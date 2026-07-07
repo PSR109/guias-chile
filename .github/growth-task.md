@@ -25,10 +25,13 @@ Toda página nueva o traducida DEBE calcar la estructura de las guías existente
 plantilla EN):
 
 - `<head>`: title con año, meta description, canonical, og:*, `estilo.css`,
-  `afiliados.js` con `defer`, y FAQ **JSON-LD** (`FAQPage`, 3 preguntas).
+  `afiliados.js` con `defer`, `analytics.js` con `defer` (mismo orden: estilo,
+  afiliados, analytics), y FAQ **JSON-LD** (`FAQPage`, 3 preguntas).
 - Cuerpo: h1 + `.sumario`, secciones de imperdibles, **tabla de precios
-  orientativos** (rangos, nunca exactos), datos prácticos, FAQ en `<details>`,
-  nota de transparencia, header/footer `.sitio` idénticos a las demás páginas.
+  orientativos** (rangos, nunca exactos), datos prácticos, bloque `.promo` con
+  link a `https://viajesypanoramas.cl/` (copiar el texto de una guía existente),
+  FAQ en `<details>`, nota de transparencia, header/footer `.sitio` idénticos a
+  las demás páginas.
 - Bloque `.cta` con los **3 botones de afiliado** exactos:
   `<a class="boton viator" data-afiliado="viator" ...>`,
   `<a class="boton civitatis" data-afiliado="civitatis" ...>`,
@@ -41,13 +44,21 @@ plantilla EN):
 
 ## Paso 3 — Verificar (obligatorio antes del PR)
 
-- `node --check afiliados.js` si lo tocaste.
-- HTML bien formado en cada archivo tocado (p. ej.
-  `python3 -c "from html.parser import HTMLParser; HTMLParser().feed(open('archivo.html',encoding='utf-8').read())"`).
-- JSON-LD parsea (`python3 -c "import json; ..."` sobre el bloque).
-- `sitemap.xml` sigue siendo XML válido.
-- Cada guía tocada tiene los 3 `data-afiliado` (viator, civitatis, gyg) y los
-  links internos apuntan a archivos que existen en el repo.
+Corre los mismos gates que `ci.yml` va a exigirle a tu PR — así no descubres un
+fallo recién en el check remoto:
+
+```
+node scripts/check-html.mjs
+node scripts/check-links.mjs
+node scripts/check-affiliate-ids.mjs
+node scripts/check-hreflang.mjs
+node scripts/check-sitemap.mjs
+```
+
+- `node --check afiliados.js` si lo tocaste (no debería hacer falta: nunca
+  cambies IDs de afiliado ya configurados).
+- Cada guía tocada tiene los 3 `data-afiliado` (viator, civitatis, gyg) y
+  `analytics.js` incluido.
 
 ## Paso 4 — Abrir el PR (nunca push a main)
 
@@ -59,6 +70,10 @@ plantilla EN):
    `🤖 Generated with [Claude Code](https://claude.com/claude-code)`.
 4. Si además completaste un ítem del backlog, márcalo `[x]` en
    `agente/ESTADO.md` dentro del mismo PR.
+5. No necesitas hacer nada más: pasos posteriores del propio workflow (fuera
+   de tu proceso) disparan `ci.yml` en tu rama y habilitan auto-merge una vez
+   que pase. No ejecutes tú `gh pr merge` — no está en tus herramientas
+   permitidas y no hace falta.
 
 ## Guardrails (innegociables)
 

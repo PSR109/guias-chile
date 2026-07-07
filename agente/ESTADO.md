@@ -7,8 +7,10 @@
 ## 1. Estado actual del sitio
 
 - **Qué es:** sitio estático de guías de viaje por Chile, monetizado con afiliados.
-- **Hosting:** GitHub Pages — https://psr109.github.io/guias-chile/ (repo `PSR109/guias-chile`, rama `main` publica automáticamente).
-- **Páginas (7):**
+- **Hosting:** GitHub Pages, dominio propio **guias.viajesypanoramas.cl** ✅
+  (repo `PSR109/guias-chile`, rama `main` publica automáticamente). Certificado
+  HTTPS aprobado y `https_enforced: true` verificado.
+- **Páginas (8):**
   1. `index.html` — portada con tarjetas + CTA Chile general
   2. `puerto-varas.html`
   3. `saltos-del-petrohue.html`
@@ -16,28 +18,36 @@
   5. `torres-del-paine.html` (con hreflang a la versión EN)
   6. `san-pedro-de-atacama.html`
   7. `en/torres-del-paine.html` (inglés)
-  Además: `privacy-policy.html`, `sitemap.xml`, `robots.txt`, `estilo.css`, `afiliados.js`.
+  8. `privacy-policy.html`
+  Además: `sitemap.xml`, `robots.txt`, `estilo.css`, `afiliados.js`, `analytics.js`.
 - **Plantilla de cada guía:** FAQ JSON-LD + tabla de precios orientativos + bloque
   `.cta` con 3 botones de afiliado (`data-afiliado="viator|civitatis|gyg"`) +
-  nota de transparencia + entrada en `sitemap.xml`.
+  bloque `.promo` con cross-link a la app Panoramas (`https://viajesypanoramas.cl/`,
+  las 7 páginas de contenido ya lo tienen) + nota de transparencia + entrada en
+  `sitemap.xml`.
 - **Monetización:** centralizada en `afiliados.js` (`window.PSR_AFILIADOS`).
   - GetYourGuide: **ACTIVO** (`gyg_partner: "BZYZJT4"`, agrega `partner_id` a los enlaces).
-  - Viator: pendiente (`viator_pid` vacío → enlaces sin comisión).
+  - Viator: **ACTIVO** (`viator_pid: "P00308789"`, registrado 2026-07-07, agrega `pid`+`mcid`).
   - Civitatis: pendiente (`civitatis_aid` vacío → enlaces sin comisión).
+- **Analítica:** `analytics.js` (beacon propio, sin cookies) envía `pageview` +
+  `click` por botón de afiliado a `https://viajesypanoramas.cl/api/eventos`.
+  Documentado en `privacy-policy.html`. El Worker de Panoramas aún no tiene CORS
+  habilitado para este origen (lane del repo `app_panoramas`) — mientras tanto
+  el POST se manda igual (Content-Type `text/plain`, sin preflight) y solo se
+  pierde la lectura de la respuesta, que no se usa.
+- **CI:** `.github/workflows/ci.yml` valida HTML, links internos, IDs de
+  afiliado y reciprocidad hreflang en cada PR y push a `main`.
 
 ## 2. ACCIONES HUMANAS pendientes (solo Patricio puede hacerlas)
 
-- [ ] **#1 Viator:** registrarse en el Viator Partner Program
-      (https://www.viator.com/partner/) con el sitio declarado →
-      pegar el `pid` en `afiliados.js` (`viator_pid`) y commitear.
-- [ ] **#2 Civitatis:** registrarse en el programa de afiliados de Civitatis
+- [ ] **Civitatis:** registrarse en el programa de afiliados de Civitatis
       (https://www.civitatis.com/es/afiliados/) → pegar el `aid` en
       `afiliados.js` (`civitatis_aid`) y commitear.
-- [ ] **#3 Dominio propio:** decisión en curso (comprar dominio y apuntarlo a
-      GitHub Pages vs. quedarse en psr109.github.io). Impacta canónicas y sitemap.
-- [ ] **#4 GetYourGuide:** verificar que ESTE sitio esté declarado como fuente de
-      tráfico en la cuenta de partner de GetYourGuide del dueño (ID `BZYZJT4`,
-      ya activo y usado también en App Panoramas).
+- [ ] **Declarar el dominio en los paneles de afiliados:** ahora que
+      `guias.viajesypanoramas.cl` sirve con HTTPS válido, declararlo (y
+      `viajesypanoramas.cl`) como fuente de tráfico autorizada en los paneles
+      de partner de GetYourGuide y Viator (los ToS lo exigen; riesgo de
+      retención de comisiones si no se hace).
 
 ## 3. BACKLOG del agente diario (elegir 1 ítem por corrida, mayor impacto en ingresos primero)
 
@@ -52,14 +62,19 @@
 ### Versiones EN (siguiendo el patrón de en/torres-del-paine.html: hreflang recíproco + sitemap)
 - [ ] en/san-pedro-de-atacama.html
 - [ ] en/puerto-varas.html
+- [ ] en/frutillar.html
+- [ ] en/saltos-del-petrohue.html
 - [ ] en/ + resto de guías a medida que existan
 
 ### Infraestructura / analítica
-- [ ] Analítica ligera: beacon a `/api/eventos` del worker de Panoramas.
-      **Bloqueado:** requiere habilitar CORS para este origen en el worker
-      (repo app_panoramas) antes de emitir nada desde aquí.
+- [x] Analítica ligera: beacon a `/api/eventos` del worker de Panoramas — hecho
+      (`analytics.js`). Pendiente del lado de `app_panoramas`: habilitar CORS
+      para este origen (fuera del alcance de este repo).
 - [ ] Links inversos: que App Panoramas enlace a estas guías desde sus
-      fichas de destino (cambio en el repo app_panoramas).
+      fichas de destino (cambio en el repo `app_panoramas`, en curso ahí).
+- [ ] Deep links de afiliados producto-a-producto (hoy son búsquedas
+      refinadas por atractivo específico, no product ID real — requiere API
+      con credenciales de GYG/Viator).
 
 ### Mantenimiento recurrente
 - [ ] Refresco anual de precios y tarifas CONAF en todas las tablas
@@ -67,8 +82,10 @@
 
 ## 4. Reglas para el agente
 
-- Nunca push directo a `main`: siempre rama + PR.
+- Nunca push directo a `main`: siempre rama + PR. El PR se auto-mergea solo si
+  `ci.yml` pasa en verde (gates: HTML, links internos, afiliados, hreflang, sitemap).
 - No inventar IDs de afiliado ni tocar secretos/workflows.
-- Toda página nueva: FAQ JSON-LD, tabla de precios, 3 CTAs de afiliado,
+- Toda página nueva: FAQ JSON-LD, tabla de precios, 3 CTAs de afiliado, bloque
+  `.promo` con link a `https://viajesypanoramas.cl/`, `analytics.js` incluido,
   canonical/og, tarjeta en `index.html` y entrada en `sitemap.xml`.
 - Precios siempre "orientativos" con rango, nunca exactos.

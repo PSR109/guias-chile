@@ -37,6 +37,7 @@ permissions:
   contents: write
   pull-requests: write
   issues: write
+  actions: write # necesario para "gh workflow run ci.yml" (ver paso 2.5, auto-merge)
 
 concurrency:
   group: growth-agent
@@ -113,6 +114,46 @@ jobs:
             > agent.log 2>&1
           echo "agent exit: $?"
           tail -40 agent.log || true
+
+      # (2.5) Auto-merge del PR que acaba de abrir el agente (si abrió uno).
+      #     Requiere que exista ci.yml con gates verdes (WP 6.1) y que el repo
+      #     tenga "Allow auto-merge" habilitado (gh api -X PATCH ... -F allow_auto_merge=true).
+      #     GOTCHA de GitHub: un PR creado con el GITHUB_TOKEN de este mismo
+      #     workflow NO dispara el evento "pull_request" de ci.yml (restricción
+      #     anti-recursión de Actions) — por eso se dispara ci.yml a mano vía
+      #     workflow_dispatch contra la misma rama/SHA, que sí queda asociado
+      #     al PR como check para el required status check de main.
+      #     Kill switch: no hay uno propio; GROWTH_ENABLED=false (arriba) apaga
+      #     todo el agente, incluida esta parte. No se justifica un segundo
+      #     interruptor solo para el auto-merge.
+      - name: Encontrar el PR recién abierto (si lo hay)
+        id: findpr
+        if: steps.agent.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          pr_json=$(gh pr list --state open --base main --json number,headRefName,createdAt \
+            --jq '[.[] | select(.headRefName | startswith("growth/"))] | sort_by(.createdAt) | last')
+          number=$(echo "$pr_json" | jq -r '.number // empty')
+          branch=$(echo "$pr_json" | jq -r '.headRefName // empty')
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+          echo "branch=$branch" >> "$GITHUB_OUTPUT"
+          if [ -n "$number" ]; then
+            echo "PR #$number en rama $branch"
+          else
+            echo "El agente no abrió PR en esta corrida (backlog vacío/bloqueado, o sin cambios)."
+          fi
+
+      - name: Disparar CI en esa rama y habilitar auto-merge
+        if: steps.findpr.outputs.number != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          gh workflow run ci.yml --ref "${{ steps.findpr.outputs.branch }}"
+          gh pr merge "${{ steps.findpr.outputs.number }}" --auto --squash \
+            || echo "No se pudo habilitar auto-merge en el PR #${{ steps.findpr.outputs.number }} (revisar 'Allow auto-merge' y branch protection de main)."
 
       # (3) Sonda enferma → abre/actualiza issue de alerta (dedup por label).
       - name: Alerta por issue (sitio enfermo)

@@ -1,0 +1,53 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# CI — Guías de Chile (sitio estático, sin build step).
+#
+# Gates baratos y sin dependencias externas (todo Node puro bajo scripts/):
+#   1. check-html.mjs           → HTML estructuralmente válido (doctype, charset,
+#                                  título, etiquetas balanceadas).
+#   2. check-links.mjs          → todo href/src interno resuelve a un archivo real.
+#   3. check-affiliate-ids.mjs  → afiliados.js sigue con los IDs de GYG y Viator.
+#   4. check-hreflang.mjs       → reciprocidad hreflang ES↔EN.
+#   5. check-sitemap.mjs        → sitemap.xml es XML válido, sin DTD/entidades.
+#
+# Este workflow es el gate que habilita el auto-merge del growth agent
+# (.github/workflows/growth-agent.yml): un PR solo se mergea solo si esto
+# pasa en verde. Kill switch: no hay uno propio de CI (no tiene sentido
+# apagar los checks de calidad); el kill switch relevante es
+# GROWTH_ENABLED=false, que apaga al agente que abre los PRs.
+# ─────────────────────────────────────────────────────────────────────────────
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  # Sin inputs propios: growth-agent.yml la dispara con `gh workflow run ci.yml
+  # --ref <rama>`, que ya fija qué rama/SHA se chequea (un PR abierto con el
+  # GITHUB_TOKEN de ese workflow no dispara "pull_request" por sí solo).
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - name: HTML válido (estructura + balance de etiquetas)
+        run: node scripts/check-html.mjs
+      - name: Enlaces internos sin roturas
+        run: node scripts/check-links.mjs
+      - name: IDs de afiliado presentes (GYG + Viator)
+        run: node scripts/check-affiliate-ids.mjs
+      - name: Reciprocidad hreflang ES↔EN
+        run: node scripts/check-hreflang.mjs
+      - name: sitemap.xml válido (sin DTD/entidades)
+        run: node scripts/check-sitemap.mjs
