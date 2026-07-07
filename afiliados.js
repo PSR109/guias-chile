@@ -1,11 +1,13 @@
 // afiliados.js — interruptor central de monetización de las Guías de Chile.
 //
-// ÚNICO paso para encender los ingresos (acción humana #7 en agente/ESTADO.md):
+// ÚNICO paso para encender los ingresos (acciones humanas #1 y #2 en agente/ESTADO.md):
 // rellenar los IDs de afiliado de abajo y hacer commit. Nada más.
 // Mientras estén vacíos, los botones funcionan como enlaces normales (sin comisión).
+// gyg_partner ya viene con el ID real: la cuenta de GetYourGuide está aprobada.
 window.PSR_AFILIADOS = {
-  viator_pid: "",    // ID de partner Viator, ej: "P00123456"
-  civitatis_aid: ""  // ID de afiliado Civitatis, ej: "12345"
+  viator_pid: "",       // ID de partner Viator, ej: "P00123456"
+  civitatis_aid: "",    // ID de afiliado Civitatis, ej: "12345"
+  gyg_partner: "BZYZJT4" // ID de partner GetYourGuide (aprobado, mismo de App Panoramas)
 };
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -19,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
         url.searchParams.set("medium", "link");
       } else if (a.dataset.afiliado === "civitatis" && ids.civitatis_aid) {
         url.searchParams.set("aid", ids.civitatis_aid);
+      } else if (a.dataset.afiliado === "gyg" && ids.gyg_partner) {
+        url.searchParams.set("partner_id", ids.gyg_partner);
       }
       a.href = url.toString();
       a.rel = "sponsored noopener";

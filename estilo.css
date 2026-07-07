@@ -1,7 +1,7 @@
 :root {
   --fondo: #fbfaf7; --texto: #1f2933; --suave: #5c6b7a; --borde: #e4e0d8;
   --tarjeta: #ffffff; --acento: #0d7a5f; --acento-texto: #ffffff;
-  --viator: #328464; --civitatis: #d5006c;
+  --viator: #328464; --civitatis: #d5006c; --gyg: #ff5533;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -42,6 +42,7 @@ th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--bor
 }
 .boton.viator { background: var(--viator); }
 .boton.civitatis { background: var(--civitatis); }
+.boton.gyg { background: var(--gyg); }
 .boton:hover { filter: brightness(1.08); }
 .tarjetas { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 24px 0; }
 .tarjeta {
