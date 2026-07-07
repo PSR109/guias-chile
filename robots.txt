@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://psr109.github.io/guias-chile/sitemap.xml
+Sitemap: https://guias.viajesypanoramas.cl/sitemap.xml

@@ -19,7 +19,7 @@
 # CONTROLES (repo → Settings → Secrets and variables → Actions → Variables):
 #   GROWTH_ENABLED   = "false" → apaga el agente sin borrar el workflow.
 #   GROWTH_MAX_TURNS = "40"    → techo de turnos del agente (~costo por corrida).
-#   GROWTH_BASE_URL  = url prod (default: https://psr109.github.io/guias-chile).
+#   GROWTH_BASE_URL  = url prod (default: https://guias.viajesypanoramas.cl).
 # ─────────────────────────────────────────────────────────────────────────────
 name: Growth Agent (salud + crecimiento diario, PR-first)
 
@@ -48,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      BASE_URL: ${{ vars.GROWTH_BASE_URL || 'https://psr109.github.io/guias-chile' }}
+      BASE_URL: ${{ vars.GROWTH_BASE_URL || 'https://guias.viajesypanoramas.cl' }}
       PAGES: 'index.html puerto-varas.html saltos-del-petrohue.html frutillar.html torres-del-paine.html san-pedro-de-atacama.html en/torres-del-paine.html'
     steps:
       - uses: actions/checkout@v5
