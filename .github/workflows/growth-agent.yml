@@ -1,0 +1,161 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Growth Agent — agente de crecimiento diario de Guías de Chile (PR-first).
+# Modelado sobre el watchdog P4 de app_panoramas, adaptado a sitio estático.
+#
+# QUÉ HACE cada día (no necesita el PC de Patricio encendido):
+#   1. Sonda de salud del sitio en producción (GitHub Pages, solo GET):
+#      cada página devuelve 200, afiliados.js es alcanzable y sitemap.xml es XML válido.
+#   2. Si existe el secret CLAUDE_CODE_OAUTH_TOKEN → invoca un agente Claude
+#      headless con la tarea .github/growth-task.md: elige UN ítem del backlog
+#      de agente/ESTADO.md (el de mayor impacto en ingresos), lo implementa
+#      siguiendo las plantillas existentes y abre un PR (NUNCA push a main).
+#   3. Sin token → solo sondea (degradación elegante). Si la sonda falla,
+#      abre/actualiza un issue de alerta.
+#
+# REQUISITO ÚNICO (lo agrega Patricio, una vez): repo secret CLAUDE_CODE_OAUTH_TOKEN
+# generado con `claude setup-token`. Cobra contra el PLAN de suscripción, nunca
+# contra créditos de API (no se define ANTHROPIC_API_KEY en ningún paso).
+#
+# CONTROLES (repo → Settings → Secrets and variables → Actions → Variables):
+#   GROWTH_ENABLED   = "false" → apaga el agente sin borrar el workflow.
+#   GROWTH_MAX_TURNS = "40"    → techo de turnos del agente (~costo por corrida).
+#   GROWTH_BASE_URL  = url prod (default: https://psr109.github.io/guias-chile).
+# ─────────────────────────────────────────────────────────────────────────────
+name: Growth Agent (salud + crecimiento diario, PR-first)
+
+on:
+  schedule:
+    - cron: '40 12 * * *' # ~08:40 America/Santiago en invierno (UTC-4); 09:40 en verano
+  workflow_dispatch:
+    inputs:
+      skip_agent:
+        description: 'Solo sondear salud (no invocar al agente)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: growth-agent
+  cancel-in-progress: false
+
+jobs:
+  growth:
+    if: ${{ vars.GROWTH_ENABLED != 'false' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      BASE_URL: ${{ vars.GROWTH_BASE_URL || 'https://psr109.github.io/guias-chile' }}
+      PAGES: 'index.html puerto-varas.html saltos-del-petrohue.html frutillar.html torres-del-paine.html san-pedro-de-atacama.html en/torres-del-paine.html'
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      # ¿Está el token del PLAN? Se evalúa en expresiones sin exponer el valor.
+      - name: ¿Hay CLAUDE_CODE_OAUTH_TOKEN?
+        id: key
+        run: echo "has=${{ secrets.CLAUDE_CODE_OAUTH_TOKEN != '' }}" >> "$GITHUB_OUTPUT"
+
+      # (1) Sonda de salud del sitio vivo — solo GET. Nunca falla el job.
+      - name: Sonda de salud (GitHub Pages)
+        id: probe
+        run: |
+          set +e
+          fail=0
+          : > probe.log
+          for p in $PAGES afiliados.js sitemap.xml; do
+            code=$(curl -sL -o /dev/null -w '%{http_code}' "$BASE_URL/$p")
+            echo "HTTP $code  $BASE_URL/$p" >> probe.log
+            [ "$code" = "200" ] || fail=1
+          done
+          # Guardas: solo nuestro propio sitemap, tope 1 MB y sin DTD/entidades (anti billion-laughs).
+          curl -sL --max-filesize 1048576 "$BASE_URL/sitemap.xml" -o sitemap-live.xml
+          if python3 -c "import sys; import xml.etree.ElementTree as ET; data=open('sitemap-live.xml','rb').read(); (b'<!DOCTYPE' in data or b'<!ENTITY' in data) and sys.exit('DTD/entidades no permitidas en sitemap'); ET.fromstring(data)" 2>> probe.log; then
+            echo "sitemap.xml: XML válido" >> probe.log
+          else
+            echo "sitemap.xml: XML INVÁLIDO" >> probe.log
+            fail=1
+          fi
+          cat probe.log
+          if [ $fail -eq 0 ]; then echo "healthy=true" >> "$GITHUB_OUTPUT"; else echo "healthy=false" >> "$GITHUB_OUTPUT"; fi
+
+      # (2) Agente de crecimiento — headless, acotado por --allowedTools y --max-turns.
+      #     Solo corre si el sitio está sano, hay token y no se pidió saltarlo.
+      #     Auth = token del PLAN (CLAUDE_CODE_OAUTH_TOKEN); nunca ANTHROPIC_API_KEY.
+      #     El agente crea rama + commit + PR con gh (PR-first, jamás push a main).
+      - name: Agente de crecimiento (PR-first)
+        id: agent
+        if: >-
+          steps.probe.outputs.healthy == 'true' &&
+          steps.key.outputs.has == 'true' &&
+          github.event.inputs.skip_agent != 'true'
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          npm i -g @anthropic-ai/claude-code >/dev/null 2>&1
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          CTX="$(printf '\n\n## Contexto de esta corrida\n\n### probe.log (sitio sano)\n%s\n\n### Fecha UTC\n%s\n' "$(cat probe.log)" "$(date -u +%F)")"
+          set +e
+          claude -p "$(cat .github/growth-task.md)$CTX" \
+            --max-turns "${{ vars.GROWTH_MAX_TURNS || 40 }}" \
+            --allowedTools "Read,Grep,Glob,Edit,Write,Bash(node *),Bash(python3 *),Bash(git status:*),Bash(git diff:*),Bash(git add:*),Bash(git checkout:*),Bash(git commit:*),Bash(git push:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(curl -s*)" \
+            --permission-mode acceptEdits \
+            > agent.log 2>&1
+          echo "agent exit: $?"
+          tail -40 agent.log || true
+
+      # (3) Sonda enferma → abre/actualiza issue de alerta (dedup por label).
+      - name: Alerta por issue (sitio enfermo)
+        if: steps.probe.outputs.healthy == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "La sonda diaria del Growth Agent detectó un problema en el sitio publicado."
+            echo ""
+            echo '```'
+            cat probe.log 2>/dev/null || echo "(sin probe.log)"
+            echo '```'
+            echo ""
+            echo "Corrida: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          } > alert-body.md
+          existing=$(gh issue list --label growth-alert --state open --json number -q '.[0].number' 2>/dev/null)
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file alert-body.md
+          else
+            gh issue create --title "🚨 Growth Agent: el sitio publicado no responde sano" \
+              --label growth-alert --body-file alert-body.md
+          fi
+
+      # Resumen humano en cada corrida, visible en la pestaña Actions.
+      - name: Resumen de la corrida
+        if: always()
+        run: |
+          {
+            echo "# 🌱 Growth Agent — resumen"
+            echo ""
+            echo "| señal | valor |"
+            echo "|---|---|"
+            echo "| sitio sano | ${{ steps.probe.outputs.healthy }} |"
+            echo "| CLAUDE_CODE_OAUTH_TOKEN (plan) | ${{ steps.key.outputs.has }} |"
+            echo "| agente invocado | ${{ steps.agent.outcome }} |"
+            echo ""
+            echo "## Sonda"
+            echo '```'
+            cat probe.log 2>/dev/null || echo "(sin probe.log)"
+            echo '```'
+            echo "## Agente (tail)"
+            echo '```'
+            tail -30 agent.log 2>/dev/null || echo "(sin agent.log — probe-only)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
