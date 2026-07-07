@@ -5,7 +5,7 @@
 // Mientras estén vacíos, los botones funcionan como enlaces normales (sin comisión).
 // gyg_partner ya viene con el ID real: la cuenta de GetYourGuide está aprobada.
 window.PSR_AFILIADOS = {
-  viator_pid: "",       // ID de partner Viator, ej: "P00123456"
+  viator_pid: "P00308789", // ID de partner Viator (registrado 2026-07-07)
   civitatis_aid: "",    // ID de afiliado Civitatis, ej: "12345"
   gyg_partner: "BZYZJT4" // ID de partner GetYourGuide (aprobado, mismo de App Panoramas)
 };
