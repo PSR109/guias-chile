@@ -3,6 +3,7 @@
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
 > Última actualización: julio 2026.
+> (Prueba E2E de CI + auto-merge — WP 6.1, esta línea se puede borrar en cualquier PR posterior.)
 
 ## 1. Estado actual del sitio
 
