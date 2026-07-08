@@ -1,7 +1,10 @@
 :root {
   --fondo: #fbfaf7; --texto: #1f2933; --suave: #5c6b7a; --borde: #e4e0d8;
   --tarjeta: #ffffff; --acento: #0d7a5f; --acento-texto: #ffffff;
-  --viator: #328464; --civitatis: #d5006c; --gyg: #ff5533;
+  /* Viator/GYG oscurecidos a ~5:1 sobre blanco (WCAG AA ≥4.5:1, con margen).
+     Civitatis queda sin botón activo (afiliado sin cuenta, ver ACCIONES-HUMANAS
+     #4) pero el color se conserva por si se reactiva. */
+  --viator: #2f7c5e; --civitatis: #d5006c; --gyg: #c44127;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -20,11 +23,14 @@ header.sitio {
   gap: 14px; align-items: baseline; flex-wrap: wrap;
 }
 header.sitio a { color: var(--texto); text-decoration: none; font-weight: 700; }
+header.sitio a.marca { display: inline-flex; align-items: center; gap: 7px; }
+header.sitio .logo { width: 20px; height: 20px; flex: none; fill: var(--acento); }
 header.sitio nav a { color: var(--suave); font-weight: 400; font-size: 15px; margin-right: 12px; }
 h1 { font-size: 34px; line-height: 1.2; margin: 34px 0 8px; }
 h2 { font-size: 24px; margin: 36px 0 10px; }
 h3 { font-size: 19px; margin: 26px 0 8px; }
 p, li { color: var(--texto); }
+.frescura { color: var(--suave); font-size: 13px; margin: 0 0 16px; }
 .sumario { color: var(--suave); font-size: 18px; margin-top: 0; }
 a { color: var(--acento); }
 img { max-width: 100%; }
@@ -44,6 +50,8 @@ th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--bor
 .boton.civitatis { background: var(--civitatis); }
 .boton.gyg { background: var(--gyg); }
 .boton:hover { filter: brightness(1.08); }
+.boton-fila { display: block; margin: 0 0 10px; }
+.afiliado-nota { display: block; color: var(--suave); font-size: 12.5px; margin: 3px 0 0 1px; }
 .tarjetas { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 24px 0; }
 .tarjeta {
   background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 12px;
