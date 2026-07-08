@@ -27,38 +27,102 @@
   <h1>Guías de Chile</h1>
   <p class="sumario">Guías prácticas para planear tu viaje por Chile: qué hacer, cuánto cuesta, cuándo ir y cómo reservar. Escritas desde Puerto Varas, en el sur de Chile.</p>
 
-  <div class="tarjetas">
-    <a class="tarjeta" href="puerto-varas.html">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Amanecer_sobre_el_Lago_LLanquihue_y_Volc%C3%A1n_Osorno%2C_vista_desde_la_costanera_de_Puerto_Varas.JPG/500px-Amanecer_sobre_el_Lago_LLanquihue_y_Volc%C3%A1n_Osorno%2C_vista_desde_la_costanera_de_Puerto_Varas.JPG" width="500" height="281" alt="Atardecer sobre el lago Llanquihue y el volcán Osorno en Puerto Varas" loading="lazy">
-      <h3>Puerto Varas</h3>
-      <p>La capital del lago Llanquihue: volcanes, kuchen y la base perfecta para explorar el sur.</p>
-    </a>
-    <a class="tarjeta" href="saltos-del-petrohue.html">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Saltos_del_Petrohu%C3%A9_y_Volc%C3%A1n_Osorno.jpg/500px-Saltos_del_Petrohu%C3%A9_y_Volc%C3%A1n_Osorno.jpg" width="500" height="357" alt="Saltos del Petrohué con el volcán Osorno de fondo" loading="lazy">
-      <h3>Saltos del Petrohué</h3>
-      <p>Aguas turquesa al pie del volcán Osorno. Cómo llegar, entradas y qué combinar.</p>
-    </a>
-    <a class="tarjeta" href="frutillar.html">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Frutillar-Theatro-del-Lago-1030906-PSD.jpg/500px-Frutillar-Theatro-del-Lago-1030906-PSD.jpg" width="500" height="294" alt="Teatro del Lago en Frutillar, a orillas del lago Llanquihue" loading="lazy">
-      <h3>Frutillar</h3>
-      <p>Herencia alemana, Teatro del Lago y la costanera más fotogénica del Llanquihue.</p>
-    </a>
-    <a class="tarjeta" href="torres-del-paine.html">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Cuernos_del_Paine_%285484302521%29.jpg/500px-Cuernos_del_Paine_%285484302521%29.jpg" width="500" height="333" alt="Los Cuernos del Paine en el parque nacional Torres del Paine" loading="lazy">
-      <h3>Torres del Paine</h3>
-      <p>La joya de la Patagonia: base Torres, la W y cómo organizarlo sin dolores de cabeza.</p>
-    </a>
-    <a class="tarjeta" href="san-pedro-de-atacama.html">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Sunset_at_Valle_de_la_Luna.jpg/500px-Sunset_at_Valle_de_la_Luna.jpg" width="500" height="312" alt="Valle de la Luna al atardecer, cerca de San Pedro de Atacama" loading="lazy">
-      <h3>San Pedro de Atacama</h3>
-      <p>Geysers, lagunas altiplánicas y el cielo más limpio del planeta.</p>
-    </a>
-    <a class="tarjeta" href="en/torres-del-paine.html">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Cuernos_del_Paine_%285484302521%29.jpg/500px-Cuernos_del_Paine_%285484302521%29.jpg" width="500" height="333" alt="The Cuernos del Paine in Torres del Paine National Park" loading="lazy">
-      <h3>Torres del Paine (English)</h3>
-      <p>The practical guide for international travelers: W Trek, day tours and logistics.</p>
-    </a>
+  <div class="buscador-fila">
+    <input type="search" id="buscador" placeholder="Buscar destino o región…" aria-label="Buscar destino o región">
+    <select id="filtro-region" aria-label="Filtrar por región">
+      <option value="">Todas las regiones</option>
+    </select>
   </div>
+  <p id="sin-resultados" class="sin-resultados" hidden>Ningún destino coincide con esa búsqueda.</p>
+
+  <!-- Orden fijo norte→sur (Chile va de Arica a Magallanes); nueva guía = insertar
+       la tarjeta en su posición geográfica real y agregar data-region. -->
+  <div class="tarjetas" id="tarjetas">
+    <div class="tarjeta" data-region="Antofagasta" data-nombre="San Pedro de Atacama">
+      <a class="tarjeta-link" href="san-pedro-de-atacama.html">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Sunset_at_Valle_de_la_Luna.jpg/500px-Sunset_at_Valle_de_la_Luna.jpg" width="500" height="312" alt="Valle de la Luna al atardecer, cerca de San Pedro de Atacama" loading="lazy">
+        <h3>San Pedro de Atacama</h3>
+        <p>Geysers, lagunas altiplánicas y el cielo más limpio del planeta.</p>
+        <span class="region-tag">Región de Antofagasta</span>
+      </a>
+    </div>
+    <div class="tarjeta" data-region="Los Lagos" data-nombre="Frutillar">
+      <a class="tarjeta-link" href="frutillar.html">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Frutillar-Theatro-del-Lago-1030906-PSD.jpg/500px-Frutillar-Theatro-del-Lago-1030906-PSD.jpg" width="500" height="294" alt="Teatro del Lago en Frutillar, a orillas del lago Llanquihue" loading="lazy">
+        <h3>Frutillar</h3>
+        <p>Herencia alemana, Teatro del Lago y la costanera más fotogénica del Llanquihue.</p>
+        <span class="region-tag">Región de Los Lagos</span>
+      </a>
+    </div>
+    <div class="tarjeta" data-region="Los Lagos" data-nombre="Saltos del Petrohué">
+      <a class="tarjeta-link" href="saltos-del-petrohue.html">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Saltos_del_Petrohu%C3%A9_y_Volc%C3%A1n_Osorno.jpg/500px-Saltos_del_Petrohu%C3%A9_y_Volc%C3%A1n_Osorno.jpg" width="500" height="357" alt="Saltos del Petrohué con el volcán Osorno de fondo" loading="lazy">
+        <h3>Saltos del Petrohué</h3>
+        <p>Aguas turquesa al pie del volcán Osorno. Cómo llegar, entradas y qué combinar.</p>
+        <span class="region-tag">Región de Los Lagos</span>
+      </a>
+    </div>
+    <div class="tarjeta" data-region="Los Lagos" data-nombre="Puerto Varas">
+      <a class="tarjeta-link" href="puerto-varas.html">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Amanecer_sobre_el_Lago_LLanquihue_y_Volc%C3%A1n_Osorno%2C_vista_desde_la_costanera_de_Puerto_Varas.JPG/500px-Amanecer_sobre_el_Lago_LLanquihue_y_Volc%C3%A1n_Osorno%2C_vista_desde_la_costanera_de_Puerto_Varas.JPG" width="500" height="281" alt="Atardecer sobre el lago Llanquihue y el volcán Osorno en Puerto Varas" loading="lazy">
+        <h3>Puerto Varas</h3>
+        <p>La capital del lago Llanquihue: volcanes, kuchen y la base perfecta para explorar el sur.</p>
+        <span class="region-tag">Región de Los Lagos</span>
+      </a>
+    </div>
+    <div class="tarjeta" data-region="Magallanes" data-nombre="Torres del Paine">
+      <a class="tarjeta-link" href="torres-del-paine.html">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Cuernos_del_Paine_%285484302521%29.jpg/500px-Cuernos_del_Paine_%285484302521%29.jpg" width="500" height="333" alt="Los Cuernos del Paine en el parque nacional Torres del Paine" loading="lazy">
+        <h3>Torres del Paine</h3>
+        <p>La joya de la Patagonia: base Torres, la W y cómo organizarlo sin dolores de cabeza.</p>
+        <span class="region-tag">Región de Magallanes</span>
+      </a>
+      <a class="idioma-en" href="en/torres-del-paine.html" title="Read this guide in English">EN</a>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var tarjetas = Array.prototype.slice.call(document.querySelectorAll('#tarjetas .tarjeta'));
+      var select = document.getElementById('filtro-region');
+      var input = document.getElementById('buscador');
+      var vacio = document.getElementById('sin-resultados');
+
+      var regiones = [];
+      tarjetas.forEach(function (t) {
+        var r = t.dataset.region;
+        if (r && regiones.indexOf(r) === -1) regiones.push(r);
+      });
+      regiones.sort().forEach(function (r) {
+        var opt = document.createElement('option');
+        opt.value = r;
+        opt.textContent = r;
+        select.appendChild(opt);
+      });
+
+      function normaliza(s) {
+        return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+      }
+
+      function aplicarFiltro() {
+        var texto = normaliza(input.value.trim());
+        var region = select.value;
+        var visibles = 0;
+        tarjetas.forEach(function (t) {
+          var coincideTexto = !texto ||
+            normaliza(t.dataset.nombre).indexOf(texto) !== -1 ||
+            normaliza(t.dataset.region).indexOf(texto) !== -1;
+          var coincideRegion = !region || t.dataset.region === region;
+          var visible = coincideTexto && coincideRegion;
+          t.hidden = !visible;
+          if (visible) visibles++;
+        });
+        vacio.hidden = visibles > 0;
+      }
+
+      input.addEventListener('input', aplicarFiltro);
+      select.addEventListener('change', aplicarFiltro);
+    })();
+  </script>
 
   <div class="promo">
     📍 ¿Estás en la región de Los Lagos? Prueba nuestra app gratuita

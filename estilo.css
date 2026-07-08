@@ -52,14 +52,31 @@ th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--bor
 .boton:hover { filter: brightness(1.08); }
 .boton-fila { display: block; margin: 0 0 10px; }
 .afiliado-nota { display: block; color: var(--suave); font-size: 12.5px; margin: 3px 0 0 1px; }
+.buscador-fila { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 4px; }
+.buscador-fila input[type="search"] {
+  flex: 1 1 220px; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--borde);
+  background: var(--tarjeta); color: var(--texto); font-size: 15px;
+}
+.buscador-fila select {
+  padding: 10px 14px; border-radius: 8px; border: 1px solid var(--borde);
+  background: var(--tarjeta); color: var(--texto); font-size: 15px;
+}
+.sin-resultados { color: var(--suave); font-size: 14px; margin: 6px 0 0; }
 .tarjetas { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 24px 0; }
 .tarjeta {
-  background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 12px;
-  padding: 16px 18px; text-decoration: none; color: var(--texto); display: block;
+  position: relative; background: var(--tarjeta); border: 1px solid var(--borde);
+  border-radius: 12px; padding: 16px 18px;
 }
 .tarjeta:hover { border-color: var(--acento); }
+.tarjeta-link { display: block; text-decoration: none; color: var(--texto); }
 .tarjeta h3 { margin: 0 0 6px; }
 .tarjeta p { color: var(--suave); font-size: 14px; margin: 0; }
+.tarjeta .idioma-en {
+  position: absolute; top: 14px; right: 14px; z-index: 2;
+  display: inline-block; font-size: 11px; font-weight: 700; color: var(--acento-texto);
+  background: var(--acento); border-radius: 5px; padding: 2px 7px; text-decoration: none;
+}
+.tarjeta .region-tag { display: block; color: var(--suave); font-size: 12px; margin-top: 8px; }
 .faq details { border-bottom: 1px solid var(--borde); padding: 10px 0; }
 .faq summary { cursor: pointer; font-weight: 600; }
 figure.foto { margin: 26px 0; }
