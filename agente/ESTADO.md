@@ -2,7 +2,7 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: julio 2026 (en/puerto-varas.html agregado).
+> Última actualización: julio 2026 (en/frutillar.html agregado).
 
 ## 1. Estado actual del sitio
 
@@ -10,17 +10,18 @@
 - **Hosting:** GitHub Pages, dominio propio **guias.viajesypanoramas.cl** ✅
   (repo `PSR109/guias-chile`, rama `main` publica automáticamente). Certificado
   HTTPS aprobado y `https_enforced: true` verificado.
-- **Páginas (10):**
+- **Páginas (11):**
   1. `index.html` — portada con tarjetas + CTA Chile general
   2. `puerto-varas.html` (con hreflang a la versión EN)
   3. `saltos-del-petrohue.html`
-  4. `frutillar.html`
+  4. `frutillar.html` (con hreflang a la versión EN)
   5. `torres-del-paine.html` (con hreflang a la versión EN)
   6. `san-pedro-de-atacama.html` (con hreflang a la versión EN)
   7. `en/torres-del-paine.html` (inglés)
   8. `en/san-pedro-de-atacama.html` (inglés)
   9. `en/puerto-varas.html` (inglés)
-  10. `privacy-policy.html`
+  10. `en/frutillar.html` (inglés)
+  11. `privacy-policy.html`
   Además: `sitemap.xml`, `robots.txt`, `estilo.css`, `afiliados.js`, `analytics.js`.
 - **Plantilla de cada guía:** logo SVG en el header (no emoji — 🇨🇱 no renderiza
   en todas las plataformas, reemplazado 2026-07-08) + `<link rel="icon"
@@ -93,7 +94,7 @@
 ### Versiones EN (siguiendo el patrón de en/torres-del-paine.html: hreflang recíproco + sitemap)
 - [x] en/san-pedro-de-atacama.html
 - [x] en/puerto-varas.html
-- [ ] en/frutillar.html
+- [x] en/frutillar.html
 - [ ] en/saltos-del-petrohue.html
 - [ ] en/ + resto de guías a medida que existan
 
