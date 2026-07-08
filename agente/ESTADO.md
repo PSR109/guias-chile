@@ -2,8 +2,7 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: julio 2026.
-> (Prueba E2E de CI + auto-merge — WP 6.1, esta línea se puede borrar en cualquier PR posterior.)
+> Última actualización: julio 2026 (WP 2.6 — fotos reales en todas las guías).
 
 ## 1. Estado actual del sitio
 
@@ -25,7 +24,19 @@
   `.cta` con 3 botones de afiliado (`data-afiliado="viator|civitatis|gyg"`) +
   bloque `.promo` con cross-link a la app Panoramas (`https://viajesypanoramas.cl/`,
   las 7 páginas de contenido ya lo tienen) + nota de transparencia + entrada en
-  `sitemap.xml`.
+  `sitemap.xml` + **fotos reales con atribución** (ver abajo).
+- **Fotos (WP 2.6, ✅ 0 guías sin imagen):** las 6 guías de contenido (+ EN) tienen
+  foto hero (`fetchpriority="high"`, sin lazy) y 1-2 fotos intercaladas
+  (`loading="lazy"`), todas de Wikimedia Commons (CC BY/BY-SA/CC0), con
+  `<figcaption>` de atribución (autor + licencia, enlazando a la página de
+  Commons — requisito legal de las licencias CC) y `og:image` en el `<head>`.
+  `index.html` también tiene thumbnail por tarjeta. Patrón para páginas nuevas:
+  API pública `commons.wikimedia.org/w/api.php` (`action=query&generator=categorymembers`
+  o `generator=search`, `prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=900`) —
+  OJO: Commons *bucketea* `iiurlwidth` a anchos fijos (330/500/960/1280…), el ancho
+  real servido no es el pedido — medir el tamaño real del archivo descargado antes
+  de fijar `width`/`height` en el `<img>` (si no, layout shift). No commitear
+  binarios: enlazar directo a `upload.wikimedia.org`.
 - **Monetización:** centralizada en `afiliados.js` (`window.PSR_AFILIADOS`).
   - GetYourGuide: **ACTIVO** (`gyg_partner: "BZYZJT4"`, agrega `partner_id` a los enlaces).
   - Viator: **ACTIVO** (`viator_pid: "P00308789"`, registrado 2026-07-07, agrega `pid`+`mcid`).
@@ -88,5 +99,7 @@
 - No inventar IDs de afiliado ni tocar secretos/workflows.
 - Toda página nueva: FAQ JSON-LD, tabla de precios, 3 CTAs de afiliado, bloque
   `.promo` con link a `https://viajesypanoramas.cl/`, `analytics.js` incluido,
-  canonical/og, tarjeta en `index.html` y entrada en `sitemap.xml`.
+  canonical/og (incluyendo `og:image`), tarjeta con thumbnail en `index.html` y
+  entrada en `sitemap.xml`. **Ninguna guía nueva nace sin foto real** (mínimo 1
+  hero de Wikimedia Commons con atribución — ver patrón en la sección 1).
 - Precios siempre "orientativos" con rango, nunca exactos.

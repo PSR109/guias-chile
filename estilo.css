@@ -54,6 +54,16 @@ th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--bor
 .tarjeta p { color: var(--suave); font-size: 14px; margin: 0; }
 .faq details { border-bottom: 1px solid var(--borde); padding: 10px 0; }
 .faq summary { cursor: pointer; font-weight: 600; }
+figure.foto { margin: 26px 0; }
+figure.foto img { display: block; width: 100%; height: auto; border-radius: 12px; }
+figure.foto figcaption {
+  color: var(--suave); font-size: 12.5px; margin-top: 7px; line-height: 1.4;
+}
+figure.foto figcaption a { color: var(--suave); }
+.tarjeta img {
+  width: 100%; height: 130px; object-fit: cover; border-radius: 8px;
+  margin-bottom: 12px; display: block;
+}
 .nota, footer.sitio {
   color: var(--suave); font-size: 13.5px; border-top: 1px solid var(--borde);
   margin-top: 44px; padding-top: 16px;
