@@ -114,6 +114,14 @@
 - Nunca push directo a `main`: siempre rama + PR. El PR se auto-mergea solo si
   `ci.yml` pasa en verde (gates: HTML, links internos, afiliados, hreflang, sitemap).
 - No inventar IDs de afiliado ni tocar secretos/workflows.
+- **`index.html` (portada, 2026-07-08):** las tarjetas van ordenadas norte→sur (geografía real
+  de Chile, no el orden de creación). Cada `<div class="tarjeta">` lleva `data-region="..."` y
+  `data-nombre="..."` (usados por el buscador/filtro JS del pie de la página — no tocar esos
+  atributos al copiar el patrón). Al agregar una guía nueva: insertar su tarjeta en la posición
+  norte-sur correcta entre las existentes (no siempre al final), con su región real. Si la guía
+  nueva tiene versión `en/`, agregar el badge `<a class="idioma-en">` como **hermano** del
+  `<a class="tarjeta-link">` (nunca anidar un `<a>` dentro de otro `<a>` — rompe el layout en
+  navegadores reales aunque el validador de `check-html.mjs` no lo detecte).
 - Toda página nueva: logo SVG + favicon en el `<head>`, línea de frescura bajo
   el H1, FAQ JSON-LD, tabla de precios, **2 CTAs de afiliado** (Viator + GYG,
   con `pid`/`partner_id` hardcodeado en el href + `rel="sponsored noopener"
