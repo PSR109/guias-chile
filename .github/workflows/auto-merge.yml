@@ -1,0 +1,37 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Auto-merge genérico — arma "auto-merge" en CUALQUIER PR nueva contra `main`
+# apenas se abre (agente de guías, agente de otra app, o Patricio a mano).
+# GitHub completa el merge solo cuando ci.yml (disparado normal por el evento
+# "pull_request" de esta misma PR) queda en verde — sin gate humano, por diseño
+# de este repo (agente/ESTADO.md §4: "El PR se auto-mergea solo si ci.yml pasa").
+#
+# NO cubre las PRs que abre growth-agent.yml (ramas growth/*): esas se crean
+# con el GITHUB_TOKEN del propio workflow, que por restricción anti-recursión
+# de Actions no dispara el evento "pull_request" de ESTE workflow tampoco —
+# growth-agent.yml ya trae su propia solución (dispara ci.yml a mano + arma
+# auto-merge en el mismo run, ver pasos 2.5 ahí). Este workflow cubre todo lo
+# demás: cualquier rama abierta con un token de usuario real.
+# ─────────────────────────────────────────────────────────────────────────────
+name: Auto-merge PRs
+
+on:
+  pull_request:
+    types: [opened, reopened]
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  enable-auto-merge:
+    if: github.event.pull_request.user.login != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Armar auto-merge (squash, se completa cuando ci.yml pase)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr merge "${{ github.event.pull_request.number }}" --auto --squash \
+            --repo "${{ github.repository }}" \
+            || echo "No se pudo armar auto-merge (revisar 'Allow auto-merge' del repo y branch protection de main)."
