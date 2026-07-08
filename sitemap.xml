@@ -16,5 +16,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/torres-del-paine.html"/>
     <changefreq>monthly</changefreq><priority>0.9</priority>
   </url>
-  <url><loc>https://guias.viajesypanoramas.cl/san-pedro-de-atacama.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/san-pedro-de-atacama.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/san-pedro-de-atacama.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/san-pedro-de-atacama.html"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/en/san-pedro-de-atacama.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/san-pedro-de-atacama.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/san-pedro-de-atacama.html"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
 </urlset>
