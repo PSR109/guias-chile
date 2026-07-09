@@ -2,7 +2,7 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: julio 2026 (copiapo-bahia-inglesa.html agregado).
+> Última actualización: julio 2026 (colchagua-pichilemu.html agregado).
 
 ## 1. Estado actual del sitio
 
@@ -10,7 +10,7 @@
 - **Hosting:** GitHub Pages, dominio propio **guias.viajesypanoramas.cl** ✅
   (repo `PSR109/guias-chile`, rama `main` publica automáticamente). Certificado
   HTTPS aprobado y `https_enforced: true` verificado.
-- **Páginas (21):**
+- **Páginas (22):**
   1. `index.html` — portada con tarjetas + CTA Chile general
   2. `puerto-varas.html` (con hreflang a la versión EN)
   3. `saltos-del-petrohue.html` (con hreflang a la versión EN)
@@ -26,12 +26,13 @@
   13. `arica.html` (sin versión EN todavía)
   14. `iquique.html` (sin versión EN todavía)
   15. `copiapo-bahia-inglesa.html` (sin versión EN todavía)
-  16. `en/torres-del-paine.html` (inglés)
-  17. `en/san-pedro-de-atacama.html` (inglés)
-  18. `en/puerto-varas.html` (inglés)
-  19. `en/frutillar.html` (inglés)
-  20. `en/saltos-del-petrohue.html` (inglés)
-  21. `privacy-policy.html`
+  16. `colchagua-pichilemu.html` (sin versión EN todavía)
+  17. `en/torres-del-paine.html` (inglés)
+  18. `en/san-pedro-de-atacama.html` (inglés)
+  19. `en/puerto-varas.html` (inglés)
+  20. `en/frutillar.html` (inglés)
+  21. `en/saltos-del-petrohue.html` (inglés)
+  22. `privacy-policy.html`
   Además: `sitemap.xml`, `robots.txt`, `estilo.css`, `afiliados.js`, `analytics.js`.
 - **Plantilla de cada guía:** logo SVG en el header (no emoji — 🇨🇱 no renderiza
   en todas las plataformas, reemplazado 2026-07-08) + `<link rel="icon"
@@ -96,7 +97,7 @@
 - [x] Arica (Región de Arica y Parinacota — playas, Valle de Azapa, geoglifos)
 - [x] Iquique (Región de Tarapacá — duna, Zofri, deportes aéreos, pampa)
 - [x] Copiapó / Bahía Inglesa (Región de Atacama — astroturismo, playas turquesa)
-- [ ] Ruta del Vino de Colchagua / Pichilemu (Región de O'Higgins — vino, surf)
+- [x] Ruta del Vino de Colchagua / Pichilemu (Región de O'Higgins — vino, surf)
 - [ ] Radal Siete Tazas / Curicó (Región del Maule — ruta del vino, termas)
 - [ ] Termas de Chillán (Región de Ñuble — nieve, termas)
 - [ ] Concepción / Salto del Laja (Región del Biobío)
