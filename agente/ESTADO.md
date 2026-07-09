@@ -2,7 +2,7 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: julio 2026 (valparaiso.html agregado).
+> Última actualización: julio 2026 (cajon-del-maipo.html agregado).
 
 ## 1. Estado actual del sitio
 
@@ -10,7 +10,7 @@
 - **Hosting:** GitHub Pages, dominio propio **guias.viajesypanoramas.cl** ✅
   (repo `PSR109/guias-chile`, rama `main` publica automáticamente). Certificado
   HTTPS aprobado y `https_enforced: true` verificado.
-- **Páginas (16):**
+- **Páginas (17):**
   1. `index.html` — portada con tarjetas + CTA Chile general
   2. `puerto-varas.html` (con hreflang a la versión EN)
   3. `saltos-del-petrohue.html` (con hreflang a la versión EN)
@@ -21,12 +21,13 @@
   8. `pucon-villarrica.html` (sin versión EN todavía)
   9. `carretera-austral.html` (sin versión EN todavía)
   10. `valparaiso.html` (sin versión EN todavía)
-  11. `en/torres-del-paine.html` (inglés)
-  12. `en/san-pedro-de-atacama.html` (inglés)
-  13. `en/puerto-varas.html` (inglés)
-  14. `en/frutillar.html` (inglés)
-  15. `en/saltos-del-petrohue.html` (inglés)
-  16. `privacy-policy.html`
+  11. `cajon-del-maipo.html` (sin versión EN todavía)
+  12. `en/torres-del-paine.html` (inglés)
+  13. `en/san-pedro-de-atacama.html` (inglés)
+  14. `en/puerto-varas.html` (inglés)
+  15. `en/frutillar.html` (inglés)
+  16. `en/saltos-del-petrohue.html` (inglés)
+  17. `privacy-policy.html`
   Además: `sitemap.xml`, `robots.txt`, `estilo.css`, `afiliados.js`, `analytics.js`.
 - **Plantilla de cada guía:** logo SVG en el header (no emoji — 🇨🇱 no renderiza
   en todas las plataformas, reemplazado 2026-07-08) + `<link rel="icon"
@@ -93,7 +94,7 @@
 - [x] Pucón – Villarrica (volcán, termas, deportes de aventura)
 - [x] Carretera Austral (ruta, tramos, ferries)
 - [x] Valparaíso (cerros, ascensores, day trip desde Santiago)
-- [ ] Cajón del Maipo (embalse El Yeso, termas, day trip desde Santiago)
+- [x] Cajón del Maipo (embalse El Yeso, termas, day trip desde Santiago)
 - [ ] Valle del Elqui (observatorios, pisco, Vicuña)
 
 ### Versiones EN (siguiendo el patrón de en/torres-del-paine.html: hreflang recíproco + sitemap)
