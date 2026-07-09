@@ -2,7 +2,7 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: julio 2026 (valle-del-elqui.html agregado).
+> Última actualización: julio 2026 (arica.html agregado).
 
 ## 1. Estado actual del sitio
 
@@ -10,7 +10,7 @@
 - **Hosting:** GitHub Pages, dominio propio **guias.viajesypanoramas.cl** ✅
   (repo `PSR109/guias-chile`, rama `main` publica automáticamente). Certificado
   HTTPS aprobado y `https_enforced: true` verificado.
-- **Páginas (18):**
+- **Páginas (19):**
   1. `index.html` — portada con tarjetas + CTA Chile general
   2. `puerto-varas.html` (con hreflang a la versión EN)
   3. `saltos-del-petrohue.html` (con hreflang a la versión EN)
@@ -23,12 +23,13 @@
   10. `valparaiso.html` (sin versión EN todavía)
   11. `cajon-del-maipo.html` (sin versión EN todavía)
   12. `valle-del-elqui.html` (sin versión EN todavía)
-  13. `en/torres-del-paine.html` (inglés)
-  14. `en/san-pedro-de-atacama.html` (inglés)
-  15. `en/puerto-varas.html` (inglés)
-  16. `en/frutillar.html` (inglés)
-  17. `en/saltos-del-petrohue.html` (inglés)
-  18. `privacy-policy.html`
+  13. `arica.html` (sin versión EN todavía)
+  14. `en/torres-del-paine.html` (inglés)
+  15. `en/san-pedro-de-atacama.html` (inglés)
+  16. `en/puerto-varas.html` (inglés)
+  17. `en/frutillar.html` (inglés)
+  18. `en/saltos-del-petrohue.html` (inglés)
+  19. `privacy-policy.html`
   Además: `sitemap.xml`, `robots.txt`, `estilo.css`, `afiliados.js`, `analytics.js`.
 - **Plantilla de cada guía:** logo SVG en el header (no emoji — 🇨🇱 no renderiza
   en todas las plataformas, reemplazado 2026-07-08) + `<link rel="icon"
@@ -44,36 +45,27 @@
   con atribución** (ver abajo). Civitatis **no lleva botón** (afiliado sin
   cuenta activa, ver sección 2) — no agregarlo a guías nuevas hasta tener un
   `civitatis_aid` real.
-- **Fotos (WP 2.6, ✅ 0 guías sin imagen):** las 6 guías de contenido (+ EN) tienen
+- **Fotos (WP 2.6, ✅ 0 guías sin imagen):** las 7 guías de contenido (+ 5 EN) tienen
   foto hero (`fetchpriority="high"`, sin lazy) y 1-2 fotos intercaladas
   (`loading="lazy"`), todas de Wikimedia Commons (CC BY/BY-SA/CC0), con
-  `<figcaption>` de atribución (autor + licencia, enlazando a la página de
-  Commons — requisito legal de las licencias CC) y `og:image` en el `<head>`.
-  `index.html` también tiene thumbnail por tarjeta. Patrón para páginas nuevas:
-  API pública `commons.wikimedia.org/w/api.php` (`action=query&generator=categorymembers`
-  o `generator=search`, `prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=900`) —
-  OJO: Commons *bucketea* `iiurlwidth` a anchos fijos (330/500/960/1280…), el ancho
-  real servido no es el pedido — medir el tamaño real del archivo descargado antes
-  de fijar `width`/`height` en el `<img>` (si no, layout shift). No commitear
+  `<figcaption>` de atribución (autor + licencia + link a Commons, requisito
+  legal CC) y `og:image` en el `<head>`; `index.html` tiene thumbnail por
+  tarjeta. Patrón: API `commons.wikimedia.org/w/api.php`
+  (`generator=categorymembers|search`, `prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=900`)
+  — OJO: Commons *bucketea* `iiurlwidth`, medir el archivo real descargado
+  antes de fijar `width`/`height` (si no, layout shift). No commitear
   binarios: enlazar directo a `upload.wikimedia.org`.
-- **Monetización:** IDs centralizados en `afiliados.js` (`window.PSR_AFILIADOS`),
-  pero el `pid`/`partner_id` va **hardcodeado en cada href** del HTML servido
-  (no solo agregado por JS) — un audit 2026-07-08 encontró que el HTML crudo
-  no llevaba el parámetro, así que copiar-link/crawlers/bots perdían la
-  comisión. `afiliados.js` sigue corriendo como red de seguridad idempotente
-  (por si algún href nuevo se olvida de hardcodearlo), pero ya no es la única
-  fuente de verdad.
-  - GetYourGuide: **ACTIVO** (`gyg_partner: "BZYZJT4"` / `partner_id=BZYZJT4` en el href).
-  - Viator: **ACTIVO** (`viator_pid: "P00308789"`, registrado 2026-07-07 / `pid=P00308789&mcid=42383&medium=link` en el href).
+- **Monetización:** IDs en `afiliados.js` (`window.PSR_AFILIADOS`), pero el
+  `pid`/`partner_id` va **hardcodeado en cada href** del HTML servido (no solo
+  vía JS, por copy-link/crawlers); `afiliados.js` queda como red de seguridad
+  idempotente.
+  - GetYourGuide: **ACTIVO** (`gyg_partner: "BZYZJT4"`).
+  - Viator: **ACTIVO** (`viator_pid: "P00308789"`, `pid=...&mcid=42383&medium=link`).
   - Civitatis: pendiente y **sin botón en el sitio** (`civitatis_aid` vacío,
-    sin cuenta — ver ACCIONES-HUMANAS #4). Color/clase CSS se conservan
-    dormant para reactivar fácil el día que exista `aid` real.
-- **Analítica:** `analytics.js` (beacon propio, sin cookies) envía `pageview` +
-  `click` por botón de afiliado a `https://viajesypanoramas.cl/api/eventos`.
-  Documentado en `privacy-policy.html`. El Worker de Panoramas aún no tiene CORS
-  habilitado para este origen (lane del repo `app_panoramas`) — mientras tanto
-  el POST se manda igual (Content-Type `text/plain`, sin preflight) y solo se
-  pierde la lectura de la respuesta, que no se usa.
+    ver ACCIONES-HUMANAS #4).
+- **Analítica:** `analytics.js` (beacon sin cookies) envía `pageview`/`click`
+  a `https://viajesypanoramas.cl/api/eventos` (doc. en `privacy-policy.html`).
+  CORS del lado del Worker de Panoramas aún pendiente (fuera de este repo).
 - **CI:** `.github/workflows/ci.yml` valida HTML, links internos, IDs de
   afiliado y reciprocidad hreflang en cada PR y push a `main`.
 
@@ -97,6 +89,16 @@
 - [x] Valparaíso (cerros, ascensores, day trip desde Santiago)
 - [x] Cajón del Maipo (embalse El Yeso, termas, day trip desde Santiago)
 - [x] Valle del Elqui (observatorios, pisco, Vicuña)
+
+**Backlog ampliado 2026-07-09 — cobertura nacional (regiones sin guía todavía):**
+- [x] Arica (Región de Arica y Parinacota — playas, Valle de Azapa, geoglifos)
+- [ ] Iquique (Región de Tarapacá — duna, Zofri, deportes aéreos, pampa)
+- [ ] Copiapó / Bahía Inglesa (Región de Atacama — astroturismo, playas turquesa)
+- [ ] Ruta del Vino de Colchagua / Pichilemu (Región de O'Higgins — vino, surf)
+- [ ] Radal Siete Tazas / Curicó (Región del Maule — ruta del vino, termas)
+- [ ] Termas de Chillán (Región de Ñuble — nieve, termas)
+- [ ] Concepción / Salto del Laja (Región del Biobío)
+- [ ] Valdivia (Región de Los Ríos — ríos, cervecerías, Parque Oncol)
 
 ### Versiones EN (siguiendo el patrón de en/torres-del-paine.html: hreflang recíproco + sitemap)
 - [x] en/san-pedro-de-atacama.html
