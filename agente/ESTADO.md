@@ -2,7 +2,7 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: julio 2026 (radal-siete-tazas-curico.html agregado).
+> Última actualización: julio 2026 (termas-de-chillan.html agregado).
 
 ## 1. Estado actual del sitio
 
@@ -10,31 +10,16 @@
 - **Hosting:** GitHub Pages, dominio propio **guias.viajesypanoramas.cl** ✅
   (repo `PSR109/guias-chile`, rama `main` publica automáticamente). Certificado
   HTTPS aprobado y `https_enforced: true` verificado.
-- **Páginas (23):**
-  1. `index.html` — portada con tarjetas + CTA Chile general
-  2. `puerto-varas.html` (con hreflang a la versión EN)
-  3. `saltos-del-petrohue.html` (con hreflang a la versión EN)
-  4. `frutillar.html` (con hreflang a la versión EN)
-  5. `torres-del-paine.html` (con hreflang a la versión EN)
-  6. `san-pedro-de-atacama.html` (con hreflang a la versión EN)
-  7. `chiloe.html` (sin versión EN todavía)
-  8. `pucon-villarrica.html` (sin versión EN todavía)
-  9. `carretera-austral.html` (sin versión EN todavía)
-  10. `valparaiso.html` (sin versión EN todavía)
-  11. `cajon-del-maipo.html` (sin versión EN todavía)
-  12. `valle-del-elqui.html` (sin versión EN todavía)
-  13. `arica.html` (sin versión EN todavía)
-  14. `iquique.html` (sin versión EN todavía)
-  15. `copiapo-bahia-inglesa.html` (sin versión EN todavía)
-  16. `colchagua-pichilemu.html` (sin versión EN todavía)
-  17. `radal-siete-tazas-curico.html` (sin versión EN todavía)
-  18. `en/torres-del-paine.html` (inglés)
-  19. `en/san-pedro-de-atacama.html` (inglés)
-  20. `en/puerto-varas.html` (inglés)
-  21. `en/frutillar.html` (inglés)
-  22. `en/saltos-del-petrohue.html` (inglés)
-  23. `privacy-policy.html`
-  Además: `sitemap.xml`, `robots.txt`, `estilo.css`, `afiliados.js`, `analytics.js`.
+- **Páginas (24):** `index.html` (portada) · con versión `en/` recíproca:
+  `puerto-varas.html`, `saltos-del-petrohue.html`, `frutillar.html`,
+  `torres-del-paine.html`, `san-pedro-de-atacama.html` (+ sus 5 `en/*.html`) ·
+  sin versión EN todavía: `chiloe.html`, `pucon-villarrica.html`,
+  `carretera-austral.html`, `valparaiso.html`, `cajon-del-maipo.html`,
+  `valle-del-elqui.html`, `arica.html`, `iquique.html`,
+  `copiapo-bahia-inglesa.html`, `colchagua-pichilemu.html`,
+  `radal-siete-tazas-curico.html`, `termas-de-chillan.html` ·
+  `privacy-policy.html`. Además: `sitemap.xml`, `robots.txt`, `estilo.css`,
+  `afiliados.js`, `analytics.js`.
 - **Plantilla de cada guía:** logo SVG en el header (no emoji — 🇨🇱 no renderiza
   en todas las plataformas, reemplazado 2026-07-08) + `<link rel="icon"
   href="favicon.svg">` en el `<head>` + línea de frescura/autoría bajo el H1
@@ -100,7 +85,7 @@
 - [x] Copiapó / Bahía Inglesa (Región de Atacama — astroturismo, playas turquesa)
 - [x] Ruta del Vino de Colchagua / Pichilemu (Región de O'Higgins — vino, surf)
 - [x] Radal Siete Tazas / Curicó (Región del Maule — ruta del vino, termas)
-- [ ] Termas de Chillán (Región de Ñuble — nieve, termas)
+- [x] Termas de Chillán (Región de Ñuble — nieve, termas)
 - [ ] Concepción / Salto del Laja (Región del Biobío)
 - [ ] Valdivia (Región de Los Ríos — ríos, cervecerías, Parque Oncol)
 
