@@ -2,7 +2,7 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: julio 2026 (pucon-villarrica.html agregado).
+> Última actualización: julio 2026 (carretera-austral.html agregado).
 
 ## 1. Estado actual del sitio
 
@@ -10,7 +10,7 @@
 - **Hosting:** GitHub Pages, dominio propio **guias.viajesypanoramas.cl** ✅
   (repo `PSR109/guias-chile`, rama `main` publica automáticamente). Certificado
   HTTPS aprobado y `https_enforced: true` verificado.
-- **Páginas (14):**
+- **Páginas (15):**
   1. `index.html` — portada con tarjetas + CTA Chile general
   2. `puerto-varas.html` (con hreflang a la versión EN)
   3. `saltos-del-petrohue.html` (con hreflang a la versión EN)
@@ -19,12 +19,13 @@
   6. `san-pedro-de-atacama.html` (con hreflang a la versión EN)
   7. `chiloe.html` (sin versión EN todavía)
   8. `pucon-villarrica.html` (sin versión EN todavía)
-  9. `en/torres-del-paine.html` (inglés)
-  10. `en/san-pedro-de-atacama.html` (inglés)
-  11. `en/puerto-varas.html` (inglés)
-  12. `en/frutillar.html` (inglés)
-  13. `en/saltos-del-petrohue.html` (inglés)
-  14. `privacy-policy.html`
+  9. `carretera-austral.html` (sin versión EN todavía)
+  10. `en/torres-del-paine.html` (inglés)
+  11. `en/san-pedro-de-atacama.html` (inglés)
+  12. `en/puerto-varas.html` (inglés)
+  13. `en/frutillar.html` (inglés)
+  14. `en/saltos-del-petrohue.html` (inglés)
+  15. `privacy-policy.html`
   Además: `sitemap.xml`, `robots.txt`, `estilo.css`, `afiliados.js`, `analytics.js`.
 - **Plantilla de cada guía:** logo SVG en el header (no emoji — 🇨🇱 no renderiza
   en todas las plataformas, reemplazado 2026-07-08) + `<link rel="icon"
@@ -89,7 +90,7 @@
 ### Nuevas guías (misma plantilla que las existentes)
 - [x] Chiloé (castro, palafitos, iglesias UNESCO — alto volumen de búsqueda)
 - [x] Pucón – Villarrica (volcán, termas, deportes de aventura)
-- [ ] Carretera Austral (ruta, tramos, ferries)
+- [x] Carretera Austral (ruta, tramos, ferries)
 - [ ] Valparaíso (cerros, ascensores, day trip desde Santiago)
 - [ ] Cajón del Maipo (embalse El Yeso, termas, day trip desde Santiago)
 - [ ] Valle del Elqui (observatorios, pisco, Vicuña)
