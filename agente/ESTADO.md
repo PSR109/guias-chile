@@ -55,7 +55,11 @@
     ver ACCIONES-HUMANAS #4).
 - **Analítica:** `analytics.js` (beacon sin cookies) envía `pageview`/`click`
   a `https://viajesypanoramas.cl/api/eventos` (doc. en `privacy-policy.html`).
-  CORS del lado del Worker de Panoramas aún pendiente (fuera de este repo).
+  ✅ CORS del lado del Worker de Panoramas resuelto (allowlist incluye
+  `https://guias.viajesypanoramas.cl`, `worker/index.js` commit `88b1b25`,
+  2026-07-08) — verificado en vivo 2026-07-09: preflight OPTIONS y POST real
+  ambos → `204` con `Access-Control-Allow-Origin` correcto. Nota vieja de
+  este archivo quedó desactualizada, no era un bloqueo real.
 - **CI:** `.github/workflows/ci.yml` valida HTML, links internos, IDs de
   afiliado y reciprocidad hreflang en cada PR y push a `main`.
 
