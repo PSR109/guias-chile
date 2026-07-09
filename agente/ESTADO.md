@@ -2,7 +2,7 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: julio 2026 (concepcion-salto-del-laja.html agregado).
+> Última actualización: julio 2026 (valdivia.html agregado).
 
 ## 1. Estado actual del sitio
 
@@ -10,7 +10,7 @@
 - **Hosting:** GitHub Pages, dominio propio **guias.viajesypanoramas.cl** ✅
   (repo `PSR109/guias-chile`, rama `main` publica automáticamente). Certificado
   HTTPS aprobado y `https_enforced: true` verificado.
-- **Páginas (25):** `index.html` (portada) · con versión `en/` recíproca:
+- **Páginas (26):** `index.html` (portada) · con versión `en/` recíproca:
   `puerto-varas.html`, `saltos-del-petrohue.html`, `frutillar.html`,
   `torres-del-paine.html`, `san-pedro-de-atacama.html` (+ sus 5 `en/*.html`) ·
   sin versión EN todavía: `chiloe.html`, `pucon-villarrica.html`,
@@ -18,7 +18,7 @@
   `valle-del-elqui.html`, `arica.html`, `iquique.html`,
   `copiapo-bahia-inglesa.html`, `colchagua-pichilemu.html`,
   `radal-siete-tazas-curico.html`, `termas-de-chillan.html`,
-  `concepcion-salto-del-laja.html` ·
+  `concepcion-salto-del-laja.html`, `valdivia.html` ·
   `privacy-policy.html`. Además: `sitemap.xml`, `robots.txt`, `estilo.css`,
   `afiliados.js`, `analytics.js`.
 - **Plantilla de cada guía:** logo SVG en el header (no emoji — 🇨🇱 no renderiza
@@ -88,7 +88,7 @@
 - [x] Radal Siete Tazas / Curicó (Región del Maule — ruta del vino, termas)
 - [x] Termas de Chillán (Región de Ñuble — nieve, termas)
 - [x] Concepción / Salto del Laja (Región del Biobío)
-- [ ] Valdivia (Región de Los Ríos — ríos, cervecerías, Parque Oncol)
+- [x] Valdivia (Región de Los Ríos — ríos, cervecerías, Parque Oncol)
 
 ### Versiones EN (siguiendo el patrón de en/torres-del-paine.html: hreflang recíproco + sitemap)
 - [x] en/san-pedro-de-atacama.html
