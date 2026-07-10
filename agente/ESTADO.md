@@ -97,7 +97,7 @@ Toda guía nueva nace ya con su `en/*.html` (regla en sección 4).
 - [x] pt/torres-del-paine.html
 - [x] pt/pucon-villarrica.html
 - [x] pt/valparaiso.html
-- [ ] pt/chiloe.html
+- [x] pt/chiloe.html
 - [ ] pt/carretera-austral.html
 - [ ] pt/cajon-del-maipo.html
 - [ ] pt/valle-del-elqui.html
