@@ -85,6 +85,11 @@ th { font-weight: 700; border-bottom: 2px solid var(--acento); }
   display: inline-block; font-size: 11px; font-weight: 700; color: var(--acento-texto);
   background: var(--acento); border-radius: 5px; padding: 2px 7px; text-decoration: none;
 }
+.tarjeta .idioma-pt {
+  position: absolute; top: 42px; right: 14px; z-index: 2;
+  display: inline-block; font-size: 11px; font-weight: 700; color: var(--acento-texto);
+  background: var(--acento); border-radius: 5px; padding: 2px 7px; text-decoration: none;
+}
 .tarjeta .region-tag { display: block; color: var(--suave); font-size: 12px; margin-top: 8px; }
 .faq details { border-bottom: 1px solid var(--borde); padding: 10px 0; }
 .faq summary { cursor: pointer; font-weight: 600; }
