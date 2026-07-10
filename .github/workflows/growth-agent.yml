@@ -100,7 +100,12 @@ jobs:
           github.event.inputs.skip_agent != 'true'
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          GH_TOKEN: ${{ github.token }}
+          # GROWTH_PAT: secret (PAT fine-scoped, scope `repo`) — hace que `gh pr create` abra el PR
+          # como usuario real, no como GITHUB_TOKEN. Eso SÍ dispara el CI del evento `pull_request` y
+          # auto-merge.yml, cerrando el auto-merge solo (sin admin-merge manual del runner). Fallback a
+          # github.token si el secret no existe todavía (el PR queda BLOCKED y lo mergea el runner —
+          # comportamiento actual). Ver HANDOFF §9-1 / memoria guias-growth-pr-blocked-auto-merge.
+          GH_TOKEN: ${{ secrets.GROWTH_PAT || github.token }}
         run: |
           npm i -g @anthropic-ai/claude-code >/dev/null 2>&1
           git config user.name "github-actions[bot]"
