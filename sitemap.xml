@@ -49,20 +49,174 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/torres-del-paine.html"/>
     <changefreq>monthly</changefreq><priority>0.9</priority>
   </url>
-  <url><loc>https://guias.viajesypanoramas.cl/chiloe.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://guias.viajesypanoramas.cl/pucon-villarrica.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://guias.viajesypanoramas.cl/carretera-austral.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://guias.viajesypanoramas.cl/valparaiso.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://guias.viajesypanoramas.cl/cajon-del-maipo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://guias.viajesypanoramas.cl/valle-del-elqui.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://guias.viajesypanoramas.cl/arica.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://guias.viajesypanoramas.cl/iquique.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://guias.viajesypanoramas.cl/copiapo-bahia-inglesa.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://guias.viajesypanoramas.cl/colchagua-pichilemu.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://guias.viajesypanoramas.cl/radal-siete-tazas-curico.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://guias.viajesypanoramas.cl/termas-de-chillan.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://guias.viajesypanoramas.cl/concepcion-salto-del-laja.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://guias.viajesypanoramas.cl/valdivia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/chiloe.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/chiloe.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/chiloe.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/en/chiloe.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/chiloe.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/chiloe.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/pucon-villarrica.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/pucon-villarrica.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/pucon-villarrica.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/en/pucon-villarrica.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/pucon-villarrica.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/pucon-villarrica.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/carretera-austral.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/carretera-austral.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/carretera-austral.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/en/carretera-austral.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/carretera-austral.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/carretera-austral.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/valparaiso.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/valparaiso.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/valparaiso.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/en/valparaiso.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/valparaiso.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/valparaiso.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/cajon-del-maipo.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/cajon-del-maipo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/cajon-del-maipo.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/en/cajon-del-maipo.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/cajon-del-maipo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/cajon-del-maipo.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/valle-del-elqui.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/valle-del-elqui.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/valle-del-elqui.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/en/valle-del-elqui.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/valle-del-elqui.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/valle-del-elqui.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/arica.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/arica.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/arica.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/en/arica.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/arica.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/arica.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/iquique.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/iquique.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/iquique.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/en/iquique.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/iquique.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/iquique.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/copiapo-bahia-inglesa.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/copiapo-bahia-inglesa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/copiapo-bahia-inglesa.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/en/copiapo-bahia-inglesa.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/copiapo-bahia-inglesa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/copiapo-bahia-inglesa.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/colchagua-pichilemu.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/colchagua-pichilemu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/colchagua-pichilemu.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/en/colchagua-pichilemu.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/colchagua-pichilemu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/colchagua-pichilemu.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/radal-siete-tazas-curico.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/radal-siete-tazas-curico.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/radal-siete-tazas-curico.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/en/radal-siete-tazas-curico.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/radal-siete-tazas-curico.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/radal-siete-tazas-curico.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/termas-de-chillan.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/termas-de-chillan.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/termas-de-chillan.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/en/termas-de-chillan.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/termas-de-chillan.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/termas-de-chillan.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/concepcion-salto-del-laja.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/concepcion-salto-del-laja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/concepcion-salto-del-laja.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/en/concepcion-salto-del-laja.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/concepcion-salto-del-laja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/concepcion-salto-del-laja.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/valdivia.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/valdivia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/valdivia.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/en/valdivia.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/valdivia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/valdivia.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
   <url>
     <loc>https://guias.viajesypanoramas.cl/san-pedro-de-atacama.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/san-pedro-de-atacama.html"/>
