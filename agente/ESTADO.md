@@ -2,7 +2,7 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: julio 2026 (valdivia.html agregado).
+> Última actualización: 2026-07-10 (ciclo apps-runner — EN 19/19 completo, PT 5/19 en marcha).
 
 ## 1. Estado actual del sitio
 
@@ -10,17 +10,11 @@
 - **Hosting:** GitHub Pages, dominio propio **guias.viajesypanoramas.cl** ✅
   (repo `PSR109/guias-chile`, rama `main` publica automáticamente). Certificado
   HTTPS aprobado y `https_enforced: true` verificado.
-- **Páginas (26):** `index.html` (portada) · con versión `en/` recíproca:
-  `puerto-varas.html`, `saltos-del-petrohue.html`, `frutillar.html`,
-  `torres-del-paine.html`, `san-pedro-de-atacama.html` (+ sus 5 `en/*.html`) ·
-  sin versión EN todavía: `chiloe.html`, `pucon-villarrica.html`,
-  `carretera-austral.html`, `valparaiso.html`, `cajon-del-maipo.html`,
-  `valle-del-elqui.html`, `arica.html`, `iquique.html`,
-  `copiapo-bahia-inglesa.html`, `colchagua-pichilemu.html`,
-  `radal-siete-tazas-curico.html`, `termas-de-chillan.html`,
-  `concepcion-salto-del-laja.html`, `valdivia.html` ·
-  `privacy-policy.html`. Además: `sitemap.xml`, `robots.txt`, `estilo.css`,
-  `afiliados.js`, `analytics.js`.
+- **Páginas (19 guías):** `index.html` (portada) + 19 guías ES, **todas con
+  versión `en/*.html` recíproca (19/19, PR #27)** y 5 con versión `pt/*.html`
+  (`san-pedro-de-atacama`, `puerto-varas`, `torres-del-paine`,
+  `pucon-villarrica`, `valparaiso` — PR #28) · `privacy-policy.html`. Además:
+  `sitemap.xml`, `robots.txt`, `estilo.css`, `afiliados.js`, `analytics.js`.
 - **Plantilla de cada guía:** logo SVG en el header (no emoji — 🇨🇱 no renderiza
   en todas las plataformas, reemplazado 2026-07-08) + `<link rel="icon"
   href="favicon.svg">` en el `<head>` + línea de frescura/autoría bajo el H1
@@ -94,12 +88,29 @@
 - [x] Concepción / Salto del Laja (Región del Biobío)
 - [x] Valdivia (Región de Los Ríos — ríos, cervecerías, Parque Oncol)
 
-### Versiones EN (siguiendo el patrón de en/torres-del-paine.html: hreflang recíproco + sitemap)
-- [x] en/san-pedro-de-atacama.html
-- [x] en/puerto-varas.html
-- [x] en/frutillar.html
-- [x] en/saltos-del-petrohue.html
-- [ ] en/ + resto de guías a medida que existan
+### Versiones EN — ✅ 19/19 completo (PR #27, 2026-07-10)
+Toda guía nueva nace ya con su `en/*.html` (regla en sección 4).
+
+### Versiones PT-BR (siguiendo el patrón de pt/torres-del-paine.html: hreflang recíproco es/en/pt + sitemap)
+- [x] pt/san-pedro-de-atacama.html
+- [x] pt/puerto-varas.html
+- [x] pt/torres-del-paine.html
+- [x] pt/pucon-villarrica.html
+- [x] pt/valparaiso.html
+- [ ] pt/chiloe.html
+- [ ] pt/carretera-austral.html
+- [ ] pt/cajon-del-maipo.html
+- [ ] pt/valle-del-elqui.html
+- [ ] pt/arica.html
+- [ ] pt/iquique.html
+- [ ] pt/copiapo-bahia-inglesa.html
+- [ ] pt/colchagua-pichilemu.html
+- [ ] pt/radal-siete-tazas-curico.html
+- [ ] pt/termas-de-chillan.html
+- [ ] pt/concepcion-salto-del-laja.html
+- [ ] pt/valdivia.html
+- [ ] pt/saltos-del-petrohue.html
+- [ ] pt/frutillar.html
 
 ### Infraestructura / analítica
 - [x] Analítica ligera: beacon a `/api/eventos` del worker de Panoramas — hecho
