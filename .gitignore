@@ -1,0 +1,4 @@
+# untracked local tooling artifacts (foot-gun: keep out of git add -A)
+.claude/
+CLAUDE.md
+deno.lock

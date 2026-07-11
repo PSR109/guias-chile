@@ -260,36 +260,63 @@
     <loc>https://guias.viajesypanoramas.cl/colchagua-pichilemu.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/colchagua-pichilemu.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/colchagua-pichilemu.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/colchagua-pichilemu.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://guias.viajesypanoramas.cl/en/colchagua-pichilemu.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/colchagua-pichilemu.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/colchagua-pichilemu.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/colchagua-pichilemu.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/pt/colchagua-pichilemu.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/colchagua-pichilemu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/colchagua-pichilemu.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/colchagua-pichilemu.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://guias.viajesypanoramas.cl/radal-siete-tazas-curico.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/radal-siete-tazas-curico.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/radal-siete-tazas-curico.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/radal-siete-tazas-curico.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://guias.viajesypanoramas.cl/en/radal-siete-tazas-curico.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/radal-siete-tazas-curico.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/radal-siete-tazas-curico.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/radal-siete-tazas-curico.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/pt/radal-siete-tazas-curico.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/radal-siete-tazas-curico.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/radal-siete-tazas-curico.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/radal-siete-tazas-curico.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://guias.viajesypanoramas.cl/termas-de-chillan.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/termas-de-chillan.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/termas-de-chillan.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/termas-de-chillan.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://guias.viajesypanoramas.cl/en/termas-de-chillan.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/termas-de-chillan.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/termas-de-chillan.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/termas-de-chillan.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/pt/termas-de-chillan.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/termas-de-chillan.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/termas-de-chillan.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/termas-de-chillan.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
