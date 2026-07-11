@@ -2,7 +2,7 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: 2026-07-11 (ciclo apps-runner — EN 19/19 completo, PT 15/19 en marcha).
+> Última actualización: 2026-07-11 (ciclo apps-runner — EN 19/19 completo, PT 19/19 completo).
 
 ## 1. Estado actual del sitio
 
@@ -11,7 +11,7 @@
   (repo `PSR109/guias-chile`, rama `main` publica automáticamente). Certificado
   HTTPS aprobado y `https_enforced: true` verificado.
 - **Páginas (19 guías):** `index.html` (portada) + 19 guías ES, **todas con
-  versión `en/*.html` recíproca (19/19, PR #27)** y 15 con versión `pt/*.html`
+  versión `en/*.html` recíproca (19/19, PR #27)** y 19 con versión `pt/*.html`
   (`san-pedro-de-atacama`, `puerto-varas`, `torres-del-paine`,
   `pucon-villarrica`, `valparaiso`, `chiloe`, `carretera-austral`,
   `cajon-del-maipo`, `valle-del-elqui`, `arica`, `iquique`,
@@ -109,10 +109,10 @@ Toda guía nueva nace ya con su `en/*.html` (regla en sección 4).
 - [x] pt/colchagua-pichilemu.html
 - [x] pt/radal-siete-tazas-curico.html
 - [x] pt/termas-de-chillan.html
-- [ ] pt/concepcion-salto-del-laja.html
-- [ ] pt/valdivia.html
-- [ ] pt/saltos-del-petrohue.html
-- [ ] pt/frutillar.html
+- [x] pt/concepcion-salto-del-laja.html
+- [x] pt/valdivia.html
+- [x] pt/saltos-del-petrohue.html
+- [x] pt/frutillar.html
 
 ### Infraestructura / analítica
 - [x] Analítica ligera: beacon a `/api/eventos` del worker de Panoramas — hecho
