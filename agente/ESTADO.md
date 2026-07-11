@@ -2,7 +2,7 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: 2026-07-11 (ciclo apps-runner — EN 19/19 completo, PT 9/19 en marcha).
+> Última actualización: 2026-07-11 (ciclo apps-runner — EN 19/19 completo, PT 12/19 en marcha).
 
 ## 1. Estado actual del sitio
 
@@ -11,10 +11,11 @@
   (repo `PSR109/guias-chile`, rama `main` publica automáticamente). Certificado
   HTTPS aprobado y `https_enforced: true` verificado.
 - **Páginas (19 guías):** `index.html` (portada) + 19 guías ES, **todas con
-  versión `en/*.html` recíproca (19/19, PR #27)** y 9 con versión `pt/*.html`
+  versión `en/*.html` recíproca (19/19, PR #27)** y 12 con versión `pt/*.html`
   (`san-pedro-de-atacama`, `puerto-varas`, `torres-del-paine`,
   `pucon-villarrica`, `valparaiso`, `chiloe`, `carretera-austral`,
-  `cajon-del-maipo`, `valle-del-elqui` — 9/19) · `privacy-policy.html`. Además:
+  `cajon-del-maipo`, `valle-del-elqui`, `arica`, `iquique`,
+  `copiapo-bahia-inglesa` — 12/19) · `privacy-policy.html`. Además:
   `sitemap.xml`, `robots.txt`, `estilo.css`, `afiliados.js`, `analytics.js`.
 - **Plantilla de cada guía:** logo SVG en el header (no emoji — 🇨🇱 no renderiza
   en todas las plataformas, reemplazado 2026-07-08) + `<link rel="icon"
@@ -102,9 +103,9 @@ Toda guía nueva nace ya con su `en/*.html` (regla en sección 4).
 - [x] pt/carretera-austral.html
 - [x] pt/cajon-del-maipo.html
 - [x] pt/valle-del-elqui.html
-- [ ] pt/arica.html
-- [ ] pt/iquique.html
-- [ ] pt/copiapo-bahia-inglesa.html
+- [x] pt/arica.html
+- [x] pt/iquique.html
+- [x] pt/copiapo-bahia-inglesa.html
 - [ ] pt/colchagua-pichilemu.html
 - [ ] pt/radal-siete-tazas-curico.html
 - [ ] pt/termas-de-chillan.html
