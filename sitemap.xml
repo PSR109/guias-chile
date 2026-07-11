@@ -197,36 +197,63 @@
     <loc>https://guias.viajesypanoramas.cl/arica.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/arica.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/arica.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/arica.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://guias.viajesypanoramas.cl/en/arica.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/arica.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/arica.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/arica.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/pt/arica.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/arica.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/arica.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/arica.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://guias.viajesypanoramas.cl/iquique.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/iquique.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/iquique.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/iquique.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://guias.viajesypanoramas.cl/en/iquique.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/iquique.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/iquique.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/iquique.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/pt/iquique.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/iquique.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/iquique.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/iquique.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://guias.viajesypanoramas.cl/copiapo-bahia-inglesa.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/copiapo-bahia-inglesa.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/copiapo-bahia-inglesa.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/copiapo-bahia-inglesa.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://guias.viajesypanoramas.cl/en/copiapo-bahia-inglesa.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/copiapo-bahia-inglesa.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/copiapo-bahia-inglesa.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/copiapo-bahia-inglesa.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/pt/copiapo-bahia-inglesa.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/copiapo-bahia-inglesa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/copiapo-bahia-inglesa.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/copiapo-bahia-inglesa.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
