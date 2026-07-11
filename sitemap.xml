@@ -113,12 +113,21 @@
     <loc>https://guias.viajesypanoramas.cl/carretera-austral.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/carretera-austral.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/carretera-austral.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/carretera-austral.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://guias.viajesypanoramas.cl/en/carretera-austral.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/carretera-austral.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/carretera-austral.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/carretera-austral.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/pt/carretera-austral.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/carretera-austral.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/carretera-austral.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/carretera-austral.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
@@ -146,24 +155,42 @@
     <loc>https://guias.viajesypanoramas.cl/cajon-del-maipo.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/cajon-del-maipo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/cajon-del-maipo.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/cajon-del-maipo.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://guias.viajesypanoramas.cl/en/cajon-del-maipo.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/cajon-del-maipo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/cajon-del-maipo.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/cajon-del-maipo.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/pt/cajon-del-maipo.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/cajon-del-maipo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/cajon-del-maipo.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/cajon-del-maipo.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://guias.viajesypanoramas.cl/valle-del-elqui.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/valle-del-elqui.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/valle-del-elqui.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/valle-del-elqui.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://guias.viajesypanoramas.cl/en/valle-del-elqui.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/valle-del-elqui.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/valle-del-elqui.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/valle-del-elqui.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/pt/valle-del-elqui.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/valle-del-elqui.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/valle-del-elqui.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/valle-del-elqui.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
