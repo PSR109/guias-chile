@@ -2,7 +2,7 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: 2026-07-11 (ciclo apps-runner — EN 19/19 completo, PT 19/19 completo).
+> Última actualización: 2026-07-12 (backlog realimentado + limpieza de texto residual; EN 19/19, PT 19/19).
 
 ## 1. Estado actual del sitio
 
@@ -10,13 +10,12 @@
 - **Hosting:** GitHub Pages, dominio propio **guias.viajesypanoramas.cl** ✅
   (repo `PSR109/guias-chile`, rama `main` publica automáticamente). Certificado
   HTTPS aprobado y `https_enforced: true` verificado.
-- **Páginas (19 guías):** `index.html` (portada) + 19 guías ES, **todas con
-  versión `en/*.html` recíproca (19/19, PR #27)** y 19 con versión `pt/*.html`
-  (`san-pedro-de-atacama`, `puerto-varas`, `torres-del-paine`,
-  `pucon-villarrica`, `valparaiso`, `chiloe`, `carretera-austral`,
-  `cajon-del-maipo`, `valle-del-elqui`, `arica`, `iquique`,
-  `copiapo-bahia-inglesa` — 12/19) · `privacy-policy.html`. Además:
-  `sitemap.xml`, `robots.txt`, `estilo.css`, `afiliados.js`, `analytics.js`.
+- **Páginas (57 de guía):** `index.html` (portada) + 19 guías ES, **todas con
+  versión `en/*.html` recíproca (19/19, PR #27) y versión `pt/*.html`
+  recíproca (19/19, PRs #28-#37)** · `privacy-policy.html` · `creditos.html`.
+  Además: `sitemap.xml` (59 URLs), `robots.txt`, `estilo.css`, `afiliados.js`,
+  `analytics.js`. Las 57 páginas de guía llevan trío de structured data
+  FAQ+Breadcrumb+Article (PRs #38/#43/#44).
 - **Plantilla de cada guía:** logo SVG en el header (no emoji — 🇨🇱 no renderiza
   en todas las plataformas, reemplazado 2026-07-08) + `<link rel="icon"
   href="favicon.svg">` en el `<head>` + línea de frescura/autoría bajo el H1
@@ -72,54 +71,37 @@
 
 ## 3. BACKLOG del agente diario (elegir 1 ítem por corrida, mayor impacto en ingresos primero)
 
-### Nuevas guías (misma plantilla que las existentes)
-- [x] Chiloé (castro, palafitos, iglesias UNESCO — alto volumen de búsqueda)
-- [x] Pucón – Villarrica (volcán, termas, deportes de aventura)
-- [x] Carretera Austral (ruta, tramos, ferries)
-- [x] Valparaíso (cerros, ascensores, day trip desde Santiago)
-- [x] Cajón del Maipo (embalse El Yeso, termas, day trip desde Santiago)
-- [x] Valle del Elqui (observatorios, pisco, Vicuña)
+### Nuevas guías — ✅ tandas 2026-07-08/09 completas (14 guías, cobertura
+nacional: las 16 regiones tienen guía; detalle en §1 y en `index.html`)
 
-**Backlog ampliado 2026-07-09 — cobertura nacional (regiones sin guía todavía):**
-- [x] Arica (Región de Arica y Parinacota — playas, Valle de Azapa, geoglifos)
-- [x] Iquique (Región de Tarapacá — duna, Zofri, deportes aéreos, pampa)
-- [x] Copiapó / Bahía Inglesa (Región de Atacama — astroturismo, playas turquesa)
-- [x] Ruta del Vino de Colchagua / Pichilemu (Región de O'Higgins — vino, surf)
-- [x] Radal Siete Tazas / Curicó (Región del Maule — ruta del vino, termas)
-- [x] Termas de Chillán (Región de Ñuble — nieve, termas)
-- [x] Concepción / Salto del Laja (Región del Biobío)
-- [x] Valdivia (Región de Los Ríos — ríos, cervecerías, Parque Oncol)
+**Backlog ampliado 2026-07-12 — destinos nuevos de alto volumen (sin guía todavía):**
+- [ ] Santiago urbano (barrios, cerros, day trips — mayor volumen de búsqueda del país)
+- [ ] Puerto Natales (puerta de Torres del Paine — captura tráfico TdP con intención alta)
+- [ ] Punta Arenas (pingüineras, Estrecho de Magallanes, Fuerte Bulnes)
+- [ ] La Serena / Coquimbo (playas, Punta de Choros, observatorios)
+- [ ] Rapa Nui (alto gasto por visitante; volar desde SCL)
+
+**Mejoras de conversión / SEO interno (1 por corrida, tras agotar destinos o alternando):**
+- [ ] Interlinking "guías cercanas": bloque con 2-3 links a guías de la misma
+      zona en cada guía (ES/EN/PT, respetando hreflang) — sube páginas/sesión
+      y reparte autoridad interna.
+- [ ] CTA temprano: en guías largas, duplicar el bloque `.cta` de afiliados
+      tras la intro (mantener el del final) — hoy el único CTA queda bajo el fold.
 
 ### Versiones EN — ✅ 19/19 completo (PR #27, 2026-07-10)
-Toda guía nueva nace ya con su `en/*.html` (regla en sección 4).
+Toda guía nueva nace ya con su `en/*.html` y su `pt/*.html` recíprocos (regla en sección 4).
 
-### Versiones PT-BR (siguiendo el patrón de pt/torres-del-paine.html: hreflang recíproco es/en/pt + sitemap)
-- [x] pt/san-pedro-de-atacama.html
-- [x] pt/puerto-varas.html
-- [x] pt/torres-del-paine.html
-- [x] pt/pucon-villarrica.html
-- [x] pt/valparaiso.html
-- [x] pt/chiloe.html
-- [x] pt/carretera-austral.html
-- [x] pt/cajon-del-maipo.html
-- [x] pt/valle-del-elqui.html
-- [x] pt/arica.html
-- [x] pt/iquique.html
-- [x] pt/copiapo-bahia-inglesa.html
-- [x] pt/colchagua-pichilemu.html
-- [x] pt/radal-siete-tazas-curico.html
-- [x] pt/termas-de-chillan.html
-- [x] pt/concepcion-salto-del-laja.html
-- [x] pt/valdivia.html
-- [x] pt/saltos-del-petrohue.html
-- [x] pt/frutillar.html
+### Versiones PT-BR — ✅ 19/19 completo (PRs #28-#37, 2026-07-11; patrón
+pt/torres-del-paine.html: hreflang recíproco es/en/pt + sitemap)
 
 ### Infraestructura / analítica
 - [x] Analítica ligera: beacon a `/api/eventos` del worker de Panoramas — hecho
       (`analytics.js`). Pendiente del lado de `app_panoramas`: habilitar CORS
       para este origen (fuera del alcance de este repo).
 - [ ] Links inversos: que App Panoramas enlace a estas guías desde sus
-      fichas de destino (cambio en el repo `app_panoramas`, en curso ahí).
+      fichas de destino (cambio en el repo `app_panoramas` — verificado
+      2026-07-12: AÚN NO empezado allá, cero referencias a
+      `guias.viajesypanoramas.cl` en su `src/`).
 - [ ] Deep links de afiliados producto-a-producto (hoy son búsquedas
       refinadas por atractivo específico, no product ID real — requiere API
       con credenciales de GYG/Viator).
