@@ -82,9 +82,9 @@ nacional: las 16 regiones tienen guía; detalle en §1 y en `index.html`)
 - [ ] Rapa Nui (alto gasto por visitante; volar desde SCL)
 
 **Mejoras de conversión / SEO interno (1 por corrida, tras agotar destinos o alternando):**
-- [ ] Interlinking "guías cercanas": bloque con 2-3 links a guías de la misma
-      zona en cada guía (ES/EN/PT, respetando hreflang) — sube páginas/sesión
-      y reparte autoridad interna.
+- [x] Interlinking "guías cercanas": bloque con 3 links a guías de la misma
+      zona (norte-sur, es/en/pt) en las 57 páginas — PR #46 (2026-07-12,
+      ciclo apps-runner), mergeada, verificado en vivo.
 - [ ] CTA temprano: en guías largas, duplicar el bloque `.cta` de afiliados
       tras la intro (mantener el del final) — hoy el único CTA queda bajo el fold.
 
