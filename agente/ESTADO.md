@@ -51,6 +51,10 @@
     ver ACCIONES-HUMANAS #4).
 - **Analítica:** `analytics.js` (beacon sin cookies) envía `pageview`/`click`
   a `https://viajesypanoramas.cl/api/eventos` (doc. en `privacy-policy.html`).
+  Desde 2026-07-12 además **beacon Cloudflare Web Analytics** (cookieless) en
+  las 62 páginas — TODA guía nueva debe incluir, junto a `analytics.js`, la
+  línea: `<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+  data-cf-beacon='{"token": "713691dd44164a07adfba071603dbf4f"}'></script>`.
   ✅ CORS del lado del Worker de Panoramas resuelto (allowlist incluye
   `https://guias.viajesypanoramas.cl`, `worker/index.js` commit `88b1b25`,
   2026-07-08) — verificado en vivo 2026-07-09: preflight OPTIONS y POST real
