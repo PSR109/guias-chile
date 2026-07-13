@@ -191,6 +191,27 @@
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
+    <loc>https://guias.viajesypanoramas.cl/la-serena-coquimbo.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/la-serena-coquimbo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/la-serena-coquimbo.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/la-serena-coquimbo.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/en/la-serena-coquimbo.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/la-serena-coquimbo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/la-serena-coquimbo.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/la-serena-coquimbo.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guias.viajesypanoramas.cl/pt/la-serena-coquimbo.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/la-serena-coquimbo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/la-serena-coquimbo.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guias.viajesypanoramas.cl/pt/la-serena-coquimbo.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://guias.viajesypanoramas.cl/valle-del-elqui.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://guias.viajesypanoramas.cl/valle-del-elqui.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guias.viajesypanoramas.cl/en/valle-del-elqui.html"/>
