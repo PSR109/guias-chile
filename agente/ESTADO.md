@@ -91,8 +91,9 @@ nacional: las 16 regiones tienen guía; detalle en §1 y en `index.html`)
 - [x] Interlinking "guías cercanas": bloque con 3 links a guías de la misma
       zona (norte-sur, es/en/pt) en las 57 páginas — PR #46 (2026-07-12,
       ciclo apps-runner), mergeada, verificado en vivo.
-- [ ] CTA temprano: en guías largas, duplicar el bloque `.cta` de afiliados
-      tras la intro (mantener el del final) — hoy el único CTA queda bajo el fold.
+- [x] CTA temprano: clon del bloque `.cta` de afiliados tras el hero `<figure>`
+      en las 72 guías (24×es/en/pt), manteniendo el del final — hecho 2026-07-13
+      (commit `b7755c7`, clase `cta-temprano`, transform idempotente, LIVE).
 
 ### Versiones EN — ✅ 19/19 completo (PR #27, 2026-07-10)
 Toda guía nueva nace ya con su `en/*.html` y su `pt/*.html` recíprocos (regla en sección 4).
