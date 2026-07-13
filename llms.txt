@@ -1,0 +1,32 @@
+# Guías de Chile
+
+> Guías prácticas y actualizadas para viajar por Chile, escritas desde el sur (Puerto Varas): qué hacer, cuánto cuesta y cómo reservar en cada destino.
+
+## Guías por destino (norte → sur)
+- [Arica](https://guias.viajesypanoramas.cl/arica.html): Guía de Arica: playas El Laucho y Chinchorro, Valle de Azapa, las momias Chinchorro y el Morro, con precios reales y cómo llegar al norte grande de Chile.
+- [Iquique](https://guias.viajesypanoramas.cl/iquique.html): Guía de Iquique: sandboard y parapente en el Dragón, playa Cavancha, la Zofri y las salitreras UNESCO de Humberstone y Santa Laura, con precios y cómo llegar.
+- [San Pedro de Atacama](https://guias.viajesypanoramas.cl/san-pedro-de-atacama.html): Guía de San Pedro de Atacama: geysers del Tatio, Valle de la Luna, lagunas altiplánicas y tours astronómicos, con precios reales, cómo llegar y la altura.
+- [Copiapó y Bahía Inglesa](https://guias.viajesypanoramas.cl/copiapo-bahia-inglesa.html): Guía de Copiapó y Bahía Inglesa: cielos para ver estrellas, playas turquesa de Caldera y el desierto florido de Atacama, con precios reales y cómo llegar.
+- [Valle del Elqui](https://guias.viajesypanoramas.cl/valle-del-elqui.html): Guía del Valle del Elqui: observatorios Mamalluca y Tololo, ruta del pisco, Vicuña y el museo Gabriela Mistral, con precios y cómo llegar desde La Serena.
+- [Valparaíso](https://guias.viajesypanoramas.cl/valparaiso.html): Guía de Valparaíso: cerros Alegre y Concepción, ascensores históricos, La Sebastiana de Neruda y arte callejero, con precios y cómo llegar desde Santiago.
+- [Santiago](https://guias.viajesypanoramas.cl/santiago.html): Qué ver en Santiago en 1 a 3 días: centro histórico, cerro San Cristóbal, Bellavista y Providencia, cuánto cuesta el metro y los mejores day trips de la zona.
+- [Cajón del Maipo](https://guias.viajesypanoramas.cl/cajon-del-maipo.html): Guía del Cajón del Maipo: Embalse El Yeso, Baños Morales, El Morado y Cascada de las Ánimas, con precios reales y cómo llegar desde Santiago en el día.
+- [Colchagua y Pichilemu](https://guias.viajesypanoramas.cl/colchagua-pichilemu.html): Guía de Colchagua y Pichilemu: viñas y degustación en Santa Cruz, el Museo de Colchagua y el surf de Punta de Lobos, con precios reales y cómo llegar.
+- [Radal Siete Tazas y Curicó](https://guias.viajesypanoramas.cl/radal-siete-tazas-curico.html): Guía de Radal Siete Tazas y Curicó: pozones y cascadas del río Claro, la ruta del vino y las termas de Panimávida, con precios reales y cómo llegar al Maule.
+- [Concepción y Salto del Laja](https://guias.viajesypanoramas.cl/concepcion-salto-del-laja.html): Guía de Concepción y Salto del Laja: Barrio Universitario, el legado minero de Lota, playas de Penco y las cascadas del Laja, con precios y cómo llegar.
+- [Termas de Chillán](https://guias.viajesypanoramas.cl/termas-de-chillan.html): Guía de Termas de Chillán: el mayor centro de esquí de Chile, aguas termales volcánicas y senderos en la Reserva Ñuble, con precios reales y cómo llegar.
+- [Pucón y Villarrica](https://guias.viajesypanoramas.cl/pucon-villarrica.html): Guía de Pucón y Villarrica: ascenso al volcán, termas naturales, rafting en el Trancura y playas de arena volcánica, con precios reales y cómo llegar.
+- [Valdivia](https://guias.viajesypanoramas.cl/valdivia.html): Guía de Valdivia: Muelle y Feria Fluvial, la cervecería Kunstmann, el bosque valdiviano de Oncol y los fuertes de Niebla y Corral, con precios y cómo llegar.
+- [Frutillar](https://guias.viajesypanoramas.cl/frutillar.html): Guía de Frutillar: Teatro del Lago, museo Colonial Alemán, dónde comer el mejor kuchen y cómo llegar desde Puerto Varas. Itinerario de un día con precios.
+- [Puerto Varas](https://guias.viajesypanoramas.cl/puerto-varas.html): Guía local de Puerto Varas: los 10 mejores panoramas, cuánto cuestan, cuándo ir y qué excursiones valen la pena: Osorno, Petrohué, Frutillar y Chiloé.
+- [Saltos del Petrohué](https://guias.viajesypanoramas.cl/saltos-del-petrohue.html): Guía de los Saltos del Petrohué: cuánto cuesta la entrada, cómo llegar desde Puerto Varas, cuánto tiempo necesitas y cómo sumar el volcán Osorno al plan.
+- [Chiloé](https://guias.viajesypanoramas.cl/chiloe.html): Guía de Chiloé: palafitos e iglesia de Castro, iglesias UNESCO, curanto y mitología chilota, y cómo cruzar el Canal de Chacao en ferry, con precios reales.
+- [Carretera Austral](https://guias.viajesypanoramas.cl/carretera-austral.html): Guía de la Carretera Austral: tramos de Puerto Montt a Villa O'Higgins, ferries, Futaleufú, Capillas de Mármol y Cerro Castillo, con precios reales y consejos.
+- [Torres del Paine](https://guias.viajesypanoramas.cl/torres-del-paine.html): Cómo organizar Torres del Paine sin agencias caras: entradas, reservas obligatorias, trekking a base Torres, circuito W, tours de día desde Puerto Natales y cuánto cuesta todo.
+
+## Idiomas
+- English: https://guias.viajesypanoramas.cl/en/
+- Português: https://guias.viajesypanoramas.cl/pt/
+
+## Sobre
+Guías de Chile es parte de Patagonia SimRacing / viajesypanoramas.cl, escrito desde Puerto Varas.
