@@ -2,7 +2,7 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: 2026-07-12 (guía Puerto Natales nueva es/en/pt + interlinking con Torres del Paine; EN 21/21, PT 21/21).
+> Última actualización: 2026-07-13 (guía La Serena / Coquimbo nueva es/en/pt + interlinking con Valle del Elqui; EN 22/22, PT 22/22).
 
 ## 1. Estado actual del sitio
 
@@ -10,11 +10,11 @@
 - **Hosting:** GitHub Pages, dominio propio **guias.viajesypanoramas.cl** ✅
   (repo `PSR109/guias-chile`, rama `main` publica automáticamente). Certificado
   HTTPS aprobado y `https_enforced: true` verificado.
-- **Páginas (63 de guía):** `index.html` (portada) + 21 guías ES (19 + Santiago +
-  Puerto Natales, ciclo apps-runner 2026-07-12), **todas con versión `en/*.html`
-  recíproca (21/21, base PR #27 + Santiago + Puerto Natales) y versión `pt/*.html`
-  recíproca (21/21, base PRs #28-#37 + Santiago + Puerto Natales)** ·
-  `privacy-policy.html` · `creditos.html`.
+- **Páginas (66 de guía):** `index.html` (portada) + 22 guías ES (19 + Santiago +
+  Puerto Natales + Punta Arenas + La Serena/Coquimbo, ciclos apps-runner
+  2026-07-12/13), **todas con versión `en/*.html` recíproca (22/22, base PR
+  #27 + guías nuevas) y versión `pt/*.html` recíproca (22/22, base PRs
+  #28-#37 + guías nuevas)** · `privacy-policy.html` · `creditos.html`.
   Además: `sitemap.xml` (65 URLs), `robots.txt`, `estilo.css`, `afiliados.js`,
   `analytics.js`. Las guías llevan trío de structured data
   FAQ+Breadcrumb+Article (PRs #38/#43/#44).
@@ -84,8 +84,8 @@ nacional: las 16 regiones tienen guía; detalle en §1 y en `index.html`)
 - [x] Santiago urbano (barrios, cerros, day trips — mayor volumen de búsqueda del país) — hecha, ciclo apps-runner 2026-07-12
 - [x] Puerto Natales (puerta de Torres del Paine) — hecha, ciclo apps-runner 2026-07-12
 - [x] Punta Arenas (pingüineras, Estrecho de Magallanes, Fuerte Bulnes) — hecha, ciclo apps-runner 2026-07-13
-- [ ] La Serena / Coquimbo (playas, Punta de Choros, observatorios)
-- [ ] Rapa Nui (alto gasto por visitante; volar desde SCL)
+- [x] La Serena / Coquimbo (playas, Punta de Choros, observatorios) — hecha, ciclo apps-runner 2026-07-13, interlinking con Valle del Elqui
+- [ ] Rapa Nui (alto gasto por visitante; volar desde SCL) — único destino que falta
 
 **Mejoras de conversión / SEO interno (1 por corrida, tras agotar destinos o alternando):**
 - [x] Interlinking "guías cercanas": bloque con 3 links a guías de la misma
