@@ -83,7 +83,7 @@ nacional: las 16 regiones tienen guía; detalle en §1 y en `index.html`)
 **Backlog ampliado 2026-07-12 — destinos nuevos de alto volumen (sin guía todavía):**
 - [x] Santiago urbano (barrios, cerros, day trips — mayor volumen de búsqueda del país) — hecha, ciclo apps-runner 2026-07-12
 - [x] Puerto Natales (puerta de Torres del Paine) — hecha, ciclo apps-runner 2026-07-12
-- [ ] Punta Arenas (pingüineras, Estrecho de Magallanes, Fuerte Bulnes)
+- [x] Punta Arenas (pingüineras, Estrecho de Magallanes, Fuerte Bulnes) — hecha, ciclo apps-runner 2026-07-13
 - [ ] La Serena / Coquimbo (playas, Punta de Choros, observatorios)
 - [ ] Rapa Nui (alto gasto por visitante; volar desde SCL)
 
