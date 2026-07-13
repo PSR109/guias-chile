@@ -105,10 +105,10 @@ pt/torres-del-paine.html: hreflang recíproco es/en/pt + sitemap)
 - [x] Analítica ligera: beacon a `/api/eventos` del worker de Panoramas — hecho
       (`analytics.js`). Pendiente del lado de `app_panoramas`: habilitar CORS
       para este origen (fuera del alcance de este repo).
-- [ ] Links inversos: que App Panoramas enlace a estas guías desde sus
-      fichas de destino (cambio en el repo `app_panoramas` — verificado
-      2026-07-12: AÚN NO empezado allá, cero referencias a
-      `guias.viajesypanoramas.cl` en su `src/`).
+- [x] Links inversos: App Panoramas enlaza a estas guías desde sus landings
+      `/region/:slug` (mapa región→guía en `worker/lib/region-guias.mjs`,
+      horneado en prerender ES + espejado en el SPA localizado) — hecho
+      2026-07-13, PR #59 de `app_panoramas` mergeada (13 gates CI verdes).
 - [ ] Deep links de afiliados producto-a-producto (hoy son búsquedas
       refinadas por atractivo específico, no product ID real — requiere API
       con credenciales de GYG/Viator).
