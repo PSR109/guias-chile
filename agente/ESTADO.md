@@ -2,7 +2,7 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: 2026-07-12 (guía Santiago urbano nueva es/en/pt + interlinking; EN 20/20, PT 20/20).
+> Última actualización: 2026-07-12 (guía Puerto Natales nueva es/en/pt + interlinking con Torres del Paine; EN 21/21, PT 21/21).
 
 ## 1. Estado actual del sitio
 
@@ -10,11 +10,12 @@
 - **Hosting:** GitHub Pages, dominio propio **guias.viajesypanoramas.cl** ✅
   (repo `PSR109/guias-chile`, rama `main` publica automáticamente). Certificado
   HTTPS aprobado y `https_enforced: true` verificado.
-- **Páginas (60 de guía):** `index.html` (portada) + 20 guías ES (19 + Santiago,
-  ciclo apps-runner 2026-07-12), **todas con versión `en/*.html` recíproca
-  (20/20, base PR #27 + Santiago) y versión `pt/*.html` recíproca (20/20,
-  base PRs #28-#37 + Santiago)** · `privacy-policy.html` · `creditos.html`.
-  Además: `sitemap.xml` (62 URLs), `robots.txt`, `estilo.css`, `afiliados.js`,
+- **Páginas (63 de guía):** `index.html` (portada) + 21 guías ES (19 + Santiago +
+  Puerto Natales, ciclo apps-runner 2026-07-12), **todas con versión `en/*.html`
+  recíproca (21/21, base PR #27 + Santiago + Puerto Natales) y versión `pt/*.html`
+  recíproca (21/21, base PRs #28-#37 + Santiago + Puerto Natales)** ·
+  `privacy-policy.html` · `creditos.html`.
+  Además: `sitemap.xml` (65 URLs), `robots.txt`, `estilo.css`, `afiliados.js`,
   `analytics.js`. Las guías llevan trío de structured data
   FAQ+Breadcrumb+Article (PRs #38/#43/#44).
 - **Plantilla de cada guía:** logo SVG en el header (no emoji — 🇨🇱 no renderiza
@@ -81,7 +82,7 @@ nacional: las 16 regiones tienen guía; detalle en §1 y en `index.html`)
 
 **Backlog ampliado 2026-07-12 — destinos nuevos de alto volumen (sin guía todavía):**
 - [x] Santiago urbano (barrios, cerros, day trips — mayor volumen de búsqueda del país) — hecha, ciclo apps-runner 2026-07-12
-- [ ] Puerto Natales (puerta de Torres del Paine — captura tráfico TdP con intención alta)
+- [x] Puerto Natales (puerta de Torres del Paine) — hecha, ciclo apps-runner 2026-07-12
 - [ ] Punta Arenas (pingüineras, Estrecho de Magallanes, Fuerte Bulnes)
 - [ ] La Serena / Coquimbo (playas, Punta de Choros, observatorios)
 - [ ] Rapa Nui (alto gasto por visitante; volar desde SCL)
