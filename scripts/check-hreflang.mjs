@@ -40,8 +40,11 @@ for (const name of enFiles) {
   }
   const esHtml = readFileSync(esPath, "utf8");
   const enHtml = readFileSync(enPath, "utf8");
-  const esUrl = `${DOMAIN}/${name}`;
-  const enUrl = `${DOMAIN}/en/${name}`;
+  // El hub de portada (index.html) usa URLs de directorio (/ y /en/), no el
+  // nombre de archivo — Google canonicaliza la home sin "index.html".
+  const isHome = name === "index.html";
+  const esUrl = isHome ? `${DOMAIN}/` : `${DOMAIN}/${name}`;
+  const enUrl = isHome ? `${DOMAIN}/en/` : `${DOMAIN}/en/${name}`;
 
   if (!hasAlternate(esHtml, "en", enUrl)) {
     errors.push(`${name}: falta <link rel="alternate" hreflang="en" href="${enUrl}">`);
@@ -54,6 +57,27 @@ for (const name of enFiles) {
   }
   if (!hasAlternate(enHtml, "en", enUrl)) {
     errors.push(`en/${name}: falta <link rel="alternate" hreflang="en" href="${enUrl}"> (self-reference)`);
+  }
+}
+
+// Cluster de portada (home hubs ES/EN/PT): el loop de arriba (EN-only) ya cubre
+// la reciprocidad ES↔EN de index.html con URLs de directorio; acá verificamos
+// además el brazo pt-BR y el x-default en las tres portadas, que ese loop no toca.
+const PT_DIR = join(ROOT, "pt");
+if (existsSync(join(EN_DIR, "index.html")) && existsSync(PT_DIR)) {
+  const esHome = `${DOMAIN}/`, enHome = `${DOMAIN}/en/`, ptHome = `${DOMAIN}/pt/`;
+  const homes = [
+    ["index.html", join(ROOT, "index.html")],
+    ["en/index.html", join(EN_DIR, "index.html")],
+    ["pt/index.html", join(PT_DIR, "index.html")],
+  ];
+  for (const [label, p] of homes) {
+    if (!existsSync(p)) { errors.push(`${label}: falta el hub de portada`); continue; }
+    const html = readFileSync(p, "utf8");
+    if (!hasAlternate(html, "es", esHome)) errors.push(`${label}: falta hreflang="es" href="${esHome}"`);
+    if (!hasAlternate(html, "en", enHome)) errors.push(`${label}: falta hreflang="en" href="${enHome}"`);
+    if (!hasAlternate(html, "pt-BR", ptHome)) errors.push(`${label}: falta hreflang="pt-BR" href="${ptHome}"`);
+    if (!hasAlternate(html, "x-default", esHome)) errors.push(`${label}: falta hreflang="x-default" href="${esHome}"`);
   }
 }
 
