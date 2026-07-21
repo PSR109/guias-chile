@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test test/",
+    "test": "node --test \"test/**/*.test.mjs\"",
     "compile": "node compile-html.mjs",
     "pdf": "node build-pdf.mjs",
     "mockups": "node make-mockups.mjs",
