@@ -1,0 +1,16 @@
+{
+  "name": "trip-kits",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/",
+    "compile": "node compile-html.mjs",
+    "pdf": "node build-pdf.mjs",
+    "mockups": "node make-mockups.mjs",
+    "all": "node compile-html.mjs && node build-pdf.mjs && node make-mockups.mjs"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "playwright-core": "^1.61.1"
+  }
+}
