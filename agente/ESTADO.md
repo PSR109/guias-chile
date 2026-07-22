@@ -2,8 +2,8 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: 2026-07-21 (llms.txt: sumadas las 4 guías que faltaban —
-> Puerto Natales, Punta Arenas, La Serena/Coquimbo, Rapa Nui, quedaba en 20/24 — ver sección 1. Trip-kits en sección 5).
+> Última actualización: 2026-07-21 (SEO técnico: meta description recortada a
+> <=160 car. en TdP/Puerto Natales/Punta Arenas/La Serena-Coquimbo/Rapa Nui × 3 idiomas, 15 páginas fuera del trim de `6171dda`; JSON-LD Article sincronizado. Trip-kits en sección 5).
 
 ## 1. Estado actual del sitio
 
