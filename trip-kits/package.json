@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test test/",
+    "test": "node --test \"test/**/*.test.mjs\"",
     "compile": "node compile-html.mjs",
     "pdf": "node build-pdf.mjs",
     "mockups": "node make-mockups.mjs",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "cheerio": "^1.2.0",
+    "pdf-lib": "^1.17.1",
     "playwright-core": "^1.61.1"
   }
 }

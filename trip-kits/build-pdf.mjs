@@ -1,9 +1,29 @@
-import { mkdirSync, readdirSync, statSync } from 'node:fs';
+import { mkdirSync, readdirSync, statSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { pathToFileURL, fileURLToPath } from 'node:url';
 import { chromium } from 'playwright-core';
+import { PDFDocument } from 'pdf-lib';
 import { chromiumPath } from './lib/chromium.mjs';
 import { KITS } from './kits.config.mjs';
+
+// Metadata embebida en el PDF (distinta del <title> HTML que ya fija Chromium):
+// mejora discoverability cuando el PDF se comparte/cruzea fuera de Etsy/Gumroad
+// (Document Properties del lector, crawlers que indexan el PDF directo) — cero
+// dependencia de la cuenta Gumroad, es contenido propio del archivo.
+async function stampMetadata(pdfPath, kit) {
+  const bytes = readFileSync(pdfPath);
+  const doc = await PDFDocument.load(bytes);
+  doc.setTitle(kit.title);
+  doc.setSubject(kit.subtitle);
+  doc.setAuthor('Chile Trip Kits — viajesypanoramas.cl');
+  doc.setCreator('guias.viajesypanoramas.cl');
+  doc.setKeywords([kit.title, 'Chile itinerary', 'printable travel guide', 'PDF trip planner', kit.subtitle]);
+  // Producer: pdf-lib siempre pisa este campo con su propia firma al hacer save()
+  // (no hay flag que lo evite en 1.17.x) — inofensivo, es un campo tecnico estandar,
+  // no afecta discoverability. Title/Author/Subject/Keywords/Creator si quedan fijos.
+  const out = await doc.save();
+  writeFileSync(pdfPath, out);
+}
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const BUILD = join(HERE, 'build');
@@ -30,6 +50,7 @@ for (const kit of KITS) {
     footerTemplate: `<div style="width:100%;text-align:center;font-size:8px;color:#5b6b7b;font-family:Arial;">
       ${kit.title} · guias.viajesypanoramas.cl · page <span class="pageNumber"></span>/<span class="totalPages"></span></div>`,
   });
+  await stampMetadata(out, kit);
   const kb = (statSync(out).size / 1024).toFixed(0);
   console.log(`pdf: ${out} (${kb} KB)`);
   if (statSync(out).size > 20 * 1024 * 1024) throw new Error(`${out} supera 20MB (limite Etsy)`);

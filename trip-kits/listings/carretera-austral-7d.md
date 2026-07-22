@@ -18,7 +18,7 @@ WHAT'S INSIDE (A4 PDF, instant download):
 • Bonus places along the route from our 25,000-place Chile catalog
 • FAQ: do you need a 4x4? how many days is enough? is there signal?
 
-Compiled by the team behind guias.viajesypanoramas.cl — free practical guides to Chile used by thousands of travelers monthly.
+WHY TRUST THIS: it's compiled by the team behind guias.viajesypanoramas.cl, a free Chile travel-guide site used by thousands of travelers every month. This kit distills those guides into one route you can follow off-line.
 
 INSTANT DOWNLOAD — print it or keep it on your phone (offline!). Personal use only.
 

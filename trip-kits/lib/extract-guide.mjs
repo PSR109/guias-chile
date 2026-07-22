@@ -20,6 +20,14 @@ export function extractGuide(lang, slug) {
   //    guias cercanas, notas de disclosure, scripts.
   $('.cta, .promo, .nota, section.cercanas, figure.foto, script, .boton-fila').remove();
 
+  // 1b) Red de seguridad estructural: cualquier <img> residual dentro de <main> se elimina,
+  //     no solo los que vienen envueltos en figure.foto. Hoy esto es un no-op (verificado:
+  //     todo <img> en las 9 guias vive dentro de figure.foto), pero si una guia futura agrega
+  //     un <img> suelto (edicion de contenido, nueva seccion), esta linea evita que se cuele
+  //     en un PDF vendido — la regla dura del proyecto es "foto exacta self-hosted o ninguna",
+  //     y el unico <img> permitido en un kit es la portada, agregada aparte por compile-html.mjs.
+  $('main img').remove();
+
   // 2) FAQ: capturar y convertir <details> (colapsan en PDF) a divs visibles.
   const faq = [];
   $('div.faq details').each((_, d) => {
