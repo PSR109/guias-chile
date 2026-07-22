@@ -84,10 +84,10 @@ esta corrida avanzó todo lo autónomo posible en el mismo repo/día.
 2. Subir los 10 PDFs de `trip-kits/dist/` (regenerar con `npm run all` si pasó
    tiempo — guías/catálogo Panoramas pueden haber cambiado) + copy de los 10
    `listings/*.md`.
-3. Mergear `trip-kits-cta` (5 kits originales) y — trabajo nuevo pendiente,
-   no arrancado — extender `inject-kit-cta.mjs` para inyectar el mismo CTA en
-   las guías de los 5 kits nuevos: `santiago`, `cajon-del-maipo`, `valparaiso`,
-   `colchagua-pichilemu`, `pucon-villarrica`, `la-serena-coquimbo`,
-   `valle-del-elqui`, `rapa-nui` (×3 idiomas cada una).
+3. **CERRADO 2026-07-21 (continuación autónoma)**: `trip-kits-cta` mergeó
+   `main` (trae el catálogo 10-kit, `f0eea60`) y `inject-kit-cta.mjs` ya
+   inyecta CTA en las 8 guías de los 5 kits nuevos también (24 archivos
+   nuevos, 27 preexistentes idempotentes). Commit `d4b4a5e`, pusheado a
+   `origin/trip-kits-cta`. Sigue sin mergear a `main` — mismo gate humano.
 4. Una vez con URLs de producto reales: recién ahí vale la pena el structured
-   data / landing page pública mencionada arriba.
+   data / landing page pública mencionada arriba, y mergear `trip-kits-cta`.
