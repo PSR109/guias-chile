@@ -2,9 +2,8 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: 2026-07-21 (nueva guía Puerto Montt ES/EN/PT — hallazgo de
-> auditoría: ciudad mencionada en texto plano sin link propio en puerto-varas.html
-> y carretera-austral.html, ambas ahora enlazan; interlinking también en chiloe.html).
+> Última actualización: 2026-07-21 (auditoría externa de Patricio: newsletter +
+> mapa + comentarios agregados a las 25 guías, ver sección 1; commit `bbc1e67`).
 
 ## 1. Estado actual del sitio
 
@@ -57,13 +56,19 @@
   las 62 páginas — TODA guía nueva debe incluir, junto a `analytics.js`, la
   línea: `<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
   data-cf-beacon='{"token": "713691dd44164a07adfba071603dbf4f"}'></script>`.
-  ✅ CORS del lado del Worker de Panoramas resuelto (allowlist incluye
-  `https://guias.viajesypanoramas.cl`, `worker/index.js` commit `88b1b25`,
-  2026-07-08) — verificado en vivo 2026-07-09: preflight OPTIONS y POST real
-  ambos → `204` con `Access-Control-Allow-Origin` correcto. Nota vieja de
-  este archivo quedó desactualizada, no era un bloqueo real.
+  ✅ CORS resuelto (allowlist en `worker/index.js` de Panoramas incluye
+  `https://guias.viajesypanoramas.cl`) — verificado en vivo 2026-07-09.
 - **CI:** `.github/workflows/ci.yml` valida HTML, links internos, IDs de
   afiliado y reciprocidad hreflang en cada PR y push a `main`.
+- **Newsletter/mapa/comentarios (2026-07-21, commit `bbc1e67`):** las 25 guías
+  (×3 idiomas) llevan mapa embebido (iframe Google Maps sin API key),
+  formulario de boletín inline + popup no invasivo (`boletin.js`, POST a
+  `/api/eventos` type=`newsletter` — mismo pipeline `public.leads` de
+  Panoramas, migración `0024` de ese repo) y sección de comentarios (Giscus:
+  Discussions habilitado, repo-id/category-id reales ya cableados).
+  **Pendiente 100% humano:** instalar la app en
+  https://github.com/apps/giscus → repo `guias-chile`, para que giscus pueda
+  publicar hilos (hoy loguea "not installed", no rompe la página).
 
 ## 2. ACCIONES HUMANAS pendientes (solo Patricio puede hacerlas)
 
@@ -125,17 +130,11 @@ en las páginas. No queda destino evidente pendiente en este backlog.
 ## 5. Trip Kits (PDFs vendibles, Etsy/Gumroad) — `trip-kits/`
 
 Pipeline en `trip-kits/` (README propio ahí) convierte guías EN + catálogo
-Panoramas en PDFs de itinerario. **10 SKUs** (5 del plan original 2026-07-21 +
-5 nuevos de la misma corrida: Santiago+Cajón del Maipo, Valparaíso+Colchagua,
-Pucón-Villarrica, La Serena+Elqui, Rapa Nui — cubren ahora también Chile
-central y Rapa Nui, no solo Patagonia/Atacama). Todo verificado local: `npm
-test`, `npm run all` (compila HTML→PDF→mockups), 5 gates de `ci.yml` — los 10
-kits compilan sin error de heading y los 10 PDFs quedan 300-700 KB (límite
-Etsy 20 MB). PDFs llevan metadata propia (Title/Author/Subject/Keywords vía
-`pdf-lib`) para discoverability fuera de Etsy/Gumroad. Label de marca en la
-portada: "Chile Trip Kits" (ya no "Patagonia Trip Kits" — el catálogo excede
-Patagonia; la tienda Gumroad sigue siendo `patagoniatrips.gumroad.com`, cuenta
-real de Patricio, sin tocar).
+Panoramas en PDFs de itinerario. **10 SKUs** (Patagonia/Atacama + Chile
+central + Rapa Nui). Verificado local (`npm test`, `npm run all`, 5 gates
+`ci.yml`): los 10 compilan sin error, PDFs 300-700 KB (límite Etsy 20 MB),
+metadata propia (`pdf-lib`). Marca en portada: "Chile Trip Kits". Tienda
+Gumroad `patagoniatrips.gumroad.com` (cuenta real de Patricio, sin tocar).
 
 **Bloqueado en 100% humano:** Patricio crea la cuenta Gumroad
 (`patagoniatrips`) → sube los 10 PDFs de `trip-kits/dist/` con el copy de
