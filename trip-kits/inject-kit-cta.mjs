@@ -16,6 +16,14 @@ const MAP = {
   'frutillar': 'chiloe-lakes-5d',
   'saltos-del-petrohue': 'chiloe-lakes-5d',
   'san-pedro-de-atacama': 'atacama-5d',
+  'santiago': 'santiago-cajon-4d',
+  'cajon-del-maipo': 'santiago-cajon-4d',
+  'valparaiso': 'valpo-wine-4d',
+  'colchagua-pichilemu': 'valpo-wine-4d',
+  'pucon-villarrica': 'pucon-volcano-4d',
+  'la-serena-coquimbo': 'elqui-stars-4d',
+  'valle-del-elqui': 'elqui-stars-4d',
+  'rapa-nui': 'rapa-nui-4d',
 };
 
 const TEXTS = {
