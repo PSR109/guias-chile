@@ -2,8 +2,9 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: 2026-07-21 (SEO técnico: meta description recortada a
-> <=160 car. en TdP/Puerto Natales/Punta Arenas/La Serena-Coquimbo/Rapa Nui × 3 idiomas, 15 páginas fuera del trim de `6171dda`; JSON-LD Article sincronizado. Trip-kits en sección 5).
+> Última actualización: 2026-07-21 (nueva guía Puerto Montt ES/EN/PT — hallazgo de
+> auditoría: ciudad mencionada en texto plano sin link propio en puerto-varas.html
+> y carretera-austral.html, ambas ahora enlazan; interlinking también en chiloe.html).
 
 ## 1. Estado actual del sitio
 
@@ -11,16 +12,13 @@
 - **Hosting:** GitHub Pages, dominio propio **guias.viajesypanoramas.cl** ✅
   (repo `PSR109/guias-chile`, rama `main` publica automáticamente). Certificado
   HTTPS aprobado y `https_enforced: true` verificado.
-- **Páginas (69 de guía):** `index.html` (portada) + 23 guías ES (19 + Santiago +
-  Puerto Natales + Punta Arenas + La Serena/Coquimbo + Rapa Nui, ciclos
-  apps-runner 2026-07-12/13), **todas con versión `en/*.html` recíproca (23/23,
-  base PR #27 + guías nuevas) y versión `pt/*.html` recíproca (23/23, base PRs
-  #28-#37 + guías nuevas)** · `privacy-policy.html` · `creditos.html`.
-  Además: `sitemap.xml` (68 URLs), `robots.txt`, `llms.txt` (discovery para
-  crawlers de IA, 24/24 guías ES desde 2026-07-21 — **sin gate de CI**, a mano
+- **Páginas (72 de guía):** `index.html` (portada) + 24 guías ES (23 previas +
+  Puerto Montt, 2026-07-21), **todas con versión `en/*.html` recíproca (24/24)
+  y versión `pt/*.html` recíproca (24/24)** · `privacy-policy.html` ·
+  `creditos.html`. Además: `sitemap.xml` (79 URLs), `robots.txt`, `llms.txt`
+  (discovery para crawlers de IA, 25/25 guías ES — **sin gate de CI**, a mano
   con cada guía nueva), `estilo.css`, `afiliados.js`, `analytics.js`. Las guías
-  llevan trío de structured data
-  FAQ+Breadcrumb+Article (PRs #38/#43/#44).
+  llevan trío de structured data FAQ+Breadcrumb+Article (PRs #38/#43/#44).
 - **Plantilla de cada guía:** logo SVG en el header (no emoji — 🇨🇱 no renderiza
   en todas las plataformas, reemplazado 2026-07-08) + `<link rel="icon"
   href="favicon.svg">` en el `<head>` + línea de frescura/autoría bajo el H1
@@ -80,13 +78,14 @@
 
 ## 3. BACKLOG del agente diario (elegir 1 ítem por corrida, mayor impacto en ingresos primero)
 
-### Guías (24 destinos, cobertura nacional + insular completa)
-✅ Todos los destinos de alto volumen cubiertos (tandas 2026-07-08 a 07-13:
-Santiago, Puerto Natales, Punta Arenas, La Serena/Coquimbo, Rapa Nui + 19
-previos). Cada guía nace con `en/*.html` + `pt/*.html` recíprocos (19/19 EN
-PR #27, 19/19 PT-BR PRs #28-#37; luego +5 con las guías nuevas = 24/24 ambos).
-Interlinking "guías cercanas" (PR #46) y CTA temprano de afiliados (commit
-`b7755c7`) ya en las 72 páginas. No queda destino pendiente en este backlog.
+### Guías (25 destinos, cobertura nacional + insular completa)
+✅ Todos los destinos de alto volumen cubiertos, + Puerto Montt (2026-07-21,
+hallazgo de auditoría: puerta de entrada a Los Lagos/Chiloé/Carretera Austral
+mencionada sin link en 2+ guías, ahora con guía propia + interlinking real
+desde puerto-varas.html, carretera-austral.html y chiloe.html). Cada guía
+nace con `en/*.html` + `pt/*.html` recíprocos (24/24 ambos). Interlinking
+"guías cercanas" (PR #46) y CTA temprano de afiliados (commit `b7755c7`) ya
+en las páginas. No queda destino evidente pendiente en este backlog.
 
 ### Infraestructura / analítica
 - [x] Analítica ligera (`analytics.js` → `/api/eventos` del worker de Panoramas, CORS resuelto).
