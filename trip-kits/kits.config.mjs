@@ -190,6 +190,121 @@ const ATACAMA_DAYS = [
     ]),
 ];
 
+const SANTIAGO_CAJON_ROUTE = [
+  R(1, 'Santiago (downtown)', -33.4372, -70.6506),
+  R(2, 'Santiago (Bellavista / San Cristóbal)', -33.4258, -70.6329),
+  R(3, 'Cajón del Maipo — El Yeso', -33.68, -70.1),
+  R(4, 'Cajón del Maipo — San Alfonso', -33.75, -70.35),
+];
+
+const VALPO_WINE_ROUTE = [
+  R(1, 'Valparaíso', -33.0472, -71.6127),
+  R(2, 'Viña del Mar', -33.0245, -71.5518),
+  R(3, 'Santa Cruz (Colchagua Valley)', -34.6389, -71.3647),
+  R(4, 'Pichilemu', -34.3833, -72.0),
+];
+
+const PUCON_ROUTE = [
+  R(1, 'Pucón (town + volcano views)', -39.2823, -71.9758),
+  R(2, 'Hot springs near Pucón', -39.38, -71.75),
+  R(3, 'Río Trancura', -39.3, -71.7),
+  R(4, 'Huerquehue National Park', -39.15, -71.68),
+];
+
+const ELQUI_ROUTE = [
+  R(1, 'La Serena', -29.9027, -71.2519),
+  R(2, 'Coquimbo / Punta de Choros', -29.9533, -71.3436),
+  R(3, 'Vicuña (Elqui Valley)', -30.0319, -70.7081),
+  R(4, 'Pisco Elqui / Cochiguaz', -30.1275, -70.4922),
+];
+
+const RAPA_NUI_ROUTE = [
+  R(1, 'Hanga Roa', -27.1547, -109.43),
+  R(2, 'Ahu Tongariki / Rano Raraku', -27.1259, -109.2769),
+  R(3, 'Orongo', -27.1836, -109.4442),
+  R(4, 'Anakena Beach', -27.0722, -109.3253),
+];
+
+// ---------- Dias — kits nuevos 2026-07-21 (expansion de catalogo) ----------
+
+const SANTIAGO_CAJON_DAYS = [
+  D('Historic downtown Santiago',
+    'Start in the Plaza de Armas and work outward: the Cathedral, the Palacio de La Moneda, Cerro Santa Lucía\'s hidden gardens. Half a day is enough if you keep moving — save the rest for jet lag or a pisco sour.',
+    [{ guide: 'santiago', headings: ['1. Historic downtown (half a day)'] }]),
+  D('Bellavista, Lastarria & San Cristóbal at sunset',
+    'Wander Bellavista\'s murals and Lastarria\'s cafes in the afternoon, then ride the funicular or cable car up San Cristóbal hill for the best sunset view of the Andes skyline in the city.',
+    [{ guide: 'santiago', headings: ['2. Bellavista, Lastarria and Providencia (afternoon-evening)', '3. San Cristóbal hill (sunset)'] }]),
+  D('Into the Andes: El Yeso Reservoir & Baños Morales',
+    'An hour and a half from Santiago the city disappears: turquoise water at El Yeso Reservoir, then the hot pools and glacier views of Baños Morales and El Morado. Plan for a 4x4-friendly ride on the last stretch.',
+    [{ guide: 'cajon-del-maipo', headings: ['1. What Cajón del Maipo is', '2. El Yeso Reservoir, the turquoise pool', '3. Baños Morales and El Morado Natural Monument'] }]),
+  D('Cascada de las Ánimas & back to the city',
+    'Close the loop lower in the canyon: the waterfall trail at Cascada de las Ánimas, a stop in San José de Maipo\'s plaza, then back to Santiago in time for a late dinner.',
+    [{ guide: 'cajon-del-maipo', headings: ['4. Cascada de las Ánimas and San Alfonso', '5. San José de Maipo and the rest of the canyon'] }]),
+];
+
+const VALPO_WINE_DAYS = [
+  D('Valparaíso: hills and funiculars',
+    'Get lost on purpose in Cerro Alegre and Cerro Concepción, then ride one of the century-old funiculars still climbing the hills of this UNESCO port city.',
+    [{ guide: 'valparaiso', headings: ['1. What Valparaíso is', '2. Cerro Alegre and Cerro Concepción', '3. The funiculars, heritage in motion'] }]),
+  D('La Sebastiana, street art & Viña del Mar',
+    'Tour Pablo Neruda\'s hillside house, La Sebastiana, then follow the open-air murals of Cerro Bellavista before crossing into neighboring Viña del Mar for the beach promenade at sunset.',
+    [{ guide: 'valparaiso', headings: ['4. La Sebastiana and the street art of Cerro Bellavista', '5. Plaza Sotomayor, the lower town and Viña del Mar'] }]),
+  D('South to Santa Cruz: a day of wine',
+    'Drive 2.5-3 hours south into the Colchagua Valley, Chile\'s most awarded wine route. Taste Carmenere in Santa Cruz, then spend the afternoon at the Colchagua Museum — dinosaur fossils to the Fenix rescue capsule.',
+    [{ guide: 'colchagua-pichilemu', headings: ['1. The Colchagua Valley: Chile\'s most awarded wine route', '2. Santa Cruz: wineries, tours and tastings', '3. Colchagua Museum: Chile\'s largest private museum'] }]),
+  D('Pichilemu: Chile\'s surf capital',
+    'Close the trip on the Pacific: Punta de Lobos, one of South America\'s most respected waves, and the easygoing surf-town pace of Pichilemu — just over an hour from Santa Cruz.',
+    [{ guide: 'colchagua-pichilemu', headings: ['4. Pichilemu: Chile\'s surf capital and Punta de Lobos'] }]),
+];
+
+const PUCON_DAYS = [
+  D('Arrival & Villarrica volcano views',
+    'Settle into Pucón with the smoking cone of Villarrica volcano watching over the town. If conditions allow, book the guided summit trek for later in the trip — it fills up and depends on the weather.',
+    [{ guide: 'pucon-villarrica', headings: ['1. Villarrica volcano'] }]),
+  D('Hot springs day',
+    'Recovery day: soak in one of the thermal springs scattered around the volcano\'s flanks. Pick a rustic pool or a full resort circuit — both are within a short drive of town.',
+    [{ guide: 'pucon-villarrica', headings: ['2. Hot springs: the volcano\'s other face'] }]),
+  D('Whitewater rafting & black-sand beaches',
+    'Morning rafting or hydrospeed on the Trancura river, afternoon cooling off on Lake Villarrica\'s black volcanic-sand beaches back in town.',
+    [{ guide: 'pucon-villarrica', headings: ['3. Adventure sports on the Trancura river', '4. Lake Villarrica and its black-sand beaches'] }]),
+  D('Huerquehue National Park & Ojos del Caburgua',
+    'Hike among araucaria trees and alpine lakes in Huerquehue National Park, then cool off at the turquoise sinkhole pools of Ojos del Caburgua on the way back.',
+    [{ guide: 'pucon-villarrica', headings: ['5. Huerquehue National Park and Ojos del Caburgua'] }]),
+];
+
+const ELQUI_DAYS = [
+  D('La Serena: lighthouse & neocolonial downtown',
+    'Walk the Monumental Lighthouse boardwalk and the neocolonial arcades of downtown La Serena, one of Chile\'s oldest cities — a gentle first day before the desert and the mountains.',
+    [{ guide: 'la-serena-coquimbo', headings: ['1. La Serena: beaches, the Monumental Lighthouse, and the neocolonial downtown'] }]),
+  D('Coquimbo & Punta de Choros penguins',
+    'Cross into Coquimbo for the giant Cruz del Tercer Milenio and Barrio Inglés, then head north to Punta de Choros for a boat trip through the Humboldt Penguin National Reserve — book the dated tour ahead.',
+    [{ guide: 'la-serena-coquimbo', headings: ['2. Coquimbo: Cruz del Tercer Milenio, Barrio Inglés, and Islote Pájaros Niños', '3. Punta de Choros and the Humboldt Penguin National Reserve'] }]),
+  D('Into the Elqui Valley: Vicuña & the pisco route',
+    'Drive an hour inland into the Elqui Valley. Vicuña\'s Gabriela Mistral museum in the morning, then an afternoon on the pisco route tasting at the distilleries around Pisco Elqui.',
+    [{ guide: 'valle-del-elqui', headings: ['1. What the Elqui Valley is', '4. Vicuña and the Gabriela Mistral museum', '3. The pisco route: Pisco Elqui and its distilleries'] }]),
+  D('Stargazing night: the clearest sky in the world',
+    'Close the trip the way the valley is famous for: a night tour at a tourist observatory, from Mamalluca to Cerro Tololo, under skies with close to zero light pollution.',
+    [
+      { guide: 'valle-del-elqui', headings: ['2. Observatories: from Mamalluca to Cerro Tololo'] },
+      { guide: 'la-serena-coquimbo', headings: ['4. Tourist observatories: Mamalluca, Collowara, and Cerro Mayu'] },
+    ]),
+];
+
+const RAPA_NUI_DAYS = [
+  D('Fly in and settle into Hanga Roa',
+    'The only way in is a 5-hour flight from Santiago. Land, check into Hanga Roa, buy your dated national park ticket if you have not already, and ease into island time.',
+    [{ guide: 'rapa-nui', headings: ['How to get there', 'Essential logistics'] }]),
+  D('Ahu Tongariki at sunrise & the Rano Raraku quarry',
+    'The fifteen restored moai of Ahu Tongariki at first light, then the volcanic quarry at Rano Raraku where nearly 400 moai were carved and abandoned mid-production.',
+    [{ guide: 'rapa-nui', headings: ['1. Ahu Tongariki: the fifteen restored moai', '2. Rano Raraku: the quarry where the moai were born'] }]),
+  D('Orongo: the birdman ceremonial village',
+    'Perched on the rim of the Rano Kau crater, Orongo\'s stone houses were the stage for the Tangata Manu birdman competition — one of the most striking sites on the island.',
+    [{ guide: 'rapa-nui', headings: ['3. Orongo: the birdman ceremonial village'] }]),
+  D('Anakena: the white-sand beach',
+    'Finish where the first Rapa Nui settlers are believed to have landed: the palm-lined white sand of Anakena, with moai wearing their red pukao topknots a few steps from the water.',
+    [{ guide: 'rapa-nui', headings: ['4. Anakena: the white-sand beach and moai with pukao'] }]),
+];
+
 // ---------- SKUs ----------
 
 export const KITS = [
@@ -341,5 +456,140 @@ export const KITS = [
     faqFrom: ['carretera-austral', 'torres-del-paine', 'chiloe'],
     poiComunas: ['Puerto Varas', 'Castro', 'Coyhaique', 'Torres del Paine', 'Natales', 'Punta Arenas'],
     poiLimit: 12,
+  },
+  {
+    id: 'santiago-cajon-4d',
+    title: 'Santiago City Break + Cajón del Maipo',
+    subtitle: '4 days: historic downtown, Bellavista, San Cristóbal hill & the Andes canyon next door',
+    priceUsd: 9.9,
+    gumroadPermalink: 'santiago-cajon-4d',
+    coverImage: 'santiago.jpg',
+    days: SANTIAGO_CAJON_DAYS,
+    route: SANTIAGO_CAJON_ROUTE,
+    checklist: [
+      'Bip! transit card for the metro (buy at any station)',
+      'Comfortable walking shoes for the downtown + hills days',
+      'Rental car or day-tour booked for Cajón del Maipo (last stretch to El Yeso needs a high-clearance vehicle)',
+      'CONAF entrance for El Morado Natural Monument',
+      'Sun layers for the Andes: altitude sun is stronger than it looks',
+      'Cash in CLP for rural stops in the canyon',
+      'Funicular or cable car timing for a San Cristóbal sunset',
+      'Offline maps downloaded (patchy signal past San José de Maipo)',
+    ],
+    budget: [
+      { guide: 'santiago', heading: 'Approximate costs (2026, per person)' },
+      { guide: 'cajon-del-maipo', heading: 'Approximate prices (2026)' },
+    ],
+    faqFrom: ['santiago', 'cajon-del-maipo'],
+    poiComunas: ['Santiago', 'Providencia', 'Las Condes', 'Vitacura', 'Ñuñoa', 'La Reina', 'Recoleta', 'San José de Maipo'],
+    poiLimit: 10,
+  },
+  {
+    id: 'valpo-wine-4d',
+    title: 'Valparaíso & the Colchagua Wine Route',
+    subtitle: '4 days: hillside heritage, street art, Chile\'s top wineries & the Pacific surf coast',
+    priceUsd: 12.9,
+    gumroadPermalink: 'valpo-wine-4d',
+    coverImage: 'valparaiso.jpg',
+    days: VALPO_WINE_DAYS,
+    route: VALPO_WINE_ROUTE,
+    checklist: [
+      'Rental car (easiest way to link the 4 stops) or buses Santiago-Valparaíso and Santa Cruz-Pichilemu',
+      'Comfortable shoes for Valparaíso\'s steep cobblestone hills',
+      'Wine tour bookings in Santa Cruz (book ahead in Jan-Feb)',
+      'Colchagua Museum hours checked before you go',
+      'Sunscreen for Pichilemu\'s exposed coast',
+      'Cash in CLP for smaller wineries',
+      'Camera for the street art and funiculars',
+      'Layers: coastal fog (camanchaca) burns off by midday',
+    ],
+    budget: [
+      { guide: 'valparaiso', heading: 'Approximate prices (2026)' },
+      { guide: 'colchagua-pichilemu', heading: 'Approximate prices (2026)' },
+    ],
+    faqFrom: ['valparaiso', 'colchagua-pichilemu'],
+    poiComunas: ['Valparaíso', 'Viña del Mar', 'Santa Cruz', 'Pichilemu'],
+    poiLimit: 10,
+  },
+  {
+    id: 'pucon-volcano-4d',
+    title: 'Pucón & Villarrica Volcano: 4-Day Adventure',
+    subtitle: 'Volcano views, hot springs, whitewater rafting & black-sand lake beaches in the Lake District',
+    priceUsd: 12.9,
+    gumroadPermalink: 'pucon-volcano-4d',
+    coverImage: 'pucon-villarrica.jpg',
+    days: PUCON_DAYS,
+    route: PUCON_ROUTE,
+    checklist: [
+      'Volcano summit trek booked with a certified operator (weather-dependent, book flexible dates)',
+      'Swimsuit + towel for the hot springs',
+      'Water shoes for rafting on the Trancura',
+      'Insect repellent for the Huerquehue trails',
+      'CONAF entrance fee for Huerquehue National Park',
+      'Warm layers even in summer (volcano wind)',
+      'Cash in CLP for smaller adventure operators',
+      'Waterproof bag for the rafting day',
+      'Book Trancura rafting/hydrospeed ahead in Jan-Feb high season',
+      'Check the current volcano alert level before trekking',
+    ],
+    budget: [{ guide: 'pucon-villarrica', heading: 'Approximate prices (2026, per person)' }],
+    faqFrom: ['pucon-villarrica'],
+    poiComunas: ['Pucón', 'Villarrica', 'Curarrehue'],
+    poiLimit: 8,
+  },
+  {
+    id: 'elqui-stars-4d',
+    title: 'La Serena, Coquimbo & the Elqui Valley',
+    subtitle: 'Stars, pisco & the coast: 4 days between the Pacific and the clearest sky on Earth',
+    priceUsd: 14.9,
+    gumroadPermalink: 'elqui-stars-4d',
+    coverImage: 'la-serena.jpg',
+    days: ELQUI_DAYS,
+    route: ELQUI_ROUTE,
+    checklist: [
+      'Dated Punta de Choros penguin-reserve boat tour booked (weather-dependent)',
+      'Observatory tour booked weeks ahead (Mamalluca/Collowara sell out)',
+      'Warm layers for night tours: desert nights are cold even in summer',
+      'Rental car for the Elqui Valley legs (public transport is limited)',
+      'Cash in CLP for small pisco distilleries',
+      'Sunscreen for the coast days',
+      'Swimsuit for La Serena\'s beaches',
+      'Camera with manual mode if you want astrophotography shots',
+      'Check for a moonless night before booking stargazing',
+      'Comfortable shoes for the neocolonial downtown walk',
+    ],
+    budget: [
+      { guide: 'la-serena-coquimbo', heading: 'Approximate prices (2026, per person)' },
+      { guide: 'valle-del-elqui', heading: 'Approximate prices (2026)' },
+    ],
+    faqFrom: ['la-serena-coquimbo', 'valle-del-elqui'],
+    poiComunas: ['La Serena', 'Coquimbo', 'Vicuña', 'Paihuano'],
+    poiLimit: 10,
+  },
+  {
+    id: 'rapa-nui-4d',
+    title: 'Rapa Nui (Easter Island) in 4 Days',
+    subtitle: 'Moai, ceremonial villages & the white-sand beach at the edge of the Pacific',
+    priceUsd: 19.9,
+    gumroadPermalink: 'rapa-nui-4d',
+    coverImage: 'rapa-nui.jpg',
+    days: RAPA_NUI_DAYS,
+    route: RAPA_NUI_ROUTE,
+    checklist: [
+      'Rapa Nui National Park entrance ticket bought online BEFORE arrival (limited daily capacity)',
+      'Flight booked early: the only route is via Santiago, and fares spike in high season',
+      'Sunscreen + hat: little shade at the ceremonial sites',
+      'Rental car, quad or tour booked (distances are longer than the map suggests)',
+      'Cash in CLP: limited card acceptance outside Hanga Roa',
+      'Reef-safe sunscreen for Anakena',
+      'Respect roped-off areas around the moai (fines apply)',
+      'Offline maps downloaded (patchy signal outside Hanga Roa)',
+      'Swimsuit for Anakena beach',
+      'Book an Orongo/Rano Kau sunset if it is not already in your park ticket',
+    ],
+    budget: [{ guide: 'rapa-nui', heading: 'Approximate prices (2026, per person)' }],
+    faqFrom: ['rapa-nui'],
+    poiComunas: ['Isla de Pascua'],
+    poiLimit: 8,
   },
 ];

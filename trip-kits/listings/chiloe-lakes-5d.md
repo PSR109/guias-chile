@@ -17,7 +17,7 @@ WHAT'S INSIDE (A4 PDF, instant download):
 • Bonus places from our 25,000-place Chile catalog
 • FAQ: how to get there, when to go, curanto (yes, order it)
 
-Compiled from guias.viajesypanoramas.cl — free practical Chile guides trusted by thousands of travelers.
+WHY TRUST THIS: it's compiled by the team behind guias.viajesypanoramas.cl, a free Chile travel-guide site used by thousands of travelers every month. This kit distills those guides into one route you can follow off-line.
 
 INSTANT DOWNLOAD — no physical item. Personal use only.
 

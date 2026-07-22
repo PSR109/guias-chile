@@ -113,7 +113,7 @@ function buildKitHtml(kit, lang) {
 </head>
 <body>
 <section id="cover">
-  <div class="label">Patagonia Trip Kits · Printable Itinerary</div>
+  <div class="label">Chile Trip Kits · Printable Itinerary</div>
   <h1>${esc(kit.title)}</h1>
   <p class="subtitle">${esc(kit.subtitle)}</p>
   <img src="../../img/og/${kit.coverImage}" alt="${esc(kit.title)}">

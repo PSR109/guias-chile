@@ -2,7 +2,7 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: 2026-07-13 (guía Rapa Nui nueva es/en/pt + interlinking con Santiago, San Pedro de Atacama y Valparaíso; EN 23/23, PT 23/23).
+> Última actualización: 2026-07-21 (trip-kits: catálogo 5→10 SKUs + metadata PDF + listings nuevos; ver sección 5).
 
 ## 1. Estado actual del sitio
 
@@ -77,41 +77,20 @@
 
 ## 3. BACKLOG del agente diario (elegir 1 ítem por corrida, mayor impacto en ingresos primero)
 
-### Nuevas guías — ✅ tandas 2026-07-08/09 completas (14 guías, cobertura
-nacional: las 16 regiones tienen guía; detalle en §1 y en `index.html`)
-
-**Backlog ampliado 2026-07-12 — destinos nuevos de alto volumen (sin guía todavía):**
-- [x] Santiago urbano (barrios, cerros, day trips — mayor volumen de búsqueda del país) — hecha, ciclo apps-runner 2026-07-12
-- [x] Puerto Natales (puerta de Torres del Paine) — hecha, ciclo apps-runner 2026-07-12
-- [x] Punta Arenas (pingüineras, Estrecho de Magallanes, Fuerte Bulnes) — hecha, ciclo apps-runner 2026-07-13
-- [x] La Serena / Coquimbo (playas, Punta de Choros, observatorios) — hecha, ciclo apps-runner 2026-07-13, interlinking con Valle del Elqui
-- [x] Rapa Nui (alto gasto por visitante; volar desde SCL) — hecha, ciclo 2026-07-13, interlinking con Santiago/San Pedro de Atacama/Valparaíso. Cobertura nacional + insular completa: no queda ningún destino pendiente en este backlog.
-
-**Mejoras de conversión / SEO interno (1 por corrida, tras agotar destinos o alternando):**
-- [x] Interlinking "guías cercanas": bloque con 3 links a guías de la misma
-      zona (norte-sur, es/en/pt) en las 57 páginas — PR #46 (2026-07-12,
-      ciclo apps-runner), mergeada, verificado en vivo.
-- [x] CTA temprano: clon del bloque `.cta` de afiliados tras el hero `<figure>`
-      en las 72 guías (24×es/en/pt), manteniendo el del final — hecho 2026-07-13
-      (commit `b7755c7`, clase `cta-temprano`, transform idempotente, LIVE).
-
-### Versiones EN — ✅ 19/19 completo (PR #27, 2026-07-10)
-Toda guía nueva nace ya con su `en/*.html` y su `pt/*.html` recíprocos (regla en sección 4).
-
-### Versiones PT-BR — ✅ 19/19 completo (PRs #28-#37, 2026-07-11; patrón
-pt/torres-del-paine.html: hreflang recíproco es/en/pt + sitemap)
+### Guías (24 destinos, cobertura nacional + insular completa)
+✅ Todos los destinos de alto volumen cubiertos (tandas 2026-07-08 a 07-13:
+Santiago, Puerto Natales, Punta Arenas, La Serena/Coquimbo, Rapa Nui + 19
+previos). Cada guía nace con `en/*.html` + `pt/*.html` recíprocos (19/19 EN
+PR #27, 19/19 PT-BR PRs #28-#37; luego +5 con las guías nuevas = 24/24 ambos).
+Interlinking "guías cercanas" (PR #46) y CTA temprano de afiliados (commit
+`b7755c7`) ya en las 72 páginas. No queda destino pendiente en este backlog.
 
 ### Infraestructura / analítica
-- [x] Analítica ligera: beacon a `/api/eventos` del worker de Panoramas — hecho
-      (`analytics.js`). Pendiente del lado de `app_panoramas`: habilitar CORS
-      para este origen (fuera del alcance de este repo).
-- [x] Links inversos: App Panoramas enlaza a estas guías desde sus landings
-      `/region/:slug` (mapa región→guía en `worker/lib/region-guias.mjs`,
-      horneado en prerender ES + espejado en el SPA localizado) — hecho
-      2026-07-13, PR #59 de `app_panoramas` mergeada (13 gates CI verdes).
-- [ ] Deep links de afiliados producto-a-producto (hoy son búsquedas
-      refinadas por atractivo específico, no product ID real — requiere API
-      con credenciales de GYG/Viator).
+- [x] Analítica ligera (`analytics.js` → `/api/eventos` del worker de Panoramas, CORS resuelto).
+- [x] Links inversos: `app_panoramas` enlaza a estas guías desde `/region/:slug`
+      (PR #59 de `app_panoramas`, 2026-07-13).
+- [ ] Deep links de afiliados producto-a-producto (requiere API con
+      credenciales de GYG/Viator; hoy son búsquedas refinadas).
 
 ### Mantenimiento recurrente
 - [ ] Refresco anual de precios y tarifas CONAF en todas las tablas
@@ -140,3 +119,28 @@ pt/torres-del-paine.html: hreflang recíproco es/en/pt + sitemap)
   `sitemap.xml`. **Ninguna guía nueva nace sin foto real** (mínimo 1 hero de
   Wikimedia Commons con atribución — ver patrón en la sección 1).
 - Precios siempre "orientativos" con rango, nunca exactos.
+
+## 5. Trip Kits (PDFs vendibles, Etsy/Gumroad) — `trip-kits/`
+
+Pipeline en `trip-kits/` (README propio ahí) convierte guías EN + catálogo
+Panoramas en PDFs de itinerario. **10 SKUs** (5 del plan original 2026-07-21 +
+5 nuevos de la misma corrida: Santiago+Cajón del Maipo, Valparaíso+Colchagua,
+Pucón-Villarrica, La Serena+Elqui, Rapa Nui — cubren ahora también Chile
+central y Rapa Nui, no solo Patagonia/Atacama). Todo verificado local: `npm
+test`, `npm run all` (compila HTML→PDF→mockups), 5 gates de `ci.yml` — los 10
+kits compilan sin error de heading y los 10 PDFs quedan 300-700 KB (límite
+Etsy 20 MB). PDFs llevan metadata propia (Title/Author/Subject/Keywords vía
+`pdf-lib`) para discoverability fuera de Etsy/Gumroad. Label de marca en la
+portada: "Chile Trip Kits" (ya no "Patagonia Trip Kits" — el catálogo excede
+Patagonia; la tienda Gumroad sigue siendo `patagoniatrips.gumroad.com`, cuenta
+real de Patricio, sin tocar).
+
+**Bloqueado en 100% humano:** Patricio crea la cuenta Gumroad
+(`patagoniatrips`) → sube los 10 PDFs de `trip-kits/dist/` con el copy de
+`trip-kits/listings/*.md` → recién ahí mergear `trip-kits-cta` (branch
+separada, CTA cross-sell en las guías de los 5 kits originales, NO tocar) y
+extenderla a las guías de los 5 kits nuevos (santiago, cajon-del-maipo,
+valparaiso, colchagua-pichilemu, pucon-villarrica, la-serena-coquimbo,
+valle-del-elqui, rapa-nui × 3 idiomas) — hoy `main` no tiene ninguna referencia
+pública a trip-kits (verificado), es intencional: no hay URL de producto real
+para linkear todavía. Detalle de decisiones y pendientes en `trip-kits/NOTES.md`.

@@ -1,6 +1,12 @@
 # Trip Kits — pipeline PDF para Etsy/Gumroad
 
-Convierte las guias EN de este repo + el catalogo de Panoramas en 5 PDFs de itinerario vendibles.
+Convierte las guias EN de este repo + el catalogo de Panoramas en PDFs de itinerario vendibles.
+10 SKUs (5 originales del plan 2026-07-21 + 5 nuevos del mismo dia, misma corrida —
+ver `kits.config.mjs`, seccion "kits nuevos 2026-07-21"): cubren ahora tambien Santiago,
+Valparaiso/Colchagua, Pucon-Villarrica, La Serena/Elqui y Rapa Nui (antes solo Patagonia
+sur + Atacama). Label de marca en la portada del PDF: "Chile Trip Kits" (no "Patagonia
+Trip Kits" — el catalogo ya no es solo Patagonia; la URL de la tienda Gumroad sigue
+siendo patagoniatrips.gumroad.com, eso no se toca, es la cuenta real de Patricio).
 
 ## Comandos (desde trip-kits/)
 - `npm test` — tests del extractor y selector de POIs
@@ -15,4 +21,4 @@ Convierte las guias EN de este repo + el catalogo de Panoramas en 5 PDFs de itin
 - Chromium: usa el de gstack via lib/chromium.mjs (no descargar navegadores).
 
 ## SKUs y precios
-Ver kits.config.mjs (5 SKUs, US$9.90-29). Los permalinks Gumroad DEBEN coincidir con gumroadPermalink.
+Ver kits.config.mjs (10 SKUs, US$9.90-29). Los permalinks Gumroad DEBEN coincidir con gumroadPermalink.
