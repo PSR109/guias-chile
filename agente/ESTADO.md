@@ -2,7 +2,8 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: 2026-07-21 (trip-kits: catálogo 5→10 SKUs + metadata PDF + listings nuevos; ver sección 5).
+> Última actualización: 2026-07-21 (llms.txt: sumadas las 4 guías que faltaban —
+> Puerto Natales, Punta Arenas, La Serena/Coquimbo, Rapa Nui, quedaba en 20/24 — ver sección 1. Trip-kits en sección 5).
 
 ## 1. Estado actual del sitio
 
@@ -15,8 +16,10 @@
   apps-runner 2026-07-12/13), **todas con versión `en/*.html` recíproca (23/23,
   base PR #27 + guías nuevas) y versión `pt/*.html` recíproca (23/23, base PRs
   #28-#37 + guías nuevas)** · `privacy-policy.html` · `creditos.html`.
-  Además: `sitemap.xml` (68 URLs), `robots.txt`, `estilo.css`, `afiliados.js`,
-  `analytics.js`. Las guías llevan trío de structured data
+  Además: `sitemap.xml` (68 URLs), `robots.txt`, `llms.txt` (discovery para
+  crawlers de IA, 24/24 guías ES desde 2026-07-21 — **sin gate de CI**, a mano
+  con cada guía nueva), `estilo.css`, `afiliados.js`, `analytics.js`. Las guías
+  llevan trío de structured data
   FAQ+Breadcrumb+Article (PRs #38/#43/#44).
 - **Plantilla de cada guía:** logo SVG en el header (no emoji — 🇨🇱 no renderiza
   en todas las plataformas, reemplazado 2026-07-08) + `<link rel="icon"
