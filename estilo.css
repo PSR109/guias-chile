@@ -116,3 +116,38 @@ footer.sitio { max-width: 760px; margin-left: auto; margin-right: auto; padding:
 .cercanas li {
   border: 1px solid var(--borde); border-radius: 10px; padding: 8px 14px; font-size: 14.5px;
 }
+
+/* growth-2026-07-21: mapa, boletín (inline + popup) y comentarios (Giscus). */
+.mapa { margin: 30px 0; }
+.mapa-embed {
+  border: 1px solid var(--borde); border-radius: 12px; overflow: hidden;
+}
+.mapa-embed iframe { display: block; }
+
+.boletin-form { display: flex; gap: 10px; flex-wrap: wrap; margin: 4px 0 0; }
+.boletin-form input[type="email"] {
+  flex: 1 1 220px; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--borde);
+  background: var(--tarjeta); color: var(--texto); font-size: 15px;
+}
+.boletin-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.boletin-boton { border: none; cursor: pointer; }
+.boletin-estado { margin: 10px 0 0; font-size: 14px; }
+.boletin-estado.boletin-ok { color: var(--acento); font-weight: 600; }
+.boletin-estado.boletin-error { color: var(--civitatis); font-weight: 600; }
+
+.boletin-popup {
+  position: fixed; right: 18px; bottom: 18px; z-index: 40; max-width: 320px;
+  background: var(--tarjeta); border: 1px solid var(--borde); border-top: 3px solid var(--acento);
+  border-radius: 12px; padding: 18px 20px; box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
+}
+.boletin-popup h3 { margin: 0 0 6px; font-size: 17px; }
+.boletin-popup p { color: var(--suave); font-size: 14px; margin: 0 0 4px; }
+.boletin-cerrar {
+  position: absolute; top: 8px; right: 10px; border: none; background: none; cursor: pointer;
+  color: var(--suave); font-size: 20px; line-height: 1; padding: 4px;
+}
+@media (max-width: 480px) {
+  .boletin-popup { left: 16px; right: 16px; bottom: 16px; max-width: none; }
+}
+
+.comentarios { margin: 34px 0 10px; }
