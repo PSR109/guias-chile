@@ -47,14 +47,14 @@ function routeMapSvg(route) {
       const ty = i % 2 === 0 ? cy - 10 : cy + 19; // alterna arriba/abajo para reducir colisiones
       return `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="6" fill="#0d6e6e"/>
 <circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="2.4" fill="#fff"/>
-<text x="${cx.toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#c0512f">${label}</text>`;
+<text x="${cx.toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="middle" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#c0512f">${label}</text>`;
     })
     .join('\n');
   return `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Route overview">
 <rect width="${W}" height="${H}" fill="#f2f6f8" rx="10"/>
 <polyline points="${pts}" fill="none" stroke="#0d6e6e" stroke-width="2.5" stroke-dasharray="7 5" stroke-linejoin="round"/>
 ${nodes}
-<text x="${PAD}" y="${H - 14}" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#5b6b7b">Schematic route — distances not to scale. North is up.</text>
+<text x="${PAD}" y="${H - 14}" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="10" fill="#5b6b7b">Schematic route — distances not to scale. North is up.</text>
 </svg>`;
 }
 

@@ -18,7 +18,7 @@ siendo patagoniatrips.gumroad.com, eso no se toca, es la cuenta real de Patricio
 - build/, dist/, mockups-out/ y node_modules/ estan gitignoreados. NUNCA commitear PDFs (repo publico = producto gratis).
 - Fotos: solo img/og/*.jpg self-hosted. Nada de Wikimedia.
 - Precios y permalinks canonicos: kits.config.mjs. Copy de listings: listings/*.md.
-- Chromium: usa el de gstack via lib/chromium.mjs (no descargar navegadores).
+- Chromium: usa el de gstack via lib/chromium.mjs (no descargar navegadores). `chromiumPath()` resuelve la cache de Playwright por OS (Windows/macOS/Linux); si falla con ENOENT, confirma que Playwright ya tenga Chromium instalado en la cache de ese SO.
 
 ## SKUs y precios
 Ver kits.config.mjs (10 SKUs, US$9.90-29). Los permalinks Gumroad DEBEN coincidir con gumroadPermalink.

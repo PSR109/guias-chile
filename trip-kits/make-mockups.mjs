@@ -23,7 +23,7 @@ const dataUri = (absPath) => {
 // Imagen principal del listing: 1000x1000 @2x = 2000x2000
 const mainHtml = (kit) => `<!doctype html><html><head><meta charset="utf-8"><style>
   * { margin:0; box-sizing:border-box; }
-  body { width:1000px; height:1000px; font-family:'Segoe UI',Arial,sans-serif;
+  body { width:1000px; height:1000px; font-family:-apple-system,'Segoe UI',Arial,sans-serif;
     background: linear-gradient(160deg,#0d3b3b 0%,#0d6e6e 60%,#12503f 100%);
     color:#fff; display:flex; flex-direction:column; align-items:center;
     justify-content:center; text-align:center; padding:60px; }
