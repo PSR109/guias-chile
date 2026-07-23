@@ -2,10 +2,12 @@ import { readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { homedir } from 'node:os';
 
-// gstack instala Playwright Chromium en la cache por-OS de Playwright
-// (verificado 2026-07-21 en Windows):
+// gstack instala Playwright Chromium en la cache por-OS de Playwright.
 // Windows: %LOCALAPPDATA%\ms-playwright\chromium-1228\chrome-win64\chrome.exe
-// macOS:   ~/Library/Caches/ms-playwright/chromium-XXXX/chrome-mac/Chromium.app/Contents/MacOS/Chromium
+// macOS:   nombre de carpeta y de .app varian por arquitectura y version de Playwright --
+//          verificado 2026-07-23 en Apple Silicon real: chrome-mac-arm64/Google Chrome for
+//          Testing.app (Playwright 1228+ renombro Chromium.app -> "Google Chrome for Testing.app").
+//          Se prueban todas las combinaciones conocidas, arm64 primero (Mac actual).
 // Linux:   ~/.cache/ms-playwright/chromium-XXXX/chrome-linux/chrome
 const CACHE_BASE_PARTS = {
   win32: ['AppData', 'Local', 'ms-playwright'],
@@ -14,7 +16,14 @@ const CACHE_BASE_PARTS = {
 };
 const BIN_CANDIDATES = {
   win32: [['chrome-win64', 'chrome.exe'], ['chrome-win', 'chrome.exe']],
-  darwin: [['chrome-mac', 'Chromium.app', 'Contents', 'MacOS', 'Chromium']],
+  darwin: [
+    ['chrome-mac-arm64', 'Google Chrome for Testing.app', 'Contents', 'MacOS', 'Google Chrome for Testing'],
+    ['chrome-mac-arm64', 'Chromium.app', 'Contents', 'MacOS', 'Chromium'],
+    ['chrome-mac-x64', 'Google Chrome for Testing.app', 'Contents', 'MacOS', 'Google Chrome for Testing'],
+    ['chrome-mac-x64', 'Chromium.app', 'Contents', 'MacOS', 'Chromium'],
+    ['chrome-mac', 'Google Chrome for Testing.app', 'Contents', 'MacOS', 'Google Chrome for Testing'],
+    ['chrome-mac', 'Chromium.app', 'Contents', 'MacOS', 'Chromium'],
+  ],
   linux: [['chrome-linux', 'chrome']],
 };
 
