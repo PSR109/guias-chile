@@ -14,9 +14,25 @@
 # ─────────────────────────────────────────────────────────────────────────────
 name: Auto-merge PRs
 
+# `synchronize` NO es decorativo — es lo que hace que esto sobreviva a un
+# force-push. Caso real (PR #57, 2026-07-24): PR abierto 22:10:09, rebase sobre
+# el main que se había movido y force-push 22:11:58. El force-push cambió el
+# head SHA antes de que los runs encolados por `opened` alcanzaran a correr, y
+# GitHub los descartó — no quedó ni un run de este workflow. ci.yml se recuperó
+# solo porque escucha `synchronize` (no declara `types`, así que toma el default
+# [opened, synchronize, reopened]); este workflow no, y el PR quedó esperando un
+# click humano. Rebasar justo después de abrir un PR es lo más normal que hay.
+#
+# Correr en cada push es barato y seguro: `gh pr merge --auto` es idempotente
+# (re-armarlo sobre un PR que ya lo tiene armado no hace nada), y este repo es
+# PÚBLICO, o sea los minutos de Actions no se facturan — el mínimo de 1 minuto
+# por job que sí pesa en los repos privados de este portfolio no aplica acá.
+#
+# `ready_for_review` cubre el otro agujero del mismo tipo: un PR abierto como
+# draft no se puede auto-mergear, y al marcarlo listo NO se dispara `opened`.
 on:
   pull_request:
-    types: [opened, reopened]
+    types: [opened, reopened, synchronize, ready_for_review]
     branches: [main]
 
 permissions:
