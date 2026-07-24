@@ -120,8 +120,9 @@ en las páginas. No queda destino evidente pendiente en este backlog.
   el H1, FAQ JSON-LD, tabla de precios, **2 CTAs de afiliado** (Viator + GYG,
   con `pid`/`partner_id` hardcodeado en el href + `rel="sponsored noopener"
   target="_blank"` estáticos + línea `.afiliado-nota` — nunca agregar botón
-  Civitatis sin `aid` real), bloque `.promo` con link a
-  `https://viajesypanoramas.cl/`, `analytics.js` incluido, canonical/og
+  Civitatis sin `aid` real), bloque `.promo` con **deep link a la página de
+  REGIÓN** de Panoramas (ver la regla dedicada abajo — ya no al home pelado),
+  `analytics.js` incluido, canonical/og
   (incluyendo `og:image`), tarjeta con thumbnail en `index.html` y entrada en
   `sitemap.xml`. **Ninguna guía nueva nace sin foto real** (mínimo 1 hero de
   Wikimedia Commons con atribución — ver patrón en la sección 1).
@@ -130,6 +131,27 @@ en las páginas. No queda destino evidente pendiente en este backlog.
   `scripts/check-html.mjs`, así que una guía sin ellos sale **CI-roja** — el gate existe
   porque 5 guías (las de mayor valor turístico) se habían quedado sin fechas mientras las
   otras 60 sí las tenían, y nada lo detectaba. `dateModified` se actualiza al editar la guía.
+- **El `.promo` deep-linkea a la región, nunca al home (2026-07-24):** el link va a
+  `https://viajesypanoramas.cl[/en|/pt]/region/<slug>` con el slug REAL de la región de la guía,
+  y el copy nombra esa región. Antes las 25 guías × 3 idiomas mandaban al home pelado: quien
+  terminaba de leer Puerto Varas aterrizaba en un buscador nacional vacío y tenía que volver a
+  escribir dónde estaba. Además el home no monetiza y la página de región sí (CTA de afiliados +
+  paywall de comuna). El mapeo guía→región **se lee de los `data-region` de las tarjetas de
+  `index.html`**, que ya existían para el filtro de la portada — no se mantiene una segunda lista
+  (ver `scripts/promo-deep-links-2026-07-24.mjs`). Dos slugs NO salen de un slugify mecánico:
+  `Metropolitana` → `metropolitana-de-santiago` y `O'Higgins` → `libertador-general-bernardo-o-higgins`.
+  **`check-links.mjs` ignora enlaces externos a propósito**, así que un slug mal escrito acá NO
+  sale CI-rojo: al agregar o cambiar uno, curlearlo a mano. Los 3 hubs (`index.html`, `en/`, `pt/`)
+  siguen apuntando al home — su alcance es nacional.
+- **Nav de idiomas de 3 vías en TODA guía (2026-07-24):** el `<nav>` del header lleva links
+  visibles a las otras dos versiones (ES→`en/X.html`+`pt/X.html`, EN→`../X.html`+`../pt/X.html`,
+  PT→`../X.html`+`../en/X.html`). 13 guías ES no tenían NI UNO y 13 versiones EN no tenían el de
+  PT: las traducciones existían, estaban en el sitemap y en el `hreflang` del `<head>`, o sea
+  Google las indexaba — pero el hreflang es señal para el crawler, no un link visible, así que una
+  persona que aterrizaba en la versión ES quedaba encerrada ahí. Los `title` de los links que
+  salen del árbol del idioma son parte del patrón, no decoración. Esto SÍ lo cubre CI
+  (`check-links.mjs` valida enlaces internos — verificado rompiendo uno a propósito), al revés que
+  los deep links externos del `.promo`.
 - Precios siempre "orientativos" con rango, nunca exactos.
 
 ## 5. Trip Kits (PDFs vendibles, Etsy/Gumroad) — `trip-kits/`
