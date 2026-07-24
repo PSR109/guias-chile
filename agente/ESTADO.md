@@ -143,6 +143,15 @@ en las páginas. No queda destino evidente pendiente en este backlog.
   **`check-links.mjs` ignora enlaces externos a propósito**, así que un slug mal escrito acá NO
   sale CI-rojo: al agregar o cambiar uno, curlearlo a mano. Los 3 hubs (`index.html`, `en/`, `pt/`)
   siguen apuntando al home — su alcance es nacional.
+- **Nav de idiomas de 3 vías en TODA guía (2026-07-24):** el `<nav>` del header lleva links
+  visibles a las otras dos versiones (ES→`en/X.html`+`pt/X.html`, EN→`../X.html`+`../pt/X.html`,
+  PT→`../X.html`+`../en/X.html`). 13 guías ES no tenían NI UNO y 13 versiones EN no tenían el de
+  PT: las traducciones existían, estaban en el sitemap y en el `hreflang` del `<head>`, o sea
+  Google las indexaba — pero el hreflang es señal para el crawler, no un link visible, así que una
+  persona que aterrizaba en la versión ES quedaba encerrada ahí. Los `title` de los links que
+  salen del árbol del idioma son parte del patrón, no decoración. Esto SÍ lo cubre CI
+  (`check-links.mjs` valida enlaces internos — verificado rompiendo uno a propósito), al revés que
+  los deep links externos del `.promo`.
 - Precios siempre "orientativos" con rango, nunca exactos.
 
 ## 5. Trip Kits (PDFs vendibles, Etsy/Gumroad) — `trip-kits/`
