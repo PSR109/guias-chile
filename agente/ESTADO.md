@@ -125,6 +125,11 @@ en las páginas. No queda destino evidente pendiente en este backlog.
   (incluyendo `og:image`), tarjeta con thumbnail en `index.html` y entrada en
   `sitemap.xml`. **Ninguna guía nueva nace sin foto real** (mínimo 1 hero de
   Wikimedia Commons con atribución — ver patrón en la sección 1).
+- **Article JSON-LD lleva `datePublished` + `dateModified` (2026-07-24):** ambos son
+  obligatorios en todo bloque `"@type":"Article"`. Lo exige `checkArticleJsonLd()` dentro de
+  `scripts/check-html.mjs`, así que una guía sin ellos sale **CI-roja** — el gate existe
+  porque 5 guías (las de mayor valor turístico) se habían quedado sin fechas mientras las
+  otras 60 sí las tenían, y nada lo detectaba. `dateModified` se actualiza al editar la guía.
 - Precios siempre "orientativos" con rango, nunca exactos.
 
 ## 5. Trip Kits (PDFs vendibles, Etsy/Gumroad) — `trip-kits/`

@@ -67,6 +67,33 @@ function checkTagBalance(html, file, errors) {
   }
 }
 
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+
+function checkArticleJsonLd(html, file, errors) {
+  // Todo bloque JSON-LD "@type":"Article" debe traer datePublished y
+  // dateModified (señal de frescura para Google/AI) — regla añadida
+  // 2026-07-24 tras encontrar 15 páginas (5 destinos x 3 idiomas) que se
+  // habían quedado sin ellos por exclusiones puntuales en pasadas previas.
+  const scriptRe = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi;
+  let m;
+  while ((m = scriptRe.exec(html))) {
+    let data;
+    try {
+      data = JSON.parse(m[1]);
+    } catch {
+      continue; // JSON inválido ya lo reporta otra herramienta; no es tarea de este check.
+    }
+    if (data["@type"] !== "Article") continue;
+    const line = lineAt(html, m.index);
+    if (!data.datePublished || !DATE_RE.test(data.datePublished)) {
+      errors.push(`${file}:${line}: JSON-LD Article sin "datePublished" válido (YYYY-MM-DD)`);
+    }
+    if (!data.dateModified || !DATE_RE.test(data.dateModified)) {
+      errors.push(`${file}:${line}: JSON-LD Article sin "dateModified" válido (YYYY-MM-DD)`);
+    }
+  }
+}
+
 function checkStructure(html, file, errors) {
   if (!/^\s*<!doctype html>/i.test(html)) {
     errors.push(`${file}: falta "<!doctype html>" al inicio del archivo`);
@@ -94,6 +121,7 @@ for (const abs of files) {
   const html = readFileSync(abs, "utf8");
   checkStructure(html, rel, errors);
   checkTagBalance(html, rel, errors);
+  checkArticleJsonLd(html, rel, errors);
 }
 
 if (errors.length) {
