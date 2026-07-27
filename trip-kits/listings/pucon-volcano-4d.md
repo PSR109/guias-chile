@@ -14,10 +14,12 @@ WHAT'S INSIDE (A4 PDF, instant download):
 • Schematic route map of the 4 days
 • 2026 budget tables in CLP + USD: tours, park fees, gear rental
 • Checklist: volcano-trek booking (weather-dependent), CONAF entrance, warm layers
-• 8 bonus places from our 25,000-place Chile catalog
+• 8 bonus places from our 30,000-place Chile catalog
 • FAQ: is the summit trek hard, best season, do you need a certified guide
 
-WHY TRUST THIS: it's compiled by the team behind guias.viajesypanoramas.cl, a free Chile travel-guide site used by thousands of travelers every month. This kit distills those guides into one route you can follow off-line.
+WHY TRUST THIS: it's compiled by the team behind guias.viajesypanoramas.cl, a free Chile travel-guide site built on a catalog of 30,000+ real places across Chile. This kit distills those guides into one route you can follow off-line.
+
+Place data is derived from OpenStreetMap, (c) OpenStreetMap contributors, available under the Open Database License (ODbL).
 
 INSTANT DOWNLOAD — no physical item shipped. Print it or use it on your phone. Personal use only.
 

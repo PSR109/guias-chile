@@ -15,12 +15,14 @@ WHAT'S INSIDE (A4 PDF, instant download):
 • The connection logic nobody explains: which airports (PMC / BBA / PUQ), which ferries, where to rent cars
 • 2026 budget tables for all four regions (CLP + USD)
 • Master checklist for 4 climates in one trip
-• 12 bonus places from our 25,000-place Chile catalog
+• 12 bonus places from our 30,000-place Chile catalog
 • Combined FAQ from all our regional guides
 
 This is the complete version of our regional kits — if you were going to buy two, this bundle is cheaper.
 
-WHY TRUST THIS: it's compiled by the team behind guias.viajesypanoramas.cl, a free Chile travel-guide site used by thousands of travelers every month. This kit distills those guides into one route you can follow off-line.
+WHY TRUST THIS: it's compiled by the team behind guias.viajesypanoramas.cl, a free Chile travel-guide site built on a catalog of 30,000+ real places across Chile. This kit distills those guides into one route you can follow off-line.
+
+Place data is derived from OpenStreetMap, (c) OpenStreetMap contributors, available under the Open Database License (ODbL).
 
 INSTANT DOWNLOAD — personal use only.
 

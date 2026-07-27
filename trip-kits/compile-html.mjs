@@ -160,6 +160,13 @@ ${daysHtml}
     What to do nearby, today: <a href="https://viajesypanoramas.cl/">viajesypanoramas.cl</a>
   </div>
   <p class="footer-note">Some links are affiliate links: booking through them supports this kit at no extra cost to you. &copy; 2026 viajesypanoramas.cl. Personal use only; please don't redistribute this file.</p>
+  <!-- Atribucion ODbL (2026-07-27). NO es opcional ni cosmetica: los lugares de
+       estos kits salen del catalogo de Panoramas, que es 98,82% OpenStreetMap
+       (30.012 de 30.369 fichas CL, contado el 2026-07-27). ODbL exige atribuir
+       en cualquier obra derivada, y este es un producto DE PAGO — venderlo sin
+       el credito es incumplimiento de licencia, no un descuido de formato. La
+       app web ya atribuye; el PDF no atribuia en ninguna parte. -->
+  <p class="footer-note">Place data derived from OpenStreetMap. &copy; OpenStreetMap contributors, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.</p>
 </section>
 </body>
 </html>`;

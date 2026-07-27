@@ -15,10 +15,12 @@ WHAT'S INSIDE (A4 PDF, instant download):
 • The ferry system explained: which crossings are unavoidable, which sell out, how to book
 • 2026 budget tables (CLP + USD): ferries, fuel, beds, boat tours
 • Road-trip checklist: rental car gravel clearance, fuel discipline, cash stops
-• Bonus places along the route from our 25,000-place Chile catalog
+• Bonus places along the route from our 30,000-place Chile catalog
 • FAQ: do you need a 4x4? how many days is enough? is there signal?
 
-WHY TRUST THIS: it's compiled by the team behind guias.viajesypanoramas.cl, a free Chile travel-guide site used by thousands of travelers every month. This kit distills those guides into one route you can follow off-line.
+WHY TRUST THIS: it's compiled by the team behind guias.viajesypanoramas.cl, a free Chile travel-guide site built on a catalog of 30,000+ real places across Chile. This kit distills those guides into one route you can follow off-line.
+
+Place data is derived from OpenStreetMap, (c) OpenStreetMap contributors, available under the Open Database License (ODbL).
 
 INSTANT DOWNLOAD — print it or keep it on your phone (offline!). Personal use only.
 
