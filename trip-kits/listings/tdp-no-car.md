@@ -26,6 +26,6 @@ INSTANT DOWNLOAD — no physical item shipped. Print it or use it on your phone.
 
 ## Gumroad
 - Product name: Torres del Paine Without a Car — 5-Day Printable Itinerary (PDF)
-- Permalink (EXACTO): tdp-no-car   →  https://patagoniatrips.gumroad.com/l/tdp-no-car
+- Permalink (EXACTO): tdp-no-car   →  https://patricio358.gumroad.com/l/tdp-no-car
 - Price: $12.90
 - Description: usar la misma descripcion de Etsy (quitar la linea INSTANT DOWNLOAD de Etsy y dejar "Instant PDF download. Personal use only.").

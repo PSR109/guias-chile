@@ -6,7 +6,7 @@ ver `kits.config.mjs`, seccion "kits nuevos 2026-07-21"): cubren ahora tambien S
 Valparaiso/Colchagua, Pucon-Villarrica, La Serena/Elqui y Rapa Nui (antes solo Patagonia
 sur + Atacama). Label de marca en la portada del PDF: "Chile Trip Kits" (no "Patagonia
 Trip Kits" — el catalogo ya no es solo Patagonia; la URL de la tienda Gumroad sigue
-siendo patagoniatrips.gumroad.com, eso no se toca, es la cuenta real de Patricio).
+siendo patricio358.gumroad.com, eso no se toca, es la cuenta real de Patricio).
 
 ## Comandos (desde trip-kits/)
 - `npm test` — tests del extractor y selector de POIs

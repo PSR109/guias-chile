@@ -26,6 +26,6 @@ INSTANT DOWNLOAD — print it or keep it on your phone (offline!). Personal use 
 
 ## Gumroad
 - Product name: Carretera Austral 7-Day Road Trip — Printable Itinerary (PDF)
-- Permalink (EXACTO): carretera-austral-7d  →  https://patagoniatrips.gumroad.com/l/carretera-austral-7d
+- Permalink (EXACTO): carretera-austral-7d  →  https://patricio358.gumroad.com/l/carretera-austral-7d
 - Price: $14.90
 - Description: misma de Etsy.

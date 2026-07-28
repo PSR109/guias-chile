@@ -1,9 +1,21 @@
 # NOTES — trip-kits, corrida 2026-07-21 (expansión mientras se espera Gumroad)
 
 Contexto: el plan original `docs/superpowers/plans/2026-07-21-trip-kits-etsy.md`
-(10/10 tasks) ya había generado 5 PDFs. El único gate humano real es que
-Patricio cree la cuenta Gumroad (`patagoniatrips`). Mientras eso se espera,
-esta corrida avanzó todo lo autónomo posible en el mismo repo/día.
+(10/10 tasks) ya había generado 5 PDFs. El único gate humano real era que
+Patricio habilitara los productos en Gumroad. Mientras eso se esperaba, esta
+corrida avanzó todo lo autónomo posible en el mismo repo/día.
+
+**ACTUALIZACIÓN 2026-07-28:** la tienda `patagoniatrips` nunca se creó — los
+productos se crean bajo la cuenta real `patricio358` (mismos permalinks
+`/l/<slug>`, solo cambia el subdominio). Vía automatización CDP (`tools/chrome/`
+en la raíz del portfolio) se crearon **5 de 10** hoy: `atacama-5d`,
+`carretera-austral-7d`, `chiloe-lakes-5d`, `elqui-stars-4d`, `patagonia-14d`.
+Los otros 5 (`tdp-no-car`, `santiago-cajon-4d`, `valpo-wine-4d`,
+`pucon-volcano-4d`, `rapa-nui-4d`) chocaron con el límite de **10
+productos/día** de Gumroad — quedan para el próximo día. `inject-kit-cta.mjs`
+tiene un set `READY_KITS` que gatea qué CTAs se inyectan en las guías; sacar
+un kit de ahí en cuanto su producto exista y esté verificado (200 en
+`patricio358.gumroad.com/l/<permalink>`).
 
 ## Qué se hizo
 
@@ -44,7 +56,7 @@ esta corrida avanzó todo lo autónomo posible en el mismo repo/día.
    correcto cuando los 5 kits originales eran todos sur de Chile/Atacama. Con
    los 5 nuevos (Santiago, Valparaíso, Rapa Nui, Elqui) ya no aplica. Cambiado
    a "Chile Trip Kits" — es solo texto de portada, NO toca `GUMROAD_BASE`
-   (`patagoniatrips.gumroad.com`, cuenta real de Patricio, sin tocar por regla).
+   (`patricio358.gumroad.com`, cuenta real de Patricio, sin tocar por regla).
 
 4. **Copy de listings.** Escritos los 5 `listings/*.md` nuevos con el mismo
    formato que los 5 originales (título Etsy <140 char, 13 tags <20 char c/u,
@@ -78,16 +90,25 @@ esta corrida avanzó todo lo autónomo posible en el mismo repo/día.
   podía hacer sin depender de Gumroad (metadata del PDF, punto 2 arriba) se
   hizo. `trip-kits-cta` NO se tocó ni se le agregaron commits.
 
-## Qué queda 100% esperando a Patricio (cuenta Gumroad)
+## Qué queda (actualizado 2026-07-28)
 
-1. Crear cuenta Gumroad `patagoniatrips` (gate humano, ya conocido).
-2. Subir los 10 PDFs de `trip-kits/dist/` (regenerar con `npm run all` si pasó
-   tiempo — guías/catálogo Panoramas pueden haber cambiado) + copy de los 10
-   `listings/*.md`.
+1. ~~Crear cuenta Gumroad `patagoniatrips`~~ → obsoleto: se usa `patricio358`
+   (cuenta real ya existente), 5/10 productos creados hoy vía CDP, 5 quedan
+   para mañana (límite 10 productos/día de Gumroad). Ver ACTUALIZACIÓN arriba.
+2. Cuando el cupo diario reinicie: crear los 5 restantes (`tdp-no-car`,
+   `santiago-cajon-4d`, `valpo-wine-4d`, `pucon-volcano-4d`, `rapa-nui-4d`),
+   agregarlos a `READY_KITS` en `inject-kit-cta.mjs`, re-correr el inyector.
 3. **CERRADO 2026-07-21 (continuación autónoma)**: `trip-kits-cta` mergeó
    `main` (trae el catálogo 10-kit, `f0eea60`) y `inject-kit-cta.mjs` ya
    inyecta CTA en las 8 guías de los 5 kits nuevos también (24 archivos
    nuevos, 27 preexistentes idempotentes). Commit `d4b4a5e`, pusheado a
    `origin/trip-kits-cta`. Sigue sin mergear a `main` — mismo gate humano.
 4. Una vez con URLs de producto reales: recién ahí vale la pena el structured
-   data / landing page pública mencionada arriba, y mergear `trip-kits-cta`.
+   data / landing page pública mencionada arriba.
+5. **SUPERSEDIDO 2026-07-28**: en vez de mergear `origin/trip-kits-cta` tal
+   cual (tenía los 10 kits sin gate — habría creado 5 links muertos a
+   productos Gumroad inexistentes), se aplicó a `main` directamente solo el
+   fix de dominio + `inject-kit-cta.mjs` con `READY_KITS` filtrando a los 4
+   kits con guía mapeada y producto vivo (commit `531328a`). La rama
+   `trip-kits-cta` queda stale — no mergear as-is, ya no aporta nada que
+   `main` no tenga (y el resto de sus permalinks siguen sin producto real).
