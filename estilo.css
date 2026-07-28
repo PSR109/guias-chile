@@ -48,6 +48,8 @@ th { font-weight: 700; border-bottom: 2px solid var(--acento); }
 }
 .cta h3 { margin-top: 0; }
 .cta p { color: var(--suave); font-size: 15px; }
+.cta.compacta { padding: 14px 18px; margin: 16px 0 20px; }
+.cta.compacta h3 { margin-bottom: 8px; font-size: 16px; }
 .boton {
   display: inline-block; margin: 6px 10px 4px 0; padding: 11px 18px; border-radius: 8px;
   color: #fff; text-decoration: none; font-weight: 600; font-size: 15px;
