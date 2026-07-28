@@ -132,12 +132,15 @@ kits compilan sin error de heading y los 10 PDFs quedan 300-700 KB (límite
 Etsy 20 MB). PDFs llevan metadata propia (Title/Author/Subject/Keywords vía
 `pdf-lib`) para discoverability fuera de Etsy/Gumroad. Label de marca en la
 portada: "Chile Trip Kits" (ya no "Patagonia Trip Kits" — el catálogo excede
-Patagonia; la tienda Gumroad sigue siendo `patagoniatrips.gumroad.com`, cuenta
+Patagonia; la tienda Gumroad sigue siendo `patricio358.gumroad.com`, cuenta
 real de Patricio, sin tocar).
 
-**Bloqueado en 100% humano:** Patricio crea la cuenta Gumroad
-(`patagoniatrips`) → sube los 10 PDFs de `trip-kits/dist/` con el copy de
-`trip-kits/listings/*.md` → recién ahí mergear `trip-kits-cta` (branch
+**Bloqueado en 100% humano:** ~~Patricio crea la cuenta Gumroad
+(`patagoniatrips`)~~ → RESUELTO 2026-07-28: los 10 productos se crearon como
+borradores en la cuenta real `patricio358` (la tienda `patagoniatrips` no
+existe; decisión de Patricio), con los PDFs de `trip-kits/dist/` y el copy de
+`trip-kits/listings/*.md`. Falta: Patricio los publica → recién ahí mergear
+`trip-kits-cta` (branch
 separada, CTA cross-sell en las guías de los 5 kits originales, NO tocar) y
 extenderla a las guías de los 5 kits nuevos (santiago, cajon-del-maipo,
 valparaiso, colchagua-pichilemu, pucon-villarrica, la-serena-coquimbo,

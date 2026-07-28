@@ -23,6 +23,6 @@ INSTANT DOWNLOAD — no physical item shipped. Print it or use it on your phone.
 
 ## Gumroad
 - Product name: Rapa Nui (Easter Island) — 4-Day Printable Itinerary (PDF)
-- Permalink (EXACTO): rapa-nui-4d  →  https://patagoniatrips.gumroad.com/l/rapa-nui-4d
+- Permalink (EXACTO): rapa-nui-4d  →  https://patricio358.gumroad.com/l/rapa-nui-4d
 - Price: $19.90
 - Description: misma de Etsy (quitar la linea INSTANT DOWNLOAD y dejar "Instant PDF download. Personal use only.").

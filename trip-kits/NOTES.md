@@ -2,7 +2,10 @@
 
 Contexto: el plan original `docs/superpowers/plans/2026-07-21-trip-kits-etsy.md`
 (10/10 tasks) ya había generado 5 PDFs. El único gate humano real es que
-Patricio cree la cuenta Gumroad (`patagoniatrips`). Mientras eso se espera,
+Patricio habilitara los productos en Gumroad. ACTUALIZACIÓN 2026-07-28: la
+tienda `patagoniatrips` no existe y NO se va a crear — los 10 productos se
+crearon bajo la cuenta real `patricio358` (decisión de Patricio), permalinks
+idénticos (`/l/<slug>`), solo cambió el subdominio. Mientras eso se esperaba,
 esta corrida avanzó todo lo autónomo posible en el mismo repo/día.
 
 ## Qué se hizo
@@ -44,7 +47,7 @@ esta corrida avanzó todo lo autónomo posible en el mismo repo/día.
    correcto cuando los 5 kits originales eran todos sur de Chile/Atacama. Con
    los 5 nuevos (Santiago, Valparaíso, Rapa Nui, Elqui) ya no aplica. Cambiado
    a "Chile Trip Kits" — es solo texto de portada, NO toca `GUMROAD_BASE`
-   (`patagoniatrips.gumroad.com`, cuenta real de Patricio, sin tocar por regla).
+   (`patricio358.gumroad.com`, cuenta real de Patricio, sin tocar por regla).
 
 4. **Copy de listings.** Escritos los 5 `listings/*.md` nuevos con el mismo
    formato que los 5 originales (título Etsy <140 char, 13 tags <20 char c/u,
@@ -80,7 +83,9 @@ esta corrida avanzó todo lo autónomo posible en el mismo repo/día.
 
 ## Qué queda 100% esperando a Patricio (cuenta Gumroad)
 
-1. Crear cuenta Gumroad `patagoniatrips` (gate humano, ya conocido).
+1. ~~Crear cuenta Gumroad `patagoniatrips`~~ → HECHO 2026-07-28 por otra vía:
+   productos creados como borradores en `patricio358` (ver arriba). Falta solo
+   que Patricio los revise y publique en su dashboard.
 2. Subir los 10 PDFs de `trip-kits/dist/` (regenerar con `npm run all` si pasó
    tiempo — guías/catálogo Panoramas pueden haber cambiado) + copy de los 10
    `listings/*.md`.

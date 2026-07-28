@@ -23,6 +23,6 @@ INSTANT DOWNLOAD — no physical item shipped. Print it or use it on your phone.
 
 ## Gumroad
 - Product name: Pucón & Villarrica Volcano — 4-Day Printable Adventure Itinerary (PDF)
-- Permalink (EXACTO): pucon-volcano-4d  →  https://patagoniatrips.gumroad.com/l/pucon-volcano-4d
+- Permalink (EXACTO): pucon-volcano-4d  →  https://patricio358.gumroad.com/l/pucon-volcano-4d
 - Price: $12.90
 - Description: misma de Etsy (quitar la linea INSTANT DOWNLOAD y dejar "Instant PDF download. Personal use only.").

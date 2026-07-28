@@ -26,6 +26,6 @@ INSTANT DOWNLOAD — personal use only.
 
 ## Gumroad
 - Product name: Ultimate Patagonia — 14 Days in Chile, Printable Itinerary (PDF)
-- Permalink (EXACTO): patagonia-14d  →  https://patagoniatrips.gumroad.com/l/patagonia-14d
+- Permalink (EXACTO): patagonia-14d  →  https://patricio358.gumroad.com/l/patagonia-14d
 - Price: $29
 - Description: misma de Etsy.

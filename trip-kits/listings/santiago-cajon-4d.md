@@ -23,6 +23,6 @@ INSTANT DOWNLOAD — no physical item shipped. Print it or use it on your phone.
 
 ## Gumroad
 - Product name: Santiago City Break + Cajón del Maipo — 4-Day Printable Itinerary (PDF)
-- Permalink (EXACTO): santiago-cajon-4d  →  https://patagoniatrips.gumroad.com/l/santiago-cajon-4d
+- Permalink (EXACTO): santiago-cajon-4d  →  https://patricio358.gumroad.com/l/santiago-cajon-4d
 - Price: $9.90
 - Description: misma de Etsy (quitar la linea INSTANT DOWNLOAD y dejar "Instant PDF download. Personal use only.").
