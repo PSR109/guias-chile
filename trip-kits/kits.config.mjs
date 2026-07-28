@@ -1,7 +1,7 @@
 // 5 SKUs. Los "pulls" referencian headings EXACTOS de los HTML en /en/ (verificados 2026-07-21).
 // El numero de dia lo pone el compilador (Day 1..N), aqui solo va el titulo del dia.
 
-export const GUMROAD_BASE = 'https://patagoniatrips.gumroad.com/l';
+export const GUMROAD_BASE = 'https://patricio358.gumroad.com/l';
 
 const D = (title, intro, pulls) => ({ title, intro, pulls });
 
