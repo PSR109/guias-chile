@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbfaf7">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181d">
 <title>Guías de Chile — panoramas, tours y consejos prácticos</title>
 <meta name="description" content="Guías prácticas y actualizadas para viajar por Chile: Puerto Varas, Torres del Paine, San Pedro de Atacama, Frutillar y más. Qué hacer, cuánto cuesta y cómo reservar.">
 <link rel="preconnect" href="https://upload.wikimedia.org">
@@ -35,13 +37,50 @@
       "name": "Guías de Chile",
       "description": "Guías prácticas y actualizadas para viajar por Chile: qué hacer, cuánto cuesta y cómo reservar en los mejores destinos, escrito desde el sur.",
       "inLanguage": "es",
-      "publisher": { "@id": "https://patagoniasimracing.cl/#organization" }
+      "publisher": { "@id": "https://patagoniasimracing.cl/#organization" },
+      "mainEntity": { "@id": "https://guias.viajesypanoramas.cl/#itemlist" }
     },
     {
       "@type": "Organization",
       "@id": "https://patagoniasimracing.cl/#organization",
       "name": "Patagonia Sim Racing",
       "url": "https://patagoniasimracing.cl"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://guias.viajesypanoramas.cl/#itemlist",
+      "name": "Guías de Chile",
+      "description": "Las 25 guías de destino publicadas, ordenadas de norte a sur.",
+      "isPartOf": { "@id": "https://guias.viajesypanoramas.cl/#website" },
+      "numberOfItems": 25,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Arica","url":"https://guias.viajesypanoramas.cl/arica.html"},
+        {"@type":"ListItem","position":2,"name":"Iquique","url":"https://guias.viajesypanoramas.cl/iquique.html"},
+        {"@type":"ListItem","position":3,"name":"San Pedro de Atacama","url":"https://guias.viajesypanoramas.cl/san-pedro-de-atacama.html"},
+        {"@type":"ListItem","position":4,"name":"Copiapó y Bahía Inglesa","url":"https://guias.viajesypanoramas.cl/copiapo-bahia-inglesa.html"},
+        {"@type":"ListItem","position":5,"name":"La Serena y Coquimbo","url":"https://guias.viajesypanoramas.cl/la-serena-coquimbo.html"},
+        {"@type":"ListItem","position":6,"name":"Valle del Elqui","url":"https://guias.viajesypanoramas.cl/valle-del-elqui.html"},
+        {"@type":"ListItem","position":7,"name":"Valparaíso","url":"https://guias.viajesypanoramas.cl/valparaiso.html"},
+        {"@type":"ListItem","position":8,"name":"Santiago","url":"https://guias.viajesypanoramas.cl/santiago.html"},
+        {"@type":"ListItem","position":9,"name":"Cajón del Maipo","url":"https://guias.viajesypanoramas.cl/cajon-del-maipo.html"},
+        {"@type":"ListItem","position":10,"name":"Ruta del Vino de Colchagua y Pichilemu","url":"https://guias.viajesypanoramas.cl/colchagua-pichilemu.html"},
+        {"@type":"ListItem","position":11,"name":"Radal Siete Tazas y Curicó","url":"https://guias.viajesypanoramas.cl/radal-siete-tazas-curico.html"},
+        {"@type":"ListItem","position":12,"name":"Termas de Chillán","url":"https://guias.viajesypanoramas.cl/termas-de-chillan.html"},
+        {"@type":"ListItem","position":13,"name":"Concepción y Salto del Laja","url":"https://guias.viajesypanoramas.cl/concepcion-salto-del-laja.html"},
+        {"@type":"ListItem","position":14,"name":"Pucón y Villarrica","url":"https://guias.viajesypanoramas.cl/pucon-villarrica.html"},
+        {"@type":"ListItem","position":15,"name":"Valdivia","url":"https://guias.viajesypanoramas.cl/valdivia.html"},
+        {"@type":"ListItem","position":16,"name":"Frutillar","url":"https://guias.viajesypanoramas.cl/frutillar.html"},
+        {"@type":"ListItem","position":17,"name":"Saltos del Petrohué","url":"https://guias.viajesypanoramas.cl/saltos-del-petrohue.html"},
+        {"@type":"ListItem","position":18,"name":"Puerto Varas","url":"https://guias.viajesypanoramas.cl/puerto-varas.html"},
+        {"@type":"ListItem","position":19,"name":"Puerto Montt","url":"https://guias.viajesypanoramas.cl/puerto-montt.html"},
+        {"@type":"ListItem","position":20,"name":"Chiloé","url":"https://guias.viajesypanoramas.cl/chiloe.html"},
+        {"@type":"ListItem","position":21,"name":"Carretera Austral","url":"https://guias.viajesypanoramas.cl/carretera-austral.html"},
+        {"@type":"ListItem","position":22,"name":"Torres del Paine","url":"https://guias.viajesypanoramas.cl/torres-del-paine.html"},
+        {"@type":"ListItem","position":23,"name":"Puerto Natales","url":"https://guias.viajesypanoramas.cl/puerto-natales.html"},
+        {"@type":"ListItem","position":24,"name":"Punta Arenas","url":"https://guias.viajesypanoramas.cl/punta-arenas.html"},
+        {"@type":"ListItem","position":25,"name":"Rapa Nui","url":"https://guias.viajesypanoramas.cl/rapa-nui.html"}
+      ]
     }
   ]
 }
@@ -56,6 +95,8 @@
 <header class="sitio">
   <a href="./" class="marca"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 19 9 6 13 13 17 8 22 19Z"/></svg>Guías de Chile</a>
   <nav>
+    <a href="en/">English</a>
+    <a href="pt/">Português</a>
     <a href="https://viajesypanoramas.cl/">App Panoramas</a>
   </nav>
 </header>
@@ -69,6 +110,17 @@
       <option value="">Todas las regiones</option>
     </select>
   </div>
+  <div class="cta compacta">
+    <h3>Reserva tours en Chile</h3>
+    <div class="boton-fila">
+      <a class="boton viator" data-afiliado="viator" rel="sponsored noopener" target="_blank" href="https://www.viator.com/es-CL/Chile/d75?pid=P00308789&mcid=42383&medium=link">Ver tours en Viator</a>
+      <span class="afiliado-nota">Cancelación gratis en la mayoría de tours</span>
+    </div>
+    <div class="boton-fila">
+      <a class="boton gyg" data-afiliado="gyg" rel="sponsored noopener" target="_blank" href="https://www.getyourguide.com/s/?q=Chile&partner_id=BZYZJT4">Ver tours en GetYourGuide</a>
+      <span class="afiliado-nota">Confirmación rápida y atención en español</span>
+    </div>
+  </div>
   <p id="sin-resultados" class="sin-resultados" hidden>Ningún destino coincide con esa búsqueda.</p>
 
   <!-- Orden fijo norte→sur (Chile va de Arica a Magallanes); nueva guía = insertar
@@ -76,7 +128,7 @@
   <div class="tarjetas" id="tarjetas">
     <div class="tarjeta" data-region="Arica y Parinacota" data-nombre="Arica">
       <a class="tarjeta-link" href="arica.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/AricaViewEast.jpg/500px-AricaViewEast.jpg" width="500" height="375" alt="Vista desde el Morro de Arica hacia el este de la ciudad, con el Valle de Azapa asomando al fondo" loading="lazy">
+        <img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/AricaViewEast.jpg/500px-AricaViewEast.jpg" width="500" height="375" alt="Vista desde el Morro de Arica hacia el este de la ciudad, con el Valle de Azapa asomando al fondo" decoding="async" loading="eager">
         <h3>Arica</h3>
         <p>Playas urbanas, Valle de Azapa, las momias más antiguas del mundo y geoglifos en el desierto.</p>
         <span class="region-tag">Región de Arica y Parinacota</span>
@@ -86,7 +138,7 @@
     </div>
     <div class="tarjeta" data-region="Tarapacá" data-nombre="Iquique">
       <a class="tarjeta-link" href="iquique.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Vista_de_Iquique%2C_Chile%2C_2016-02-11%2C_DD_20.JPG/500px-Vista_de_Iquique%2C_Chile%2C_2016-02-11%2C_DD_20.JPG" width="500" height="259" alt="Vista de la Duna del Dragón en primer plano y la ciudad de Iquique al fondo" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Vista_de_Iquique%2C_Chile%2C_2016-02-11%2C_DD_20.JPG/500px-Vista_de_Iquique%2C_Chile%2C_2016-02-11%2C_DD_20.JPG" width="500" height="259" alt="Vista de la Duna del Dragón en primer plano y la ciudad de Iquique al fondo" decoding="async" loading="eager">
         <h3>Iquique</h3>
         <p>Sandboard y parapente en la duna del Dragón, playa Cavancha, la Zofri y las salitreras Patrimonio de la Humanidad.</p>
         <span class="region-tag">Región de Tarapacá</span>
@@ -96,7 +148,7 @@
     </div>
     <div class="tarjeta" data-region="Antofagasta" data-nombre="San Pedro de Atacama">
       <a class="tarjeta-link" href="san-pedro-de-atacama.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Sunset_at_Valle_de_la_Luna.jpg/500px-Sunset_at_Valle_de_la_Luna.jpg" width="500" height="312" alt="Valle de la Luna al atardecer, cerca de San Pedro de Atacama" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Sunset_at_Valle_de_la_Luna.jpg/500px-Sunset_at_Valle_de_la_Luna.jpg" width="500" height="312" alt="Valle de la Luna al atardecer, cerca de San Pedro de Atacama" decoding="async" loading="eager">
         <h3>San Pedro de Atacama</h3>
         <p>Geysers, lagunas altiplánicas y el cielo más limpio del planeta.</p>
         <span class="region-tag">Región de Antofagasta</span>
@@ -106,7 +158,7 @@
     </div>
     <div class="tarjeta" data-region="Atacama" data-nombre="Copiapó y Bahía Inglesa">
       <a class="tarjeta-link" href="copiapo-bahia-inglesa.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Playa_Bahia_Inglesa_%2847098788761%29.jpg/500px-Playa_Bahia_Inglesa_%2847098788761%29.jpg" width="500" height="333" alt="Playa de arena clara y aguas turquesa en Bahía Inglesa, cerca de Caldera" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Playa_Bahia_Inglesa_%2847098788761%29.jpg/500px-Playa_Bahia_Inglesa_%2847098788761%29.jpg" width="500" height="333" alt="Playa de arena clara y aguas turquesa en Bahía Inglesa, cerca de Caldera" decoding="async" loading="lazy">
         <h3>Copiapó y Bahía Inglesa</h3>
         <p>Astroturismo bajo cielos despejados, playas turquesa junto a Caldera y el desierto florido de Llanos de Challe.</p>
         <span class="region-tag">Región de Atacama</span>
@@ -116,7 +168,7 @@
     </div>
     <div class="tarjeta" data-region="Coquimbo" data-nombre="La Serena y Coquimbo">
       <a class="tarjeta-link" href="la-serena-coquimbo.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Faro_Monumental_de_La_Serena._08.12.2022.jpg/500px-Faro_Monumental_de_La_Serena._08.12.2022.jpg" width="500" height="333" alt="Faro Monumental de La Serena, junto a la Avenida del Mar" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Faro_Monumental_de_La_Serena._08.12.2022.jpg/500px-Faro_Monumental_de_La_Serena._08.12.2022.jpg" width="500" height="333" alt="Faro Monumental de La Serena, junto a la Avenida del Mar" decoding="async" loading="lazy">
         <h3>La Serena y Coquimbo</h3>
         <p>Playas de Avenida del Mar, la Cruz del Tercer Milenio, Punta de Choros y observatorios turísticos bajo cielos despejados.</p>
         <span class="region-tag">Región de Coquimbo</span>
@@ -126,7 +178,7 @@
     </div>
     <div class="tarjeta" data-region="Coquimbo" data-nombre="Valle del Elqui">
       <a class="tarjeta-link" href="valle-del-elqui.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Cerro_Tololo_Inter-American_Observatory_%28noirlab-tololo-01%29.jpg/500px-Cerro_Tololo_Inter-American_Observatory_%28noirlab-tololo-01%29.jpg" width="500" height="278" alt="Cúpulas del Observatorio Interamericano Cerro Tololo sobre las montañas del Valle del Elqui" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Cerro_Tololo_Inter-American_Observatory_%28noirlab-tololo-01%29.jpg/500px-Cerro_Tololo_Inter-American_Observatory_%28noirlab-tololo-01%29.jpg" width="500" height="278" alt="Cúpulas del Observatorio Interamericano Cerro Tololo sobre las montañas del Valle del Elqui" decoding="async" loading="lazy">
         <h3>Valle del Elqui</h3>
         <p>Observatorios, ruta del pisco y el pueblo natal de Gabriela Mistral, bajo uno de los cielos más limpios del mundo.</p>
         <span class="region-tag">Región de Coquimbo</span>
@@ -136,7 +188,7 @@
     </div>
     <div class="tarjeta" data-region="Valparaíso" data-nombre="Valparaíso">
       <a class="tarjeta-link" href="valparaiso.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Overlooking_Valparaiso%2C_Chile_%2838530946744%29.jpg/500px-Overlooking_Valparaiso%2C_Chile_%2838530946744%29.jpg" width="500" height="334" alt="Vista panorámica de los cerros de colores de Valparaíso sobre la bahía" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Overlooking_Valparaiso%2C_Chile_%2838530946744%29.jpg/500px-Overlooking_Valparaiso%2C_Chile_%2838530946744%29.jpg" width="500" height="334" alt="Vista panorámica de los cerros de colores de Valparaíso sobre la bahía" decoding="async" loading="lazy">
         <h3>Valparaíso</h3>
         <p>Cerros de colores, ascensores centenarios y el mejor arte callejero de Chile, a un paso de Santiago.</p>
         <span class="region-tag">Región de Valparaíso</span>
@@ -146,7 +198,7 @@
     </div>
     <div class="tarjeta" data-region="Metropolitana" data-nombre="Santiago">
       <a class="tarjeta-link" href="santiago.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Gran_Santiago_Tower%2C_Views_from_San_Crit%C3%B3bal_Hill_-_Santiago_-_Chile_01.jpg/500px-Gran_Santiago_Tower%2C_Views_from_San_Crit%C3%B3bal_Hill_-_Santiago_-_Chile_01.jpg" width="500" height="375" alt="Vista del skyline de Providencia y el Gran Torre Santiago desde el cerro San Cristóbal" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Gran_Santiago_Tower%2C_Views_from_San_Crit%C3%B3bal_Hill_-_Santiago_-_Chile_01.jpg/500px-Gran_Santiago_Tower%2C_Views_from_San_Crit%C3%B3bal_Hill_-_Santiago_-_Chile_01.jpg" width="500" height="375" alt="Vista del skyline de Providencia y el Gran Torre Santiago desde el cerro San Cristóbal" decoding="async" loading="lazy">
         <h3>Santiago</h3>
         <p>Centro histórico, cerro San Cristóbal y los mejores day trips desde la capital.</p>
         <span class="region-tag">Región Metropolitana</span>
@@ -156,7 +208,7 @@
     </div>
     <div class="tarjeta" data-region="Metropolitana" data-nombre="Cajón del Maipo">
       <a class="tarjeta-link" href="cajon-del-maipo.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Laguna_Negra_y_Embalse_El_Yeso.jpg/500px-Laguna_Negra_y_Embalse_El_Yeso.jpg" width="500" height="321" alt="Aguas turquesas del Embalse El Yeso rodeadas de montañas andinas en el Cajón del Maipo" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Laguna_Negra_y_Embalse_El_Yeso.jpg/500px-Laguna_Negra_y_Embalse_El_Yeso.jpg" width="500" height="321" alt="Aguas turquesas del Embalse El Yeso rodeadas de montañas andinas en el Cajón del Maipo" decoding="async" loading="lazy">
         <h3>Cajón del Maipo</h3>
         <p>Embalse El Yeso, termas y glaciar El Morado a una hora de Santiago.</p>
         <span class="region-tag">Región Metropolitana</span>
@@ -166,7 +218,7 @@
     </div>
     <div class="tarjeta" data-region="O'Higgins" data-nombre="Ruta del Vino de Colchagua y Pichilemu">
       <a class="tarjeta-link" href="colchagua-pichilemu.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Vi%C3%B1a_Santa_Rita%2C_Valle_de_Colchagua.jpg/500px-Vi%C3%B1a_Santa_Rita%2C_Valle_de_Colchagua.jpg" width="500" height="375" alt="Hileras de vides en un viñedo del Valle de Colchagua, cerca de Santa Cruz" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Vi%C3%B1a_Santa_Rita%2C_Valle_de_Colchagua.jpg/500px-Vi%C3%B1a_Santa_Rita%2C_Valle_de_Colchagua.jpg" width="500" height="375" alt="Hileras de vides en un viñedo del Valle de Colchagua, cerca de Santa Cruz" decoding="async" loading="lazy">
         <h3>Ruta del Vino de Colchagua y Pichilemu</h3>
         <p>Viñas premiadas y el Museo de Colchagua en Santa Cruz, y el surf de Punta de Lobos en la costa de O'Higgins.</p>
         <span class="region-tag">Región de O'Higgins</span>
@@ -176,7 +228,7 @@
     </div>
     <div class="tarjeta" data-region="Maule" data-nombre="Radal Siete Tazas y Curicó">
       <a class="tarjeta-link" href="radal-siete-tazas-curico.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Pozones_del_R%C3%ADo_Claro_desde_las_alturas_en_Radal_Siete_Tazas.jpg/500px-Pozones_del_R%C3%ADo_Claro_desde_las_alturas_en_Radal_Siete_Tazas.jpg" width="500" height="375" alt="Vista aérea de los pozones turquesa del río Claro en el Parque Nacional Radal Siete Tazas" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Pozones_del_R%C3%ADo_Claro_desde_las_alturas_en_Radal_Siete_Tazas.jpg/500px-Pozones_del_R%C3%ADo_Claro_desde_las_alturas_en_Radal_Siete_Tazas.jpg" width="500" height="375" alt="Vista aérea de los pozones turquesa del río Claro en el Parque Nacional Radal Siete Tazas" decoding="async" loading="lazy">
         <h3>Radal Siete Tazas y Curicó</h3>
         <p>Pozones y cascadas del río Claro, la Ruta del Vino Valles de Curicó y las termas de Panimávida, en el Maule.</p>
         <span class="region-tag">Región del Maule</span>
@@ -186,7 +238,7 @@
     </div>
     <div class="tarjeta" data-region="Ñuble" data-nombre="Termas de Chillán">
       <a class="tarjeta-link" href="termas-de-chillan.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Volc%C3%A1n_desde_valle_hermoso-termas_de_chillan.JPG/500px-Volc%C3%A1n_desde_valle_hermoso-termas_de_chillan.JPG" width="500" height="375" alt="Volcán Chillán nevado visto desde el Valle Hermoso, cerca de Termas de Chillán" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Volc%C3%A1n_desde_valle_hermoso-termas_de_chillan.JPG/500px-Volc%C3%A1n_desde_valle_hermoso-termas_de_chillan.JPG" width="500" height="375" alt="Volcán Chillán nevado visto desde el Valle Hermoso, cerca de Termas de Chillán" decoding="async" loading="lazy">
         <h3>Termas de Chillán</h3>
         <p>Nieve en el centro de esquí más grande de Chile, aguas termales volcánicas y senderismo junto al volcán, en Ñuble.</p>
         <span class="region-tag">Región de Ñuble</span>
@@ -196,7 +248,7 @@
     </div>
     <div class="tarjeta" data-region="Biobío" data-nombre="Concepción y Salto del Laja">
       <a class="tarjeta-link" href="concepcion-salto-del-laja.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Campanil%2C_Universidad_de_Concepci%C3%B3n.jpg/500px-Campanil%2C_Universidad_de_Concepci%C3%B3n.jpg" width="500" height="375" alt="El Campanil, torre emblemática de la Universidad de Concepción, en el Barrio Universitario" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Campanil%2C_Universidad_de_Concepci%C3%B3n.jpg/500px-Campanil%2C_Universidad_de_Concepci%C3%B3n.jpg" width="500" height="375" alt="El Campanil, torre emblemática de la Universidad de Concepción, en el Barrio Universitario" decoding="async" loading="lazy">
         <h3>Concepción y Salto del Laja</h3>
         <p>Ciudad universitaria, el legado minero de Lota, playas cercanas y las cascadas del Salto del Laja, en el Biobío.</p>
         <span class="region-tag">Región del Biobío</span>
@@ -206,7 +258,7 @@
     </div>
     <div class="tarjeta" data-region="La Araucanía" data-nombre="Pucón y Villarrica">
       <a class="tarjeta-link" href="pucon-villarrica.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Volc%C3%A1n_Villarrica_desde_las_Termas_de_Trancura.jpg/500px-Volc%C3%A1n_Villarrica_desde_las_Termas_de_Trancura.jpg" width="500" height="375" alt="Volcán Villarrica nevado visto desde las Termas de Trancura, cerca de Pucón" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Volc%C3%A1n_Villarrica_desde_las_Termas_de_Trancura.jpg/500px-Volc%C3%A1n_Villarrica_desde_las_Termas_de_Trancura.jpg" width="500" height="375" alt="Volcán Villarrica nevado visto desde las Termas de Trancura, cerca de Pucón" decoding="async" loading="lazy">
         <h3>Pucón y Villarrica</h3>
         <p>Volcán activo, termas naturales y rafting en el río Trancura, a orillas del lago Villarrica.</p>
         <span class="region-tag">Región de La Araucanía</span>
@@ -216,7 +268,7 @@
     </div>
     <div class="tarjeta" data-region="Los Ríos" data-nombre="Valdivia">
       <a class="tarjeta-link" href="valdivia.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Muelle_Schuster%2C_Valdivia%2C_20190216_-_05.jpg/500px-Muelle_Schuster%2C_Valdivia%2C_20190216_-_05.jpg" width="500" height="332" alt="Muelle Schuster sobre el río Valdivia, en pleno centro de la ciudad" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Muelle_Schuster%2C_Valdivia%2C_20190216_-_05.jpg/500px-Muelle_Schuster%2C_Valdivia%2C_20190216_-_05.jpg" width="500" height="332" alt="Muelle Schuster sobre el río Valdivia, en pleno centro de la ciudad" decoding="async" loading="lazy">
         <h3>Valdivia</h3>
         <p>Paseos en bote por tres ríos, mercado fluvial con lobos marinos, cervecería Kunstmann y fuertes coloniales en Niebla y Corral.</p>
         <span class="region-tag">Región de Los Ríos</span>
@@ -226,7 +278,7 @@
     </div>
     <div class="tarjeta" data-region="Los Lagos" data-nombre="Frutillar">
       <a class="tarjeta-link" href="frutillar.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Frutillar-Theatro-del-Lago-1030906-PSD.jpg/500px-Frutillar-Theatro-del-Lago-1030906-PSD.jpg" width="500" height="294" alt="Teatro del Lago en Frutillar, a orillas del lago Llanquihue" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Frutillar-Theatro-del-Lago-1030906-PSD.jpg/500px-Frutillar-Theatro-del-Lago-1030906-PSD.jpg" width="500" height="294" alt="Teatro del Lago en Frutillar, a orillas del lago Llanquihue" decoding="async" loading="lazy">
         <h3>Frutillar</h3>
         <p>Herencia alemana, Teatro del Lago y la costanera más fotogénica del Llanquihue.</p>
         <span class="region-tag">Región de Los Lagos</span>
@@ -236,7 +288,7 @@
     </div>
     <div class="tarjeta" data-region="Los Lagos" data-nombre="Saltos del Petrohué">
       <a class="tarjeta-link" href="saltos-del-petrohue.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Saltos_del_Petrohu%C3%A9_y_Volc%C3%A1n_Osorno.jpg/500px-Saltos_del_Petrohu%C3%A9_y_Volc%C3%A1n_Osorno.jpg" width="500" height="357" alt="Saltos del Petrohué con el volcán Osorno de fondo" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Saltos_del_Petrohu%C3%A9_y_Volc%C3%A1n_Osorno.jpg/500px-Saltos_del_Petrohu%C3%A9_y_Volc%C3%A1n_Osorno.jpg" width="500" height="357" alt="Saltos del Petrohué con el volcán Osorno de fondo" decoding="async" loading="lazy">
         <h3>Saltos del Petrohué</h3>
         <p>Aguas turquesa al pie del volcán Osorno. Cómo llegar, entradas y qué combinar.</p>
         <span class="region-tag">Región de Los Lagos</span>
@@ -246,7 +298,7 @@
     </div>
     <div class="tarjeta" data-region="Los Lagos" data-nombre="Puerto Varas">
       <a class="tarjeta-link" href="puerto-varas.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Amanecer_sobre_el_Lago_LLanquihue_y_Volc%C3%A1n_Osorno%2C_vista_desde_la_costanera_de_Puerto_Varas.JPG/500px-Amanecer_sobre_el_Lago_LLanquihue_y_Volc%C3%A1n_Osorno%2C_vista_desde_la_costanera_de_Puerto_Varas.JPG" width="500" height="281" alt="Atardecer sobre el lago Llanquihue y el volcán Osorno en Puerto Varas" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Amanecer_sobre_el_Lago_LLanquihue_y_Volc%C3%A1n_Osorno%2C_vista_desde_la_costanera_de_Puerto_Varas.JPG/500px-Amanecer_sobre_el_Lago_LLanquihue_y_Volc%C3%A1n_Osorno%2C_vista_desde_la_costanera_de_Puerto_Varas.JPG" width="500" height="281" alt="Atardecer sobre el lago Llanquihue y el volcán Osorno en Puerto Varas" decoding="async" loading="lazy">
         <h3>Puerto Varas</h3>
         <p>La capital del lago Llanquihue: volcanes, kuchen y la base perfecta para explorar el sur.</p>
         <span class="region-tag">Región de Los Lagos</span>
@@ -254,9 +306,19 @@
       <a class="idioma-en" href="en/puerto-varas.html" title="Read this guide in English">EN</a>
       <a class="idioma-pt" href="pt/puerto-varas.html" title="Leia este guia em português">PT</a>
     </div>
+    <div class="tarjeta" data-region="Los Lagos" data-nombre="Puerto Montt">
+      <a class="tarjeta-link" href="puerto-montt.html">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Puertomontt2006.jpg/500px-Puertomontt2006.jpg" width="500" height="375" alt="Vista de Puerto Montt y su bahía desde la costanera" decoding="async" loading="lazy">
+        <h3>Puerto Montt</h3>
+        <p>Angelmó, Isla Tenglo y el aeropuerto El Tepual: la puerta de entrada al sur de Chile.</p>
+        <span class="region-tag">Región de Los Lagos</span>
+      </a>
+      <a class="idioma-en" href="en/puerto-montt.html" title="Read this guide in English">EN</a>
+      <a class="idioma-pt" href="pt/puerto-montt.html" title="Leia este guia em português">PT</a>
+    </div>
     <div class="tarjeta" data-region="Los Lagos" data-nombre="Chiloé">
       <a class="tarjeta-link" href="chiloe.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Palafitos_de_Castro%2C_Chilo%C3%A9.jpg/500px-Palafitos_de_Castro%2C_Chilo%C3%A9.jpg" width="500" height="332" alt="Palafitos de colores en la costanera de Castro, Chiloé" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Palafitos_de_Castro%2C_Chilo%C3%A9.jpg/500px-Palafitos_de_Castro%2C_Chilo%C3%A9.jpg" width="500" height="332" alt="Palafitos de colores en la costanera de Castro, Chiloé" decoding="async" loading="lazy">
         <h3>Chiloé</h3>
         <p>Castro, palafitos, iglesias UNESCO y curanto: la isla grande del sur.</p>
         <span class="region-tag">Región de Los Lagos</span>
@@ -266,7 +328,7 @@
     </div>
     <div class="tarjeta" data-region="Aysén" data-nombre="Carretera Austral">
       <a class="tarjeta-link" href="carretera-austral.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Carretera_Austral_-_Leones.JPG/500px-Carretera_Austral_-_Leones.JPG" width="500" height="334" alt="Tramo de ripio de la Carretera Austral entre montañas, región de Aysén" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Carretera_Austral_-_Leones.JPG/500px-Carretera_Austral_-_Leones.JPG" width="500" height="334" alt="Tramo de ripio de la Carretera Austral entre montañas, región de Aysén" decoding="async" loading="lazy">
         <h3>Carretera Austral</h3>
         <p>1.240 km de Puerto Montt a Villa O'Higgins: tramos, ferries y los imperdibles de la ruta 7.</p>
         <span class="region-tag">Región de Aysén</span>
@@ -276,7 +338,7 @@
     </div>
     <div class="tarjeta" data-region="Magallanes" data-nombre="Torres del Paine">
       <a class="tarjeta-link" href="torres-del-paine.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Cuernos_del_Paine_%285484302521%29.jpg/500px-Cuernos_del_Paine_%285484302521%29.jpg" width="500" height="333" alt="Los Cuernos del Paine en el parque nacional Torres del Paine" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Cuernos_del_Paine_%285484302521%29.jpg/500px-Cuernos_del_Paine_%285484302521%29.jpg" width="500" height="333" alt="Los Cuernos del Paine en el parque nacional Torres del Paine" decoding="async" loading="lazy">
         <h3>Torres del Paine</h3>
         <p>La joya de la Patagonia: base Torres, la W y cómo organizarlo sin dolores de cabeza.</p>
         <span class="region-tag">Región de Magallanes</span>
@@ -286,7 +348,7 @@
     </div>
     <div class="tarjeta" data-region="Magallanes" data-nombre="Puerto Natales">
       <a class="tarjeta-link" href="puerto-natales.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/PuertoNatalesView.jpg/500px-PuertoNatalesView.jpg" width="500" height="375" alt="Vista de Puerto Natales y el Seno Última Esperanza desde el Parque de las Cuatro Etnias" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/PuertoNatalesView.jpg/500px-PuertoNatalesView.jpg" width="500" height="375" alt="Vista de Puerto Natales y el Seno Última Esperanza desde el Parque de las Cuatro Etnias" decoding="async" loading="lazy">
         <h3>Puerto Natales</h3>
         <p>La puerta de entrada a Torres del Paine: Cueva del Milodón, Puerto Bories y navegación por el Seno Última Esperanza.</p>
         <span class="region-tag">Región de Magallanes</span>
@@ -296,7 +358,7 @@
     </div>
     <div class="tarjeta" data-region="Magallanes" data-nombre="Punta Arenas">
       <a class="tarjeta-link" href="punta-arenas.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Punta-Arenas-Chile-11.jpg/500px-Punta-Arenas-Chile-11.jpg" width="500" height="335" alt="Vista de Punta Arenas junto al Estrecho de Magallanes" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Punta-Arenas-Chile-11.jpg/500px-Punta-Arenas-Chile-11.jpg" width="500" height="335" alt="Vista de Punta Arenas junto al Estrecho de Magallanes" decoding="async" loading="lazy">
         <h3>Punta Arenas</h3>
         <p>La capital de la Patagonia: pingüineras de Isla Magdalena y Seno Otway, Fuerte Bulnes y el Estrecho de Magallanes.</p>
         <span class="region-tag">Región de Magallanes</span>
@@ -306,7 +368,7 @@
     </div>
     <div class="tarjeta" data-region="Valparaíso" data-nombre="Rapa Nui">
       <a class="tarjeta-link" href="rapa-nui.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Ahu_Tongariki_al_amanecer.jpg/500px-Ahu_Tongariki_al_amanecer.jpg" width="500" height="281" alt="Los quince moáis de Ahu Tongariki al amanecer, en Rapa Nui" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Ahu_Tongariki_al_amanecer.jpg/500px-Ahu_Tongariki_al_amanecer.jpg" width="500" height="281" alt="Los quince moáis de Ahu Tongariki al amanecer, en Rapa Nui" decoding="async" loading="lazy">
         <h3>Rapa Nui</h3>
         <p>Isla de Pascua: Ahu Tongariki, la cantera de Rano Raraku, Orongo y la playa de Anakena, a 5 horas de vuelo desde Santiago.</p>
         <span class="region-tag">Isla oceánica, Región de Valparaíso</span>

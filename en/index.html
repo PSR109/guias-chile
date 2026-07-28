@@ -37,13 +37,50 @@
       "inLanguage": "en",
       "publisher": {
         "@id": "https://patagoniasimracing.cl/#organization"
-      }
+      },
+      "mainEntity": { "@id": "https://guias.viajesypanoramas.cl/en/#itemlist" }
     },
     {
       "@type": "Organization",
       "@id": "https://patagoniasimracing.cl/#organization",
       "name": "Patagonia Sim Racing",
       "url": "https://patagoniasimracing.cl"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://guias.viajesypanoramas.cl/en/#itemlist",
+      "name": "Chile Travel Guides",
+      "description": "The 25 published destination guides, ordered north to south.",
+      "isPartOf": { "@id": "https://guias.viajesypanoramas.cl/en/#website" },
+      "numberOfItems": 25,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Arica","url":"https://guias.viajesypanoramas.cl/en/arica.html"},
+        {"@type":"ListItem","position":2,"name":"Iquique","url":"https://guias.viajesypanoramas.cl/en/iquique.html"},
+        {"@type":"ListItem","position":3,"name":"San Pedro de Atacama","url":"https://guias.viajesypanoramas.cl/en/san-pedro-de-atacama.html"},
+        {"@type":"ListItem","position":4,"name":"Copiapó and Bahía Inglesa","url":"https://guias.viajesypanoramas.cl/en/copiapo-bahia-inglesa.html"},
+        {"@type":"ListItem","position":5,"name":"La Serena and Coquimbo","url":"https://guias.viajesypanoramas.cl/en/la-serena-coquimbo.html"},
+        {"@type":"ListItem","position":6,"name":"Elqui Valley","url":"https://guias.viajesypanoramas.cl/en/valle-del-elqui.html"},
+        {"@type":"ListItem","position":7,"name":"Valparaíso","url":"https://guias.viajesypanoramas.cl/en/valparaiso.html"},
+        {"@type":"ListItem","position":8,"name":"Santiago","url":"https://guias.viajesypanoramas.cl/en/santiago.html"},
+        {"@type":"ListItem","position":9,"name":"Cajón del Maipo","url":"https://guias.viajesypanoramas.cl/en/cajon-del-maipo.html"},
+        {"@type":"ListItem","position":10,"name":"Colchagua Wine Route and Pichilemu","url":"https://guias.viajesypanoramas.cl/en/colchagua-pichilemu.html"},
+        {"@type":"ListItem","position":11,"name":"Radal Siete Tazas and Curicó","url":"https://guias.viajesypanoramas.cl/en/radal-siete-tazas-curico.html"},
+        {"@type":"ListItem","position":12,"name":"Termas de Chillán","url":"https://guias.viajesypanoramas.cl/en/termas-de-chillan.html"},
+        {"@type":"ListItem","position":13,"name":"Concepción and Salto del Laja","url":"https://guias.viajesypanoramas.cl/en/concepcion-salto-del-laja.html"},
+        {"@type":"ListItem","position":14,"name":"Pucón and Villarrica","url":"https://guias.viajesypanoramas.cl/en/pucon-villarrica.html"},
+        {"@type":"ListItem","position":15,"name":"Valdivia","url":"https://guias.viajesypanoramas.cl/en/valdivia.html"},
+        {"@type":"ListItem","position":16,"name":"Frutillar","url":"https://guias.viajesypanoramas.cl/en/frutillar.html"},
+        {"@type":"ListItem","position":17,"name":"Saltos del Petrohué","url":"https://guias.viajesypanoramas.cl/en/saltos-del-petrohue.html"},
+        {"@type":"ListItem","position":18,"name":"Puerto Varas","url":"https://guias.viajesypanoramas.cl/en/puerto-varas.html"},
+        {"@type":"ListItem","position":19,"name":"Puerto Montt","url":"https://guias.viajesypanoramas.cl/en/puerto-montt.html"},
+        {"@type":"ListItem","position":20,"name":"Chiloé","url":"https://guias.viajesypanoramas.cl/en/chiloe.html"},
+        {"@type":"ListItem","position":21,"name":"Carretera Austral","url":"https://guias.viajesypanoramas.cl/en/carretera-austral.html"},
+        {"@type":"ListItem","position":22,"name":"Torres del Paine","url":"https://guias.viajesypanoramas.cl/en/torres-del-paine.html"},
+        {"@type":"ListItem","position":23,"name":"Puerto Natales","url":"https://guias.viajesypanoramas.cl/en/puerto-natales.html"},
+        {"@type":"ListItem","position":24,"name":"Punta Arenas","url":"https://guias.viajesypanoramas.cl/en/punta-arenas.html"},
+        {"@type":"ListItem","position":25,"name":"Rapa Nui","url":"https://guias.viajesypanoramas.cl/en/rapa-nui.html"}
+      ]
     }
   ]
 }
@@ -73,12 +110,23 @@
       <option value="">All regions</option>
     </select>
   </div>
+  <div class="cta compacta">
+    <h3>Book tours in Chile</h3>
+    <div class="boton-fila">
+      <a class="boton viator" data-afiliado="viator" rel="sponsored noopener" target="_blank" href="https://www.viator.com/Chile/d75?pid=P00308789&mcid=42383&medium=link">See tours on Viator</a>
+      <span class="afiliado-nota">Free cancellation on most tours</span>
+    </div>
+    <div class="boton-fila">
+      <a class="boton gyg" data-afiliado="gyg" rel="sponsored noopener" target="_blank" href="https://www.getyourguide.com/s/?q=Chile&partner_id=BZYZJT4">See tours on GetYourGuide</a>
+      <span class="afiliado-nota">Fast confirmation</span>
+    </div>
+  </div>
   <p id="sin-resultados" class="sin-resultados" hidden>No destination matches that search.</p>
 
   <div class="tarjetas" id="tarjetas">
     <div class="tarjeta" data-region="Arica and Parinacota" data-nombre="Arica">
       <a class="tarjeta-link" href="arica.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/AricaViewEast.jpg/500px-AricaViewEast.jpg" width="500" height="375" alt="View from the Morro de Arica toward the east of the city, with the Azapa Valley in the distance" loading="lazy">
+        <img fetchpriority="high" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/AricaViewEast.jpg/500px-AricaViewEast.jpg" width="500" height="375" alt="View from the Morro de Arica toward the east of the city, with the Azapa Valley in the distance" decoding="async" loading="eager">
         <h3>Arica</h3>
         <p>Urban beaches, the Azapa Valley, the world's oldest mummies and desert geoglyphs.</p>
         <span class="region-tag">Arica and Parinacota Region</span>
@@ -88,7 +136,7 @@
     </div>
     <div class="tarjeta" data-region="Tarapacá" data-nombre="Iquique">
       <a class="tarjeta-link" href="iquique.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Vista_de_Iquique%2C_Chile%2C_2016-02-11%2C_DD_20.JPG/500px-Vista_de_Iquique%2C_Chile%2C_2016-02-11%2C_DD_20.JPG" width="500" height="259" alt="The Dragon Dune in the foreground and the city of Iquique behind" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Vista_de_Iquique%2C_Chile%2C_2016-02-11%2C_DD_20.JPG/500px-Vista_de_Iquique%2C_Chile%2C_2016-02-11%2C_DD_20.JPG" width="500" height="259" alt="The Dragon Dune in the foreground and the city of Iquique behind" decoding="async" loading="eager">
         <h3>Iquique</h3>
         <p>Sandboarding and paragliding on the Dragon dune, Cavancha beach, the Zofri and the UNESCO saltpeter works.</p>
         <span class="region-tag">Tarapacá Region</span>
@@ -98,7 +146,7 @@
     </div>
     <div class="tarjeta" data-region="Antofagasta" data-nombre="San Pedro de Atacama">
       <a class="tarjeta-link" href="san-pedro-de-atacama.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Sunset_at_Valle_de_la_Luna.jpg/500px-Sunset_at_Valle_de_la_Luna.jpg" width="500" height="312" alt="Valle de la Luna at sunset, near San Pedro de Atacama" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Sunset_at_Valle_de_la_Luna.jpg/500px-Sunset_at_Valle_de_la_Luna.jpg" width="500" height="312" alt="Valle de la Luna at sunset, near San Pedro de Atacama" decoding="async" loading="eager">
         <h3>San Pedro de Atacama</h3>
         <p>Geysers, altiplano lagoons and the cleanest sky on the planet.</p>
         <span class="region-tag">Antofagasta Region</span>
@@ -108,7 +156,7 @@
     </div>
     <div class="tarjeta" data-region="Atacama" data-nombre="Copiapó and Bahía Inglesa">
       <a class="tarjeta-link" href="copiapo-bahia-inglesa.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Playa_Bahia_Inglesa_%2847098788761%29.jpg/500px-Playa_Bahia_Inglesa_%2847098788761%29.jpg" width="500" height="333" alt="Pale-sand beach and turquoise water at Bahía Inglesa, near Caldera" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Playa_Bahia_Inglesa_%2847098788761%29.jpg/500px-Playa_Bahia_Inglesa_%2847098788761%29.jpg" width="500" height="333" alt="Pale-sand beach and turquoise water at Bahía Inglesa, near Caldera" decoding="async" loading="lazy">
         <h3>Copiapó and Bahía Inglesa</h3>
         <p>Astro-tourism under clear skies, turquoise beaches by Caldera and the flowering desert of Llanos de Challe.</p>
         <span class="region-tag">Atacama Region</span>
@@ -118,7 +166,7 @@
     </div>
     <div class="tarjeta" data-region="Coquimbo" data-nombre="La Serena and Coquimbo">
       <a class="tarjeta-link" href="la-serena-coquimbo.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Faro_Monumental_de_La_Serena._08.12.2022.jpg/500px-Faro_Monumental_de_La_Serena._08.12.2022.jpg" width="500" height="333" alt="Faro Monumental in La Serena, next to Avenida del Mar" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Faro_Monumental_de_La_Serena._08.12.2022.jpg/500px-Faro_Monumental_de_La_Serena._08.12.2022.jpg" width="500" height="333" alt="Faro Monumental in La Serena, next to Avenida del Mar" decoding="async" loading="lazy">
         <h3>La Serena and Coquimbo</h3>
         <p>Avenida del Mar beaches, the Cross of the Third Millennium, Punta de Choros and tourist observatories under clear skies.</p>
         <span class="region-tag">Coquimbo Region</span>
@@ -128,7 +176,7 @@
     </div>
     <div class="tarjeta" data-region="Coquimbo" data-nombre="Elqui Valley">
       <a class="tarjeta-link" href="valle-del-elqui.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Cerro_Tololo_Inter-American_Observatory_%28noirlab-tololo-01%29.jpg/500px-Cerro_Tololo_Inter-American_Observatory_%28noirlab-tololo-01%29.jpg" width="500" height="278" alt="Domes of the Cerro Tololo Inter-American Observatory above the mountains of the Elqui Valley" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Cerro_Tololo_Inter-American_Observatory_%28noirlab-tololo-01%29.jpg/500px-Cerro_Tololo_Inter-American_Observatory_%28noirlab-tololo-01%29.jpg" width="500" height="278" alt="Domes of the Cerro Tololo Inter-American Observatory above the mountains of the Elqui Valley" decoding="async" loading="lazy">
         <h3>Elqui Valley</h3>
         <p>Observatories, the pisco route and Gabriela Mistral's hometown, under one of the world's clearest skies.</p>
         <span class="region-tag">Coquimbo Region</span>
@@ -138,7 +186,7 @@
     </div>
     <div class="tarjeta" data-region="Valparaíso" data-nombre="Valparaíso">
       <a class="tarjeta-link" href="valparaiso.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Overlooking_Valparaiso%2C_Chile_%2838530946744%29.jpg/500px-Overlooking_Valparaiso%2C_Chile_%2838530946744%29.jpg" width="500" height="334" alt="Panoramic view of the colorful hills of Valparaíso above the bay" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Overlooking_Valparaiso%2C_Chile_%2838530946744%29.jpg/500px-Overlooking_Valparaiso%2C_Chile_%2838530946744%29.jpg" width="500" height="334" alt="Panoramic view of the colorful hills of Valparaíso above the bay" decoding="async" loading="lazy">
         <h3>Valparaíso</h3>
         <p>Colorful hills, century-old funiculars and Chile's best street art, a stone's throw from Santiago.</p>
         <span class="region-tag">Valparaíso Region</span>
@@ -148,7 +196,7 @@
     </div>
     <div class="tarjeta" data-region="Santiago Metropolitan" data-nombre="Santiago">
       <a class="tarjeta-link" href="santiago.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Gran_Santiago_Tower%2C_Views_from_San_Crit%C3%B3bal_Hill_-_Santiago_-_Chile_01.jpg/500px-Gran_Santiago_Tower%2C_Views_from_San_Crit%C3%B3bal_Hill_-_Santiago_-_Chile_01.jpg" width="500" height="375" alt="View of the Providencia skyline and the Gran Torre Santiago from San Cristóbal hill" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Gran_Santiago_Tower%2C_Views_from_San_Crit%C3%B3bal_Hill_-_Santiago_-_Chile_01.jpg/500px-Gran_Santiago_Tower%2C_Views_from_San_Crit%C3%B3bal_Hill_-_Santiago_-_Chile_01.jpg" width="500" height="375" alt="View of the Providencia skyline and the Gran Torre Santiago from San Cristóbal hill" decoding="async" loading="lazy">
         <h3>Santiago</h3>
         <p>Historic downtown, San Cristóbal hill and the best day trips from the capital.</p>
         <span class="region-tag">Santiago Metropolitan Region</span>
@@ -158,7 +206,7 @@
     </div>
     <div class="tarjeta" data-region="Santiago Metropolitan" data-nombre="Cajón del Maipo">
       <a class="tarjeta-link" href="cajon-del-maipo.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Laguna_Negra_y_Embalse_El_Yeso.jpg/500px-Laguna_Negra_y_Embalse_El_Yeso.jpg" width="500" height="321" alt="Turquoise waters of the El Yeso reservoir surrounded by Andean mountains in Cajón del Maipo" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Laguna_Negra_y_Embalse_El_Yeso.jpg/500px-Laguna_Negra_y_Embalse_El_Yeso.jpg" width="500" height="321" alt="Turquoise waters of the El Yeso reservoir surrounded by Andean mountains in Cajón del Maipo" decoding="async" loading="lazy">
         <h3>Cajón del Maipo</h3>
         <p>El Yeso reservoir, hot springs and the El Morado glacier an hour from Santiago.</p>
         <span class="region-tag">Santiago Metropolitan Region</span>
@@ -168,7 +216,7 @@
     </div>
     <div class="tarjeta" data-region="O'Higgins" data-nombre="Colchagua Wine Route and Pichilemu">
       <a class="tarjeta-link" href="colchagua-pichilemu.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Vi%C3%B1a_Santa_Rita%2C_Valle_de_Colchagua.jpg/500px-Vi%C3%B1a_Santa_Rita%2C_Valle_de_Colchagua.jpg" width="500" height="375" alt="Rows of vines in a Colchagua Valley vineyard, near Santa Cruz" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Vi%C3%B1a_Santa_Rita%2C_Valle_de_Colchagua.jpg/500px-Vi%C3%B1a_Santa_Rita%2C_Valle_de_Colchagua.jpg" width="500" height="375" alt="Rows of vines in a Colchagua Valley vineyard, near Santa Cruz" decoding="async" loading="lazy">
         <h3>Colchagua Wine Route and Pichilemu</h3>
         <p>Award-winning wineries and the Colchagua Museum in Santa Cruz, and the surf of Punta de Lobos on the O'Higgins coast.</p>
         <span class="region-tag">O'Higgins Region</span>
@@ -178,7 +226,7 @@
     </div>
     <div class="tarjeta" data-region="Maule" data-nombre="Radal Siete Tazas and Curicó">
       <a class="tarjeta-link" href="radal-siete-tazas-curico.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Pozones_del_R%C3%ADo_Claro_desde_las_alturas_en_Radal_Siete_Tazas.jpg/500px-Pozones_del_R%C3%ADo_Claro_desde_las_alturas_en_Radal_Siete_Tazas.jpg" width="500" height="375" alt="Aerial view of the turquoise pools of the Claro river in Radal Siete Tazas National Park" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Pozones_del_R%C3%ADo_Claro_desde_las_alturas_en_Radal_Siete_Tazas.jpg/500px-Pozones_del_R%C3%ADo_Claro_desde_las_alturas_en_Radal_Siete_Tazas.jpg" width="500" height="375" alt="Aerial view of the turquoise pools of the Claro river in Radal Siete Tazas National Park" decoding="async" loading="lazy">
         <h3>Radal Siete Tazas and Curicó</h3>
         <p>Pools and waterfalls of the Claro river, the Curicó valleys wine route and the Panimávida hot springs, in the Maule.</p>
         <span class="region-tag">Maule Region</span>
@@ -188,7 +236,7 @@
     </div>
     <div class="tarjeta" data-region="Ñuble" data-nombre="Termas de Chillán">
       <a class="tarjeta-link" href="termas-de-chillan.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Volc%C3%A1n_desde_valle_hermoso-termas_de_chillan.JPG/500px-Volc%C3%A1n_desde_valle_hermoso-termas_de_chillan.JPG" width="500" height="375" alt="The snow-capped Chillán volcano seen from Valle Hermoso, near Termas de Chillán" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Volc%C3%A1n_desde_valle_hermoso-termas_de_chillan.JPG/500px-Volc%C3%A1n_desde_valle_hermoso-termas_de_chillan.JPG" width="500" height="375" alt="The snow-capped Chillán volcano seen from Valle Hermoso, near Termas de Chillán" decoding="async" loading="lazy">
         <h3>Termas de Chillán</h3>
         <p>Snow at Chile's largest ski resort, volcanic hot springs and hiking by the volcano, in Ñuble.</p>
         <span class="region-tag">Ñuble Region</span>
@@ -198,7 +246,7 @@
     </div>
     <div class="tarjeta" data-region="Biobío" data-nombre="Concepción and Salto del Laja">
       <a class="tarjeta-link" href="concepcion-salto-del-laja.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Campanil%2C_Universidad_de_Concepci%C3%B3n.jpg/500px-Campanil%2C_Universidad_de_Concepci%C3%B3n.jpg" width="500" height="375" alt="El Campanil, the emblematic tower of the University of Concepción, in the University District" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Campanil%2C_Universidad_de_Concepci%C3%B3n.jpg/500px-Campanil%2C_Universidad_de_Concepci%C3%B3n.jpg" width="500" height="375" alt="El Campanil, the emblematic tower of the University of Concepción, in the University District" decoding="async" loading="lazy">
         <h3>Concepción and Salto del Laja</h3>
         <p>A university city, Lota's mining legacy, nearby beaches and the Salto del Laja waterfalls, in the Biobío.</p>
         <span class="region-tag">Biobío Region</span>
@@ -208,7 +256,7 @@
     </div>
     <div class="tarjeta" data-region="Araucanía" data-nombre="Pucón and Villarrica">
       <a class="tarjeta-link" href="pucon-villarrica.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Volc%C3%A1n_Villarrica_desde_las_Termas_de_Trancura.jpg/500px-Volc%C3%A1n_Villarrica_desde_las_Termas_de_Trancura.jpg" width="500" height="375" alt="The snow-capped Villarrica volcano seen from the Termas de Trancura, near Pucón" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Volc%C3%A1n_Villarrica_desde_las_Termas_de_Trancura.jpg/500px-Volc%C3%A1n_Villarrica_desde_las_Termas_de_Trancura.jpg" width="500" height="375" alt="The snow-capped Villarrica volcano seen from the Termas de Trancura, near Pucón" decoding="async" loading="lazy">
         <h3>Pucón and Villarrica</h3>
         <p>An active volcano, natural hot springs and rafting on the Trancura river, on the shore of Lake Villarrica.</p>
         <span class="region-tag">Araucanía Region</span>
@@ -218,7 +266,7 @@
     </div>
     <div class="tarjeta" data-region="Los Ríos" data-nombre="Valdivia">
       <a class="tarjeta-link" href="valdivia.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Muelle_Schuster%2C_Valdivia%2C_20190216_-_05.jpg/500px-Muelle_Schuster%2C_Valdivia%2C_20190216_-_05.jpg" width="500" height="332" alt="The Schuster pier over the Valdivia river, in the city center" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Muelle_Schuster%2C_Valdivia%2C_20190216_-_05.jpg/500px-Muelle_Schuster%2C_Valdivia%2C_20190216_-_05.jpg" width="500" height="332" alt="The Schuster pier over the Valdivia river, in the city center" decoding="async" loading="lazy">
         <h3>Valdivia</h3>
         <p>Boat trips on three rivers, a river market with sea lions, the Kunstmann brewery and colonial forts at Niebla and Corral.</p>
         <span class="region-tag">Los Ríos Region</span>
@@ -228,7 +276,7 @@
     </div>
     <div class="tarjeta" data-region="Los Lagos" data-nombre="Frutillar">
       <a class="tarjeta-link" href="frutillar.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Frutillar-Theatro-del-Lago-1030906-PSD.jpg/500px-Frutillar-Theatro-del-Lago-1030906-PSD.jpg" width="500" height="294" alt="Teatro del Lago in Frutillar, on the shore of Lake Llanquihue" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Frutillar-Theatro-del-Lago-1030906-PSD.jpg/500px-Frutillar-Theatro-del-Lago-1030906-PSD.jpg" width="500" height="294" alt="Teatro del Lago in Frutillar, on the shore of Lake Llanquihue" decoding="async" loading="lazy">
         <h3>Frutillar</h3>
         <p>German heritage, the Teatro del Lago and the most photogenic waterfront on Lake Llanquihue.</p>
         <span class="region-tag">Los Lagos Region</span>
@@ -238,7 +286,7 @@
     </div>
     <div class="tarjeta" data-region="Los Lagos" data-nombre="Saltos del Petrohué">
       <a class="tarjeta-link" href="saltos-del-petrohue.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Saltos_del_Petrohu%C3%A9_y_Volc%C3%A1n_Osorno.jpg/500px-Saltos_del_Petrohu%C3%A9_y_Volc%C3%A1n_Osorno.jpg" width="500" height="357" alt="The Saltos del Petrohué with the Osorno volcano behind" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Saltos_del_Petrohu%C3%A9_y_Volc%C3%A1n_Osorno.jpg/500px-Saltos_del_Petrohu%C3%A9_y_Volc%C3%A1n_Osorno.jpg" width="500" height="357" alt="The Saltos del Petrohué with the Osorno volcano behind" decoding="async" loading="lazy">
         <h3>Saltos del Petrohué</h3>
         <p>Turquoise waters at the foot of the Osorno volcano. How to get there, tickets and what to combine.</p>
         <span class="region-tag">Los Lagos Region</span>
@@ -248,7 +296,7 @@
     </div>
     <div class="tarjeta" data-region="Los Lagos" data-nombre="Puerto Varas">
       <a class="tarjeta-link" href="puerto-varas.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Amanecer_sobre_el_Lago_LLanquihue_y_Volc%C3%A1n_Osorno%2C_vista_desde_la_costanera_de_Puerto_Varas.JPG/500px-Amanecer_sobre_el_Lago_LLanquihue_y_Volc%C3%A1n_Osorno%2C_vista_desde_la_costanera_de_Puerto_Varas.JPG" width="500" height="281" alt="Sunset over Lake Llanquihue and the Osorno volcano in Puerto Varas" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Amanecer_sobre_el_Lago_LLanquihue_y_Volc%C3%A1n_Osorno%2C_vista_desde_la_costanera_de_Puerto_Varas.JPG/500px-Amanecer_sobre_el_Lago_LLanquihue_y_Volc%C3%A1n_Osorno%2C_vista_desde_la_costanera_de_Puerto_Varas.JPG" width="500" height="281" alt="Sunset over Lake Llanquihue and the Osorno volcano in Puerto Varas" decoding="async" loading="lazy">
         <h3>Puerto Varas</h3>
         <p>The capital of Lake Llanquihue: volcanoes, kuchen and the perfect base to explore the south.</p>
         <span class="region-tag">Los Lagos Region</span>
@@ -256,9 +304,19 @@
       <a class="idioma-en" href="../puerto-varas.html" title="Leer esta guía en español">ES</a>
       <a class="idioma-pt" href="../pt/puerto-varas.html" title="Leia este guia em português">PT</a>
     </div>
+    <div class="tarjeta" data-region="Los Lagos" data-nombre="Puerto Montt">
+      <a class="tarjeta-link" href="puerto-montt.html">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Puertomontt2006.jpg/500px-Puertomontt2006.jpg" width="500" height="375" alt="View of Puerto Montt and its bay from the waterfront" decoding="async" loading="lazy">
+        <h3>Puerto Montt</h3>
+        <p>Angelmó, Isla Tenglo and El Tepual airport: the gateway to southern Chile.</p>
+        <span class="region-tag">Los Lagos Region</span>
+      </a>
+      <a class="idioma-en" href="../puerto-montt.html" title="Leer esta guía en español">ES</a>
+      <a class="idioma-pt" href="../pt/puerto-montt.html" title="Leia este guia em português">PT</a>
+    </div>
     <div class="tarjeta" data-region="Los Lagos" data-nombre="Chiloé">
       <a class="tarjeta-link" href="chiloe.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Palafitos_de_Castro%2C_Chilo%C3%A9.jpg/500px-Palafitos_de_Castro%2C_Chilo%C3%A9.jpg" width="500" height="332" alt="Colorful palafito stilt houses on the Castro waterfront, Chiloé" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Palafitos_de_Castro%2C_Chilo%C3%A9.jpg/500px-Palafitos_de_Castro%2C_Chilo%C3%A9.jpg" width="500" height="332" alt="Colorful palafito stilt houses on the Castro waterfront, Chiloé" decoding="async" loading="lazy">
         <h3>Chiloé</h3>
         <p>Castro, palafito stilt houses, UNESCO churches and curanto: the big island of the south.</p>
         <span class="region-tag">Los Lagos Region</span>
@@ -268,7 +326,7 @@
     </div>
     <div class="tarjeta" data-region="Aysén" data-nombre="Carretera Austral">
       <a class="tarjeta-link" href="carretera-austral.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Carretera_Austral_-_Leones.JPG/500px-Carretera_Austral_-_Leones.JPG" width="500" height="334" alt="A gravel section of the Carretera Austral between mountains, Aysén region" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Carretera_Austral_-_Leones.JPG/500px-Carretera_Austral_-_Leones.JPG" width="500" height="334" alt="A gravel section of the Carretera Austral between mountains, Aysén region" decoding="async" loading="lazy">
         <h3>Carretera Austral</h3>
         <p>1,240 km from Puerto Montt to Villa O'Higgins: sections, ferries and the highlights of Route 7.</p>
         <span class="region-tag">Aysén Region</span>
@@ -278,7 +336,7 @@
     </div>
     <div class="tarjeta" data-region="Magallanes" data-nombre="Torres del Paine">
       <a class="tarjeta-link" href="torres-del-paine.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Cuernos_del_Paine_%285484302521%29.jpg/500px-Cuernos_del_Paine_%285484302521%29.jpg" width="500" height="333" alt="The Cuernos del Paine in Torres del Paine National Park" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Cuernos_del_Paine_%285484302521%29.jpg/500px-Cuernos_del_Paine_%285484302521%29.jpg" width="500" height="333" alt="The Cuernos del Paine in Torres del Paine National Park" decoding="async" loading="lazy">
         <h3>Torres del Paine</h3>
         <p>Patagonia's jewel: the base of the towers, the W trek and how to organize it hassle-free.</p>
         <span class="region-tag">Magallanes Region</span>
@@ -288,7 +346,7 @@
     </div>
     <div class="tarjeta" data-region="Magallanes" data-nombre="Puerto Natales">
       <a class="tarjeta-link" href="puerto-natales.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/PuertoNatalesView.jpg/500px-PuertoNatalesView.jpg" width="500" height="375" alt="View of Puerto Natales and the Last Hope Sound from the Parque de las Cuatro Etnias" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/PuertoNatalesView.jpg/500px-PuertoNatalesView.jpg" width="500" height="375" alt="View of Puerto Natales and the Last Hope Sound from the Parque de las Cuatro Etnias" decoding="async" loading="lazy">
         <h3>Puerto Natales</h3>
         <p>The gateway to Torres del Paine: the Milodón Cave, Puerto Bories and sailing the Last Hope Sound.</p>
         <span class="region-tag">Magallanes Region</span>
@@ -298,7 +356,7 @@
     </div>
     <div class="tarjeta" data-region="Magallanes" data-nombre="Punta Arenas">
       <a class="tarjeta-link" href="punta-arenas.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Punta-Arenas-Chile-11.jpg/500px-Punta-Arenas-Chile-11.jpg" width="500" height="335" alt="View of Punta Arenas by the Strait of Magellan" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Punta-Arenas-Chile-11.jpg/500px-Punta-Arenas-Chile-11.jpg" width="500" height="335" alt="View of Punta Arenas by the Strait of Magellan" decoding="async" loading="lazy">
         <h3>Punta Arenas</h3>
         <p>The capital of Patagonia: the penguin colonies of Magdalena Island and Seno Otway, Fuerte Bulnes and the Strait of Magellan.</p>
         <span class="region-tag">Magallanes Region</span>
@@ -308,7 +366,7 @@
     </div>
     <div class="tarjeta" data-region="Valparaíso" data-nombre="Rapa Nui">
       <a class="tarjeta-link" href="rapa-nui.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Ahu_Tongariki_al_amanecer.jpg/500px-Ahu_Tongariki_al_amanecer.jpg" width="500" height="281" alt="The fifteen moai of Ahu Tongariki at dawn, on Rapa Nui" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Ahu_Tongariki_al_amanecer.jpg/500px-Ahu_Tongariki_al_amanecer.jpg" width="500" height="281" alt="The fifteen moai of Ahu Tongariki at dawn, on Rapa Nui" decoding="async" loading="lazy">
         <h3>Rapa Nui</h3>
         <p>Easter Island: Ahu Tongariki, the Rano Raraku quarry, Orongo and Anakena beach, a 5-hour flight from Santiago.</p>
         <span class="region-tag">Oceanic island, Valparaíso Region</span>

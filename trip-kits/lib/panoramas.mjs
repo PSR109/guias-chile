@@ -1,6 +1,14 @@
 import { readFileSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const DATA_PATH = 'C:/Creador de apps/app_panoramas/dist/data/panoramas.json';
+const HERE = dirname(fileURLToPath(import.meta.url));
+// Supuesto: checkout hermano de app_panoramas junto a guias-chile
+// (.../guias-chile/trip-kits/lib -> ../../../app_panoramas/dist/data/panoramas.json).
+// Override con PANORAMAS_DATA_PATH si el checkout vive en otro lado.
+const DATA_PATH = process.env.PANORAMAS_DATA_PATH
+  ? resolve(process.env.PANORAMAS_DATA_PATH)
+  : resolve(HERE, '..', '..', '..', 'app_panoramas', 'dist', 'data', 'panoramas.json');
 let cache = null;
 
 function load() {

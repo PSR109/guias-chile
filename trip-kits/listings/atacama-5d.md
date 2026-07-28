@@ -14,10 +14,12 @@ WHAT'S INSIDE (A4 PDF, instant download):
 • Schematic route map of the excursions around San Pedro
 • 2026 budget tables in CLP + USD: tours, park fees, transfers
 • Checklist: 4 AM geyser tour survival, water, sunscreen, cash
-• Bonus places from our 25,000-place Chile catalog
+• Bonus places from our 30,000-place Chile catalog
 • FAQ: altitude, best season, moonless nights for stargazing
 
-Compiled from guias.viajesypanoramas.cl — free practical Chile guides trusted by thousands of travelers.
+Compiled from guias.viajesypanoramas.cl — free practical Chile guides, open to everyone.
+
+Place data is derived from OpenStreetMap, (c) OpenStreetMap contributors, available under the Open Database License (ODbL).
 
 INSTANT DOWNLOAD — print or phone. Personal use only.
 
