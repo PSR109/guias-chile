@@ -25,6 +25,6 @@ INSTANT DOWNLOAD — no physical item shipped. Print it or use it on your phone.
 
 ## Gumroad
 - Product name: La Serena, Coquimbo & the Elqui Valley — 4-Day Printable Itinerary (PDF)
-- Permalink (EXACTO): elqui-stars-4d  →  https://patricio358.gumroad.com/l/elqui-stars-4d
+- Permalink (EXACTO): elqui-stars-4d  →  https://payhip.com/b/uy4v9
 - Price: $14.90
 - Description: misma de Etsy (quitar la linea INSTANT DOWNLOAD y dejar "Instant PDF download. Personal use only.").

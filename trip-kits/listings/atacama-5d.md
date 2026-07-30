@@ -25,6 +25,6 @@ INSTANT DOWNLOAD — print or phone. Personal use only.
 
 ## Gumroad
 - Product name: Atacama Desert in 5 Days — Printable Itinerary (PDF)
-- Permalink (EXACTO): atacama-5d  →  https://patricio358.gumroad.com/l/atacama-5d
+- Permalink (EXACTO): atacama-5d  →  https://payhip.com/b/lBTyt
 - Price: $12.90
 - Description: misma de Etsy.

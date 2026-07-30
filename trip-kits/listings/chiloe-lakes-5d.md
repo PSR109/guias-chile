@@ -25,6 +25,6 @@ INSTANT DOWNLOAD — no physical item. Personal use only.
 
 ## Gumroad
 - Product name: Chiloe & the Chilean Lakes — 5-Day Printable Itinerary (PDF)
-- Permalink (EXACTO): chiloe-lakes-5d  →  https://patricio358.gumroad.com/l/chiloe-lakes-5d
+- Permalink (EXACTO): chiloe-lakes-5d  →  https://payhip.com/b/hdBVf
 - Price: $9.90
 - Description: misma de Etsy.
