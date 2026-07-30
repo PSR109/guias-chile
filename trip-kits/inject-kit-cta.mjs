@@ -27,15 +27,21 @@ const MAP = {
 };
 
 // Gate 2026-07-28: solo los kits con producto Gumroad YA existente y verificado
-// (200 en patricio358.gumroad.com/l/<permalink>) entran al inyector. Los otros
-// 5 (tdp-no-car, santiago-cajon-4d, valpo-wine-4d, pucon-volcano-4d,
-// rapa-nui-4d) chocaron con el limite de 10 productos/dia de Gumroad -- sacar
-// de esta lista en cuanto ACCIONES-HUMANAS.md #50 los confirme creados.
+// (200 en patricio358.gumroad.com/l/<permalink>) entran al inyector. Los 5 que
+// chocaron con el limite de 10 productos/dia de Gumroad (tdp-no-car,
+// santiago-cajon-4d, valpo-wine-4d, pucon-volcano-4d, rapa-nui-4d) se
+// verificaron 200 el 2026-07-30 (ciclo apps-runner) -- cupo diario reseteado,
+// los 10 kits ya existen.
 const READY_KITS = new Set([
   'carretera-austral-7d',
   'chiloe-lakes-5d',
   'atacama-5d',
   'elqui-stars-4d',
+  'tdp-no-car',
+  'santiago-cajon-4d',
+  'valpo-wine-4d',
+  'pucon-volcano-4d',
+  'rapa-nui-4d',
 ]);
 
 const TEXTS = {
