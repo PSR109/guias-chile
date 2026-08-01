@@ -216,6 +216,25 @@ QUEDA (humano — crear 3 productos, fichas en `listings/`):
    - bundle: nada que inyectar (producto puro de marketplace).
 3. Re-correr los 5 gates, verificar el CTA en prod con curl/DOM vivo y pushear.
 
+## NOTES — 2026-08-01 (cierre tanda 2: los 3 productos LIVE)
+
+Productos creados y verificados por Patricio (Payhip + espejo Gumroad, ambos LIVE):
+radal-siete-tazas-3d → https://payhip.com/b/ZD0xY · santiago-cajon-4d-es →
+https://payhip.com/b/asZlb · chile-completo-bundle → https://payhip.com/b/BI8z0.
+
+Cableado ejecutado (commit `cce68a3`, pusheado a main):
+- `PAYHIP_URLS` con las 2 URLs reales; ambos kits en `READY_KITS`.
+- `inject-kit-cta.mjs` → `changed=3 skipped=50 notReady=0`: CTA nuevo en
+  `radal-siete-tazas-curico.html` (ES) + SWAP EN→ES en `santiago.html` y
+  `cajon-del-maipo.html` (un solo CTA por guía, UTM `utm_campaign=<id>`).
+  en/pt NO tocadas: siguen con el kit EN (`Qrh0p`). Idempotente (2ª corrida changed=0).
+- Listings actualizados con las URLs reales (los 3).
+- 5 gates verdes. Verificación prod post-deploy (curl):
+  ZD0xY ×1 en /radal-siete-tazas-curico.html; asZlb ×1 en /santiago.html y
+  /cajon-del-maipo.html; Qrh0p ×1 y asZlb ×0 en en/ y pt/ de ambas.
+- Bundle: nada que inyectar (producto puro de marketplace); landing opcional del
+  bundle queda diferida (punto de inserción documentado en su listing).
+
 ## NOTES — 2026-08-01 (cierre: kit Termas del Sur LIVE)
 
 Producto creado y verificado por Patricio: **Payhip https://payhip.com/b/XDjCS**
