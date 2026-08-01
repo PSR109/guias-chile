@@ -2,8 +2,28 @@
 
 > Archivo de operaciones del sitio. Lo leen el dueño (Patricio) y el agente de
 > crecimiento diario (`.github/workflows/growth-agent.yml`). Mantener < 150 líneas.
-> Última actualización: 2026-07-21 (auditoría externa de Patricio: newsletter +
-> mapa + comentarios agregados a las 25 guías, ver sección 1; commit `bbc1e67`).
+> Última actualización: **2026-08-01 (sesión goal ronda 6)** — 4 cambios:
+> 1. **IndexNow**: key `ba9bbef166e3cb5cedd5294cdbb0c483.txt` en raíz (`22a5f64`),
+>   79 URLs del sitemap enviadas a Bing/Yandex (202). Re-submitir con la misma key
+>   cuando cambie el sitemap.
+> 2. **Guía malalcahuello-conguillio ES** (`2b8e9bc`) + **EN** (`29bec32`) —
+>   ES-only con CTA manual al kit ES (Payhip `/b/O7gIr`); EN con hreflang
+>   recíproco y CTA con nota "Spanish only" (pendiente swap al kit EN, abajo).
+>   El kit malalcahuello tiene shape custom FUERA del pipeline (`KITS`/
+>   `READY_KITS`/inyector NO lo tocan — ver trip-kits/NOTES.md).
+> 3. **Afiliados Travelpayouts** (`26be294`): bloque Airalo eSIM en 51 guías
+>   EN/PT (NO en ES — audiencia local con SIM chilena, decisión deliberada) +
+>   línea Kiwi vuelos en 77 guías ES/EN/PT con gateways curados. Inyector
+>   idempotente `scripts/inject-travelpayouts-2026-08-01.mjs` (markers
+>   `data-inyectado="tp-*"` — re-correrlo al agregar guías; NO borrar esos
+>   bloques). Marker 747702 en `afiliados.js` y en `check-affiliate-ids.mjs`.
+>   Pendiente fase 3: Booking/Hostelworld/Busbud/DiscoverCars (review auto TP).
+> 4. **Kit EN malalcahuello-conguillio-4d-en** construido (`b8bd4e1`, mismo
+>   shape custom que el ES, 13 págs) — pendiente upload Payhip y swap del CTA
+>   EN (manual, nunca con el inyector).
+> Última actualización previa: 2026-07-21 (auditoría externa de Patricio:
+> newsletter + mapa + comentarios agregados a las 25 guías, ver sección 1;
+> commit `bbc1e67`).
 
 ## 1. Estado actual del sitio
 
