@@ -153,6 +153,69 @@ QUEDA (humano + próxima sesión):
 3. Cosmético conocido: en `termas-del-sur-4d-main.png` el badge de precio solapa
    levemente el título largo (mismo patrón gen-1; no bloquea).
 
+## NOTES — 2026-08-01 (tanda 2: kits 12-13 ES + bundle "Chile Completo")
+
+Dos kits gen-2 ES nuevos (sin cablear — gate Payhip) + primer producto bundle.
+
+**K12 `radal-siete-tazas-3d` (US$12.90, 3 días, ES).** Wedge GSC: "velo de la novia"
+(62 imp, pos ~9). Contenido 100% de `radal-siete-tazas-curico.html` (ES). Curiosidad
+editorial: SIN sección de POIs bonus — la cobertura del catálogo Panoramas en
+Molina/Curicó es boilerplate autogenerado ("Mirador en Libertador General Bernardo
+O'Higgins, Chile." — región errada incluida); `poiComunas: []` → `compile-html.mjs`
+omite la sección entera (nada de relleno en un producto de pago). PDF:
+`dist/radal-siete-tazas-3d-es.pdf`, 10 páginas A4, 1.021.521 bytes. Mockups OK
+(solape leve badge/título, mismo cosmético conocido de termas, no bloquea).
+
+**K13 `santiago-cajon-4d-es` (US$9.90, 4 días, ES).** Gemelo ES de `santiago-cajon-4d`
+(mismo molde/ruta, copy ES, pulls a las guías ES raíz). Permalink `santiago-cajon-es`
+para no colisionar con el EN. 10 POIs ES reales (dedup editorial: fuera los 5 lugares
+que ya son contenido de los días 1-4). PDF: `dist/santiago-cajon-4d-es-es.pdf`
+(sí, doble `-es`: `${id}-${lang}`), 13 páginas, 724.261 bytes.
+
+**B1 `chile-completo-bundle` (US$59).** Los 11 kits del corte (10 EN + termas ES;
+suma US$163, ahorro 64%) en UN zip: `dist/chile-completo-bundle.zip`
+(7.057.399 bytes, 11 PDFs verificados con `unzip -l`). Regenerar tras `npm run all`:
+`cd trip-kits/dist && zip -j chile-completo-bundle.zip <los 11 PDFs>`. NO es kit del
+pipeline: no va en kits.config ni en el inyector. Sin mockup propio (reusar
+`patagonia-14d-main.png` si hace falta portada). Los 2 kits ES de esta tanda NO
+entran al bundle (posteriores al corte) — evaluar v2 si se publican.
+Punto de inserción en el sitio documentado en el listing (bloque `.cta` del índice,
+~línea 431); no implementado: sin URL aún.
+
+**Cambios de pipeline (retrocompatibles — los 11 PDFs anteriores regeneran idénticos):**
+- `kits.config.mjs`: entries K12/K13 + `PAYHIP_URLS` de ambos en `null` (productos
+  aún no creados; el código /b/<CODE> lo genera Payhip, NO inventarlo).
+- `inject-kit-cta.mjs`: `MAP` ahora acepta string o ARRAY de kits por guía. Por
+  idioma se elige el kit con `lang` fijo que calce; si no, el gen-1 (sin lang).
+  SWAP: si la guía ya tiene el CTA de otro kit, se reemplaza el bloque completo
+  (nunca 2 CTAs). Idempotencia por `utm_campaign=<id>"` con borde de comilla
+  (`santiago-cajon-4d` es substring de `santiago-cajon-4d-es`). Con los kits nuevos
+  FUERA de `READY_KITS`, el inyector corre idéntico a antes (verificado smoke test
+  en /tmp con fixtures: changed=0, skip correctos, swap ES solo tras agregar a READY).
+- `test/kits-config.test.mjs` (nuevo): invariantes de los 13 kits (ids/permalinks
+  únicos, route.length === days.length, pulls/budget/FAQ contra headings reales de
+  las guías). `npm test` 7/7.
+- `tools/chrome/gen-product-specs.mjs` (repo RAÍZ, cambio local no commiteado ahí):
+  honra `- File:` en la sección Gumroad del listing (el bundle entrega zip, no PDF);
+  sin ese ajuste el parser lanzaba "Falta PDF" con el listing del bundle presente.
+
+Verificación: `npm run all` → 13 HTML + 13 PDF + 52 PNG; PDFs nuevos re-leídos con
+pdf-lib (páginas/metadata ES) + revisión visual de mockups (portada y presupuesto).
+Gates: check-html, check-links, check-affiliate-ids, check-hreflang, check-sitemap OK.
+NO se corrió el inyector contra las guías reales (gate: sin producto no hay CTA).
+
+QUEDA (humano — crear 3 productos, fichas en `listings/`):
+1. Payhip: radal-siete-tazas-3d ($12.90, PDF `-es.pdf`), santiago-cajon-4d-es ($9.90,
+   PDF `-es-es.pdf`), chile-completo-bundle ($59, zip). Gumroad espejo opcional
+   (permalinks EXACTOS en cada listing).
+2. Con las URLs reales: pegar en `PAYHIP_URLS`, agregar ambos kits a `READY_KITS`,
+   correr `node inject-kit-cta.mjs`:
+   - radal: inyecta CTA nuevo en `radal-siete-tazas-curico.html` (ES).
+   - santiago-cajon-4d-es: SWAP del CTA EN por el ES en `santiago.html` y
+     `cajon-del-maipo.html` (ES); en/pt siguen con el kit EN.
+   - bundle: nada que inyectar (producto puro de marketplace).
+3. Re-correr los 5 gates, verificar el CTA en prod con curl/DOM vivo y pushear.
+
 ## NOTES — 2026-08-01 (cierre: kit Termas del Sur LIVE)
 
 Producto creado y verificado por Patricio: **Payhip https://payhip.com/b/XDjCS**

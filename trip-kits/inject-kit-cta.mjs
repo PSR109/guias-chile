@@ -5,7 +5,10 @@ import { KITS, GUMROAD_BASE, PAYHIP_URLS } from './kits.config.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
-// guia -> kit que se le ofrece
+// guia -> kit que se le ofrece. Valor string (gen-1) o array (2026-08-01):
+// array = kits candidatos para la MISMA guia; por idioma se elige el kit con
+// lang fijo que calce y, si no hay, el gen-1 (sin lang). Ej: santiago/cajon
+// ofrecen el kit EN en en/pt y el gemelo ES en la guia ES (swap del CTA).
 const MAP = {
   'torres-del-paine': 'tdp-no-car',
   'puerto-natales': 'tdp-no-car',
@@ -16,17 +19,19 @@ const MAP = {
   'frutillar': 'chiloe-lakes-5d',
   'saltos-del-petrohue': 'chiloe-lakes-5d',
   'san-pedro-de-atacama': 'atacama-5d',
-  'santiago': 'santiago-cajon-4d',
-  'cajon-del-maipo': 'santiago-cajon-4d',
+  'santiago': ['santiago-cajon-4d', 'santiago-cajon-4d-es'],
+  'cajon-del-maipo': ['santiago-cajon-4d', 'santiago-cajon-4d-es'],
   'valparaiso': 'valpo-wine-4d',
   'colchagua-pichilemu': 'valpo-wine-4d',
   'pucon-villarrica': 'pucon-volcano-4d',
   'la-serena-coquimbo': 'elqui-stars-4d',
   'valle-del-elqui': 'elqui-stars-4d',
   'rapa-nui': 'rapa-nui-4d',
-  // Kit gen-2 ES (2026-08-01): queda FUERA de READY_KITS hasta que el producto
-  // Payhip exista y PAYHIP_URLS['termas-del-sur-4d'] tenga la URL real.
   'termas-de-chillan': 'termas-del-sur-4d',
+  // Kits gen-2 ES de la tanda 2 (2026-08-01): FUERA de READY_KITS hasta que los
+  // productos Payhip existan y PAYHIP_URLS tenga las URLs reales (gate: sin
+  // producto real no se publica el link — leccion 2026-07-28).
+  'radal-siete-tazas-curico': 'radal-siete-tazas-3d',
 };
 
 // Gate 2026-07-28: solo los kits con producto Gumroad YA existente y verificado
@@ -63,19 +68,35 @@ const TEXTS = {
 };
 
 let changed = 0, skipped = 0, notReady = 0;
-for (const [slug, kitId] of Object.entries(MAP)) {
-  if (!READY_KITS.has(kitId)) { notReady++; continue; }
-  const kit = KITS.find((k) => k.id === kitId);
-  // Kits con lang fijo (gen-2 ES) solo se ofrecen en guias de ese idioma:
-  // un CTA en la guia EN venderia un PDF en español. Kits gen-1: los 3 idiomas.
-  const langs = kit.lang ? [kit.lang] : ['es', 'en', 'pt'];
-  for (const lang of langs) {
+for (const [slug, entry] of Object.entries(MAP)) {
+  const readyIds = (Array.isArray(entry) ? entry : [entry]).filter((id) => READY_KITS.has(id));
+  if (readyIds.length === 0) { notReady++; continue; }
+  const kits = readyIds.map((id) => KITS.find((k) => k.id === id));
+  for (const lang of ['es', 'en', 'pt']) {
+    // Kit para ESTE idioma: el de lang fijo que calce; si no, el gen-1 (sin
+    // lang). Kits con lang fijo (gen-2 ES) solo se ofrecen en guias de ese
+    // idioma: un CTA en la guia EN venderia un PDF en espanol (y viceversa).
+    const kit = kits.find((k) => k.lang === lang) ?? kits.find((k) => !k.lang);
+    if (!kit) continue;
     const file = lang === 'es' ? join(ROOT, `${slug}.html`) : join(ROOT, lang, `${slug}.html`);
     if (!existsSync(file)) { console.warn(`WARN: no existe ${file}`); continue; }
     let html = readFileSync(file, 'utf8');
-    if (html.includes('kit-cta')) { skipped++; continue; }
+    // La comilla final es el borde del href: sin ella, el id 'santiago-cajon-4d'
+    // haria match substring dentro de 'santiago-cajon-4d-es'.
+    if (html.includes(`utm_campaign=${kit.id}"`)) { skipped++; continue; }
     const url = `${kitUrl(kit)}?utm_source=guias&utm_medium=cta&utm_campaign=${kit.id}`;
     const block = `  <div class="kit-cta">\n    ${TEXTS[lang](kit, url)}\n  </div>\n\n`;
+    if (html.includes('kit-cta')) {
+      // SWAP: la guia ya tiene el CTA de OTRO kit (ej. la guia ES ofrecia el
+      // kit EN y ahora existe el gemelo ES). Se reemplaza el bloque completo
+      // por el del kit elegido — nunca dos CTAs en la misma guia.
+      const swapped = html.replace(/ {2}<div class="kit-cta">\n[\s\S]*?\n {2}<\/div>\n\n/, block);
+      if (swapped === html) { console.warn(`WARN: kit-cta con formato inesperado en ${file}, no se toca`); continue; }
+      writeFileSync(file, swapped);
+      changed++;
+      console.log(`cta swap: ${lang}/${slug} -> ${kit.id}`);
+      continue;
+    }
     const anchor = '<div class="promo">';
     if (!html.includes(anchor)) { console.warn(`WARN: sin ancla .promo en ${file}`); continue; }
     html = html.replace(anchor, block + '  ' + anchor);

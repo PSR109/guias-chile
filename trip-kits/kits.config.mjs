@@ -19,6 +19,10 @@ export const PAYHIP_URLS = {
   'tdp-no-car': 'https://payhip.com/b/9CyLp',
   'valpo-wine-4d': 'https://payhip.com/b/ydz2j',
   'termas-del-sur-4d': 'https://payhip.com/b/XDjCS', // creado y verificado 2026-08-01
+  // Kits gen-2 ES de la tanda 2026-08-01 (radal + gemelo ES de santiago-cajon):
+  // productos AUN NO creados — null hasta que Payhip entregue el /b/<CODE> real.
+  'radal-siete-tazas-3d': null,
+  'santiago-cajon-4d-es': null,
 };
 
 const D = (title, intro, pulls) => ({ title, intro, pulls });
@@ -348,6 +352,45 @@ const TERMAS_SUR_DAYS = [
     [{ guide: 'termas-de-chillan', headings: ['5. Chillán: longaniza, mercado y los murales de la Escuela México'] }]),
 ];
 
+// ---------- Dias — kits gen-2 ES 2026-08-01 (tanda 2: radal + gemelo ES santiago-cajon) ----------
+
+const RADAL_ROUTE = [
+  R(1, 'Curicó', -34.983, -71.239),
+  R(2, 'P.N. Radal Siete Tazas', -35.457, -71.032),
+  R(3, 'Molina / Lontué (Ruta del Vino)', -35.114, -71.282),
+];
+
+// Todos los pulls referencian headings EXACTOS de radal-siete-tazas-curico.html (ES, raiz).
+const RADAL_DAYS = [
+  D('Llegada a Curicó, la puerta de entrada del Maule',
+    'Desde Santiago son unos 200 km por la Ruta 5 Sur hasta Curicó (2,5 horas en auto, o bus desde el Terminal Alameda). Hoy toca instalarse, recorrer la Plaza de Armas de palmeras con su kiosco de fierro y dejar compradas las entradas del parque: se venden solo online en pasesparques.cl, sin venta de tickets en el lugar.',
+    [{ guide: 'radal-siete-tazas-curico', headings: ['3. Curicó: la puerta de entrada con historia propia', 'Cómo llegar y cuándo ir'] }]),
+  D('Radal Siete Tazas: pozones del río Claro, Salto La Leona y Velo de la Novia',
+    'El día central del viaje. Desde Curicó o Molina son unos 65 km por la ruta L-27, en su mayor parte pavimentada, hasta los pozones turquesa del río Claro; de ahí el sendero corto al Salto La Leona y, ya en el sector Parque Inglés, el Velo de la Novia. Entre diciembre y marzo el río está más bajo y templado para meterse a los pozones.',
+    [{ guide: 'radal-siete-tazas-curico', headings: ['1. Parque Nacional Radal Siete Tazas: los pozones del río Claro', '2. Salto la Leona y Velo de la Novia: las cascadas del parque'] }]),
+  D('Ruta del Vino de Curicó y cierre termal en Panimávida',
+    'El cierre entre viñas y aguas termales: cata en el valle de Lontué —Viña San Pedro, Valdivieso o Miguel Torres, mejor con reserva— y, para bajar el cuerpo después del trekking, las Termas de Panimávida o Quinamávida, unos 85 km al sur, cerca de Linares.',
+    [{ guide: 'radal-siete-tazas-curico', headings: ['4. Ruta del Vino Valles de Curicó: Lontué, Molina y Sagrada Familia', '5. Termas de Panimávida y Quinamávida: el cierre relajado de la ruta'] }]),
+];
+
+// Gemelo ES de SANTIAGO_CAJON_DAYS (mismo molde, copy ES). Pulls a los headings
+// EXACTOS de santiago.html y cajon-del-maipo.html (ES, raiz) — distintos de los EN.
+// La ruta se reusa tal cual: SANTIAGO_CAJON_ROUTE (coords, no texto).
+const SANTIAGO_CAJON_DAYS_ES = [
+  D('Centro histórico de Santiago',
+    'Parte en la Plaza de Armas y despliega desde ahí: la Catedral, el Palacio de La Moneda, los jardines del cerro Santa Lucía. Medio día alcanza si te mantienes en movimiento — guarda el resto para el jet lag o un pisco sour.',
+    [{ guide: 'santiago', headings: ['1. Centro histórico (medio día)'] }]),
+  D('Bellavista, Lastarria y atardecer en el cerro San Cristóbal',
+    'Recorre los murales de Bellavista y los cafés de Lastarria en la tarde, y luego sube en funicular o teleférico al cerro San Cristóbal: la mejor vista del atardecer sobre la ciudad con la cordillera de fondo.',
+    [{ guide: 'santiago', headings: ['2. Bellavista, Lastarria y Providencia (tarde-noche)', '3. Cerro San Cristóbal (atardecer)'] }]),
+  D('A la cordillera: Embalse El Yeso y Baños Morales',
+    'A una hora y media de Santiago la ciudad desaparece: agua turquesa en el Embalse El Yeso y, siguiendo el Camino al Volcán, las piscinas termales de Baños Morales y el sendero del Monumento Natural El Morado hacia el Glaciar San Francisco. El tramo final es de ripio: conviene un vehículo con buena altura.',
+    [{ guide: 'cajon-del-maipo', headings: ['1. Qué es el Cajón del Maipo', '2. Embalse El Yeso, el reservorio turquesa', '3. Baños Morales y Monumento Natural El Morado'] }]),
+  D('Cascada de las Ánimas y regreso a la ciudad',
+    'Cierra el circuito más abajo del cajón: la caminata liviana a la cascada en la reserva de Cascada de las Ánimas (o canopy y rafting si queda energía), una parada en la plaza de San José de Maipo, y de vuelta a Santiago a tiempo para una cena tardía.',
+    [{ guide: 'cajon-del-maipo', headings: ['4. Cascada de las Ánimas y San Alfonso', '5. San José de Maipo y el resto del cajón'] }]),
+];
+
 // ---------- SKUs ----------
 
 export const KITS = [
@@ -666,5 +709,75 @@ export const KITS = [
     // del centro de esqui; se queda UNA de cada una (la de mayor score).
     poiExclude: ['Termas de Chillán', 'Termas de Chillán - Spa y Parque de Agua', 'Nevados de Chillán (centro de esquí)'],
     poiLimit: 8,
+  },
+  // Kit gen-2 ES (2026-08-01, tanda 2): wedge sobre la query GSC "velo de la
+  // novia" (62 imp, pos ~9 — ranking bueno, sin producto que la capture).
+  // Contenido 100% de radal-siete-tazas-curico.html (ES). SIN seccion de POIs
+  // bonus: la cobertura del catalogo en Molina/Curico es boilerplate autogenerado
+  // (verificado 2026-08-01: descripciones tipo "Mirador en Libertador General
+  // Bernardo O'Higgins, Chile." — region errada incluida). Nada de eso entra a
+  // un producto de pago: poiComunas vacio => compile-html omite la seccion.
+  {
+    id: 'radal-siete-tazas-3d',
+    lang: 'es',
+    title: 'Radal Siete Tazas y Velo de la Novia: 3 días en el Maule',
+    subtitle: 'Pozones turquesa del río Claro, cascadas entre bosque nativo, la Ruta del Vino de Curicó y el cierre en las termas de Panimávida — la ruta completa con presupuesto 2026',
+    priceUsd: 12.9,
+    gumroadPermalink: 'radal-siete-tazas-3d',
+    affQuery: 'Curicó',
+    coverImage: 'radal-siete-tazas-curico.jpg',
+    days: RADAL_DAYS,
+    route: RADAL_ROUTE,
+    checklist: [
+      'Entrada al parque comprada online en pasesparques.cl ANTES de salir de viaje (no hay venta en el lugar ni en el pueblo de Radal)',
+      'Alojamiento reservado en Curicó o Molina para la noche anterior al día de parque',
+      'Transporte Molina → parque definido: auto propio, taxi o combi rural (no siempre circula a diario — confirmar horarios)',
+      'Traje de baño y toalla para los pozones del río Claro y las termas del día 3',
+      'Tour de degustación en viña reservado (en vendimia, marzo-abril, conviene asegurar cupo)',
+      'Calzado de trekking para los senderos del parque',
+      'Ropa de capas: valle caluroso abajo, precordillera más fría arriba',
+      'Efectivo en CLP para combis rurales y compras menores',
+    ],
+    budget: [{ guide: 'radal-siete-tazas-curico', heading: 'Precios orientativos (2026)' }],
+    faqFrom: ['radal-siete-tazas-curico'],
+    poiComunas: [],
+    poiLimit: 0,
+  },
+  // Kit gen-2 ES (2026-08-01, tanda 2): gemelo en español de santiago-cajon-4d
+  // (mismo molde y misma ruta, copy ES, pulls a las guias ES raiz). Permalink
+  // distinto del EN para no colisionar en Gumroad/Payhip. Al cablearlo, el
+  // inyector hace SWAP del CTA EN por este en las guias ES santiago/cajon
+  // (lector ES -> PDF ES); en/pt siguen ofreciendo el kit EN.
+  {
+    id: 'santiago-cajon-4d-es',
+    lang: 'es',
+    title: 'Santiago + Cajón del Maipo: 4 días',
+    subtitle: 'Centro histórico, Bellavista y el atardecer en el cerro San Cristóbal, más la escapada de montaña al Embalse El Yeso y Baños Morales — con presupuesto 2026',
+    priceUsd: 9.9,
+    gumroadPermalink: 'santiago-cajon-es',
+    affQuery: 'Santiago Chile',
+    coverImage: 'santiago.jpg',
+    days: SANTIAGO_CAJON_DAYS_ES,
+    route: SANTIAGO_CAJON_ROUTE,
+    checklist: [
+      'Tarjeta Bip! para metro y buses (se compra y recarga en cualquier estación)',
+      'Calzado cómodo para los días de centro histórico y cerros',
+      'Entrada al Monumento Natural El Morado comprada online con anticipación en Pases Parques (cupos diarios limitados, sobre todo enero-febrero)',
+      'Auto arrendado o tour reservado para el cajón: el tramo final a El Yeso y Baños Morales es de ripio y conviene buena altura de vehículo',
+      'Corte estacional de El Yeso revisado: entre abril y agosto el acceso vehicular puede restringirse',
+      'Capas y protección solar para la cordillera — el sol de altura pega más fuerte de lo que parece',
+      'Efectivo en CLP para paradas rurales del cajón',
+      'Horario del funicular o teleférico confirmado para llegar al atardecer al San Cristóbal',
+    ],
+    budget: [
+      { guide: 'santiago', heading: 'Costos orientativos (2026, por persona)' },
+      { guide: 'cajon-del-maipo', heading: 'Precios orientativos (2026)' },
+    ],
+    faqFrom: ['santiago', 'cajon-del-maipo'],
+    poiComunas: ['Santiago', 'Providencia', 'Las Condes', 'Vitacura', 'Ñuñoa', 'La Reina', 'Recoleta', 'San José de Maipo'],
+    // Dedup editorial: el kit ya cubre estos 5 como contenido de los dias 1-4;
+    // el bonus tiene que ser EXTRA (museos, mercados, termas de Colina, etc.).
+    poiExclude: ['Cerro San Cristóbal y Parque Metropolitano', 'Barrio Bellavista', 'Plaza de Armas y Centro Histórico de Santiago', 'Embalse El Yeso', 'Cascada de las Ánimas'],
+    poiLimit: 10,
   },
 ];
