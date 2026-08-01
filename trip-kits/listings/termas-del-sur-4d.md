@@ -4,6 +4,8 @@ Primer kit en español: apunta a la demanda GSC medida en guias.viajesypanoramas
 ("termas de chillán" ~79 impresiones/3 semanas, posición ~45 — query caliente sin
 producto que la capture). Contenido condensado de la guía ES `termas-de-chillan.html`
 + catálogo Panoramas (POIs con `descripcion_es`). Cero datos inventados.
+La descripción de marketplace va en español a propósito (kit ES); la sección se llama
+"Etsy description" solo para que `gen-product-specs.mjs` la parsee como los kits gen-1.
 
 ## Título (Payhip/Gumroad)
 Termas del Sur: 4 días en las Termas de Chillán — Itinerario imprimible (PDF)
@@ -13,7 +15,7 @@ termas de chillán / termas chile / nevados de chillán / ñuble / aguas termale
 itinerario chile / guía de viaje pdf / esquí chile / reserva ñuble / descarga digital /
 imprimible viaje / sur de chile / planificador viaje
 
-## Descripción
+## Etsy description
 Las Termas de Chillán ordenadas día a día: 4 días entre las aguas termales volcánicas
 de los Nevados de Chillán, la nieve del centro de esquí más grande de Chile (en
 temporada), el trekking de la Reserva Nacional Ñuble y la gastronomía de Chillán —
@@ -41,6 +43,11 @@ disponibles bajo la Open Database License (ODbL).
 DESCARGA INSTANTÁNEA — no se envía ningún producto físico. Imprímelo o llévalo en
 el teléfono. Solo para uso personal.
 
+## Gumroad (espejo opcional, comisión 10%)
+- Product name: Termas del Sur — 4 días en las Termas de Chillán (PDF)
+- Permalink (EXACTO): termas-del-sur-4d  →  PENDIENTE (pegar `payhip.com/b/<CODE>` al crearlo, patrón de la línea de arriba)
+- Price: $12.90
+
 ## Payhip (tienda principal, comisión 5%)
 - Nombre de producto: Termas del Sur: 4 días en las Termas de Chillán — Itinerario imprimible (PDF)
 - Permalink Payhip: PENDIENTE — el código `payhip.com/b/<CODE>` lo genera Payhip al
@@ -49,11 +56,6 @@ el teléfono. Solo para uso personal.
 - Precio: $12.90
 - Descripción: la de arriba (quitar la línea DESCARGA INSTANTÁNEA y dejar
   "Descarga instantánea en PDF. Solo uso personal.").
-
-## Gumroad (espejo opcional, comisión 10%)
-- Nombre de producto: Termas del Sur — 4 días en las Termas de Chillán (PDF)
-- Permalink (EXACTO, debe coincidir con kits.config.mjs): termas-del-sur-4d
-- Precio: $12.90
 
 ## Archivos del producto
 - PDF: `trip-kits/dist/termas-del-sur-4d-es.pdf` (13 páginas A4, ~567 KB)
