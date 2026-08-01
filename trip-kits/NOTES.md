@@ -244,3 +244,76 @@ URL en `PAYHIP_URLS`, kit en `READY_KITS`, `inject-kit-cta.mjs` → `changed=1`
 (solo `termas-de-chillan.html` ES, antes de `.promo`, UTM `utm_campaign=termas-del-sur-4d`).
 5 gates verdes. Verificación prod (GitHub Pages): CTA visible en
 https://guias.viajesypanoramas.cl/termas-de-chillan.html.
+
+## NOTES — 2026-08-01 (tanda 3: kits 14-15 ES)
+
+Dos kits gen-2 ES nuevos (sin cablear — gate Payhip), gemelos de los dos kits EN
+mejor rankeados del catálogo. Catálogo final: 15 kits (10 gen-1 EN + 5 gen-2 ES).
+
+**K14 `atacama-5d-es` (US$12.90, 5 días, ES).** Gemelo ES de `atacama-5d` (mismo
+molde/recorrido: llegada y aclimatación → Valle de la Luna → Tatio → lagunas
+altiplánicas/Piedras Rojas → Cejar + astronómico; copy ES nuevo). Contenido 100%
+de `san-pedro-de-atacama.html` (ES, raíz). 7 POIs bonus reales tras dedup
+editorial (fuera los 6 lugares que ya son contenido de los días 1-5) y exclusión
+del boilerplate autogenerado del catálogo (fichas "Mirador en Antofagasta,
+Chile.", stubs de 53 chars, stats Ramsar/Santuario, hostal con reseña EN,
+camping duplicado — verificado 2026-08-01; quedan sandboard, Pukará de Quitor,
+iglesia, Termas de Puritama, Valle del Arcoíris, Aldea de Tulor, Caracoles).
+Permalink `atacama-5d-es` (distinto del EN para no colisionar). PDF:
+`dist/atacama-5d-es-es.pdf` (doble `-es`: `${id}-${lang}`), 14 páginas A4,
+640.084 bytes, metadata ES embebida (verificado con pdf-lib).
+
+**K15 `torres-del-paine-5d-es` (US$12.90, 5 días, ES).** Gemelo ES de
+`tdp-no-car` (mismo ángulo "sin auto": Punta Arenas → Puerto Natales → tour de
+día completo → Base Torres en el día → margen: Última Esperanza o Isla
+Magdalena; copy ES nuevo). Contenido de `torres-del-paine.html`,
+`puerto-natales.html` y `punta-arenas.html` (ES, raíz) — 3 tablas de presupuesto
+2026. 10 POIs bonus reales tras dedup editorial (fuera los 8 lugares que ya son
+contenido de los días 1-5) y exclusión de junk (stub EN de 52 chars, camping
+con reseña EN, ficha stats de hectáreas — verificado 2026-08-01; quedan Cerro de
+la Cruz, Glaciar Grey, mercado, Cementerio Sara Braun, museos, Seno Otway,
+Dorotea, Nao Victoria, Fuerte Bulnes, Reserva Magallanes). Permalink
+`torres-del-paine-5d-es`. PDF: `dist/torres-del-paine-5d-es-es.pdf`, 15 páginas
+A4, 635.661 bytes, metadata ES (verificado con pdf-lib).
+
+**Cambios de pipeline (retrocompatibles — los 13 PDFs anteriores regeneran idénticos):**
+- `kits.config.mjs`: entries K14/K15 con `lang: 'es'`, `affQuery`, y días/rutas
+  ES PROPIOS (`ATACAMA_DAYS_ES`/`ATACAMA_ROUTE_ES`, `TDP_DAYS_ES`/`TDP_ROUTE_ES`
+  — mismas coords que los EN, nombres ES; las constantes EN no se tocan para que
+  los PDFs EN regenere idénticos). `PAYHIP_URLS` de ambos en `null` (productos
+  aún no creados; el código /b/<CODE> lo genera Payhip, NO inventarlo).
+- `inject-kit-cta.mjs`: `MAP` de las 4 guías ahora con arrays EN+ES
+  (`san-pedro-de-atacama`: `['atacama-5d', 'atacama-5d-es']`; `torres-del-paine`,
+  `puerto-natales`, `punta-arenas`: `['tdp-no-car', 'torres-del-paine-5d-es']`).
+  Kits nuevos FUERA de `READY_KITS` (gate: sin producto real no hay CTA —
+  lección 2026-07-28): el filtro READY deja solo el kit EN y el inyector corre
+  idéntico a antes.
+- `test/kits-config.test.mjs`: invariante de conteo actualizado a 15 kits.
+  `npm test` 7/7 (incluye pulls/budget/FAQ contra headings reales de las guías
+  para los 15 kits + topPois de San Pedro de Atacama y Natales).
+
+Verificación: `npm run all` → 15 HTML (`build/`) + 15 PDF (`dist/`) + 60 PNG
+(`mockups-out/`). PDFs nuevos re-leídos con pdf-lib (páginas/metadata ES OK) y
+revisión visual de mockups (portada `-main.png` y presupuesto `-preview-3.png`
+de ambos): contenido correcto; solape leve del badge de precio sobre el título
+largo (mismo cosmético conocido de termas/radal/santiago-es, no bloquea). Gates:
+check-html, check-links, check-affiliate-ids, check-hreflang, check-sitemap OK.
+NO se corrió el inyector contra las guías reales. Smoke test en /tmp con
+fixtures: con los kits fuera de READY `changed=0 skipped=4` (idéntico a antes);
+simulando READY, SWAP EN→ES solo en las guías ES (`changed=2`), en/pt intactas,
+un solo CTA por guía, idempotente en 2ª corrida.
+
+QUEDA (humano — crear 2 productos, fichas en `listings/atacama-5d-es.md` y
+`listings/torres-del-paine-5d-es.md`):
+1. Payhip: atacama-5d-es ($12.90, PDF `-es-es.pdf`, 14 págs) y
+   torres-del-paine-5d-es ($12.90, PDF `-es-es.pdf`, 15 págs). Gumroad espejo
+   opcional (permalinks EXACTOS: `atacama-5d-es` y `torres-del-paine-5d-es`).
+2. Con las URLs reales: pegar en `PAYHIP_URLS`, agregar ambos kits a
+   `READY_KITS`, correr `node inject-kit-cta.mjs`:
+   - SWAP EN→ES del CTA en `san-pedro-de-atacama.html` (ES).
+   - SWAP EN→ES en `torres-del-paine.html`, `puerto-natales.html` y
+     `punta-arenas.html` (ES). en/pt siguen con los kits EN (`lBTyt`, `9CyLp`).
+3. Re-correr los 5 gates, verificar el CTA en prod con curl/DOM vivo y pushear.
+4. Cosmético conocido (todas las portadas ES): badge de precio solapa levemente
+   el título largo en `-main.png` — mismo patrón gen-1, no bloquea; evaluar fix
+   global de tipografía de portada si se retocan los mockups.
