@@ -24,9 +24,9 @@ export const PAYHIP_URLS = {
   'radal-siete-tazas-3d': 'https://payhip.com/b/ZD0xY',
   'santiago-cajon-4d-es': 'https://payhip.com/b/asZlb',
   // Kits gen-2 ES de la tanda 3 (2026-08-01, gemelos ES de atacama-5d y tdp-no-car):
-  // productos aun no creados; el codigo /b/<CODE> lo genera Payhip, NO inventarlo.
-  'atacama-5d-es': null,
-  'torres-del-paine-5d-es': null,
+  // creados y verificados 2026-08-01 (Payhip; espejo Gumroad: atacama listo, tdp pendiente por cupo 10/dia).
+  'atacama-5d-es': 'https://payhip.com/b/ONobC',
+  'torres-del-paine-5d-es': 'https://payhip.com/b/VysH7',
 };
 
 const D = (title, intro, pulls) => ({ title, intro, pulls });

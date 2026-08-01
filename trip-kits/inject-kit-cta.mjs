@@ -60,6 +60,12 @@ const READY_KITS = new Set([
   // cajon-del-maipo.html (ES); las guias en/pt siguen con el kit EN.
   'radal-siete-tazas-3d',
   'santiago-cajon-4d-es',
+  // Tanda 3 (2026-08-01), Payhip creados y verificados el mismo dia:
+  // atacama-5d-es (Payhip ONobC, US$12.90) -> SWAP EN->ES en san-pedro-de-atacama.html.
+  // torres-del-paine-5d-es (Payhip VysH7, US$12.90) -> SWAP EN->ES en torres-del-paine,
+  // puerto-natales y punta-arenas (ES); en/pt siguen con el kit EN.
+  'atacama-5d-es',
+  'torres-del-paine-5d-es',
 ]);
 
 // URL de compra: Payhip si existe (migracion 2026-07-30), si no el permalink Gumroad.
