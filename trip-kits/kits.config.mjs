@@ -18,7 +18,7 @@ export const PAYHIP_URLS = {
   'santiago-cajon-4d': 'https://payhip.com/b/Qrh0p',
   'tdp-no-car': 'https://payhip.com/b/9CyLp',
   'valpo-wine-4d': 'https://payhip.com/b/ydz2j',
-  'termas-del-sur-4d': null, // TODO Patricio: pegar https://payhip.com/b/<CODE> al crear el producto
+  'termas-del-sur-4d': 'https://payhip.com/b/XDjCS', // creado y verificado 2026-08-01
 };
 
 const D = (title, intro, pulls) => ({ title, intro, pulls });

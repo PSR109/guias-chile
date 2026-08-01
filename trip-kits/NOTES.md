@@ -152,3 +152,13 @@ QUEDA (humano + próxima sesión):
    re-correr los 5 gates y pushear.
 3. Cosmético conocido: en `termas-del-sur-4d-main.png` el badge de precio solapa
    levemente el título largo (mismo patrón gen-1; no bloquea).
+
+## NOTES — 2026-08-01 (cierre: kit Termas del Sur LIVE)
+
+Producto creado y verificado por Patricio: **Payhip https://payhip.com/b/XDjCS**
+(US$12.90, PDF adjunto, "Product Added" confirmado) + espejo Gumroad
+https://gumroad.com/l/termas-del-sur-4d (US$12.90, 200 anónimo). Cableado ejecutado:
+URL en `PAYHIP_URLS`, kit en `READY_KITS`, `inject-kit-cta.mjs` → `changed=1`
+(solo `termas-de-chillan.html` ES, antes de `.promo`, UTM `utm_campaign=termas-del-sur-4d`).
+5 gates verdes. Verificación prod (GitHub Pages): CTA visible en
+https://guias.viajesypanoramas.cl/termas-de-chillan.html.

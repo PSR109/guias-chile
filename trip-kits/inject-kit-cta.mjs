@@ -45,9 +45,9 @@ const READY_KITS = new Set([
   'valpo-wine-4d',
   'pucon-volcano-4d',
   'rapa-nui-4d',
-  // 'termas-del-sur-4d' NO entra aqui hasta que exista el producto Payhip
-  // (URL real en PAYHIP_URLS de kits.config.mjs) — si no, la guia quedaria
-  // linkeando un producto inexistente (leccion 2026-07-28, ver NOTES.md).
+  // termas-del-sur-4d: producto Payhip creado y verificado 2026-08-01
+  // (https://payhip.com/b/XDjCS, US$12.90). Kit ES: el inyector solo toca la guia ES.
+  'termas-del-sur-4d',
 ]);
 
 // URL de compra: Payhip si existe (migracion 2026-07-30), si no el permalink Gumroad.

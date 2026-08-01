@@ -45,14 +45,14 @@ el teléfono. Solo para uso personal.
 
 ## Gumroad (espejo opcional, comisión 10%)
 - Product name: Termas del Sur — 4 días en las Termas de Chillán (PDF)
-- Permalink (EXACTO): termas-del-sur-4d  →  PENDIENTE (pegar `payhip.com/b/<CODE>` al crearlo, patrón de la línea de arriba)
+- Permalink (EXACTO): termas-del-sur-4d  →  https://payhip.com/b/XDjCS
+- URL Gumroad espejo (verificada 200 anónimo 2026-08-01): https://gumroad.com/l/termas-del-sur-4d
 - Price: $12.90
 
 ## Payhip (tienda principal, comisión 5%)
 - Nombre de producto: Termas del Sur: 4 días en las Termas de Chillán — Itinerario imprimible (PDF)
-- Permalink Payhip: PENDIENTE — el código `payhip.com/b/<CODE>` lo genera Payhip al
-  crear el producto. Al tenerlo: pegar en `PAYHIP_URLS['termas-del-sur-4d']`
-  (kits.config.mjs) y agregar el kit a `READY_KITS` (inject-kit-cta.mjs).
+- Permalink Payhip: https://payhip.com/b/XDjCS (creado y verificado 2026-08-01 —
+  "Product Added" confirmado, PDF adjunto, US$12.90)
 - Precio: $12.90
 - Descripción: la de arriba (quitar la línea DESCARGA INSTANTÁNEA y dejar
   "Descarga instantánea en PDF. Solo uso personal.").
