@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { KITS, GUMROAD_BASE } from './kits.config.mjs';
+import { KITS, GUMROAD_BASE, PAYHIP_URLS } from './kits.config.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -24,6 +24,9 @@ const MAP = {
   'la-serena-coquimbo': 'elqui-stars-4d',
   'valle-del-elqui': 'elqui-stars-4d',
   'rapa-nui': 'rapa-nui-4d',
+  // Kit gen-2 ES (2026-08-01): queda FUERA de READY_KITS hasta que el producto
+  // Payhip exista y PAYHIP_URLS['termas-del-sur-4d'] tenga la URL real.
+  'termas-de-chillan': 'termas-del-sur-4d',
 };
 
 // Gate 2026-07-28: solo los kits con producto Gumroad YA existente y verificado
@@ -42,7 +45,13 @@ const READY_KITS = new Set([
   'valpo-wine-4d',
   'pucon-volcano-4d',
   'rapa-nui-4d',
+  // 'termas-del-sur-4d' NO entra aqui hasta que exista el producto Payhip
+  // (URL real en PAYHIP_URLS de kits.config.mjs) — si no, la guia quedaria
+  // linkeando un producto inexistente (leccion 2026-07-28, ver NOTES.md).
 ]);
+
+// URL de compra: Payhip si existe (migracion 2026-07-30), si no el permalink Gumroad.
+const kitUrl = (kit) => PAYHIP_URLS[kit.id] ?? `${GUMROAD_BASE}/${kit.gumroadPermalink}`;
 
 const TEXTS = {
   es: (kit, url) =>
@@ -57,12 +66,15 @@ let changed = 0, skipped = 0, notReady = 0;
 for (const [slug, kitId] of Object.entries(MAP)) {
   if (!READY_KITS.has(kitId)) { notReady++; continue; }
   const kit = KITS.find((k) => k.id === kitId);
-  for (const lang of ['es', 'en', 'pt']) {
+  // Kits con lang fijo (gen-2 ES) solo se ofrecen en guias de ese idioma:
+  // un CTA en la guia EN venderia un PDF en español. Kits gen-1: los 3 idiomas.
+  const langs = kit.lang ? [kit.lang] : ['es', 'en', 'pt'];
+  for (const lang of langs) {
     const file = lang === 'es' ? join(ROOT, `${slug}.html`) : join(ROOT, lang, `${slug}.html`);
     if (!existsSync(file)) { console.warn(`WARN: no existe ${file}`); continue; }
     let html = readFileSync(file, 'utf8');
     if (html.includes('kit-cta')) { skipped++; continue; }
-    const url = `${GUMROAD_BASE}/${kit.gumroadPermalink}?utm_source=guias&utm_medium=cta&utm_campaign=${kit.id}`;
+    const url = `${kitUrl(kit)}?utm_source=guias&utm_medium=cta&utm_campaign=${kit.id}`;
     const block = `  <div class="kit-cta">\n    ${TEXTS[lang](kit, url)}\n  </div>\n\n`;
     const anchor = '<div class="promo">';
     if (!html.includes(anchor)) { console.warn(`WARN: sin ancla .promo en ${file}`); continue; }
@@ -72,4 +84,4 @@ for (const [slug, kitId] of Object.entries(MAP)) {
     console.log(`cta: ${lang}/${slug}`);
   }
 }
-console.log(`changed=${changed} skipped=${skipped} notReady(sin producto Gumroad aun)=${notReady}`);
+console.log(`changed=${changed} skipped=${skipped} notReady(sin producto Payhip aun)=${notReady}`);

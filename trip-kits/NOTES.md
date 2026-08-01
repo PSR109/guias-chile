@@ -112,3 +112,43 @@ un kit de ahí en cuanto su producto exista y esté verificado (200 en
    kits con guía mapeada y producto vivo (commit `531328a`). La rama
    `trip-kits-cta` queda stale — no mergear as-is, ya no aporta nada que
    `main` no tenga (y el resto de sus permalinks siguen sin producto real).
+
+## NOTES — 2026-08-01 (kit gen-2 ES: Termas del Sur)
+
+Kit 11 y PRIMERO EN ESPAÑOL: `termas-del-sur-4d` (US$12.90, 4 días). Wedge sobre la
+query GSC "termas de chillán" (~79 imp/3sem, pos ~45 — ranking regalado, sin producto
+que la capture). Contenido 100% reutilizado de `termas-de-chillan.html` (ES) + POIs del
+catálogo Panoramas con `descripcion_es` (cero datos inventados; "punulaf" y
+"jardín del corazón" tienen demanda GSC pero NO existe contenido en el repo — quedan
+fuera por regla anti-alucinación).
+
+Cambios de pipeline (retrocompatibles: los 10 PDFs EN regeneran idénticos):
+- `kits.config.mjs`: campo `lang` por kit (fija idioma, independiente de `--lang`),
+  `affQuery` opcional para los links de afiliado, y `PAYHIP_URLS` (las 10 URLs reales
+  de la migración 2026-07-30 + la nueva en `null`).
+- `compile-html.mjs`: carcasa parametrizada por idioma (`I18N`); las strings EN quedan
+  idénticas al gen-1. Sección #pois se omite si el catálogo no tiene cobertura.
+- `lib/panoramas.mjs`: `topPois({lang, exclude})` — ES usa `descripcion_es`;
+  `exclude` para dedup editorial (el catálogo triplica Termas de Chillán).
+- `build-pdf.mjs` / `make-mockups.mjs`: idioma por kit (footer "página", keywords ES,
+  badges ES).
+- `inject-kit-cta.mjs`: URL de compra = Payhip si existe en `PAYHIP_URLS` (si no,
+  permalink Gumroad); kits con `lang` solo se inyectan en guías de ese idioma.
+  `termas-de-chillan` mapeada al kit nuevo pero FUERA de `READY_KITS` (gate: sin
+  producto real no se publica el link — lección 2026-07-28). Corrida de verificación:
+  `changed=0 skipped=51 notReady=1`.
+
+Verificación: `npm test` 5/5; `npm run all` → 11 HTML + 11 PDF + 44 PNG; el PDF ES
+tiene 13 páginas A4, 567 KB, metadata ES embebida; revisión visual de portada, día 1
+y presupuesto OK. Gates: check-html, check-links, check-affiliate-ids, check-hreflang,
+check-sitemap — todos OK.
+
+QUEDA (humano + próxima sesión):
+1. Patricio crea el producto en Payhip (ficha completa: `listings/termas-del-sur-4d.md`;
+   PDF en `dist/termas-del-sur-4d-es.pdf`, mockups en `mockups-out/termas-del-sur-4d-*`).
+   Gumroad espejo opcional (permalink exacto `termas-del-sur-4d`, comisión 10% vs 5%).
+2. Con la URL real: pegar en `PAYHIP_URLS['termas-del-sur-4d']`, agregar el kit a
+   `READY_KITS`, correr `node inject-kit-cta.mjs` (inyecta solo en la guía ES),
+   re-correr los 5 gates y pushear.
+3. Cosmético conocido: en `termas-del-sur-4d-main.png` el badge de precio solapa
+   levemente el título largo (mismo patrón gen-1; no bloquea).

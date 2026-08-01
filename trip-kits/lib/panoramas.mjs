@@ -16,15 +16,21 @@ function load() {
   return cache;
 }
 
-const score = (p) =>
+// lang='es' usa descripcion_es (catalogo Panoramas es ES-primary; verificado 2026-08-01:
+// los POIs de Ñuble traen descripcion_es editorial completa). Default 'en' = comportamiento gen-1.
+// exclude: nombres exactos a omitir (dedup editorial — el catalogo repite el mismo complejo
+// con nombres distintos, ej. 3 fichas de Termas de Chillán y 2 del centro de esquí).
+const score = (p, field = 'descripcion_en') =>
   (Array.isArray(p.bundle_tags) && p.bundle_tags.includes('imperdible') ? 10 : 0) +
   (p.photo_url ? 1 : 0) +
-  (p.descripcion_en && p.descripcion_en.length > 120 ? 1 : 0);
+  (p[field] && p[field].length > 120 ? 1 : 0);
 
-export function topPois({ comunas, limit = 8 }) {
+export function topPois({ comunas, limit = 8, lang = 'en', exclude = [] }) {
+  const field = lang === 'es' ? 'descripcion_es' : 'descripcion_en';
   const set = new Set(comunas);
-  const hits = load().filter((p) => set.has(p.comuna) && p.descripcion_en);
-  hits.sort((a, b) => score(b) - score(a));
+  const skip = new Set(exclude);
+  const hits = load().filter((p) => set.has(p.comuna) && p[field] && !skip.has(p.nombre));
+  hits.sort((a, b) => score(b, field) - score(a, field));
   const seen = new Set();
   const out = [];
   for (const p of hits) {
@@ -32,7 +38,7 @@ export function topPois({ comunas, limit = 8 }) {
     seen.add(p.nombre);
     out.push({
       nombre: p.nombre,
-      descripcion: p.descripcion_en,
+      descripcion: p[field],
       precioClp: p.precio_referencia_clp ?? 0,
       horas: p.duracion_horas ?? null,
       categoria: p.categoria_slug ?? '',

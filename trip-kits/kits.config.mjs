@@ -3,6 +3,24 @@
 
 export const GUMROAD_BASE = 'https://patricio358.gumroad.com/l';
 
+// URLs Payhip REALES de los 10 kits gen-1 (productos creados 2026-07-30; los CTAs
+// en guias migraron Gumroad -> Payhip ese dia, comision 5% vs 10%). Fuente: listings/*.md.
+// El inyector (inject-kit-cta.mjs) las prefiere sobre el permalink Gumroad.
+// null = producto aun no creado; el codigo /b/<CODE> lo genera Payhip, NO inventarlo.
+export const PAYHIP_URLS = {
+  'atacama-5d': 'https://payhip.com/b/lBTyt',
+  'carretera-austral-7d': 'https://payhip.com/b/MxXD4',
+  'chiloe-lakes-5d': 'https://payhip.com/b/hdBVf',
+  'elqui-stars-4d': 'https://payhip.com/b/uy4v9',
+  'patagonia-14d': 'https://payhip.com/b/jwes1',
+  'pucon-volcano-4d': 'https://payhip.com/b/WjFp0',
+  'rapa-nui-4d': 'https://payhip.com/b/b97TX',
+  'santiago-cajon-4d': 'https://payhip.com/b/Qrh0p',
+  'tdp-no-car': 'https://payhip.com/b/9CyLp',
+  'valpo-wine-4d': 'https://payhip.com/b/ydz2j',
+  'termas-del-sur-4d': null, // TODO Patricio: pegar https://payhip.com/b/<CODE> al crear el producto
+};
+
 const D = (title, intro, pulls) => ({ title, intro, pulls });
 
 // ---------- Rutas para el mapa esquematico (una parada por dia) ----------
@@ -305,6 +323,31 @@ const RAPA_NUI_DAYS = [
     [{ guide: 'rapa-nui', headings: ['4. Anakena: the white-sand beach and moai with pukao'] }]),
 ];
 
+// ---------- Dias — kit gen-2 ES 2026-08-01 (wedge GSC: "termas de chillán") ----------
+
+const TERMAS_SUR_ROUTE = [
+  R(1, 'Valle Las Trancas', -36.9, -71.48),
+  R(2, 'Termas de Chillán', -36.905, -71.41),
+  R(3, 'Reserva Nacional Ñuble', -36.96, -71.45),
+  R(4, 'Chillán (ciudad)', -36.607, -72.103),
+];
+
+// Todos los pulls referencian headings EXACTOS de termas-de-chillan.html (ES, raiz).
+const TERMAS_SUR_DAYS = [
+  D('Llegada a Chillán y subida al Valle Las Trancas',
+    'Desde Santiago son unos 400 km por la Ruta 5 Sur hasta Chillán (4,5-5 horas en auto, bus o vuelo); desde la ciudad se suben los 80 km finales a Las Trancas, el poblado con cabañas, restaurantes y arriendo de equipos que funciona como base. Hoy toca instalarse y dejar las reservas listas.',
+    [{ guide: 'termas-de-chillan', headings: ['Cómo llegar y cuándo ir', '3. Valle Las Trancas: la puerta de entrada'] }]),
+  D('Termas de Chillán: día completo de aguas termales',
+    'El día central del viaje: piscinas termales exteriores con vista a la montaña, spa y tratamientos con barro volcánico, alimentadas por el mismo complejo volcánico de los Nevados de Chillán. Sin alojarse en el hotel se puede comprar entrada de día — en temporada alta hay que reservar con anticipación porque el aforo es limitado.',
+    [{ guide: 'termas-de-chillan', headings: ['1. Termas de Chillán: aguas termales de origen volcánico'] }]),
+  D('Nieve en invierno o trekking en la Reserva Ñuble',
+    'Según la temporada: esquí en Nevados de Chillán (junio a octubre, con la pista El Otto de unos 13 km bajando entre araucarias) o senderismo en la Reserva Nacional Ñuble, mejor entre noviembre y abril — el sendero corto Los Pretiles para toda la familia, o la caminata larga hacia la Laguna Fea.',
+    [{ guide: 'termas-de-chillan', headings: ['2. Nevados de Chillán: el centro de esquí más grande de Chile', '4. Senderismo en la Reserva Nacional Ñuble y el volcán Chillán'] }]),
+  D('Chillán: mercado, longaniza y murales antes de volver',
+    'Baja a la ciudad para el cierre gastronómico y cultural: el histórico mercado techado con la longaniza con Denominación de Origen y los murales de Siqueiros y Guerrero en la Escuela México. Desde ahí, bus o vuelo de regreso.',
+    [{ guide: 'termas-de-chillan', headings: ['5. Chillán: longaniza, mercado y los murales de la Escuela México'] }]),
+];
+
 // ---------- SKUs ----------
 
 export const KITS = [
@@ -590,6 +633,38 @@ export const KITS = [
     budget: [{ guide: 'rapa-nui', heading: 'Approximate prices (2026, per person)' }],
     faqFrom: ['rapa-nui'],
     poiComunas: ['Isla de Pascua'],
+    poiLimit: 8,
+  },
+  // Kit gen-2 (2026-08-01): primer kit en ESPAÑOL (mercado de la query GSC
+  // "termas de chillán" ~79 imp/3sem pos ~45). lang:'es' fija guia fuente ES
+  // (raiz del repo) + carcasa ES; no depende del flag --lang.
+  {
+    id: 'termas-del-sur-4d',
+    lang: 'es',
+    title: 'Termas del Sur: 4 días en las Termas de Chillán',
+    subtitle: 'Aguas termales volcánicas, nieve en invierno, trekking en la Reserva Ñuble y la gastronomía de Chillán — la ruta completa con presupuesto 2026',
+    priceUsd: 12.9,
+    gumroadPermalink: 'termas-del-sur-4d',
+    affQuery: 'Chillán',
+    coverImage: 'termas-de-chillan.jpg',
+    days: TERMAS_SUR_DAYS,
+    route: TERMAS_SUR_ROUTE,
+    checklist: [
+      'Entrada de día a las piscinas termales reservada con anticipación (aforo limitado en temporada alta)',
+      'Alojamiento, pases de esquí y entrada a las termas reservados si viajas en julio o en fines de semana largos',
+      'Traje de baño y toalla para las piscinas termales',
+      'Transporte Chillán → Las Trancas definido: combi rural, taxi o auto arrendado (80 km de subida)',
+      'Estado de la nieve y apertura de andariveles revisado antes de viajar (varía cada año)',
+      'Calzado de trekking para los senderos de la Reserva Nacional Ñuble',
+      'Ropa de capas: puedes pasar de la nieve a la piscina termal el mismo día',
+      'Efectivo en CLP para el mercado de Chillán y paradas rurales',
+    ],
+    budget: [{ guide: 'termas-de-chillan', heading: 'Precios orientativos (2026)' }],
+    faqFrom: ['termas-de-chillan'],
+    poiComunas: ['Pinto', 'Chillán'],
+    // Dedup editorial: el catalogo tiene 3 fichas del mismo complejo termal y 2
+    // del centro de esqui; se queda UNA de cada una (la de mayor score).
+    poiExclude: ['Termas de Chillán', 'Termas de Chillán - Spa y Parque de Agua', 'Nevados de Chillán (centro de esquí)'],
     poiLimit: 8,
   },
 ];

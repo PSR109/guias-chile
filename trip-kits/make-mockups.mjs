@@ -20,6 +20,12 @@ const dataUri = (absPath) => {
   return `data:${mime};base64,${readFileSync(absPath).toString('base64')}`;
 };
 
+// Textos del mockup por idioma del kit (EN identico al gen-1).
+const MOCK_I18N = {
+  en: { tag: 'Printable PDF · Instant Download', days: (n) => `${n}-day plan`, budget: 'Budget tables', edition: '2026 edition' },
+  es: { tag: 'PDF imprimible · Descarga instantánea', days: (n) => `Plan de ${n} días`, budget: 'Presupuesto 2026', edition: 'edición 2026' },
+};
+
 // Imagen principal del listing: 1000x1000 @2x = 2000x2000
 const mainHtml = (kit) => `<!doctype html><html><head><meta charset="utf-8"><style>
   * { margin:0; box-sizing:border-box; }
@@ -41,15 +47,15 @@ const mainHtml = (kit) => `<!doctype html><html><head><meta charset="utf-8"><sty
     box-shadow:0 10px 26px rgba(0,0,0,.35); }
 </style></head><body>
   <div class="price">$${kit.priceUsd}</div>
-  <div class="tag">Printable PDF · Instant Download</div>
+  <div class="tag">${MOCK_I18N[kit.lang ?? 'en'].tag}</div>
   <h1>${esc(kit.title)}</h1>
   <div class="sub">${esc(kit.subtitle)}</div>
   <img src="${dataUri(join(HERE, '..', 'img', 'og', kit.coverImage))}">
   <div class="badges">
-    <span class="badge">${kit.days.length}-day plan</span>
-    <span class="badge">Budget tables</span>
+    <span class="badge">${MOCK_I18N[kit.lang ?? 'en'].days(kit.days.length)}</span>
+    <span class="badge">${MOCK_I18N[kit.lang ?? 'en'].budget}</span>
     <span class="badge">Checklist</span>
-    <span class="badge">A4 · ${'2026'} edition</span>
+    <span class="badge">A4 · ${MOCK_I18N[kit.lang ?? 'en'].edition}</span>
   </div>
 </body></html>`;
 
@@ -66,7 +72,7 @@ for (const kit of KITS) {
 // 2) Previews: portada, primer dia, presupuesto (paginas reales del kit)
 const prev = await browser.newPage({ viewport: { width: 900, height: 1165 }, deviceScaleFactor: 2 });
 for (const kit of KITS) {
-  await prev.goto(pathToFileURL(join(HERE, 'build', `${kit.id}-en.html`)).href, { waitUntil: 'networkidle' });
+  await prev.goto(pathToFileURL(join(HERE, 'build', `${kit.id}-${kit.lang ?? 'en'}.html`)).href, { waitUntil: 'networkidle' });
   const targets = ['#cover', '#day-1', '#budget'];
   for (let i = 0; i < targets.length; i++) {
     const el = prev.locator(targets[i]);
