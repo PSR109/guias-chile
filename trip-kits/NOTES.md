@@ -245,6 +245,28 @@ URL en `PAYHIP_URLS`, kit en `READY_KITS`, `inject-kit-cta.mjs` → `changed=1`
 5 gates verdes. Verificación prod (GitHub Pages): CTA visible en
 https://guias.viajesypanoramas.cl/termas-de-chillan.html.
 
+## NOTES — 2026-08-01 (growth-agent: puerto-montt sumada a chiloe-lakes-5d)
+
+Con los 13 kits ya cableados y live, revisé qué guías del cluster de un kit ya
+LIVE seguían sin CTA (superficie de afiliación sin costo de contenido nuevo ni
+gate humano). `puerto-montt.html` (agregada 2026-07-21 como puerta de entrada a
+Los Lagos/Chiloé/Carretera Austral) era la única huérfana: sus vecinas directas
+(`puerto-varas`, `frutillar`, `chiloe`, `saltos-del-petrohue`) ya ofrecían
+`chiloe-lakes-5d` (Payhip `hdBVf`, US$9.9, producto real y en `READY_KITS` desde
+la tanda del 2026-07-28) y la guía misma dice textualmente que "la mayoría...
+prefiere dormir en Puerto Varas" — mismo viaje, mismo kit.
+
+Cambio: una línea en `MAP` de `inject-kit-cta.mjs`
+(`'puerto-montt': 'chiloe-lakes-5d'`) + `node inject-kit-cta.mjs` →
+`changed=3` (`puerto-montt.html`, `en/puerto-montt.html`, `pt/puerto-montt.html`,
+CTA antes de `.promo`). Idempotente (2ª corrida `changed=0`). No se tocó
+`kits.config.mjs`, `READY_KITS` ni ningún otro kit/guía. 5 gates verdes
+(`check-html`, `check-links`, `check-affiliate-ids`, `check-hreflang`,
+`check-sitemap`). `npm test` no corrió limpio en este sandbox por falta de
+`node_modules`/dependencias de red (cheerio no instalado, `panoramas.json` del
+repo hermano ausente) — falla preexistente del entorno, no relacionada con este
+cambio (no toca `kits.config.mjs` ni `lib/panoramas.mjs`).
+
 ## NOTES — 2026-08-01 (tanda 3: kits 14-15 ES)
 
 Dos kits gen-2 ES nuevos (sin cablear — gate Payhip), gemelos de los dos kits EN
