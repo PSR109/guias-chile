@@ -10,9 +10,12 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 // lang fijo que calce y, si no hay, el gen-1 (sin lang). Ej: santiago/cajon
 // ofrecen el kit EN en en/pt y el gemelo ES en la guia ES (swap del CTA).
 const MAP = {
-  'torres-del-paine': 'tdp-no-car',
-  'puerto-natales': 'tdp-no-car',
-  'punta-arenas': 'tdp-no-car',
+  // Kits gen-2 ES tanda 3 (2026-08-01): arrays EN+ES en las 4 guias de los gemelos.
+  // Mientras el kit ES este fuera de READY_KITS, el inyector corre identico a antes
+  // (el filtro por READY deja solo el kit EN). Al cablear: SWAP EN->ES solo en la guia ES.
+  'torres-del-paine': ['tdp-no-car', 'torres-del-paine-5d-es'],
+  'puerto-natales': ['tdp-no-car', 'torres-del-paine-5d-es'],
+  'punta-arenas': ['tdp-no-car', 'torres-del-paine-5d-es'],
   'carretera-austral': 'carretera-austral-7d',
   'chiloe': 'chiloe-lakes-5d',
   'puerto-varas': 'chiloe-lakes-5d',
@@ -22,7 +25,7 @@ const MAP = {
   // el aeropuerto/puerta de entrada de esta misma ruta ("la mayoria... prefiere
   // dormir en Puerto Varas" dice la propia guia) -- mismo kit que sus vecinas.
   'puerto-montt': 'chiloe-lakes-5d',
-  'san-pedro-de-atacama': 'atacama-5d',
+  'san-pedro-de-atacama': ['atacama-5d', 'atacama-5d-es'],
   'santiago': ['santiago-cajon-4d', 'santiago-cajon-4d-es'],
   'cajon-del-maipo': ['santiago-cajon-4d', 'santiago-cajon-4d-es'],
   'valparaiso': 'valpo-wine-4d',
@@ -61,6 +64,12 @@ const READY_KITS = new Set([
   // cajon-del-maipo.html (ES); las guias en/pt siguen con el kit EN.
   'radal-siete-tazas-3d',
   'santiago-cajon-4d-es',
+  // Tanda 3 (2026-08-01), Payhip creados y verificados el mismo dia:
+  // atacama-5d-es (Payhip ONobC, US$12.90) -> SWAP EN->ES en san-pedro-de-atacama.html.
+  // torres-del-paine-5d-es (Payhip VysH7, US$12.90) -> SWAP EN->ES en torres-del-paine,
+  // puerto-natales y punta-arenas (ES); en/pt siguen con el kit EN.
+  'atacama-5d-es',
+  'torres-del-paine-5d-es',
 ]);
 
 // URL de compra: Payhip si existe (migracion 2026-07-30), si no el permalink Gumroad.

@@ -8,6 +8,9 @@ test('kits: ids y permalinks unicos, route.length === days.length', () => {
   assert.equal(new Set(ids).size, ids.length, 'ids duplicados');
   const permalinks = KITS.map((k) => k.gumroadPermalink);
   assert.equal(new Set(permalinks).size, permalinks.length, 'permalinks duplicados');
+  // Corte 2026-08-01 (tanda 3): 10 gen-1 EN + 5 gen-2 ES (termas, radal,
+  // santiago-cajon-es, atacama-es, tdp-es). Si el conteo cambia, actualizar.
+  assert.equal(KITS.length, 15, 'conteo de kits cambio — actualizar invariante');
   for (const kit of KITS) {
     assert.equal(kit.route.length, kit.days.length, `${kit.id}: route.length !== days.length`);
     assert.ok(kit.lang === undefined || kit.lang === 'es', `${kit.id}: lang inesperado`);

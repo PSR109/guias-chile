@@ -23,6 +23,10 @@ export const PAYHIP_URLS = {
   // creados y verificados 2026-08-01 (Gumroad espejo: /l/radal-siete-tazas-3d y /l/santiago-cajon-es).
   'radal-siete-tazas-3d': 'https://payhip.com/b/ZD0xY',
   'santiago-cajon-4d-es': 'https://payhip.com/b/asZlb',
+  // Kits gen-2 ES de la tanda 3 (2026-08-01, gemelos ES de atacama-5d y tdp-no-car):
+  // creados y verificados 2026-08-01 (Payhip; espejo Gumroad: atacama listo, tdp pendiente por cupo 10/dia).
+  'atacama-5d-es': 'https://payhip.com/b/ONobC',
+  'torres-del-paine-5d-es': 'https://payhip.com/b/VysH7',
 };
 
 const D = (title, intro, pulls) => ({ title, intro, pulls });
@@ -389,6 +393,79 @@ const SANTIAGO_CAJON_DAYS_ES = [
   D('Cascada de las Ánimas y regreso a la ciudad',
     'Cierra el circuito más abajo del cajón: la caminata liviana a la cascada en la reserva de Cascada de las Ánimas (o canopy y rafting si queda energía), una parada en la plaza de San José de Maipo, y de vuelta a Santiago a tiempo para una cena tardía.',
     [{ guide: 'cajon-del-maipo', headings: ['4. Cascada de las Ánimas y San Alfonso', '5. San José de Maipo y el resto del cajón'] }]),
+];
+
+// ---------- Dias — kits gen-2 ES 2026-08-01 (tanda 3: gemelos ES de atacama-5d y tdp-no-car) ----------
+
+// Gemelo ES de ATACAMA_DAYS (mismo molde/recorrido, copy ES). Pulls a los headings
+// EXACTOS de san-pedro-de-atacama.html (ES, raiz) — distintos de los EN.
+// Ruta propia (mismas coords que ATACAMA_ROUTE, nombres ES): la compartida no se
+// toca para que el PDF EN regenere identico.
+const ATACAMA_ROUTE_ES = [
+  R(1, 'San Pedro de Atacama', -22.91, -68.2),
+  R(2, 'Valle de la Luna', -22.92, -68.3),
+  R(3, 'Geysers del Tatio', -22.33, -68.01),
+  R(4, 'Piedras Rojas', -23.75, -67.78),
+  R(5, 'Laguna Cejar', -22.97, -68.22),
+];
+
+const ATACAMA_DAYS_ES = [
+  D('Llegada a San Pedro y aclimatación',
+    'Vuelo a Calama (CJC) y transfer de 1 h 20 min al pueblo. Hoy toca tomárselo con calma — la altura es real y las excursiones se ordenan de menor a mayor altitud. Recorre las calles de adobe, deja reservadas las excursiones de la semana y camina al borde del pueblo al atardecer.',
+    [{ guide: 'san-pedro-de-atacama', headings: ['Datos prácticos'] }]),
+  D('Valle de la Luna al atardecer',
+    'Mañana libre en el pueblo y en la tarde el Valle de la Luna, a 15 minutos: dunas, crestas de sal y anfiteatros de piedra que al atardecer se tiñen de rojo. Es la excursión de menor exigencia del viaje — está casi a la altura del pueblo.',
+    [{ guide: 'san-pedro-de-atacama', headings: ['2. Valle de la Luna'] }]),
+  D('Geysers del Tatio al amanecer',
+    'La salida madrugadora que vale la pena: el campo geotérmico más alto del mundo (4.320 m), a las 6 de la mañana y bajo cero — las fumarolas solo se ven con el frío del amanecer. Nunca se hace el primer día: es la excursión que más exige aclimatación. Tarde de descanso.',
+    [{ guide: 'san-pedro-de-atacama', headings: ['1. Geysers del Tatio'] }]),
+  D('Lagunas altiplánicas y Piedras Rojas',
+    'El día largo y más escénico del viaje: flamencos en la laguna Chaxa del salar de Atacama, las lagunas Miscanti y Miñiques (4.100 m) espejando volcanes, y Piedras Rojas como postal final. Día completo.',
+    [{ guide: 'san-pedro-de-atacama', headings: ['3. Lagunas altiplánicas y Piedras Rojas'] }]),
+  D('Flotar en Cejar y cierre astronómico',
+    'Mañana de flotación en agua más salada que el mar Muerto (Cejar) o recorriendo las siete lagunas escondidas de Baltinache — medio día cualquiera de las dos. Tarde libre y cierre del viaje con un tour astronómico bajo el cielo más limpio del planeta: evita las noches de luna llena.',
+    [{ guide: 'san-pedro-de-atacama', headings: ['5. Lagunas Cejar o Baltinache', '4. Tour astronómico'] }]),
+];
+
+// Gemelo ES de TDP_DAYS (mismo molde "sin auto", copy ES). Pulls a los headings
+// EXACTOS de torres-del-paine.html, puerto-natales.html y punta-arenas.html (ES, raiz).
+// Ruta propia (mismas coords que TDP_ROUTE, nombres ES + mismo nudge del dia 5).
+const TDP_ROUTE_ES = [
+  R(1, 'Punta Arenas', -53.163, -70.917),
+  R(2, 'Puerto Natales', -51.729, -72.498),
+  R(3, 'Torres del Paine (circuito vehicular)', -51.06, -73.0),
+  R(4, 'Base Torres (inicio del sendero)', -50.95, -72.86),
+  R(5, 'Punta Arenas (regreso)', -53.35, -70.6),
+];
+
+const TDP_DAYS_ES = [
+  D('Llegada a Punta Arenas y bus a Puerto Natales',
+    'Vuela a Punta Arenas (PUQ), el aeropuerto más conectado de la Patagonia chilena (~3,5 h desde Santiago), almuerza en el centro histórico y toma el bus de ~3 h por la Ruta 9 a Puerto Natales — la base de operaciones del parque, con varias salidas diarias.',
+    [
+      { guide: 'punta-arenas', headings: ['Cómo llegar', '5. Centro histórico y Plaza Muñoz Gamero'] },
+      { guide: 'puerto-natales', headings: ['Cómo llegar'] },
+    ]),
+  D('Puerto Natales: preparativos y Cueva del Milodón',
+    'Día de logística: compra online la entrada al parque con fecha (obligatoria), confirma tours y compra las últimas provisiones. En el día, la Cueva del Milodón a 25 km — caverna gigante con la réplica del animal a tamaño real. Tarde de costanera y cordero patagónico.',
+    [
+      { guide: 'puerto-natales', headings: ['2. Cueva del Milodón (medio día)', '5. El pueblo mismo', 'Logística esencial'] },
+    ]),
+  D('Torres del Paine: tour de día completo (sin auto)',
+    'El circuito vehicular clásico en van con guía desde Puerto Natales (~1,5 h de viaje): miradores del lago Grey y sus témpanos, Salto Grande, lago Pehoé y los cuernos del Paine, con suerte guanacos y cóndores todo el día. La postal del parque sin caminar 20 km.',
+    [
+      { guide: 'torres-del-paine', headings: ['1. Tour de día completo (el formato accesible)'] },
+    ]),
+  D('Trekking a Base Torres en el día',
+    'La caminata estrella: ~19 km ida y vuelta a la laguna al pie de las torres, 8–10 horas con un tramo final de morrena empinada. Exigente pero no técnico: por libre (transporte a Laguna Amarga + shuttle) o con tour guiado con transporte incluido desde Puerto Natales.',
+    [
+      { guide: 'torres-del-paine', headings: ['2. Base Torres en el día (el trekking estrella)', 'Logística esencial'] },
+    ]),
+  D('Día de margen: navegación por Última Esperanza o regreso a Punta Arenas',
+    '¿Piernas cansadas? Navega el Seno Última Esperanza hasta los glaciares Balmaceda y Serrano, o camina a Puerto Bories desde la costanera. Si no, bus de vuelta a Punta Arenas para los pingüinos de Isla Magdalena (noviembre-marzo) antes del vuelo.',
+    [
+      { guide: 'puerto-natales', headings: ['4. Navegación por el Seno Última Esperanza', '3. Puerto Bories (1-2 horas)'] },
+      { guide: 'punta-arenas', headings: ['1. Isla Magdalena (pingüineras, medio día)'] },
+    ]),
 ];
 
 // ---------- SKUs ----------
@@ -778,6 +855,105 @@ export const KITS = [
     // Dedup editorial: el kit ya cubre estos 5 como contenido de los dias 1-4;
     // el bonus tiene que ser EXTRA (museos, mercados, termas de Colina, etc.).
     poiExclude: ['Cerro San Cristóbal y Parque Metropolitano', 'Barrio Bellavista', 'Plaza de Armas y Centro Histórico de Santiago', 'Embalse El Yeso', 'Cascada de las Ánimas'],
+    poiLimit: 10,
+  },
+  // Kit gen-2 ES (2026-08-01, tanda 3): gemelo en español de atacama-5d (mismo
+  // molde/recorrido, copy ES, pulls a la guia ES raiz san-pedro-de-atacama.html).
+  // Permalink distinto del EN para no colisionar en Gumroad/Payhip.
+  {
+    id: 'atacama-5d-es',
+    lang: 'es',
+    title: 'Desierto de Atacama en 5 días',
+    subtitle: 'San Pedro de Atacama: Valle de la Luna, géiseres del Tatio, lagunas altiplánicas y tour astronómico bajo el cielo más limpio del planeta — con presupuesto 2026',
+    priceUsd: 12.9,
+    gumroadPermalink: 'atacama-5d-es',
+    affQuery: 'San Pedro de Atacama',
+    coverImage: 'san-pedro-de-atacama.jpg',
+    days: ATACAMA_DAYS_ES,
+    route: ATACAMA_ROUTE_ES,
+    checklist: [
+      'Excursiones ordenadas de menor a mayor altitud: Luna → Cejar → lagunas → Tatio — el Tatio NUNCA el primer día',
+      'Tour a los géiseres del Tatio reservado (salida ~4 AM; en temporada alta se agota)',
+      'Capas y gorro aunque sea verano: 25 °C de día en el pueblo, bajo cero al amanecer en el Tatio',
+      'Tour astronómico en una noche sin luna llena (reservar con anticipación en temporada alta)',
+      'Efectivo en CLP: las entradas comunitarias se pagan en efectivo y los cajeros del pueblo se agotan en temporada alta',
+      'Presupuesto extra de CLP 30.000–50.000 para entradas a sitios (casi nunca incluidas en los tours)',
+      'Traje de baño para flotar en las lagunas Cejar o Baltinache',
+      'Plan B para enero-febrero: el invierno altiplánico puede llover y cerrar rutas puntualmente',
+    ],
+    budget: [{ guide: 'san-pedro-de-atacama', heading: 'Precios orientativos (2026, por persona)' }],
+    faqFrom: ['san-pedro-de-atacama'],
+    poiComunas: ['San Pedro de Atacama'],
+    // Dedup editorial: los 6 primeros nombres ya son contenido de los dias 1-5
+    // (el bonus tiene que ser EXTRA). El resto de la exclusion es boilerplate
+    // autogenerado verificado 2026-08-01: fichas "Mirador en Antofagasta, Chile."
+    // (Laguna Piedra, Tunel de Catarpe...), stubs de 53 chars (Laguna Miscanti...),
+    // stats Ramsar/Santuario, un hostal con resena EN y un camping con nombre
+    // duplicado. Quedan 7 POIs editoriales reales (sandboard, Pukara de Quitor,
+    // iglesia, Termas de Puritama, Valle del Arcoiris, Aldea de Tulor, Caracoles).
+    poiExclude: [
+      'Valle de la Luna', 'Géiseres del Tatio', 'Lagunas Altiplánicas Miscanti y Miñiques',
+      'Laguna Cejar y Ojos del Salar', 'Tour Astronómico en San Pedro de Atacama',
+      'Laguna Chaxa - Reserva Nacional Los Flamencos',
+      'Laguna Licancabur', 'Laguna Miñiques', 'Laguna Miscanti', 'Laguna Tebenquiche',
+      'Laguna Tuyajto', 'Laguna Piedra',
+      'Santuario de la Naturaleza Valle de la Luna y Sierra de Orbate',
+      'Santuario de la Naturaleza Laguna Tebenquiche',
+      'Sitio Ramsar Salar de Pujsa',
+      'Sitio Ramsar Sistema Hidrológico de Soncor del Salar de Atacama',
+      'Sitio Ramsar Salar de Tara',
+      'Hostal Misky Wasi',
+      'Camping y Termas de Puritama altiplano - Camping Laguna Lejía',
+    ],
+    poiLimit: 7,
+  },
+  // Kit gen-2 ES (2026-08-01, tanda 3): gemelo en español de tdp-no-car (mismo
+  // molde "sin auto", copy ES, pulls a las guias ES raiz torres-del-paine,
+  // puerto-natales y punta-arenas). Permalink distinto del EN.
+  {
+    id: 'torres-del-paine-5d-es',
+    lang: 'es',
+    title: 'Torres del Paine sin auto: 5 días',
+    subtitle: 'Buses, tour de día completo, trekking a Base Torres y navegación por el Seno Última Esperanza desde Puerto Natales — con presupuesto 2026',
+    priceUsd: 12.9,
+    gumroadPermalink: 'torres-del-paine-5d-es',
+    affQuery: 'Torres del Paine',
+    coverImage: 'torres-del-paine.jpg',
+    days: TDP_DAYS_ES,
+    route: TDP_ROUTE_ES,
+    checklist: [
+      'Entrada al parque comprada online CON FECHA antes de llegar (obligatoria)',
+      'Bus Punta Arenas ↔ Puerto Natales (~3 h por la Ruta 9) comprado con anticipación',
+      'Tour de día completo al parque reservado desde Puerto Natales',
+      'Transporte a Laguna Amarga + shuttle (o tour guiado) para el día de Base Torres',
+      'Alojamiento en Puerto Natales reservado con anticipación en diciembre-febrero',
+      'Cortaviento real y bastones: ráfagas de 100+ km/h son normales en verano',
+      'Capas para cuatro estaciones en un día, da igual el pronóstico',
+      'Calzado de trekking ya usado (19 km y 8-10 horas el día de Base Torres)',
+      'Efectivo en CLP sacado en Puerto Natales: dentro del parque casi no hay señal ni pago electrónico',
+      'Provisiones compradas en Puerto Natales antes de entrar al parque',
+    ],
+    budget: [
+      { guide: 'torres-del-paine', heading: 'Costos orientativos (2026, por persona)' },
+      { guide: 'puerto-natales', heading: 'Costos orientativos (2026, por persona)' },
+      { guide: 'punta-arenas', heading: 'Costos orientativos (2026, por persona)' },
+    ],
+    faqFrom: ['torres-del-paine', 'puerto-natales'],
+    poiComunas: ['Torres del Paine', 'Natales', 'Puerto Natales', 'Punta Arenas'],
+    // Dedup editorial: los 8 primeros ya son contenido de los dias 1-5 (parque,
+    // Base Torres, Pehoe/Salto Grande del tour, Milodon, Magdalena, plaza y
+    // costanera). Las 3 ultimas exclusiones son junk verificado 2026-08-01:
+    // stub EN de 52 chars, camping con resena EN y ficha stats de hectareas.
+    // Quedan 10 POIs editoriales reales (Cerro de la Cruz, Glaciar Grey, mercado,
+    // cementerio, museos, Seno Otway, Dorotea, Nao Victoria, Fuerte Bulnes...).
+    poiExclude: [
+      'Parque Nacional Torres del Paine', 'Mirador Base Las Torres', 'Lago Pehoé',
+      'Salto Grande', 'Monumento Natural Cueva del Milodón',
+      'Monumento Natural Los Pingüinos (Isla Magdalena)',
+      'Plaza Muñoz Gamero', 'Costanera de Puerto Natales',
+      'salto Chico Falls', 'Camping Río Serrano',
+      'Parque Nacional y Reserva Nacional Kawésqar',
+    ],
     poiLimit: 10,
   },
 ];
