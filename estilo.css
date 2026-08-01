@@ -1,10 +1,10 @@
 :root {
   --fondo: #fbfaf7; --texto: #1f2933; --suave: #5c6b7a; --suave-fuerte: #3d4a56; --borde: #e4e0d8;
   --tarjeta: #ffffff; --acento: #0d7a5f; --acento-texto: #ffffff;
-  /* Viator/GYG oscurecidos a ~5:1 sobre blanco (WCAG AA ≥4.5:1, con margen).
-     Civitatis queda sin botón activo (afiliado sin cuenta, ver ACCIONES-HUMANAS
-     #4) pero el color se conserva por si se reactiva. */
-  --viator: #2f7c5e; --civitatis: #d5006c; --gyg: #c44127;
+  /* Viator/GYG/Airalo oscurecidos a ~5:1 sobre blanco (WCAG AA ≥4.5:1, con
+     margen). Civitatis queda sin botón activo (afiliado sin cuenta, ver
+     ACCIONES-HUMANAS #4) pero el color se conserva por si se reactiva. */
+  --viator: #2f7c5e; --civitatis: #d5006c; --gyg: #c44127; --airalo: #0b65c2;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -58,6 +58,7 @@ th { font-weight: 700; border-bottom: 2px solid var(--acento); }
 .boton.viator { background: var(--viator); }
 .boton.civitatis { background: var(--civitatis); }
 .boton.gyg { background: var(--gyg); }
+.boton.airalo { background: var(--airalo); }
 .boton:hover { filter: brightness(1.08); }
 .boton-fila { display: block; margin: 0 0 10px; }
 .afiliado-nota { display: block; color: var(--suave); font-size: 12.5px; margin: 3px 0 0 1px; }
