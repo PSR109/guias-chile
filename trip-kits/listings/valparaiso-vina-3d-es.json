@@ -1,0 +1,32 @@
+{
+  "name": "Valparaíso + Viña del Mar: 3 días — Itinerario imprimible (PDF)",
+  "slug": "valparaiso-vina-3d-es",
+  "price_usd": 9.9,
+  "files": [
+    "guias-chile/trip-kits/build/valparaiso-vina-3d-es/valparaiso-vina-3d-es.pdf",
+    "guias-chile/trip-kits/build/valparaiso-vina-3d-es/valparaiso-vina-3d-es.html"
+  ],
+  "description_html": "<p>Valparaíso y Viña del Mar ordenadas día a día: 3 días entre los cerros patrimoniales declarados UNESCO, los ascensores que siguen subiendo desde el siglo XIX, la casa de Pablo Neruda en Cerro Bellavista, los mercados del plan portuario y una tarde completa en Viña del Mar — con la logística real de cómo llegar desde Santiago y moverse entre ambas ciudades.</p><p><strong>QUÉ INCLUYE (PDF A4, descarga instantánea):</strong></p><ul><li>Plan día a día: llegada y cerros Alegre y Concepción → ascensores, La Sebastiana y el arte callejero → plan portuario (Plaza Sotomayor, mercados, Muelle Barón) y tarde en Viña del Mar</li><li>Mapa esquemático de la ruta de 3 días</li><li>Tabla de presupuesto 2026 en CLP: ascensores, entrada a La Sebastiana, tours a pie, bus Santiago–Valparaíso y alojamiento en los cerros</li><li>Checklist pre-viaje: reserva online de La Sebastiana, efectivo para ascensores y colectivos, alojamiento en Año Nuevo</li><li>10 lugares bonus de nuestro catálogo de más de 25.000 lugares en Chile (miradores, Caleta Portales, Reloj de Flores, Reñaca, Jardín Botánico con precios 2026 y el estado real de los castillos Wulff y Brunet)</li><li>FAQ: ¿se puede hacer en un día desde Santiago?, seguridad en los cerros, cuántos ascensores funcionan</li></ul><p><strong>POR QUÉ CONFIAR:</strong> lo compila el equipo detrás de guias.viajesypanoramas.cl, sitio gratuito de guías de Chile construido sobre un catálogo de más de 25.000 lugares reales. Este kit destila esa guía en una ruta que puedes seguir sin conexión.</p><p>Datos de lugares derivados de OpenStreetMap, (c) colaboradores de OpenStreetMap, disponibles bajo la Open Database License (ODbL).</p><p><strong>DESCARGA INSTANTÁNEA</strong> — no se envía ningún producto físico. Imprímelo o llévalo en el teléfono. Solo para uso personal.</p>",
+  "keywords": [
+    "valparaíso",
+    "viña del mar",
+    "itinerario chile",
+    "guía de viaje pdf",
+    "cerros valparaíso",
+    "la sebastiana neruda",
+    "ascensores valparaíso",
+    "reñaca",
+    "reloj de flores",
+    "descarga digital",
+    "imprimible viaje",
+    "presupuesto 2026",
+    "fin de semana chile"
+  ],
+  "guias_cta": {
+    "swap_de": "valpo-wine-4d",
+    "guias_es": ["valparaiso.html"],
+    "no_tocar": ["en/valparaiso.html", "pt/valparaiso.html"],
+    "nota": "SWAP EN→ES al cablear: la guía ES valparaiso.html ya lleva el CTA del kit EN valpo-wine-4d (Payhip https://payhip.com/b/ydz2j, utm_campaign=valpo-wine-4d, verificado en el HTML 2026-08-01). Reemplazar ese bloque por el CTA de valparaiso-vina-3d-es (un solo CTA por guía, utm_campaign=valparaiso-vina-3d-es). en/ y pt/ siguen ofreciendo el kit EN. El kit NO está en kits.config.mjs ni en READY_KITS: el cableado (entry en kits.config.mjs, PAYHIP_URLS con la URL real /b/<CODE> que genere Payhip, READY_KITS e inject-kit-cta.mjs) lo hace el agente central una vez creado y verificado el producto."
+  },
+  "notas": "Kit gen-3 ES (WP 10K.5.13, ronda 4, 2026-08-01). PDF: 13 páginas A4, 824.006 bytes, metadata ES embebida (verificado con pdf-lib + revisión visual de portada, mapa de ruta, día 1, presupuesto, checklist y POIs). Payhip: crear producto con este nombre/precio y adjuntar files[0]; el código /b/<CODE> lo genera Payhip (NO inventarlo). Gumroad espejo opcional con permalink EXACTO igual al slug. Contenido 100% de valparaiso.html (ES) + catálogo Panoramas con descripcion_es (dedup editorial documentado en kit-valparaiso-vina-3d-es.config.mjs); no existe guía propia de Viña del Mar en el repo — la cobertura de Viña viene del heading 5 de la guía de Valparaíso + los POIs bonus. Build reproducible: cd guias-chile/trip-kits && node build-valparaiso-vina-3d-es.mjs."
+}

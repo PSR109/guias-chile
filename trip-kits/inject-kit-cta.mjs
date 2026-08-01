@@ -16,23 +16,30 @@ const MAP = {
   'torres-del-paine': ['tdp-no-car', 'torres-del-paine-5d-es'],
   'puerto-natales': ['tdp-no-car', 'torres-del-paine-5d-es'],
   'punta-arenas': ['tdp-no-car', 'torres-del-paine-5d-es'],
-  'carretera-austral': 'carretera-austral-7d',
-  'chiloe': 'chiloe-lakes-5d',
+  'carretera-austral': ['carretera-austral-7d', 'carretera-austral-norte-7d-es'],
+  'chiloe': ['chiloe-lakes-5d', 'chiloe-5d-es'],
   'puerto-varas': 'chiloe-lakes-5d',
   'frutillar': 'chiloe-lakes-5d',
   'saltos-del-petrohue': 'chiloe-lakes-5d',
   // Puerto Montt (guia agregada 2026-07-21, huerfana de kit hasta ahora): es
   // el aeropuerto/puerta de entrada de esta misma ruta ("la mayoria... prefiere
   // dormir en Puerto Varas" dice la propia guia) -- mismo kit que sus vecinas.
-  'puerto-montt': 'chiloe-lakes-5d',
+  // Ronda 4 (2026-08-01): SWAP EN->ES solo en la guia ES (gemelo chiloe-5d-es);
+  // las vecinas puerto-varas/frutillar/saltos-del-petrohue siguen solo con el EN.
+  'puerto-montt': ['chiloe-lakes-5d', 'chiloe-5d-es'],
   'san-pedro-de-atacama': ['atacama-5d', 'atacama-5d-es'],
   'santiago': ['santiago-cajon-4d', 'santiago-cajon-4d-es'],
   'cajon-del-maipo': ['santiago-cajon-4d', 'santiago-cajon-4d-es'],
-  'valparaiso': 'valpo-wine-4d',
+  'valparaiso': ['valpo-wine-4d', 'valparaiso-vina-3d-es'],
   'colchagua-pichilemu': 'valpo-wine-4d',
-  'pucon-villarrica': 'pucon-volcano-4d',
-  'la-serena-coquimbo': 'elqui-stars-4d',
-  'valle-del-elqui': 'elqui-stars-4d',
+  'pucon-villarrica': ['pucon-volcano-4d', 'pucon-4d-es'],
+  'la-serena-coquimbo': ['elqui-stars-4d', 'valle-elqui-4d-es'],
+  'valle-del-elqui': ['elqui-stars-4d', 'valle-elqui-4d-es'],
+  // Kits gen-3 ES ronda 4 (2026-08-01): CTA NUEVO en iquique.html y arica.html
+  // (ninguna tenia CTA de kit). Kit ES-only: en/pt NO se tocan (el filtro por
+  // lang no encuentra kit para esos idiomas).
+  'iquique': 'iquique-altiplano-4d-es',
+  'arica': 'iquique-altiplano-4d-es',
   'rapa-nui': 'rapa-nui-4d',
   'termas-de-chillan': 'termas-del-sur-4d',
   // Kit gen-2 ES tanda 2 (2026-08-01): guia ES radal, cableada el mismo dia.
@@ -70,6 +77,24 @@ const READY_KITS = new Set([
   // puerto-natales y punta-arenas (ES); en/pt siguen con el kit EN.
   'atacama-5d-es',
   'torres-del-paine-5d-es',
+  // Ronda 4 (2026-08-01, gen-3 ES), Payhip creados y verificados el mismo dia
+  // (fuente: tools/chrome/payhip-results-r4.jsonl):
+  // chiloe-5d-es (Payhip f6KZF, US$12.90) -> SWAP EN->ES en chiloe.html y puerto-montt.html.
+  // pucon-4d-es (Payhip RlCHK, US$12.90) -> SWAP EN->ES en pucon-villarrica.html.
+  // valparaiso-vina-3d-es (Payhip Itnmo, US$9.90) -> SWAP EN->ES en valparaiso.html.
+  // carretera-austral-norte-7d-es (Payhip JY2nc, US$14.90) -> SWAP EN->ES en carretera-austral.html.
+  // valle-elqui-4d-es (Payhip 3za2d, US$12.90) -> SWAP EN->ES en la-serena-coquimbo.html
+  // y valle-del-elqui.html.
+  // iquique-altiplano-4d-es (Payhip x90rj, US$12.90) -> CTA NUEVO en iquique.html y arica.html.
+  // En todos: en/pt NO se tocan (siguen con el kit EN o sin CTA).
+  // malalcahuello-conguillio-4d-es (Payhip O7gIr) NO entra: sin guia destino
+  // (documentado en listings/malalcahuello-conguillio-4d-es.json) — nada que inyectar.
+  'chiloe-5d-es',
+  'pucon-4d-es',
+  'valparaiso-vina-3d-es',
+  'carretera-austral-norte-7d-es',
+  'valle-elqui-4d-es',
+  'iquique-altiplano-4d-es',
 ]);
 
 // URL de compra: Payhip si existe (migracion 2026-07-30), si no el permalink Gumroad.

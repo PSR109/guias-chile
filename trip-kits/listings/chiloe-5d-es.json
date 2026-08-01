@@ -1,0 +1,34 @@
+{
+  "name": "Chiloé en 5 días — Itinerario imprimible (PDF)",
+  "slug": "chiloe-5d-es",
+  "price_usd": 12.9,
+  "files": [
+    "guias-chile/trip-kits/dist/chiloe-5d-es-es.pdf",
+    "guias-chile/trip-kits/mockups-out/chiloe-5d-es-main.png",
+    "guias-chile/trip-kits/mockups-out/chiloe-5d-es-preview-1.png",
+    "guias-chile/trip-kits/mockups-out/chiloe-5d-es-preview-2.png",
+    "guias-chile/trip-kits/mockups-out/chiloe-5d-es-preview-3.png"
+  ],
+  "description_html": "<p><strong>Chiloé ordenado día a día:</strong> 5 días completos en la isla — cruce del Canal de Chacao en ferry desde Pargua, los palafitos y la Iglesia de San Francisco de Castro, el circuito de iglesias de madera Patrimonio de la Humanidad (Achao, Tenaún, Vilupulli, Colo), Dalcahue y las islas menores como Mechuque, el curanto al hoyo y la mitología chilota (Trauco, Pincoya, Caleuche), con la logística real del cruce: el puente Chacao sigue en obra (entrega estimada 2028) y el ferry es la vía actual.</p><p><strong>QUÉ INCLUYE (PDF A4, 13 páginas, descarga instantánea):</strong></p><ul><li>Plan día a día: llegada a Puerto Montt y cruce del Chacao → Castro: palafitos e Iglesia de San Francisco → iglesias Patrimonio de la Humanidad → Dalcahue, islas menores y curanto → mitología chilota y regreso por Puerto Montt (Angelmó)</li><li>Mapa esquemático de la ruta de 5 días</li><li>Tablas de presupuesto 2026 en CLP: ferry Pargua–Chacao (pasajero y auto), alojamiento en Castro, tour de día e iglesias, curanto en restaurante, traslados aeropuerto El Tepual–Puerto Montt</li><li>Checklist pre-viaje: bus directo con ferry incluido vs auto, impermeable para la selva valdiviana, domingo para la feria de Dalcahue, curanto al hoyo coordinado con anticipación, efectivo para caletas</li><li>4 lugares bonus de nuestro catálogo de más de 25.000 lugares en Chile</li><li>FAQ: estado real del puente Chacao, cuántos días dedicar, mejor época</li></ul><p><strong>POR QUÉ CONFIAR:</strong> lo compila el equipo detrás de guias.viajesypanoramas.cl, sitio gratuito de guías de Chile construido sobre un catálogo de más de 25.000 lugares reales. Este kit destila esa guía en una ruta que puedes seguir sin conexión.</p><p>Datos de lugares derivados de OpenStreetMap, (c) colaboradores de OpenStreetMap, disponibles bajo la Open Database License (ODbL).</p><p>Descarga instantánea en PDF. Solo para uso personal.</p>",
+  "keywords": [
+    "chiloé",
+    "castro chiloé",
+    "palafitos",
+    "iglesias de chiloé unesco",
+    "dalcahue",
+    "curanto",
+    "mitología chilota",
+    "canal de chacao ferry",
+    "ancud",
+    "pingüinos puñihuil",
+    "itinerario chile",
+    "guía de viaje pdf",
+    "descarga digital",
+    "imprimible viaje",
+    "sur de chile"
+  ],
+  "guias_cta": [
+    "chiloe.html",
+    "puerto-montt.html"
+  ]
+}

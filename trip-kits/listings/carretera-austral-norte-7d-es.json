@@ -1,0 +1,31 @@
+{
+  "name": "Carretera Austral Norte en 7 días: de Puerto Montt a Coyhaique (Trip Kit PDF)",
+  "slug": "carretera-austral-norte-7d-es",
+  "price_usd": 14.9,
+  "files": [
+    "trip-kits/dist/carretera-austral-norte-7d-es.pdf"
+  ],
+  "description_html": "<p><strong>La Carretera Austral Norte con toda la logística resuelta: ferries, bencina y reservas.</strong> Este trip kit en español convierte la mitad norte de la Ruta 7 —de Puerto Montt a las Capillas de Mármol, con Coyhaique como pivote— en un plan de 7 días que puedes seguir sin conexión: cuándo cruzar el ferry Hornopirén–Caleta Gonzalo, dónde llenar el estanque (y dónde NO hay bencineras), qué reservar con semanas de anticipación y cuánto cuesta todo en 2026.</p><p><strong>Qué incluye:</strong></p><ul><li>Plan día a día (7 días): llegada a Puerto Montt y Angelmó, Hornopirén, ferry a Caleta Gonzalo y Parque Pumalín, desvío a Futaleufú, el día largo a Coyhaique, Cerro Castillo y las Capillas de Mármol con cierre en Balmaceda</li><li>Logística de ferries: cuáles son obligatorios, cómo se reservan y qué pasa con los cupos de vehículo en temporada alta</li><li>Logística de bencina: puntos clave de recarga y los tramos de más de 200 km sin estaciones al sur de Coyhaique</li><li>Mapa esquemático de la ruta día a día</li><li>2 tablas de presupuesto 2026 en CLP (ferry, bencina, alojamiento, tours y llegada a Puerto Montt)</li><li>Checklist pre-viaje imprimible de 10 puntos</li><li>10 lugares bonus reales de nuestro catálogo de más de 25.000 lugares de Chile (Coyhaique y Aysén: museos, miradores, trekking, gastronomía)</li><li>Preguntas frecuentes: 4x4, días necesarios, señal y bencina, y cómo seguir el viaje</li></ul><p><strong>Por qué confiar:</strong> lo compila el equipo detrás de guias.viajesypanoramas.cl, una guía de viajes de Chile gratuita construida sobre un catálogo de más de 25.000 lugares reales. El kit destila esas guías en una ruta que puedes seguir sin señal. Datos de lugares derivados de OpenStreetMap, (c) OpenStreetMap contributors, disponibles bajo la licencia ODbL.</p><p><strong>Descarga instantánea</strong> — no se envía ningún producto físico. PDF A4 imprimible de 16 páginas, en español. Solo para uso personal.</p>",
+  "keywords": [
+    "carretera austral",
+    "coyhaique",
+    "patagonia chile",
+    "itinerario pdf",
+    "guia de viaje chile",
+    "road trip chile",
+    "aysen",
+    "capillas de marmol",
+    "ferries patagonia",
+    "viaje por chile",
+    "descarga digital",
+    "trip kit",
+    "vacaciones 2026"
+  ],
+  "guias_cta": ["carretera-austral"],
+  "note": "PDF adjunto: dist/carretera-austral-norte-7d-es.pdf (copia del build; el contenido vive en build/carretera-austral-norte-7d-es/). CTA: la guia ES carretera-austral.html hoy tiene el CTA del kit EN carretera-austral-7d (Payhip MxXD4) — al publicar este kit, SWAP EN->ES en esa guia (patron gemelos gen-2: lector ES -> PDF ES); en/pt siguen con el kit EN. Permalink Gumroad sugerido: carretera-austral-norte-7d-es. El bundle bundle-sur-de-chile referencia este mismo archivo.",
+  "verification_2026_08_01": {
+    "pdf": "dist/carretera-austral-norte-7d-es.pdf — 709.270 bytes, PDF valido re-leido con pdf-lib, 16 paginas A4, metadata ES (title/author/keywords) embebida",
+    "contenido": "7 dias (pulls verificados contra headings reales de carretera-austral.html y puerto-montt.html ES), 10 POIs ES editoriales (boilerplate del catalogo excluido), 6 FAQ, 2 tablas de presupuesto, checklist de 10 items, atribucion ODbL",
+    "revision_visual": "portada, mapa de ruta, dia 1, dia 5, presupuesto, POIs y checklist renderizados y revisados en Chromium (emulacion print)"
+  }
+}

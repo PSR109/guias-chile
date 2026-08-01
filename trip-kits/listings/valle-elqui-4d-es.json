@@ -1,0 +1,50 @@
+{
+  "name": "Valle del Elqui y La Serena: 4 días de estrellas y pisco — Trip Kit PDF (español)",
+  "slug": "valle-elqui-4d-es",
+  "price_usd": 12.9,
+  "files": [
+    "trip-kits/build/valle-elqui-4d-es/valle-elqui-4d-es.pdf"
+  ],
+  "description_html": "<p><strong>Cuatro días entre el Pacífico y el cielo más limpio del planeta, ordenados en un plan que puedes seguir sin conexión.</strong> Este trip kit en español condensa nuestras guías completas de La Serena, Coquimbo y el Valle del Elqui en un itinerario imprimible de 13 páginas A4: pingüinos de Humboldt en Punta de Choros, la Cruz del Tercer Milenio y el Barrio Inglés, la ruta del pisco entre viñedos de altura en Pisco Elqui, Vicuña y el museo de Gabriela Mistral, Cochiguaz y el cierre con un tour astronómico en Mamalluca u otro observatorio turístico.</p><p><strong>El plan, día a día:</strong></p><ul><li><strong>Día 1 — Llegada a La Serena:</strong> Faro Monumental, Avenida del Mar y el centro neocolonial del Plan Serena, con parada en La Recova.</li><li><strong>Día 2 — Coquimbo y Punta de Choros:</strong> Cruz del Tercer Milenio, Barrio Inglés, Islote Pájaros Niños y navegación por la Reserva Nacional Pingüino de Humboldt.</li><li><strong>Día 3 — Subida al valle:</strong> Vicuña y el Museo Gabriela Mistral por la mañana; destilerías de pisco (Mistral y Los Nichos) en Pisco Elqui por la tarde.</li><li><strong>Día 4 — Cochiguaz y noche de estrellas:</strong> el sub-valle más silencioso del Elqui y un tour nocturno de observatorio, idealmente cerca de luna nueva.</li></ul><p><strong>Qué incluye:</strong> mapa esquemático de la ruta, 2 tablas de presupuesto 2026 en CLP (tours, observatorios, destilerías, buses y alojamiento), checklist pre-viaje de 10 puntos (reservas de observatorio y Punta de Choros, fase lunar, capas para la noche), 5 lugares bonus seleccionados desde nuestro catálogo de más de 25.000 lugares reales de Chile (kitesurf en el Embalse Puclaro, playas Totoralillo y Tongoy, el Jardín del Corazón y más), 6 preguntas frecuentes y links de reserva con cancelación gratis.</p><p><strong>Por qué confiar:</strong> lo compila el equipo detrás de guias.viajesypanoramas.cl, una guía de viajes de Chile gratuita y actualizada en 2026. Cero relleno: cada sección viene de las guías completas publicadas. Datos de lugares derivados de OpenStreetMap, (c) OpenStreetMap contributors, disponibles bajo la licencia ODbL.</p><p><strong>Descarga instantánea</strong> — no se envía ningún producto físico. PDF A4 imprimible en español (es-CL). Solo para uso personal. Precio de referencia: US$12,90 (≈ $12.900 CLP).</p>",
+  "keywords": [
+    "valle del elqui",
+    "la serena",
+    "coquimbo",
+    "punta de choros",
+    "pinguinos humboldt",
+    "observatorio mamalluca",
+    "cerro tololo",
+    "astroturismo chile",
+    "pisco elqui",
+    "vicuña",
+    "gabriela mistral",
+    "ruta del pisco",
+    "itinerario pdf",
+    "guia de viaje chile",
+    "norte chico chile",
+    "viaje por chile",
+    "trip kit",
+    "descarga digital",
+    "cochiguaz",
+    "vacaciones chile"
+  ],
+  "guias_cta": {
+    "utm_campaign": "valle-elqui-4d-es",
+    "idioma": "es",
+    "accion": "swap",
+    "reemplaza_a": "elqui-stars-4d",
+    "guias": [
+      "la-serena-coquimbo.html",
+      "valle-del-elqui.html"
+    ],
+    "detalle": "Ambas guías ES llevan hoy el CTA del kit EN elqui-stars-4d (Payhip https://payhip.com/b/uy4v9, utm_campaign=elqui-stars-4d). Cuando exista el producto Payhip de este kit ES: (1) agregar la entry del kit a kits.config.mjs (definición completa en build/valle-elqui-4d-es/generate.mjs, constante KIT) con PAYHIP_URLS['valle-elqui-4d-es'] = URL real; (2) cambiar MAP a 'la-serena-coquimbo': ['elqui-stars-4d', 'valle-elqui-4d-es'] y 'valle-del-elqui': ['elqui-stars-4d', 'valle-elqui-4d-es']; (3) agregar 'valle-elqui-4d-es' a READY_KITS y correr node inject-kit-cta.mjs — el inyector hace SWAP EN→ES solo en las guías ES (un solo CTA por guía, idempotente); en/pt siguen ofreciendo elqui-stars-4d. NO agregar a READY_KITS sin producto real (gate 2026-07-28).",
+    "cta_texto_es": "🗺️ ¿Planificando este viaje? Descarga nuestro itinerario PDF día a día: Valle del Elqui y La Serena: 4 días de estrellas y pisco — imprimible, con presupuesto 2026 y checklist. US$12.9",
+    "verificado_2026_08_01": "CTA actual del kit EN presente en la-serena-coquimbo.html (línea ~157) y valle-del-elqui.html (línea ~156), ambos antes de .promo, formato <div class=\"kit-cta\"> estándar compatible con el SWAP del inyector."
+  },
+  "note": "Gumroad espejo opcional tras Payhip: permalink EXACTO 'valle-elqui-4d-es' (no colisiona con el EN 'elqui-stars-4d'). Mockups: no generados en esta ronda (make-mockups.mjs es compartido); el publicador puede re-usar la portada img/og/valle-del-elqui.jpg o generar mockups al cablear el kit al pipeline.",
+  "verification_2026_08_01": {
+    "pdf": "trip-kits/build/valle-elqui-4d-es/valle-elqui-4d-es.pdf — 13 páginas A4, 619.905 bytes, metadata ES embebida (verificado re-leyendo con pdf-lib: title/author/creator/keywords OK)",
+    "html": "12 secciones OK (portada, índice, mapa, 4 días, presupuesto×2 guías, checklist×10, 5 POIs bonus, 6 FAQ, recursos); 0 fugas de kit-cta/payhip/wikimedia; revisión visual de portada, día 1, mapa, presupuesto y POIs OK",
+    "contenido": "100% extraído de la-serena-coquimbo.html y valle-del-elqui.html (ES, raíz) + 5 POIs editoriales del catálogo Panoramas tras dedup editorial y filtro anti-boilerplate (24 exclusiones documentadas en generate.mjs)"
+  }
+}

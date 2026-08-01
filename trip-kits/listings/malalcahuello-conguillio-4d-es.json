@@ -1,0 +1,32 @@
+{
+  "name": "Malalcahuello y Conguillío en 4 días — Itinerario imprimible (PDF)",
+  "slug": "malalcahuello-conguillio-4d-es",
+  "price_usd": 12.90,
+  "files": [
+    "guias-chile/trip-kits/build/malalcahuello-conguillio-4d-es/malalcahuello-conguillio-4d-es.pdf"
+  ],
+  "description_html": "<p>Malalcahuello y el Parque Nacional Conguillío ordenados día a día: 4 días entre las araucarias milenarias y el volcán Llaima, el sendero Sierra Nevada sobre el Lago Conguillío, el cráter Navidad del volcán Lonquimay (erupción 1988), las termas de Malalcahuello y la nieve de Corralco en invierno — con la logística real de cómo llegar desde Temuco y dónde dormir.</p><p><b>QUÉ INCLUYE (PDF A4, 13 páginas, descarga instantánea):</b></p><ul><li>Plan día a día: llegada por Temuco y Curacautín → día completo en el PN Conguillío → Cráter Navidad o ski en Corralco → saltos de Curacautín y regreso</li><li>Mapa esquemático de la ruta de 4 días</li><li>Tabla de presupuesto 2026 en CLP: entradas CONAF, termas, pase de ski, cabañas, buses y comidas</li><li>Checklist pre-viaje: entrada online al parque (pasesparques.cl), apertura por nieve, efectivo y señal</li><li>8 lugares bonus de nuestro catálogo de más de 25.000 lugares en Chile (Sollipulli, Tolhuaca, Icalma, China Muerta y más)</li><li>FAQ: mejor época, ¿auto o bus?, reservas del parque, dificultad del Cráter Navidad</li></ul><p><b>POR QUÉ CONFIAR:</b> lo compila el equipo detrás de guias.viajesypanoramas.cl, sitio gratuito de guías de Chile construido sobre un catálogo de más de 25.000 lugares reales. Este kit destila ese conocimiento en una ruta que puedes seguir sin conexión.</p><p>Datos de lugares derivados de OpenStreetMap, (c) colaboradores de OpenStreetMap, disponibles bajo la Open Database License (ODbL). Foto de portada: lautaroj, CC BY 2.0 (vía Wikimedia Commons).</p><p><b>DESCARGA INSTANTÁNEA</b> — no se envía ningún producto físico. Imprímelo o llévalo en el teléfono. Solo para uso personal.</p>",
+  "keywords": [
+    "malalcahuello",
+    "conguillio",
+    "parque nacional conguillio",
+    "volcan llaima",
+    "corralco",
+    "curacautin",
+    "crater navidad",
+    "araucarias chile",
+    "la araucania",
+    "itinerario chile",
+    "guia de viaje pdf",
+    "imprimible viaje",
+    "sur de chile"
+  ],
+  "guias_cta": {
+    "lang": "es",
+    "utm_campaign": "malalcahuello-conguillio-4d-es",
+    "insert_anchor": "<div class=\"promo\">",
+    "texto_html_template": "🗺️ ¿Planificando este viaje? Descarga nuestro <a href=\"{URL_PAYHIP}?utm_source=guias&utm_medium=cta&utm_campaign=malalcahuello-conguillio-4d-es\" rel=\"sponsored noopener\" target=\"_blank\">itinerario PDF día a día: Malalcahuello y Conguillío en 4 días</a> — imprimible, con presupuesto 2026 y checklist. <span class=\"kit-price\">US$12.90</span>",
+    "target_guides": [],
+    "target_note": "NO existe guía de la zona en guias-chile al 2026-08-01 (ni malalcahuello, conguillío ni curacautín tienen HTML raíz/en/pt — el kit se construyó sin guía fuente, contenido de autoría propia sobre el catálogo Panoramas). NO inyectar en pucon-villarrica.html ni termas-de-chillan.html: ambas ya tienen CTA LIVE de otro kit (pucon-volcano-4d y termas-del-sur-4d) y la regla del inyector es un solo CTA por guía — un SWAP mataría ventas existentes. Acción previa sugerida: crear la guía ES 'malalcahuello-conguillio' (el contenido de kit-data.mjs ya es la base editorial) y cablear el CTA ahí con el flujo estándar (kits.config.mjs + READY_KITS + inject-kit-cta.mjs)."
+  }
+}

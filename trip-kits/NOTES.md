@@ -339,3 +339,65 @@ QUEDA (humano — crear 2 productos, fichas en `listings/atacama-5d-es.md` y
 4. Cosmético conocido (todas las portadas ES): badge de precio solapa levemente
    el título largo en `-main.png` — mismo patrón gen-1, no bloquea; evaluar fix
    global de tipografía de portada si se retocan los mockups.
+
+## NOTES — 2026-08-01 (ronda 4: 7 kits gen-3 ES cableados y LIVE)
+
+Los 7 kits gen-3 ES (construidos en paralelo por agentes constructores, PDFs
+verificados) fueron publicados en Payhip y aquí se cablearon los CTAs. Catálogo
+final: **21 kits en `KITS`** (10 gen-1 EN + 5 gen-2 ES + 6 gen-3 ES) +
+malalcahuello registrado solo en `PAYHIP_URLS` (ver abajo).
+
+| Kit | US$ | Payhip | CTA en guía(s) ES |
+|---|---|---|---|
+| chiloe-5d-es | 12.90 | https://payhip.com/b/f6KZF | SWAP EN→ES en `chiloe.html` y `puerto-montt.html` |
+| pucon-4d-es | 12.90 | https://payhip.com/b/RlCHK | SWAP EN→ES en `pucon-villarrica.html` |
+| valparaiso-vina-3d-es | 9.90 | https://payhip.com/b/Itnmo | SWAP EN→ES en `valparaiso.html` |
+| carretera-austral-norte-7d-es | 14.90 | https://payhip.com/b/JY2nc | SWAP EN→ES en `carretera-austral.html` |
+| valle-elqui-4d-es | 12.90 | https://payhip.com/b/3za2d | SWAP EN→ES en `la-serena-coquimbo.html` y `valle-del-elqui.html` |
+| iquique-altiplano-4d-es | 12.90 | https://payhip.com/b/x90rj | CTA NUEVO en `iquique.html` y `arica.html` |
+| malalcahuello-conguillio-4d-es | 12.90 | https://payhip.com/b/O7gIr | **nada** — sin guía destino (ver abajo) |
+
+Cableado ejecutado (integrador ronda 4):
+- `kits.config.mjs`: 6 entries nuevas (días/rutas ES como constantes propias
+  `*_ES`/gen-3, mismo patrón que tanda 3; contenido integrado tal cual lo
+  dejaron los constructores — pulls a headings EXACTOS verificados por ellos)
+  + 7 URLs en `PAYHIP_URLS`. `test/kits-config.test.mjs`: invariante 15→21.
+  `npm test` 7/7.
+- `inject-kit-cta.mjs`: `MAP` con arrays EN+ES en las 7 guías de swap +
+  entradas nuevas `iquique`/`arica` (string, kit ES-only); los 6 kits a
+  `READY_KITS`. Corrida: `changed=9 skipped=49 notReady=0` (7 swaps + 2 CTAs
+  nuevos); 2ª corrida `changed=0` (idempotente). en/pt NO tocadas: siguen con
+  los kits EN (verificado: `utm_campaign` EN intacto en en/pt; en/pt de
+  iquique/arica sin CTA).
+- 5 gates verdes: check-html, check-links, check-affiliate-ids, check-hreflang,
+  check-sitemap.
+- PDFs copiados a `dist/` para uniformidad (orden local, gitignored):
+  pucon-4d-es, valparaiso-vina-3d-es, valle-elqui-4d-es, iquique-altiplano-4d-es
+  y malalcahuello-conguillio-4d-es (el bundle `bundle-sur-de-chile` referencia
+  `dist/`). Los 7 PDFs ya estaban adjuntos en sus productos Payhip.
+- Scripts de build de los constructores preservados en repo:
+  `build-chiloe-5d-es.mjs` (+ `kits.config.chiloe-5d-es.mjs`),
+  `build-valparaiso-vina-3d-es.mjs` (+ `kit-valparaiso-vina-3d-es.config.mjs`),
+  `build-iquique-altiplano.mjs` (+ `kits.iquique-altiplano.config.mjs`),
+  `build-austral-norte.mjs` (autocontenido). Los generadores de pucon y
+  valle-elqui vivían en `build/<slug>/` (gitignored): su contenido ya quedó
+  integrado en `kits.config.mjs` — rebuilds futuros por el pipeline estándar.
+
+**malalcahuello-conguillio-4d-es — por qué no está en `KITS` ni en el inyector:**
+(a) NO existe guía de la zona en el repo (ni malalcahuello/conguillío/curacautín
+tienen HTML raíz/en/pt) — el kit se construyó sin guías fuente, con contenido de
+autoría propia: `days` con `html` propio, `budgetRows`, `pois` curados a mano —
+shape incompatible con `compile-html.mjs` y con `test/kits-config.test.mjs`;
+(b) sin guía destino no hay CTA que inyectar, y NO se inyecta en guías ajenas
+con CTA live (regla un CTA por guía). Su build standalone vive en
+`build/malalcahuello-conguillio-4d-es/` y su URL Payhip está registrada en
+`PAYHIP_URLS`. Acción previa sugerida (de su listing): crear la guía ES
+`malalcahuello-conguillio` y cablear con el flujo estándar.
+
+QUEDA:
+1. Verificación prod (GitHub Pages, 1-3 min tras push): curl a iquique.html,
+   chiloe.html y valle-del-elqui.html confirmando el CTA con la URL Payhip ES.
+2. Bundle Sur de Chile (Payhip TZa3f, US$29): ya publicado con su zip; si se
+   regenera, incluir los 4 PDFs de `dist/` que le corresponden.
+3. Evaluar guía ES `malalcahuello-conguillio` para darle superficie de venta
+   al 7º kit (contenido base ya existe en su `kit-data.mjs`).

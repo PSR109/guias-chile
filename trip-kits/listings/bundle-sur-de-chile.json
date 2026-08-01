@@ -1,0 +1,37 @@
+{
+  "name": "Bundle Sur de Chile — 4 Trip Kits PDF (Termas del Sur + Pucón + Chiloé + Carretera Austral Norte)",
+  "slug": "bundle-sur-de-chile",
+  "price_usd": 29,
+  "files": [
+    "trip-kits/dist/termas-del-sur-*.pdf",
+    "trip-kits/dist/pucon-4d-es.pdf",
+    "trip-kits/dist/chiloe-5d-es.pdf",
+    "trip-kits/dist/carretera-austral-norte-7d-es.pdf"
+  ],
+  "description_html": "<p><strong>El sur de Chile en 4 itinerarios imprimibles, por menos que el costo de 3.</strong> Este bundle reúne los trip kits en español de las cuatro rutas clásicas del sur: <strong>Termas del Sur</strong> (4 días en las Termas de Chillán), <strong>Pucón y el volcán Villarrica</strong> (4 días), <strong>Chiloé y los Lagos</strong> (5 días) y la <strong>Carretera Austral Norte</strong> (7 días). Comprados por separado suman US$50,60 (valor referencial); el bundle cuesta US$29 — ahorras más de un 40%.</p><p><strong>Qué incluye cada kit:</strong> plan día a día con horarios y tiempos de traslado, mapa esquemático de la ruta, tablas de presupuesto 2026 en CLP (alojamiento, comida, entradas, bencina), checklist pre-viaje, lugares bonus extraídos de nuestro catálogo de más de 25.000 lugares reales de Chile y preguntas frecuentes.</p><ul><li>Termas del Sur: 4 días en las Termas de Chillán — US$12,90 por separado</li><li>Pucón y el volcán Villarrica: 4 días — US$12,90 por separado</li><li>Chiloé y los Lagos: 5 días — US$9,90 por separado</li><li>Carretera Austral Norte: 7 días — US$14,90 por separado</li></ul><p><strong>Por qué confiar:</strong> estos kits los compila el equipo detrás de guias.viajesypanoramas.cl, una guía de viajes de Chile gratuita construida sobre un catálogo de más de 25.000 lugares reales. Los kits destilan esas guías en rutas que puedes seguir sin conexión. Datos de lugares derivados de OpenStreetMap, (c) OpenStreetMap contributors, disponibles bajo la licencia ODbL.</p><p><strong>Descarga instantánea</strong> — no se envía ningún producto físico. PDFs A4 imprimibles en español. Solo para uso personal.</p>",
+  "keywords": [
+    "sur de chile",
+    "carretera austral",
+    "chiloe",
+    "pucon",
+    "termas de chillan",
+    "itinerario pdf",
+    "guia de viaje chile",
+    "descarga digital",
+    "viaje por chile",
+    "patagonia chile",
+    "los lagos",
+    "trip kit",
+    "ruta sur chile",
+    "vacaciones chile"
+  ],
+  "note": "files los adjunta el publicador central: dist/termas-del-sur-*.pdf + dist/pucon-4d-es.pdf + dist/chiloe-5d-es.pdf + dist/carretera-austral-norte-7d-es.pdf (los que existan al publicar)",
+  "verification_2026_08_01": {
+    "existen": ["dist/termas-del-sur-4d-es.pdf (580.717 bytes, PDF 1.7 válido)"],
+    "faltan": [
+      "dist/pucon-4d-es.pdf (existe solo EN: dist/pucon-volcano-4d-en.pdf)",
+      "dist/chiloe-5d-es.pdf (existe solo EN: dist/chiloe-lakes-5d-en.pdf)",
+      "dist/carretera-austral-norte-7d-es.pdf (existe solo EN: dist/carretera-austral-7d-en.pdf)"
+    ]
+  }
+}

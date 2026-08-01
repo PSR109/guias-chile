@@ -1,0 +1,33 @@
+{
+  "name": "Pucón y Alrededores: 4 días de aventura — Itinerario imprimible (PDF)",
+  "slug": "pucon-4d-es",
+  "price_usd": 12.9,
+  "files": [
+    "guias-chile/trip-kits/build/pucon-4d-es/pucon-4d-es.pdf",
+    "guias-chile/trip-kits/build/pucon-4d-es/pucon-4d-es.html"
+  ],
+  "description_html": "<p>Pucón ordenado día a día: 4 días entre el volcán Villarrica (uno de los cráteres activos más accesibles del mundo), las termas naturales que alimenta el mismo volcán —de las rústicas Pozones a las fotografiadas Termas Geométricas—, el rafting en el río Trancura (clase III para principiantes, clase IV para expertos), las playas de arena volcánica del lago Villarrica y el trekking entre araucarias milenarias del Parque Nacional Huerquehue con los pozones turquesa de los Ojos del Caburgua.</p><p><b>QUÉ INCLUYE (PDF A4, 13 páginas, descarga instantánea):</b></p><ul><li>Plan día a día: llegada y la postal del volcán → día de termas → rafting en el Trancura y playas de arena negra → Huerquehue y Ojos del Caburgua</li><li>Mapa esquemático de la ruta de 4 días</li><li>Tabla de presupuesto 2026 en CLP: ascenso guiado al volcán, rafting, Termas Geométricas, termas rústicas y alojamiento</li><li>Checklist pre-viaje: reserva del ascenso con fecha flexible (depende de la alerta SERNAGEOMIN y del clima), qué llevar a termas y rafting, entrada CONAF de Huerquehue</li><li>8 lugares bonus de nuestro catálogo de más de 25.000 lugares en Chile</li><li>FAQ: si siempre se puede subir al volcán, cuántos días dedicar y la mejor época para ir</li></ul><p><b>POR QUÉ CONFIAR:</b> lo compila el equipo detrás de guias.viajesypanoramas.cl, sitio gratuito de guías de Chile construido sobre un catálogo de más de 25.000 lugares reales. Este kit destila esa guía en una ruta que puedes seguir sin conexión.</p><p>Datos de lugares derivados de OpenStreetMap, (c) colaboradores de OpenStreetMap, disponibles bajo la Open Database License (ODbL).</p><p>DESCARGA INSTANTÁNEA — no se envía ningún producto físico. Imprímelo o llévalo en el teléfono. Solo para uso personal.</p>",
+  "keywords": [
+    "pucón",
+    "villarrica",
+    "volcán villarrica",
+    "termas pucón",
+    "rafting trancura",
+    "huerquehue",
+    "ojos del caburgua",
+    "lago villarrica",
+    "itinerario chile",
+    "guía de viaje pdf",
+    "descarga digital",
+    "imprimible viaje",
+    "sur de chile",
+    "la araucanía",
+    "planificador viaje"
+  ],
+  "guias_cta": {
+    "swap_de": "pucon-volcano-4d",
+    "guias_es": ["pucon-villarrica.html"],
+    "no_tocar": ["en/pucon-villarrica.html", "pt/pucon-villarrica.html"],
+    "nota": "SWAP EN→ES al cablear: la guía ES ya lleva el CTA del kit EN pucon-volcano-4d (Payhip https://payhip.com/b/WjFp0, utm_campaign=pucon-volcano-4d). Reemplazar ese bloque por el CTA de pucon-4d-es (un solo CTA por guía, utm_campaign=pucon-4d-es). en/ y pt/ siguen ofreciendo el kit EN. El kit NO está en kits.config.mjs ni en READY_KITS: el cableado (entry en kits.config.mjs, PAYHIP_URLS con la URL real /b/<CODE> que genere Payhip, READY_KITS e inject-kit-cta.mjs) lo hace el agente central una vez creado y verificado el producto."
+  }
+}

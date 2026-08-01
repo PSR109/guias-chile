@@ -1,0 +1,51 @@
+{
+  "name": "Iquique + Altiplano: 4 días — Itinerario imprimible (PDF)",
+  "slug": "iquique-altiplano-4d-es",
+  "price_usd": 12.9,
+  "files": [
+    "guias-chile/trip-kits/build/iquique-altiplano-4d-es/iquique-altiplano-4d-es.pdf"
+  ],
+  "description_html": "<p>Iquique y el altiplano ordenados día a día: 4 días entre Playa Cavancha y el borde costero, la Duna del Dragón (sandboard o parapente biplaza), las oficinas salitreras Humberstone y Santa Laura — Patrimonio de la Humanidad — con los geoglifos de Pintados, y el cruce final al Parque Nacional Lauca: lago Chungará, volcanes Payachatas y el pueblo de Parinacota por sobre los 4.500 msnm, con la logística real de la altura (bus Iquique → Arica, aclimatación y la opción de dormir en Putre).</p><p><strong>QUÉ INCLUYE (PDF A4, 13 páginas, descarga instantánea):</strong></p><ul><li>Plan día a día: llegada a Iquique y playa Cavancha → Duna del Dragón + tarde en la Zofri → Humberstone, Santa Laura y geoglifos de la pampa → cruce de día completo al Parque Nacional Lauca vía Arica</li><li>Mapa esquemático de la ruta de 4 días</li><li>Tablas de presupuesto 2026 en CLP (Iquique y Arica): sandboard, parapente, salitreras, tours, colectivos y alojamiento</li><li>Checklist pre-viaje: parapente reservado en fines de semana largos, bus a Arica la tarde del día 3, aclimatación sobre 4.500 msnm, capas para el altiplano, efectivo en CLP y la advertencia de la Fiesta de La Tirana en julio</li><li>12 lugares bonus de nuestro catálogo de más de 25.000 lugares en Chile (Lauca y Chungará, Cotacotani, Parinacota, termas de Jurasi y Mamiña, oasis de Pica, Gigante de Tarapacá y más)</li><li>FAQ: cuántos días dedicar, seguridad del sandboard y el parapente, Humberstone en medio día, geoglifos y el cruce al altiplano</li></ul><p><strong>POR QUÉ CONFIAR:</strong> lo compila el equipo detrás de guias.viajesypanoramas.cl, sitio gratuito de guías de Chile construido sobre un catálogo de más de 25.000 lugares reales. Este kit destila esas guías en una ruta que puedes seguir sin conexión.</p><p>Datos de lugares derivados de OpenStreetMap, © colaboradores de OpenStreetMap, disponibles bajo la Open Database License (ODbL).</p><p>DESCARGA INSTANTÁNEA — no se envía ningún producto físico. Imprímelo o llévalo en el teléfono. Solo para uso personal.</p>",
+  "keywords": [
+    "iquique",
+    "altiplano chile",
+    "parque nacional lauca",
+    "lago chungará",
+    "humberstone",
+    "duna del dragón",
+    "sandboard iquique",
+    "parapente iquique",
+    "putre",
+    "geoglifos de pintados",
+    "pampa del tamarugal",
+    "itinerario chile",
+    "guía de viaje pdf",
+    "descarga digital",
+    "imprimible viaje",
+    "norte de chile",
+    "planificador viaje"
+  ],
+  "gumroad_permalink": "iquique-altiplano-4d-es",
+  "payhip_url": null,
+  "previews": [
+    "guias-chile/trip-kits/build/iquique-altiplano-4d-es/preview-portada.png",
+    "guias-chile/trip-kits/build/iquique-altiplano-4d-es/preview-ruta.png",
+    "guias-chile/trip-kits/build/iquique-altiplano-4d-es/preview-dia4.png",
+    "guias-chile/trip-kits/build/iquique-altiplano-4d-es/preview-presupuesto.png",
+    "guias-chile/trip-kits/build/iquique-altiplano-4d-es/preview-bonus.png"
+  ],
+  "guias_cta": {
+    "kit_id": "iquique-altiplano-4d-es",
+    "lang": "es",
+    "guias": ["iquique", "arica"],
+    "map_entries": {
+      "iquique": "iquique-altiplano-4d-es",
+      "arica": "iquique-altiplano-4d-es"
+    },
+    "utm_campaign": "iquique-altiplano-4d-es",
+    "posicion": "Bloque .kit-cta antes de .promo, solo en la guía ES raíz (iquique.html y arica.html); en/ y pt/ NO se tocan (kit ES-only, misma regla que los kits gen-2). Ninguna de las dos guías tiene CTA de kit hoy: ambas son CTA NUEVO (no hay swap), changed=2 esperado.",
+    "cta_texto_es": "🗺️ ¿Planificando este viaje? Descarga nuestro itinerario PDF día a día: Iquique + Altiplano: 4 días — imprimible, con presupuesto 2026 y checklist. US$12.9",
+    "gate": "NO inyectar hasta que exista URL de producto real (lección 2026-07-28: sin producto no hay CTA). Una vez creado el producto: pegar la URL Payhip en PAYHIP_URLS['iquique-altiplano-4d-es'] en trip-kits/kits.config.mjs, agregar el kit a READY_KITS y las 2 entradas del MAP en trip-kits/inject-kit-cta.mjs (o mergear kits.iquique-altiplano.config.mjs en kits.config.mjs), correr node inject-kit-cta.mjs, re-correr los 5 gates (check-html, check-links, check-affiliate-ids, check-hreflang, check-sitemap) y verificar el CTA en prod con curl/DOM vivo.",
+    "espejo_gumroad": "Opcional (comisión 10% vs 5%): permalink EXACTO 'iquique-altiplano-4d-es'. Payhip genera el código /b/<CODE> al crear el producto — NO inventarlo."
+  }
+}

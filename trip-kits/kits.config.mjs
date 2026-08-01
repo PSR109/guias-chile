@@ -27,6 +27,17 @@ export const PAYHIP_URLS = {
   // creados y verificados 2026-08-01 (Payhip; espejo Gumroad: atacama listo, tdp pendiente por cupo 10/dia).
   'atacama-5d-es': 'https://payhip.com/b/ONobC',
   'torres-del-paine-5d-es': 'https://payhip.com/b/VysH7',
+  // Kits gen-3 ES de la ronda 4 (2026-08-01): creados y verificados en Payhip
+  // (fuente: tools/chrome/payhip-results-r4.jsonl del repo raiz).
+  // malalcahuello-conguillio-4d-es NO tiene guia destino (documentado en su
+  // listing): URL registrada aqui, pero no va al MAP del inyector.
+  'chiloe-5d-es': 'https://payhip.com/b/f6KZF',
+  'pucon-4d-es': 'https://payhip.com/b/RlCHK',
+  'valparaiso-vina-3d-es': 'https://payhip.com/b/Itnmo',
+  'carretera-austral-norte-7d-es': 'https://payhip.com/b/JY2nc',
+  'valle-elqui-4d-es': 'https://payhip.com/b/3za2d',
+  'iquique-altiplano-4d-es': 'https://payhip.com/b/x90rj',
+  'malalcahuello-conguillio-4d-es': 'https://payhip.com/b/O7gIr',
 };
 
 const D = (title, intro, pulls) => ({ title, intro, pulls });
@@ -465,6 +476,193 @@ const TDP_DAYS_ES = [
     [
       { guide: 'puerto-natales', headings: ['4. Navegación por el Seno Última Esperanza', '3. Puerto Bories (1-2 horas)'] },
       { guide: 'punta-arenas', headings: ['1. Isla Magdalena (pingüineras, medio día)'] },
+    ]),
+];
+
+// ---------- Dias — kits gen-3 ES 2026-08-01 (ronda 4) ----------
+// Integrados desde los fragmentos/config que dejo cada constructor:
+// kits.config.chiloe-5d-es.mjs, build/pucon-4d-es/generate.mjs,
+// kit-valparaiso-vina-3d-es.config.mjs, build-austral-norte.mjs,
+// build/valle-elqui-4d-es/generate.mjs y kits.iquique-altiplano.config.mjs.
+// Todos los pulls referencian headings EXACTOS de las guias ES raiz
+// (verificados por cada constructor el 2026-08-01).
+
+const CHILOE_ROUTE_ES = [
+  R(1, 'Ancud (cruce del Chacao)', -41.87, -73.83),
+  R(2, 'Castro', -42.48, -73.76),
+  R(3, 'Achao (isla Quinchao)', -42.47, -73.49),
+  R(4, 'Dalcahue', -42.38, -73.65),
+  R(5, 'Chonchi', -42.62, -73.77),
+];
+
+const CHILOE_DAYS_ES = [
+  D('Llegada a Puerto Montt y cruce del Canal de Chacao',
+    'Vuela a Puerto Montt (PMC), el aeropuerto por donde entra la mayoría de los vuelos al sur de Chile, y sigue por tierra a Pargua (~1 h, unos 57 km) para el cruce en ferry por el Canal de Chacao (~30 min, salidas frecuentes todo el día; en bus hay servicios directos Puerto Montt–Castro que incluyen el ferry en el pasaje). Del desembarco a Ancud o Castro es otra ~1 h a 1 h 15: hoy toca llegar, instalarse y dejar listas las reservas.',
+    [
+      { guide: 'puerto-montt', headings: ['4. El aeropuerto El Tepual, puerta de entrada al sur', '5. Rumbo a Chiloé o a la Carretera Austral'] },
+      { guide: 'chiloe', headings: ['Cómo llegar y cuándo ir'] },
+    ]),
+  D('Castro: palafitos y la Iglesia de San Francisco',
+    'El día de la capital de la provincia: los palafitos de la costanera de los ríos Gamboa y Ten Ten —casas de madera de colores sobre pilotes, pensadas para que los pescadores subieran sus botes bajo la propia vivienda— y, frente a la plaza, la Iglesia de San Francisco, amarilla y lila, una de las 16 iglesias chilotas Patrimonio de la Humanidad. Tarde libre entre cafés y tiendas de artesanía instalados en los propios palafitos.',
+    [{ guide: 'chiloe', headings: ['1. Castro: palafitos y la Iglesia de San Francisco'] }]),
+  D('Las iglesias Patrimonio de la Humanidad',
+    'El paseo cultural clásico de la isla: un día completo recorriendo dos o tres de las 16 iglesias de madera construidas por misiones jesuitas y franciscanas entre los siglos XVII y XIX, con la técnica local de tejuelas de alerce sin clavos. Además de San Francisco en Castro, las más visitadas son Achao —la más antigua, en la isla Quinchao—, Tenaún, Vilupulli y Colo.',
+    [{ guide: 'chiloe', headings: ['2. Iglesias de Chiloé, Patrimonio de la Humanidad'] }]),
+  D('Dalcahue, las islas menores y el curanto',
+    'A 20 minutos de Castro, Dalcahue suma su feria artesanal (más fuerte los domingos) y el embarcadero hacia la isla Quinchao y las islas menores del archipiélago, como Mechuque: caletas con más palafitos y mucho menos turismo que Castro. El almuerzo se resuelve con el plato insular: curanto al hoyo si te toca una preparación comunitaria, o la versión de restaurante —curanto en olla o pulmay— disponible todos los días.',
+    [{ guide: 'chiloe', headings: ['5. Dalcahue y las islas menores', '3. Curanto, el sabor de la isla'] }]),
+  D('Mitología chilota y regreso por Puerto Montt',
+    'Cierre con el imaginario de la isla —el Trauco, la Pincoya, el Caleuche— que museos y guías locales de Castro y Chonchi cuentan en detalle, y regreso al continente con parada en Puerto Montt: las cocinerías y la artesanía en lana y madera del mercado de Angelmó, la costanera frente al Seno de Reloncaví y la Catedral de la Plaza de Armas antes del vuelo.',
+    [
+      { guide: 'chiloe', headings: ['4. Mitología chilota'] },
+      { guide: 'puerto-montt', headings: ['1. Angelmó', '3. La costanera y la Plaza de Armas'] },
+    ]),
+];
+
+const PUCON_ROUTE_ES = [
+  R(1, 'Pucón (pueblo + vistas al volcán)', -39.2823, -71.9758),
+  R(2, 'Termas cerca de Pucón', -39.38, -71.75),
+  R(3, 'Río Trancura', -39.3, -71.7),
+  R(4, 'Parque Nacional Huerquehue', -39.15, -71.68),
+];
+
+const PUCON_DAYS_ES = [
+  D('Llegada a Pucón y la postal del volcán Villarrica',
+    'Instalación en Pucón con el cono humeante del volcán Villarrica vigilando el pueblo. Si las condiciones lo permiten, deja reservado el ascenso guiado a la cumbre para los días siguientes — se agota y depende del clima y de la alerta volcánica de SERNAGEOMIN.',
+    [{ guide: 'pucon-villarrica', headings: ['Cómo llegar y cuándo ir', '1. El volcán Villarrica'] }]),
+  D('Día de termas: la otra cara del volcán',
+    'Día de recuperación: piscinas termales alimentadas por el mismo calor del volcán. Elige una poza rústica junto al río (Los Pozones, abiertas de noche) o un complejo con más infraestructura — y si alcanza el día, las Geométricas hacia Coñaripe son la postal termal más fotografiada de Chile.',
+    [{ guide: 'pucon-villarrica', headings: ['2. Termas: la otra cara del volcán'] }]),
+  D('Rafting en el Trancura y playas de arena negra',
+    'Mañana de rafting o hydrospeed en el río Trancura —Bajo Trancura clase III para principiantes y familias, Alto Trancura clase IV para quienes ya remaron— y tarde de descanso en las playas de arena volcánica del lago Villarrica, con la costanera y el volcán de fondo al atardecer.',
+    [{ guide: 'pucon-villarrica', headings: ['3. Deportes de aventura en el río Trancura', '4. Lago Villarrica y sus playas de arena negra'] }]),
+  D('Parque Nacional Huerquehue y Ojos del Caburgua',
+    'Trekking entre araucarias milenarias y lagunas alpinas en el Parque Nacional Huerquehue —el sendero de los Lagos, 4-5 horas ida y vuelta— y cierre en los pozones turquesa de los Ojos del Caburgua, a la entrada del mismo camino de regreso a Pucón.',
+    [{ guide: 'pucon-villarrica', headings: ['5. Parque Nacional Huerquehue y Ojos del Caburgua'] }]),
+];
+
+const VALPO_VINA_ROUTE = [
+  R(1, 'Valparaíso (Cerro Alegre)', -33.0427, -71.6245),
+  R(2, 'Cerro Bellavista (La Sebastiana)', -33.0562, -71.6206),
+  R(3, 'El plan + Viña del Mar', -33.0245, -71.5518),
+];
+
+// No existe guia propia de Viña del Mar: toda la cobertura ES de Viña del
+// repo vive en el heading 5 de valparaiso.html.
+const VALPO_VINA_DAYS = [
+  D('Llegada a Valparaíso y los cerros Alegre y Concepción',
+    'Desde Santiago son unos 120 km por la Ruta 68 (1 h 30-2 h): buses cada 15-20 minutos desde los terminales Alameda o San Borja. Instálate en un hostal de Cerro Alegre o Concepción y dedica la tarde a perderte a pie por los dos cerros patrimoniales: escaleras empedradas, miradores sobre la bahía y cafés con vista.',
+    [{ guide: 'valparaiso', headings: ['Cómo llegar y cuándo ir', '1. Qué es Valparaíso', '2. Cerro Alegre y Cerro Concepción'] }]),
+  D('Ascensores centenarios, La Sebastiana y el arte callejero',
+    'El día de los clásicos porteños: sube en uno de los ascensores que siguen operando desde fines del siglo XIX (Concepción, Artillería, El Peral o Reina Victoria), recorre La Sebastiana —la casa de Pablo Neruda en Cerro Bellavista, conviene comprar la entrada online— y sigue el rastro de los murales de gran formato del propio cerro.',
+    [{ guide: 'valparaiso', headings: ['3. Los ascensores, patrimonio en movimiento', '4. La Sebastiana y el arte callejero de Cerro Bellavista'] }]),
+  D('El plan portuario y la tarde en Viña del Mar',
+    'Baja al plan: la Plaza Sotomayor con el Monumento a los Héroes de Iquique, mariscos frescos en el Mercado Puerto o el Mercado Cardonal y una caminata por el Muelle Barón y el barrio Puerto. En la tarde cruza a Viña del Mar —15-20 minutos en auto o colectivo— para el Reloj de Flores, la Quinta Vergara y la costanera al atardecer.',
+    [{ guide: 'valparaiso', headings: ['5. Plaza Sotomayor, el plan y Viña del Mar'] }]),
+];
+
+const AUSTRAL_NORTE_ROUTE = [
+  R(1, 'Puerto Montt', -41.47, -72.94),
+  R(2, 'Hornopirén', -41.94, -72.43),
+  R(3, 'Chaitén / Pumalín', -42.92, -72.71),
+  R(4, 'Futaleufú', -43.19, -71.87),
+  R(5, 'Coyhaique', -45.57, -72.07),
+  R(6, 'Villa Cerro Castillo', -46.12, -72.16),
+  R(7, 'Puerto Río Tranquilo', -46.62, -72.68),
+];
+
+const AUSTRAL_NORTE_DAYS = [
+  D('Llegada a Puerto Montt: auto, provisiones y Angelmó',
+    'Aterriza en El Tepual (PMC), retira el auto arrendado —avisa con anticipación que harás la Carretera Austral, porque varias agencias restringen o cobran extra por ripio y ferry— y haz la compra grande de provisiones: al sur todo es más caro y hay menos oferta. Cierra la tarde en el mercado de Angelmó, el muelle desde donde zarpan los ferris de largo recorrido a Chaitén.',
+    [
+      { guide: 'puerto-montt', headings: ['4. El aeropuerto El Tepual, puerta de entrada al sur', '1. Angelmó', '5. Rumbo a Chiloé o a la Carretera Austral'] },
+    ]),
+  D('Puerto Montt a Hornopirén: el inicio de la Ruta 7',
+    'Los primeros 110 km son los más fáciles de toda la ruta, mayormente pavimentados. Es el día para entrar en ritmo: llena el estanque antes de salir de Puerto Montt y llega con luz a Hornopirén, porque el ferry a Caleta Gonzalo sale temprano y con cupo limitado de vehículos.',
+    [
+      { guide: 'carretera-austral', headings: ['1. Qué es la Carretera Austral', '2. Puerto Montt–Hornopirén y el cruce a Pumalín'] },
+    ]),
+  D('Ferry a Caleta Gonzalo y Parque Pumalín',
+    'El cruce Hornopirén–Leptepu–Fiordo Largo–Caleta Gonzalo combina dos navegaciones con un puente terrestre corto y te deja dentro del Parque Pumalín: bosque valdiviano de alerces milenarios, senderos cortos a saltos de agua y miradores del volcán Chaitén. Noche en Chaitén: primera parada seria de bencina al sur de Puerto Montt.',
+    [
+      { guide: 'carretera-austral', headings: ['Ferries: cuáles son obligatorios'] },
+    ]),
+  D('Desvío a Futaleufú: el río turquesa',
+    'Desde Villa Santa Lucía son unos 75 km de desvío hasta uno de los ríos con mejor rafting del mundo: aguas turquesa de deshielo glaciar y rápidos de clase III a V. ¿No haces rafting? El valle justifica igual el desvío, con cabalgatas y pesca con mosca como alternativas tranquilas.',
+    [
+      { guide: 'carretera-austral', headings: ['3. Futaleufú: rafting de clase mundial'] },
+    ]),
+  D('Día largo al sur: La Junta y Puyuhuapi hasta Coyhaique',
+    'El día de más conducción del viaje, por La Junta y Puyuhuapi (termas si te sobra tiempo). Coyhaique es la única ciudad real de la ruta: reabastece TODO —estanque lleno, despensa y efectivo— porque al sur de aquí las distancias entre bencineras se estiran y la señal de celular desaparece por horas.',
+    [
+      { guide: 'carretera-austral', headings: ['Cómo llegar y cuándo ir'] },
+    ]),
+  D('Cerro Castillo: las agujas de roca y su laguna glaciar',
+    'Antes de seguir al sur, el Parque Nacional Cerro Castillo guarda uno de los treks más espectaculares de la Patagonia: la laguna glaciar bajo las agujas de roca que dan nombre al cerro. Base en Villa Cerro Castillo, a orillas de la Ruta 7.',
+    [
+      { guide: 'carretera-austral', headings: ['5. Cerro Castillo y Villa O\'Higgins: el fin de la ruta'] },
+    ]),
+  D('Capillas de Mármol y cierre en Balmaceda',
+    'Mañana en bote o kayak a las Capillas de Mármol sobre el lago General Carrera —sal temprano, la luz de la mañana es la mejor para las vetas azules— y después regreso al norte por la misma Ruta 7 hasta el aeropuerto de Balmaceda, junto a Coyhaique, para devolver el auto y volar.',
+    [
+      { guide: 'carretera-austral', headings: ['4. Puerto Río Tranquilo y las Capillas de Mármol'] },
+    ]),
+];
+
+const ELQUI_ROUTE_ES = [
+  R(1, 'La Serena', -29.9027, -71.2519),
+  R(2, 'Coquimbo / Punta de Choros', -29.9533, -71.3436),
+  R(3, 'Vicuña (Valle del Elqui)', -30.0319, -70.7081),
+  R(4, 'Pisco Elqui / Cochiguaz', -30.1275, -70.4922),
+];
+
+const ELQUI_DAYS_ES = [
+  D('Llegada a La Serena: Faro Monumental y centro neocolonial',
+    'El viaje parte en la segunda ciudad más antigua de Chile: vuelo de poco más de una hora desde Santiago (o 470 km por la Ruta 5 Norte) y una tarde suave entre la Avenida del Mar, el Faro Monumental y las arcadas neocoloniales del Plan Serena, con parada en La Recova por papaya confitada, cerámica y lapislázuli.',
+    [{ guide: 'la-serena-coquimbo', headings: ['1. La Serena: playas, Faro Monumental y el centro neocolonial', 'Cómo llegar'] }]),
+  D('Coquimbo y los pingüinos de Punta de Choros',
+    'A minutos de La Serena, Coquimbo tiene identidad propia: la Cruz del Tercer Milenio sobre la bahía, el Barrio Inglés y los lobos marinos del Islote Pájaros Niños. Después, dos horas al norte hasta la caleta de Punta de Choros para navegar la Reserva Nacional Pingüino de Humboldt — el bote sale temprano, antes de que se levante el viento, y en temporada alta conviene reservarlo con antelación.',
+    [{ guide: 'la-serena-coquimbo', headings: ['2. Coquimbo: Cruz del Tercer Milenio, Barrio Inglés e Islote Pájaros Niños', '3. Punta de Choros y la Reserva Nacional Pingüino de Humboldt'] }]),
+  D('Subida al Valle del Elqui: Vicuña y la ruta del pisco',
+    'A poco más de una hora hacia el interior, el valle se angosta entre cerros áridos: la mañana es de Vicuña y su Museo Gabriela Mistral, y la tarde de los viñedos de moscatel a más de 1.000 metros de altura y las destilerías de Pisco Elqui —Mistral, con tour y museo, y Los Nichos, la más antigua de Chile—. Hoy toca dormir en el valle.',
+    [{ guide: 'valle-del-elqui', headings: ['1. Qué es el Valle del Elqui', '4. Vicuña y el museo Gabriela Mistral', '3. La ruta del pisco: Pisco Elqui y sus destilerías', 'Cómo llegar y cuándo ir'] }]),
+  D('Cochiguaz y la noche de estrellas más limpia del planeta',
+    'El último día sube valle arriba hasta Cochiguaz, el sub-valle más silencioso y con menos contaminación lumínica del Elqui, y cierra como manda la zona: un tour nocturno en Mamalluca u otro observatorio turístico, idealmente en una noche cercana a luna nueva. Como los tours empiezan al anochecer y terminan tarde, esta noche también conviene dormir en el valle.',
+    [
+      { guide: 'valle-del-elqui', headings: ['5. Cochiguaz y el resto del valle', '2. Observatorios: de Mamalluca a Cerro Tololo'] },
+      { guide: 'la-serena-coquimbo', headings: ['4. Observatorios turísticos: Mamalluca, Collowara y Cerro Mayu'] },
+    ]),
+];
+
+const IQUIQUE_ALTIPLANO_ROUTE = [
+  R(1, 'Iquique', -20.214, -70.152),
+  R(2, 'Duna del Dragón', -20.252, -70.108),
+  R(3, 'Humberstone / Pampa del Tamarugal', -20.291, -69.796),
+  R(4, 'P.N. Lauca / Lago Chungará (vía Arica)', -18.243, -69.157),
+];
+
+// Dias 1-3: pulls de iquique.html. Dia 4 (altiplano): iquique.html NO tiene
+// contenido de altiplano; la guia arica.html si (Ruta 11 / Chungara / Lauca).
+const IQUIQUE_ALTIPLANO_DAYS = [
+  D('Llegada a Iquique: Cavancha y el borde costero',
+    'Aterriza en el Aeropuerto Diego Aracena (IQQ), a unos 40 km del centro, e instálate frente al mar. La tarde es para Playa Cavancha — arena ancha y aguas tranquilas aptas para nadar todo el año — con caminata por la costanera al atardecer y cena de pescados frente a la península.',
+    [
+      { guide: 'iquique', headings: ['Cómo llegar y cuándo ir', '1. Qué es Iquique', '2. Playa Cavancha y el borde costero'] },
+    ]),
+  D('Duna del Dragón: sandboard o parapente + tarde libre en la Zofri',
+    'Mañana de adrenalina en la Duna del Dragón, la duna urbana de más de 300 metros que domina la ciudad: clase de sandboard o vuelo en parapente biplaza con piloto certificado, siempre con escuelas establecidas. La tarde queda libre para la Zofri, la zona franca libre de impuestos que mueve la economía local desde 1975.',
+    [
+      { guide: 'iquique', headings: ['3. Duna del Dragón: sandboard y parapente', '4. Zofri: la zona franca más grande del norte'] },
+    ]),
+  D('Humberstone, Santa Laura y los geoglifos de la pampa',
+    'Mañana de pampa: las oficinas salitreras Humberstone y Santa Laura — Patrimonio de la Humanidad UNESCO desde 2005 — a 45 minutos de la ciudad, más el bosque de tamarugos y el campo de geoglifos de Pintados; los tours de medio día cubren el circuito completo. De vuelta en Iquique, la tarde queda para el centro histórico de la época del salitre o la playa. Ojo: a mediados de julio la Fiesta de La Tirana llena los accesos a la pampa.',
+    [
+      { guide: 'iquique', headings: ['5. Humberstone y Santa Laura: salitreras Patrimonio de la Humanidad', '6. Pampa del Tamarugal: bosque, geoglifos y desierto absoluto'] },
+    ]),
+  D('Cruce al altiplano: Arica, Putre y el Parque Nacional Lauca',
+    'El salto al altiplano: bus Iquique → Arica (300 km, unas 4 horas por la Ruta 5 — tómalo la tarde del día 3 para dormir allá) y el cruce de día completo por la Ruta 11 al Parque Nacional Lauca: lago Chungará, los volcanes Payachatas y el pueblo de Parinacota, por sobre los 4.500 msnm. La subida es rápida, así que tómate los días previos con calma e hidrátate bien. Como cierre, puedes volar de vuelta desde Arica sin repetir camino.',
+    [
+      { guide: 'arica', headings: ['1. Qué es Arica', 'Cómo llegar y cuándo ir'] },
     ]),
 ];
 
@@ -955,5 +1153,302 @@ export const KITS = [
       'Parque Nacional y Reserva Nacional Kawésqar',
     ],
     poiLimit: 10,
+  },
+  // ---------- Kits gen-3 ES (ronda 4, 2026-08-01) ----------
+  // Contenido integrado tal cual lo dejaron los constructores (ver header de la
+  // seccion de dias gen-3). Payhip ya verificado: ver PAYHIP_URLS.
+  // NOTA: malalcahuello-conguillio-4d-es (7o kit de la ronda) NO va en este
+  // array a proposito: su contenido es de autoria propia sin guias fuente
+  // (days con html propio, budgetRows, pois curados — shape incompatible con
+  // compile-html.mjs y con test/kits-config.test.mjs) y no tiene guia destino
+  // para CTA. Su build standalone vive en build/malalcahuello-conguillio-4d-es/
+  // y su URL Payhip esta registrada en PAYHIP_URLS.
+  {
+    id: 'chiloe-5d-es',
+    lang: 'es',
+    title: 'Chiloé en 5 días',
+    subtitle: 'Cruce del Canal de Chacao en ferry, palafitos e iglesias Patrimonio de la Humanidad, Dalcahue y las islas menores, curanto y mitología chilota — la ruta completa con presupuesto 2026',
+    priceUsd: 12.9,
+    gumroadPermalink: 'chiloe-5d-es',
+    affQuery: 'Chiloe Chile',
+    coverImage: 'chiloe.jpg',
+    days: CHILOE_DAYS_ES,
+    route: CHILOE_ROUTE_ES,
+    checklist: [
+      'Pasaje a la isla definido: bus directo Puerto Montt–Castro (incluye el ferry en el pasaje, ~4 h total) o auto + ferry Pargua–Chacao (el cruce del auto se paga aparte, CLP 15.000–16.000)',
+      'Nada de puente Chacao: sigue en obra (entrega estimada 2028) — el cruce es en ferry desde Pargua, no asumas paso en auto sin ferry',
+      'Alojamiento reservado en Castro, la base con más oferta de hospedaje y restaurantes de la isla',
+      'Cortaviento e impermeable SIEMPRE: clima de selva valdiviana, llueve en cualquier época del año, incluso en enero',
+      'Un día completo libre para el circuito de iglesias UNESCO (dos o tres templos + Dalcahue es el paseo cultural clásico)',
+      'Si puedes cuadrar un domingo en Dalcahue: la feria artesanal es más fuerte ese día',
+      'Curanto al hoyo coordinado con anticipación (es preparación comunitaria) o curanto en olla/pulmay en restaurante como plan B diario',
+      'Efectivo en CLP para ferias artesanales, cocinerías y caletas de las islas menores',
+      'Horarios del embarcadero de Dalcahue confirmados para el cruce a Quinchao (Achao) o Mechuque',
+      'Si las pingüineras de Puñihuil entran en tus planes (bonus): la temporada de pingüinos es septiembre-marzo',
+    ],
+    budget: [
+      { guide: 'chiloe', heading: 'Precios orientativos (2026, por persona)' },
+      { guide: 'puerto-montt', heading: 'Precios orientativos (2026)' },
+    ],
+    faqFrom: ['chiloe', 'puerto-montt'],
+    poiComunas: ['Ancud', 'Castro', 'Dalcahue', 'Chonchi', 'Quinchao', 'Puerto Montt'],
+    // Dedup editorial verificado por el constructor 2026-08-01 (detalle en
+    // kits.config.chiloe-5d-es.mjs): fuera los 4 lugares que ya son contenido
+    // de los dias 1-5 + boilerplate autogenerado del catalogo. Quedan 4 POIs
+    // editoriales reales (Alerce Andino, Puñihuil, iglesia de Chonchi, Muestra
+    // Costumbrista de Castro).
+    poiExclude: [
+      'Iglesia San Francisco de Castro', 'Palafitos de Castro (Gamboa y Pedro Montt)',
+      'Mercado y Cocinerías de Angelmó', 'Feria Artesanal y Costanera de Dalcahue',
+      'Barranco Anais Orellana Caicheo, Lamecura', 'Gabriela Mistral',
+      'Memorial de Detenidos Desaparecidos y Ejecutados Políticos de Ancud',
+      'Vista Hermosa', 'Humedal Marino de Chamiza', 'Parque Tepuhueico',
+      'Santuario de la Naturaleza Parque Katalapi', 'Sitio RHRAP Humedal Marino de Coihuín',
+      'Santuario de la Naturaleza Humedal Bahía de Quinchao', 'Iglesia San Francisco',
+    ],
+    poiLimit: 4,
+  },
+  {
+    id: 'pucon-4d-es',
+    lang: 'es',
+    title: 'Pucón y Alrededores: 4 días de aventura',
+    subtitle: 'Volcán Villarrica, termas naturales, rafting en el río Trancura y playas de arena volcánica — la ruta completa con presupuesto 2026',
+    priceUsd: 12.9,
+    gumroadPermalink: 'pucon-4d-es',
+    affQuery: 'Pucon',
+    coverImage: 'pucon-villarrica.jpg',
+    days: PUCON_DAYS_ES,
+    route: PUCON_ROUTE_ES,
+    checklist: [
+      'Ascenso al volcán reservado con agencia certificada (depende del clima y de la alerta volcánica: reserva con fecha flexible)',
+      'Traje de baño y toalla para las termas',
+      'Zapatos de agua para el rafting en el Trancura',
+      'Repelente de insectos para los senderos de Huerquehue',
+      'Entrada al Parque Nacional Huerquehue (CONAF) comprada con anticipación',
+      'Capas abrigadas incluso en verano (viento en el volcán)',
+      'Efectivo en CLP para operadores de aventura más pequeños',
+      'Bolso impermeable para el día de rafting',
+      'Rafting o hydrospeed en el Trancura reservado con anticipación en temporada alta (enero-febrero)',
+      'Nivel de alerta volcánica (SERNAGEOMIN) revisado antes del trekking',
+    ],
+    budget: [{ guide: 'pucon-villarrica', heading: 'Precios orientativos (2026, por persona)' }],
+    faqFrom: ['pucon-villarrica'],
+    poiComunas: ['Pucón', 'Villarrica', 'Curarrehue'],
+    // Dedup editorial + filtro anti-boilerplate verificado por el constructor
+    // 2026-08-01 (detalle en build/pucon-4d-es/generate.mjs): fuera los 5
+    // lugares que ya son contenido de los dias 1-4, stubs autogenerados, la
+    // ficha stats Ramsar y Lican Ray (fuera del eje de esta ruta).
+    poiExclude: [
+      'Ascenso al Volcán Villarrica',
+      'Termas Los Pozones',
+      'Rafting Río Trancura',
+      'Parque Nacional Huerquehue',
+      'Ojos del Caburgua',
+      'Termas de San Luis',
+      'Termas Trancura',
+      'Hotel & Termas Huife',
+      'Nido de Aguila',
+      'Salto La China',
+      'Salto El León',
+      'Lago Villarrica',
+      'Lago Caburgua',
+      'Lago Tinquilco',
+      'Cuevas Volcánicas Volcán Villarrica',
+      'Humedal Urbano Mallolafquen',
+      'Playa Grande de Lican Ray',
+    ],
+    poiLimit: 8,
+  },
+  {
+    id: 'valparaiso-vina-3d-es',
+    lang: 'es',
+    title: 'Valparaíso + Viña del Mar: 3 días',
+    subtitle: 'Cerros patrimoniales, ascensores centenarios, la casa de Neruda, el plan portuario y un día completo entre Viña del Mar y sus playas — la ruta completa con presupuesto 2026',
+    priceUsd: 9.9,
+    gumroadPermalink: 'valparaiso-vina-3d-es',
+    affQuery: 'Valparaíso',
+    coverImage: 'valparaiso.jpg',
+    days: VALPO_VINA_DAYS,
+    route: VALPO_VINA_ROUTE,
+    checklist: [
+      'Bus Santiago–Valparaíso definido: salidas cada 15-20 minutos desde Terminal Alameda o San Borja (Turbus, Pullman Bus, Condor Bus); en enero-febrero y fines de semana largo conviene comprar antes',
+      'Alojamiento reservado en Cerro Alegre o Cerro Concepción (CLP 35.000–80.000 la noche en hostal boutique; para Año Nuevo se agota con meses de anticipación)',
+      'Entrada a La Sebastiana comprada online con anticipación (CLP 7.000–9.000; se agota en temporada alta y fines de semana largo)',
+      'Efectivo en CLP para los ascensores: algunos solo aceptan efectivo y la tarifa varía de un cerro a otro (CLP 300–1.000 por viaje)',
+      'Efectivo para el colectivo a Viña del Mar (15-20 minutos desde el plan)',
+      'Calzado cómodo para subir y bajar cerros empedrados todo el día',
+      'Capas: la nubosidad costera de la mañana suele despejar al mediodía, pero el borde costero pide cortaviento',
+      'Bloqueador solar para la tarde de costanera y playas de Viña',
+    ],
+    budget: [{ guide: 'valparaiso', heading: 'Precios orientativos (2026)' }],
+    faqFrom: ['valparaiso'],
+    poiComunas: ['Valparaíso', 'Viña del Mar'],
+    // Dedup editorial verificado por el constructor 2026-08-01 (detalle en
+    // kit-valparaiso-vina-3d-es.config.mjs): fuera lo que ya es contenido de
+    // los dias 1-3 + bustos/humedales/stubs autogenerados. Quedan 10 POIs
+    // reales y vigentes (miradores, Caleta Portales, iconos de Viña, castillos
+    // Wulff/Brunet con su estado real).
+    poiExclude: [
+      'Casa Museo La Sebastiana', 'La Sebastiana (Casa de Pablo Neruda)', 'La Sebastiana',
+      'Museo a Cielo Abierto, Cerro Bellavista',
+      'Plaza Sotomayor', 'Mercado Puerto', 'Mercado Cardonal', 'Muelle Barón',
+      'Micaela Cáceres', 'Gabriela Mistral', 'Isabel La Católica',
+      'Obelisco a Diego Portales', 'Dr. Ernesto Quiros W.',
+      'Capitán de Ejército Alberto Larraguibel', 'Gran Chascón', 'Día uno', 'Por Favor',
+      'Humedal Urbano Kan Kan', 'Humedal Urbano Estero Reñaca',
+      'Humedal Urbano Laguna El Criquet y Quebrada Honda',
+      'Procesión de San Pedro en Caleta Portales',
+      'Laguna Sausalito', 'Mirador Castillo Wolff', 'Mirador Padre Hurtado',
+      'Mirador Castillo Brunet', 'Puente Casino', 'Playa Los Marineros',
+      'Reñaca', 'Balneario Las Salinas', 'Playa Cochoa',
+    ],
+    poiLimit: 10,
+  },
+  {
+    id: 'carretera-austral-norte-7d-es',
+    lang: 'es',
+    title: 'Carretera Austral Norte en 7 días: de Puerto Montt a Coyhaique',
+    subtitle: 'Ferries entre fiordos, ripio y glaciares: la mitad norte de la Ruta 7 con toda la logística de bencina y ferris resuelta, presupuesto 2026 y checklist imprimible',
+    priceUsd: 14.9,
+    gumroadPermalink: 'carretera-austral-norte-7d-es',
+    affQuery: 'Carretera Austral',
+    coverImage: 'carretera-austral.jpg',
+    days: AUSTRAL_NORTE_DAYS,
+    route: AUSTRAL_NORTE_ROUTE,
+    checklist: [
+      'Auto arrendado habilitado POR ESCRITO para ripio y ferry — avisa a la agencia que harás la Carretera Austral',
+      'Ferry Hornopirén–Caleta Gonzalo reservado apenas tengas fechas (los cupos de vehículo se agotan con semanas de anticipación en enero-febrero)',
+      'Disciplina de bencina: llena el estanque en CADA estación — Puerto Montt, Chaitén, La Junta y Coyhaique son tus puntos clave; al sur de Coyhaique los tramos sin bencineras superan los 200 km',
+      'Efectivo en CLP: ferry, venta informal de bencina en bidones y pueblos chicos no siempre aceptan tarjeta',
+      'Mapas descargados offline y playlist lista: hay tramos de horas sin señal, sobre todo al sur de Cochrane',
+      'Neumático de repuesto revisado + kit básico — el ripio es duro con las ruedas',
+      'Tour a las Capillas de Mármol reservado para la mañana (mejor luz y lago más calmo)',
+      'Capas de abrigo e impermeable incluso en enero: en la Patagonia llueve en cualquier época',
+      'Alojamiento reservado en Chaitén y Futaleufú si viajas en temporada alta',
+      'Itinerario avisado a un contacto: hay tramos sin cobertura donde nadie puede localizarte',
+    ],
+    budget: [
+      { guide: 'carretera-austral', heading: 'Precios orientativos (2026)' },
+      { guide: 'puerto-montt', heading: 'Precios orientativos (2026)' },
+    ],
+    faqFrom: ['carretera-austral', 'puerto-montt'],
+    poiComunas: ['Coyhaique', 'Cochrane', 'Puerto Río Tranquilo'],
+    // Dedup editorial verificado por el constructor 2026-08-01 (detalle en
+    // build-austral-norte.mjs): fuera la ficha con tipografia corrupta y la de
+    // stats autogenerada; el boilerplate restante queda fuera por el corte de
+    // limit. Los 10 que quedan son editoriales reales.
+    poiExclude: ['Parque Patagonia - Valle Chacabuco', 'Bien Nacional Protegido Cerro San Lorenzo'],
+    poiLimit: 10,
+  },
+  {
+    id: 'valle-elqui-4d-es',
+    lang: 'es',
+    title: 'Valle del Elqui y La Serena: 4 días de estrellas y pisco',
+    subtitle: 'Pingüinos de Humboldt en Punta de Choros, la ruta del pisco entre viñedos de altura, Vicuña y el museo de Gabriela Mistral, y la noche bajo uno de los cielos más limpios del planeta — la ruta completa con presupuesto 2026',
+    priceUsd: 12.9,
+    gumroadPermalink: 'valle-elqui-4d-es',
+    affQuery: 'Valle del Elqui',
+    coverImage: 'valle-del-elqui.jpg',
+    days: ELQUI_DAYS_ES,
+    route: ELQUI_ROUTE_ES,
+    checklist: [
+      'Tour en bote a la Reserva Nacional Pingüino de Humboldt reservado con antelación (sale temprano en la mañana y depende del viento)',
+      'Tour nocturno de observatorio reservado: Mamalluca se agota en enero-febrero; Cerro Tololo es solo diurno y exige reserva con semanas o meses de anticipación',
+      'Fase lunar revisada antes de reservar astroturismo: cerca de luna nueva se ve mejor la Vía Láctea',
+      'Capas abrigadas para los tours nocturnos: las noches del valle son frías incluso en verano',
+      'Alojamiento en el valle reservado para la noche del tour astronómico (los tours terminan tarde y volver de noche por el camino de montaña no es ideal)',
+      'Auto arrendado o tour con transporte para recorrer el valle (el transporte público es limitado, sobre todo de noche)',
+      'Efectivo en CLP para destilerías pequeñas, buses rurales y compras menores',
+      'Bloqueador solar para los días de costa y de valle',
+      'Traje de baño para las playas de la Avenida del Mar',
+      'Calzado cómodo para el centro neocolonial y los pueblos de adobe',
+    ],
+    budget: [
+      { guide: 'la-serena-coquimbo', heading: 'Precios orientativos (2026, por persona)' },
+      { guide: 'valle-del-elqui', heading: 'Precios orientativos (2026)' },
+    ],
+    faqFrom: ['la-serena-coquimbo', 'valle-del-elqui'],
+    poiComunas: ['La Serena', 'Coquimbo', 'Vicuña', 'Paihuano'],
+    // Dedup editorial + filtro anti-boilerplate verificado corriendo topPois el
+    // 2026-08-01 (detalle en build/valle-elqui-4d-es/generate.mjs): fuera los 10
+    // lugares que ya son contenido de los dias 1-4, fichas junk del catalogo y
+    // boilerplate autogenerado — por eso poiLimit queda en 5: solo los 5 POIs
+    // editoriales verificados.
+    poiExclude: [
+      'Observatorio Mamalluca',
+      'Cruz del Tercer Milenio',
+      'Destilería Pisco Mistral (Pisco Elqui)',
+      'Avenida del Mar y Faro Monumental de La Serena',
+      'Museo Gabriela Mistral de Vicuña',
+      'Pueblo de Pisco Elqui',
+      'Cochiguaz',
+      'Barrio Inglés de Coquimbo',
+      'Cerro Tololo y cielos del Elqui (zona alta cordillerana)',
+      'Mercado La Recova',
+      "Monumento Bernardo O'Higgins",
+      'Pdte. Videla',
+      'Casa Piñera',
+      'Francisco de Aguirre',
+      'Gabriela Mistral',
+      '4 Estaciones',
+      'Hito Conmemorativo Umbra',
+      'Sitio Ramsar Humedales Costeros de la Bahía Tongoy',
+      'Santuario de la Naturaleza Río Cochiguaz',
+      'Humedal Urbano Río Elqui',
+      'Embalse Puclaro (deportes náuticos y borde lago)',
+      'Cascada Luz de Luna',
+      'Embalse Puclaro',
+      'Mirador La Herradura',
+    ],
+    poiLimit: 5,
+  },
+  {
+    id: 'iquique-altiplano-4d-es',
+    lang: 'es',
+    title: 'Iquique + Altiplano: 4 días',
+    subtitle: 'Playa Cavancha, la Duna del Dragón, las salitreras Patrimonio de la Humanidad y el cruce al Parque Nacional Lauca y el lago Chungará por sobre los 4.500 msnm — la ruta completa con presupuesto 2026',
+    priceUsd: 12.9,
+    gumroadPermalink: 'iquique-altiplano-4d-es',
+    affQuery: 'Iquique',
+    coverImage: 'iquique.jpg',
+    days: IQUIQUE_ALTIPLANO_DAYS,
+    route: IQUIQUE_ALTIPLANO_ROUTE,
+    checklist: [
+      'Vuelo a Iquique (IQQ) reservado: el aeropuerto Diego Aracena queda a unos 40 km del centro — coordina transfer o arriendo de auto con anticipación',
+      'Sandboard o parapente en la Duna del Dragón reservado con escuela u operador establecido; en fines de semana largos el parapente se agota',
+      'Tour o transporte a Humberstone y Santa Laura definido: la entrada incluye ambas oficinas y los tours de medio día suman los geoglifos de Pintados',
+      'Bus Iquique → Arica (300 km, unas 4 horas por la Ruta 5) comprado para la tarde del día 3: el cruce al altiplano es de día completo y conviene dormir en Arica la noche anterior',
+      'Aclimatación tomada en serio: la Ruta 11 al lago Chungará sube por sobre los 4.500 msnm — primeros días con calma, buena hidratación y, si eres sensible a la altura, considera dormir en Putre',
+      'Capas y cortaviento: la costa se mantiene en 18-25 °C casi todo el año, pero el altiplano sobre 4.500 msnm exige abrigo real incluso en verano',
+      'Efectivo en CLP para entradas (salitreras, geoglifos, termas) y compras menores fuera de la ciudad',
+      'Si viajas a mediados de julio: la Fiesta de La Tirana llena los accesos a la Pampa del Tamarugal — reserva alojamiento con mucha anticipación',
+    ],
+    budget: [
+      { guide: 'iquique', heading: 'Precios orientativos (2026)' },
+      { guide: 'arica', heading: 'Precios orientativos (2026)' },
+    ],
+    faqFrom: ['iquique', 'arica'],
+    poiComunas: ['Iquique', 'Alto Hospicio', 'Pozo Almonte', 'Pica', 'Huara', 'Putre'],
+    // Dedup editorial verificado por el constructor 2026-08-01 (detalle en
+    // kits.iquique-altiplano.config.mjs): fuera los 7 lugares que ya son
+    // contenido de los dias 1-3 + fichas Ramsar/Santuario/template/stubs.
+    // Los 4 POIs estrella del altiplano NO se excluyen pese a ser el destino
+    // del dia 4: el cuerpo del dia 4 cubre logistica/contexto y sin ellas el
+    // altiplano desapareceria del PDF.
+    poiExclude: [
+      'Playa Cavancha', 'Cerro Dragón', 'Parapente en Alto Hospicio',
+      'Zona Franca de Iquique (ZOFRI)',
+      'Oficinas Salitreras de Humberstone y Santa Laura', 'Geoglifos de Pintados',
+      'Reserva Nacional Pampa del Tamarugal',
+      'Santuario de la Naturaleza Cerro Dragón', 'Sitio Ramsar Salar de Surire',
+      'Sitio Ramsar y Santuario de la Naturaleza Salar de Huasco',
+      'Parque Nacional Salar del Huasco', 'Bien Nacional Protegido Cerro Unita',
+      'Santuario de la Naturaleza Quebrada de Chacarilla',
+      'Santuario de la Naturaleza Oasis de Niebla Punta Gruesa',
+      'Humedal Urbano Playa Blanca',
+      'Reserva Nacional Pampa del Tamarugal - Salar de Llamara',
+      'Cerro Santiago', 'Gabriela Mistral',
+    ],
+    poiLimit: 12,
   },
 ];
