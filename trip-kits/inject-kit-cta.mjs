@@ -18,6 +18,10 @@ const MAP = {
   'puerto-varas': 'chiloe-lakes-5d',
   'frutillar': 'chiloe-lakes-5d',
   'saltos-del-petrohue': 'chiloe-lakes-5d',
+  // Puerto Montt (guia agregada 2026-07-21, huerfana de kit hasta ahora): es
+  // el aeropuerto/puerta de entrada de esta misma ruta ("la mayoria... prefiere
+  // dormir en Puerto Varas" dice la propia guia) -- mismo kit que sus vecinas.
+  'puerto-montt': 'chiloe-lakes-5d',
   'san-pedro-de-atacama': 'atacama-5d',
   'santiago': ['santiago-cajon-4d', 'santiago-cajon-4d-es'],
   'cajon-del-maipo': ['santiago-cajon-4d', 'santiago-cajon-4d-es'],
