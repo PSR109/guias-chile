@@ -433,3 +433,46 @@ hreflang + sitemap en/pt como el resto).
 Verificación: 5 gates verdes (check-html, check-links, check-affiliate-ids,
 check-hreflang, check-sitemap). Verificación prod post-push: curl 200 en
 /malalcahuello-conguillio.html con el link payhip.com/b/O7gIr en el HTML servido.
+
+## NOTES — 2026-08-01 (ronda 6: kit EN malalcahuello-conguillio-4d-en, sin cablear — gate Payhip)
+
+Gemelo ENGLISH del kit ronda 4 `malalcahuello-conguillio-4d-es` (US$12.90, 4 días).
+La guía EN `en/malalcahuello-conguillio.html` ya está LIVE (commit `29bec32`) y hoy
+enlaza el kit ES (O7gIr) con la nota "currently available in Spanish only" — con el
+producto EN publicado, ese CTA pasa a ser pleno.
+
+**Mismo shape custom que el ES, a propósito** (ver nota ronda 4): NO va en `KITS`,
+`READY_KITS`, `PAYHIP_URLS` ni en `test/kits-config.test.mjs` — `days` con `html`
+propio, `budgetRows` y `pois` curados a mano son incompatibles con `compile-html.mjs`
+y con las invariantes del pipeline. Build standalone en
+`build/malalcahuello-conguillio-4d-en/` (gitignored, orden local):
+- `kit-data.mjs` — traducción real del ES (mismo itinerario/cifras); precios CLP con
+  ≈USD a la regla del repo (CLP = USD × 1000) y nota "Referential 2026 prices —
+  check conaf.cl/pasesparques.cl" en el intro del presupuesto; km/°C sin convertir.
+- `build.mjs` — réplica exacta del `build.mjs` ES con carcasa EN: strings IDÉNTICAS
+  a `I18N.en` de `compile-html.mjs`, footer "page", keywords metadata EN, Viator sin
+  `/es-CL`. Misma cadena: `../../assets/pdf.css` + `../../lib/chromium.mjs` +
+  playwright-core + pdf-lib desde `trip-kits/node_modules`. `node build.mjs` genera
+  HTML + PDF en el propio dir; PDF copiado a `dist/malalcahuello-conguillio-4d-en.pdf`
+  (uniformidad con los demás dist/, gitignored).
+- `CREDITS.md` + `portada-conguillio.jpg` — misma foto CC BY 2.0 (lautaroj, vía
+  Wikimedia Commons), atribución impresa EN en la página de recursos del PDF.
+
+Verificación: PDF 13 páginas A4, 884.944 bytes, metadata EN embebida (re-leído con
+pdf-lib); preview visual con el mismo mecanismo de `make-mockups.mjs` (element
+screenshots Chromium de #cover, #day-1, #budget, #route, #faq) — sin texto cortado
+ni overflow. Listing spec: `listings/malalcahuello-conguillio-4d-en.json` (mismo
+shape que los listings r4). `npm test` 7/7 (sin tocar KITS ni los invariantes).
+Pipeline compartido intacto: `compile-html.mjs`, `kits.config.mjs`, `inject-kit-cta.mjs`
+y tests sin cambios.
+
+QUEDA (humano/agente CDP — crear 1 producto, ficha en el listing JSON):
+1. Payhip: malalcahuello-conguillio-4d-en ($12.90, PDF `dist/malalcahuello-conguillio-4d-en.pdf`,
+   13 págs). Pendiente registrado en `tools/chrome/payhip-pending-r6.json` (repo raíz).
+   Gumroad espejo opcional (permalink exacto `malalcahuello-conguillio-4d-en`).
+2. Con la URL real /b/<CODE>: actualizar A MANO el CTA de `en/malalcahuello-conguillio.html`
+   (NO el inyector — el kit no está en KITS): href → URL nueva, utm_campaign →
+   `malalcahuello-conguillio-4d-en`, y QUITAR la nota `<em>...Spanish only.</em>`
+   (texto final en `guias_cta.texto_html_template` del listing). La guía ES raíz
+   sigue con el kit ES O7gIr — no tocarla; pt/ no existe.
+3. Re-correr los 5 gates, verificar el CTA en prod con curl/DOM vivo y pushear.

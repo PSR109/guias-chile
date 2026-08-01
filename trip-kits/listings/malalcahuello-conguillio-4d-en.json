@@ -1,0 +1,31 @@
+{
+  "name": "Malalcahuello & Conguillío in 4 Days — Printable Itinerary (PDF)",
+  "slug": "malalcahuello-conguillio-4d-en",
+  "price_usd": 12.9,
+  "files": [
+    "guias-chile/trip-kits/dist/malalcahuello-conguillio-4d-en.pdf"
+  ],
+  "description_html": "<p>Malalcahuello and Conguillío National Park laid out day by day: 4 days among thousand-year-old araucaria trees and the Llaima volcano, the Sierra Nevada trail above Lake Conguillío, the Navidad Crater on Lonquimay volcano (born in the 1988 eruption), the Malalcahuello hot springs and Corralco's volcano skiing in winter — with the real logistics of getting there from Temuco and where to sleep.</p><p><b>WHAT'S INSIDE (A4 PDF, 13 pages, instant download):</b></p><ul><li>Day-by-day plan: arrival via Temuco and Curacautín → full day in Conguillío NP → Navidad Crater or skiing at Corralco → Curacautín waterfalls and return</li><li>Schematic map of the 4-day route</li><li>2026 budget table in CLP with approximate USD: CONAF park fees, hot springs, ski day pass, cabins, buses and meals</li><li>Pre-trip checklist: online park ticket (pasesparques.cl), snow-season openings, cash and cell signal</li><li>8 bonus places from our catalog of 25,000+ places in Chile (Sollipulli, Tolhuaca, Icalma, China Muerta and more)</li><li>FAQ: best season, car or bus?, park reservations, Navidad Crater difficulty</li></ul><p><b>WHY TRUST THIS:</b> compiled by the team behind guias.viajesypanoramas.cl, a free Chile-guides site built on a catalog of 25,000+ real places. This kit distills that knowledge into a route you can follow offline.</p><p>Place data derived from OpenStreetMap, (c) OpenStreetMap contributors, available under the Open Database License (ODbL). Cover photo: lautaroj, CC BY 2.0 (via Wikimedia Commons).</p><p><b>INSTANT DOWNLOAD</b> — no physical product ships. Print it or carry it on your phone. Personal use only.</p>",
+  "keywords": [
+    "malalcahuello",
+    "conguillio",
+    "conguillio national park",
+    "llaima volcano",
+    "corralco",
+    "curacautin",
+    "navidad crater",
+    "araucaria chile",
+    "la araucania",
+    "chile itinerary",
+    "travel guide pdf",
+    "printable itinerary",
+    "southern chile"
+  ],
+  "guias_cta": {
+    "lang": "en",
+    "utm_campaign": "malalcahuello-conguillio-4d-en",
+    "target_guides": ["en/malalcahuello-conguillio.html"],
+    "texto_html_template": "🗺️ Planning this trip? Get our <a href=\"{URL_PAYHIP}?utm_source=guias&utm_medium=cta&utm_campaign=malalcahuello-conguillio-4d-en\" rel=\"sponsored noopener\" target=\"_blank\">day-by-day PDF itinerary: Malalcahuello & Conguillío in 4 days</a> — printable, with 2026 budget tables and a checklist. <span class=\"kit-price\">US$12.9</span>",
+    "nota": "La guía EN ya tiene CTA (escrito a mano en commit 29bec32) apuntando al kit ES https://payhip.com/b/O7gIr con la nota '<em>Note: this itinerary is currently available in Spanish only.</em>'. Con la URL Payhip real del kit EN: reemplazar el href por {URL_PAYHIP}, cambiar utm_campaign a malalcahuello-conguillio-4d-en y QUITAR la nota ES-only (queda como texto_html_template). NO usar inject-kit-cta.mjs: el kit NO está en KITS (shape custom, igual que el ES — el comentario en inject-kit-cta.mjs prohíbe agregarlo al MAP). La guía ES raíz (malalcahuello-conguillio.html) sigue ofreciendo el kit ES O7gIr — no tocarla. pt/ no existe. El kit queda fuera de kits.config.mjs/READY_KITS/test de invariantes, documentado en trip-kits/NOTES.md (rondas 4 y 6)."
+  }
+}
