@@ -401,3 +401,35 @@ QUEDA:
    regenera, incluir los 4 PDFs de `dist/` que le corresponden.
 3. Evaluar guía ES `malalcahuello-conguillio` para darle superficie de venta
    al 7º kit (contenido base ya existe en su `kit-data.mjs`).
+
+## NOTES — 2026-08-01 (cierre ronda 4: guía destino para el kit huérfano malalcahuello)
+
+El kit `malalcahuello-conguillio-4d-es` era el único de los 8 de ronda 4 sin guía destino
+donde enlazar su Payhip (https://payhip.com/b/O7gIr, LIVE). Se creó la guía ES
+`malalcahuello-conguillio.html` (raíz) con contenido derivado de su propio
+`build/malalcahuello-conguillio-4d-es/kit-data.mjs` (días, presupuesto, FAQ — mismos
+valores "referencia 2026" y la instrucción de confirmar tarifas CONAF en conaf.cl /
+pasesparques.cl), esqueleto copiado de `iquique.html` y 4 fotos CC de Wikimedia Commons
+verificadas (thumbs 500/960/1280 → 200; Wikimedia ya no sirve tamaños arbitrarios como
+480/640/768 en fotos nuevas — los srcset de esta guía usan los buckets vigentes).
+
+Cableado del CTA: el kit NO se integró a `KITS` (sigue con su shape propio incompatible
+con `compile-html.mjs` y `test/kits-config.test.mjs`, ver nota ronda 4) ni al `MAP` del
+inyector — el CTA quedó escrito a mano en la guía con el formato exacto del inyector
+(mismo bloque `.kit-cta`, texto patrón ES, UTM
+`utm_source=guias&utm_medium=cta&utm_campaign=malalcahuello-conguillio-4d-es`, antes de
+`.promo`). Comentario actualizado en `inject-kit-cta.mjs` para que nadie lo agregue al
+MAP sin integrarlo antes en KITS (rompería el inyector). El inyector corre idéntico a
+antes (la guía no está en MAP → no la toca).
+
+Cambios sitio: guía nueva + tarjeta en `index.html` (posición norte→sur: entre
+Concepción y Pucón; ItemList JSON-LD 25→26 renumerado) + entrada en `sitemap.xml`
+(solo hreflang es — guía ES-only, sin en/pt; `check-hreflang.mjs` solo itera pares
+desde `en/`, así que no exige nada más) + `img/og/malalcahuello-conguillio.jpg`
+(1280×664, derivada de la portada del kit — lautaroj, CC BY 2.0) registrada en
+`img/og/credits.json`. En/pt NO existen: tarea futura si se traduce (agregar entradas
+hreflang + sitemap en/pt como el resto).
+
+Verificación: 5 gates verdes (check-html, check-links, check-affiliate-ids,
+check-hreflang, check-sitemap). Verificación prod post-push: curl 200 en
+/malalcahuello-conguillio.html con el link payhip.com/b/O7gIr en el HTML servido.

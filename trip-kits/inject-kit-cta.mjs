@@ -87,8 +87,11 @@ const READY_KITS = new Set([
   // y valle-del-elqui.html.
   // iquique-altiplano-4d-es (Payhip x90rj, US$12.90) -> CTA NUEVO en iquique.html y arica.html.
   // En todos: en/pt NO se tocan (siguen con el kit EN o sin CTA).
-  // malalcahuello-conguillio-4d-es (Payhip O7gIr) NO entra: sin guia destino
-  // (documentado en listings/malalcahuello-conguillio-4d-es.json) — nada que inyectar.
+  // malalcahuello-conguillio-4d-es (Payhip O7gIr) NO entra al MAP: su guia destino
+  // (malalcahuello-conguillio.html, creada 2026-08-01) ya tiene el CTA escrito a mano
+  // con el mismo formato y UTM del inyector. El kit sigue fuera de KITS (shape propio
+  // incompatible con compile-html.mjs y test/kits-config.test.mjs — ver NOTES.md ronda 4):
+  // agregarlo al MAP sin integrarlo antes en KITS romperia el inyector (KITS.find -> undefined).
   'chiloe-5d-es',
   'pucon-4d-es',
   'valparaiso-vina-3d-es',
