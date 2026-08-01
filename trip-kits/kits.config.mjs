@@ -20,9 +20,9 @@ export const PAYHIP_URLS = {
   'valpo-wine-4d': 'https://payhip.com/b/ydz2j',
   'termas-del-sur-4d': 'https://payhip.com/b/XDjCS', // creado y verificado 2026-08-01
   // Kits gen-2 ES de la tanda 2026-08-01 (radal + gemelo ES de santiago-cajon):
-  // productos AUN NO creados — null hasta que Payhip entregue el /b/<CODE> real.
-  'radal-siete-tazas-3d': null,
-  'santiago-cajon-4d-es': null,
+  // creados y verificados 2026-08-01 (Gumroad espejo: /l/radal-siete-tazas-3d y /l/santiago-cajon-es).
+  'radal-siete-tazas-3d': 'https://payhip.com/b/ZD0xY',
+  'santiago-cajon-4d-es': 'https://payhip.com/b/asZlb',
 };
 
 const D = (title, intro, pulls) => ({ title, intro, pulls });

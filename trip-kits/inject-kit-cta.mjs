@@ -28,9 +28,7 @@ const MAP = {
   'valle-del-elqui': 'elqui-stars-4d',
   'rapa-nui': 'rapa-nui-4d',
   'termas-de-chillan': 'termas-del-sur-4d',
-  // Kits gen-2 ES de la tanda 2 (2026-08-01): FUERA de READY_KITS hasta que los
-  // productos Payhip existan y PAYHIP_URLS tenga las URLs reales (gate: sin
-  // producto real no se publica el link — leccion 2026-07-28).
+  // Kit gen-2 ES tanda 2 (2026-08-01): guia ES radal, cableada el mismo dia.
   'radal-siete-tazas-curico': 'radal-siete-tazas-3d',
 };
 
@@ -53,6 +51,12 @@ const READY_KITS = new Set([
   // termas-del-sur-4d: producto Payhip creado y verificado 2026-08-01
   // (https://payhip.com/b/XDjCS, US$12.90). Kit ES: el inyector solo toca la guia ES.
   'termas-del-sur-4d',
+  // Tanda 2 (2026-08-01), creados y verificados el mismo dia:
+  // radal-siete-tazas-3d (Payhip ZD0xY, US$12.90) -> CTA nuevo en la guia ES radal.
+  // santiago-cajon-4d-es (Payhip asZlb, US$9.90) -> SWAP EN->ES en santiago.html y
+  // cajon-del-maipo.html (ES); las guias en/pt siguen con el kit EN.
+  'radal-siete-tazas-3d',
+  'santiago-cajon-4d-es',
 ]);
 
 // URL de compra: Payhip si existe (migracion 2026-07-30), si no el permalink Gumroad.

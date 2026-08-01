@@ -47,15 +47,13 @@ el teléfono. Solo para uso personal.
 
 ## Gumroad (espejo opcional, comisión 10%)
 - Product name: Radal Siete Tazas y Velo de la Novia — 3 días en el Maule (PDF)
-- Permalink (EXACTO): radal-siete-tazas-3d
+- Permalink (EXACTO): radal-siete-tazas-3d  →  https://payhip.com/b/ZD0xY
+- URL Gumroad espejo (verificada LIVE 2026-08-01): https://gumroad.com/l/radal-siete-tazas-3d
 - Price: $12.90
-- Estado: PENDIENTE — producto aún no creado (2026-08-01). Sin URL hasta que exista.
 
 ## Payhip (tienda principal, comisión 5%)
 - Nombre de producto: Radal Siete Tazas y Velo de la Novia: 3 días en el Maule — Itinerario imprimible (PDF)
-- Permalink Payhip: PENDIENTE — el código /b/<CODE> lo genera Payhip al crear el
-  producto (no inventarlo). Pegarlo luego en `PAYHIP_URLS['radal-siete-tazas-3d']`
-  en `trip-kits/kits.config.mjs`.
+- Permalink Payhip: https://payhip.com/b/ZD0xY (creado y verificado 2026-08-01, US$12.90)
 - Precio: $12.90
 - Descripción: la de arriba (quitar la línea DESCARGA INSTANTÁNEA y dejar
   "Descarga instantánea en PDF. Solo uso personal.").
@@ -66,11 +64,8 @@ el teléfono. Solo para uso personal.
   + `radal-siete-tazas-3d-preview-1..3.png` (portada, día 1, presupuesto)
 - (dist/ y mockups-out/ están gitignored — regenerar con `npm run all` si hace falta)
 
-## Cableado final (cuando el producto exista)
-1. Pegar la URL Payhip en `PAYHIP_URLS['radal-siete-tazas-3d']` (kits.config.mjs).
-2. Agregar `'radal-siete-tazas-3d'` a `READY_KITS` (inject-kit-cta.mjs).
-3. Correr `node inject-kit-cta.mjs` → inyecta el CTA solo en la guía ES
-   `radal-siete-tazas-curico.html` (antes de `.promo`, UTM `utm_campaign=radal-siete-tazas-3d`).
-   La guía ya está mapeada en el `MAP` del inyector — no hay que tocar el MAP.
-4. Re-correr los 5 gates (check-html, check-links, check-affiliate-ids,
-   check-hreflang, check-sitemap) y pushear.
+## Cableado (EJECUTADO 2026-08-01)
+URL en `PAYHIP_URLS`, kit en `READY_KITS`, inyector corrido (`changed=3` total):
+CTA nuevo inyectado en la guía ES `radal-siete-tazas-curico.html`, antes de
+`.promo`, UTM `utm_campaign=radal-siete-tazas-3d`. 5 gates verdes. Verificación
+prod: CTA visible en https://guias.viajesypanoramas.cl/radal-siete-tazas-curico.html.

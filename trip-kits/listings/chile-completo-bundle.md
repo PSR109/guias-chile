@@ -59,14 +59,14 @@ INSTANT DOWNLOAD — no physical item shipped. One ZIP with 11 printable A4 PDFs
 
 ## Gumroad (espejo opcional, comisión 10%)
 - Product name: Chile Completo — All 11 Trip Kits Bundle (ZIP: 11 printable PDF itineraries)
-- Permalink (EXACTO): chile-completo-bundle
+- Permalink (EXACTO): chile-completo-bundle  →  https://payhip.com/b/BI8z0
+- URL Gumroad (verificada LIVE 2026-08-01): https://gumroad.com/l/chile-completo-bundle
 - Price: $59.00
 - File: trip-kits/dist/chile-completo-bundle.zip
-- Estado: PENDIENTE — producto aún no creado (2026-08-01). Sin URL hasta que exista.
 
 ## Payhip (tienda principal, comisión 5%)
 - Nombre de producto: Chile Completo — All 11 Trip Kits Bundle (ZIP: 11 printable PDF itineraries)
-- Permalink Payhip: PENDIENTE — el código /b/<CODE> lo genera Payhip al crear el producto.
+- Permalink Payhip: https://payhip.com/b/BI8z0 (creado y verificado 2026-08-01, US$59.00)
 - Precio: $59.00
 - Archivo a subir: `trip-kits/dist/chile-completo-bundle.zip` (6,7 MB)
 - Descripción: la de arriba (quitar la línea INSTANT DOWNLOAD y dejar

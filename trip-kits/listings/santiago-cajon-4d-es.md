@@ -48,15 +48,13 @@ el teléfono. Solo para uso personal.
 
 ## Gumroad (espejo opcional, comisión 10%)
 - Product name: Santiago + Cajón del Maipo — 4 días, itinerario imprimible (PDF)
-- Permalink (EXACTO): santiago-cajon-es
+- Permalink (EXACTO): santiago-cajon-es  →  https://payhip.com/b/asZlb
+- URL Gumroad espejo (verificada LIVE 2026-08-01): https://gumroad.com/l/santiago-cajon-es
 - Price: $9.90
-- Estado: PENDIENTE — producto aún no creado (2026-08-01). Sin URL hasta que exista.
 
 ## Payhip (tienda principal, comisión 5%)
 - Nombre de producto: Santiago + Cajón del Maipo: 4 días — Itinerario imprimible (PDF)
-- Permalink Payhip: PENDIENTE — el código /b/<CODE> lo genera Payhip al crear el
-  producto (no inventarlo). Pegarlo luego en `PAYHIP_URLS['santiago-cajon-4d-es']`
-  en `trip-kits/kits.config.mjs`.
+- Permalink Payhip: https://payhip.com/b/asZlb (creado y verificado 2026-08-01, US$9.90)
 - Precio: $9.90
 - Descripción: la de arriba (quitar la línea DESCARGA INSTANTÁNEA y dejar
   "Descarga instantánea en PDF. Solo uso personal.").
@@ -68,13 +66,10 @@ el teléfono. Solo para uso personal.
   + `santiago-cajon-4d-es-preview-1..3.png` (portada, día 1, presupuesto)
 - (dist/ y mockups-out/ están gitignored — regenerar con `npm run all` si hace falta)
 
-## Cableado final (cuando el producto exista) — OJO, tiene swap
-1. Pegar la URL Payhip en `PAYHIP_URLS['santiago-cajon-4d-es']` (kits.config.mjs).
-2. Agregar `'santiago-cajon-4d-es'` a `READY_KITS` (inject-kit-cta.mjs).
-3. Correr `node inject-kit-cta.mjs`. El `MAP` ya tiene
-   `'santiago': ['santiago-cajon-4d', 'santiago-cajon-4d-es']` (ídem cajon-del-maipo):
-   - guías ES `santiago.html` y `cajon-del-maipo.html`: SWAP del CTA — el kit EN
-     se reemplaza por este gemelo ES (lector ES → PDF ES), UTM
-     `utm_campaign=santiago-cajon-4d-es`. Nunca dos CTAs en la misma guía.
-   - guías `en/` y `pt/`: sin cambios, siguen ofreciendo el kit EN.
-4. Re-correr los 5 gates y pushear.
+## Cableado (EJECUTADO 2026-08-01) — con swap
+URL en `PAYHIP_URLS`, kit en `READY_KITS`, inyector corrido (`changed=3` total):
+SWAP EN→ES ejecutado en las guías ES `santiago.html` y `cajon-del-maipo.html`
+(UTM `utm_campaign=santiago-cajon-4d-es`; un solo CTA por guía). Las guías
+`en/`/`pt/` no se tocaron: siguen ofreciendo el kit EN (`santiago-cajon-4d`).
+5 gates verdes. Verificación prod: CTA ES visible en
+https://guias.viajesypanoramas.cl/santiago.html y /cajon-del-maipo.html.
