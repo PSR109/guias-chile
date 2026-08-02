@@ -476,3 +476,64 @@ QUEDA (humano/agente CDP — crear 1 producto, ficha en el listing JSON):
    (texto final en `guias_cta.texto_html_template` del listing). La guía ES raíz
    sigue con el kit ES O7gIr — no tocarla; pt/ no existe.
 3. Re-correr los 5 gates, verificar el CTA en prod con curl/DOM vivo y pushear.
+
+---
+
+# NOTES — trip-kits, 2026-08-02 (PoC ePub — WP 10K.7.10, mitad build)
+
+PoC de ebooks (ePub 3 reflowable) para KDP/Play Books. Script NUEVO y
+reutilizable: `lib/epub.mjs` (no toca `compile-html.mjs`, `kits.config.mjs`
+ni tests). Convierte el HTML compilado de CUALQUIER kit (pipeline estándar
+y shape custom — todos comparten las secciones cover/toc/route/day-N/
+budget/checklist/pois/faq/resources) a ePub empaquetado con `zip` del
+sistema, sin conversores.
+
+## Cómo correrlo
+
+```bash
+cd guias-chile/trip-kits
+
+# un kit (salida: dist-ebooks/<id>.epub + previews/ PNG de portada y día 1)
+node lib/epub.mjs build/malalcahuello-conguillio-4d-en/malalcahuello-conguillio-4d-en.html
+
+# los 22 kits con HTML ya compilado (los .html sueltos de build/ y los
+# de subdirectorios custom, incluido kit.html de carretera-austral-norte):
+find build -maxdepth 2 -name '*.html' | while read -r f; do node lib/epub.mjs "$f"; done
+```
+
+Flags: `--out ruta.epub` (salida distinta) · `--no-preview` (salta los PNG
+de verificación). Requiere: Chromium de Playwright (vía `lib/chromium.mjs`),
+`zip`, `unzip`, `xmllint`, `sips` (todo presente en macOS; no instala nada).
+
+## Qué hace / decisiones para KDP-ebooks
+
+- **Reflowable**: 1 xhtml por sección, en orden (cover, toc, route, day-1..N,
+  budget, checklist, pois, faq, resources) + `nav.xhtml` (EPUB3) y `toc.ncx`
+  (compat lectores EPUB2). Spine en el mismo orden, nav al final.
+- **Serialización XHTML propia** desde el DOM de Chromium (el HTML fuente no
+  es XML-válido: `<br>` sin cerrar, entidades con nombre tipo `&copy;`).
+  Se escapan textos/atributos y se cierran void elements.
+- **Mapa de ruta SVG → PNG** rasterizado con Chromium (Kindle no garantiza
+  SVG inline); la portada se re-encoda con `sips` a **≤127 KB** (recomendación
+  KDP) bajando calidad y luego dimensión — la foto de Conguillío queda en
+  108 KB @1000px q45.
+- **CSS propio** (`epub.css` embebido): identidad visual de `assets/pdf.css`
+  pero sin mm/@page/vars CSS (Kindle viejo no soporta `var()`); fonts de
+  sistema (Georgia/Arial), nada externo.
+- Metadata OPF: título/subtítulo/lang auto-detectados del propio HTML
+  (`<html lang>`, h1 de portada, `.subtitle`); id del kit = nombre del
+  archivo html (si se llama `kit.html`, el nombre de su carpeta);
+  identifier `urn:uuid` nuevo por build + `dcterms:modified`.
+- **Validación sin epubcheck** (no instalada): `mimetype` primera entrada y
+  `Stored` (sin comprimir) vía `unzip -Z1/-v`; `xmllint --noout` sobre todos
+  los xml/xhtml/opf/ncx; previews PNG de cover y day-1 renderizados con
+  Chromium en `dist-ebooks/previews/` (revisarlos antes de subir a tienda).
+- `dist-ebooks/` queda gitignored como `dist/` y `build/`.
+
+## Verificación de la PoC (2026-08-02)
+
+- `dist-ebooks/malalcahuello-conguillio-4d-en.epub` (170 KB) y
+  `...-4d-es.epub` (170 KB): 12 capítulos c/u, mimetype Stored primero,
+  xmllint OK, previews sin markup roto (cover + día 1 + mapa raster OK,
+  entidades → ≈ — í OK), imágenes 108+56 KB < 127 KB.
+- NO se subió nada a ninguna tienda (la otra mitad del WP es del agente CDP).
