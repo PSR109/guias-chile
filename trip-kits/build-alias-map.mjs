@@ -258,14 +258,23 @@ const salida = {
   ctas: filas,
 };
 
+// `trip-kits/dist/` está en .gitignore: en CI no existe. El único campo que
+// depende de ese directorio es `pdf_en_dist` (informativo — el idioma del kit
+// sale de kits.config.mjs, que sí está versionado). Cuando dist no está, se
+// compara todo lo demás en lugar de saltarse el gate entero: un check que se
+// salta se lee igual que uno que pasa, y eso ya costó un incidente.
+const HAY_DIST = pdfs.length > 0;
+const sinArtefactos = (o) => JSON.parse(JSON.stringify(o), (k, v) => (k === "pdf_en_dist" ? undefined : v));
+
 if (process.argv.includes("--check")) {
-  const actual = existsSync(OUT) ? readFileSync(OUT, "utf8") : "";
-  const nuevo = JSON.stringify(salida, null, 2) + "\n";
-  if (actual !== nuevo) {
+  const actual = existsSync(OUT) ? JSON.parse(readFileSync(OUT, "utf8")) : null;
+  const a = JSON.stringify(HAY_DIST ? actual : sinArtefactos(actual), null, 2);
+  const b = JSON.stringify(HAY_DIST ? salida : sinArtefactos(salida), null, 2);
+  if (a !== b) {
     console.error("alias-map.json está desactualizado. Corre: node trip-kits/build-alias-map.mjs");
     process.exit(1);
   }
-  console.log("alias-map.json: al día");
+  console.log(`alias-map.json: al día${HAY_DIST ? "" : " (sin trip-kits/dist/: no se comparó pdf_en_dist)"}`);
 } else {
   writeFileSync(OUT, JSON.stringify(salida, null, 2) + "\n");
   console.log(`alias-map.json: ${filas.length} CTAs en ${new Set(filas.map((f) => f.pagina)).size} páginas`);
