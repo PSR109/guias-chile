@@ -229,18 +229,19 @@
       "titulo": "Valparaíso & the Colchagua Wine Route — 4-Day Printable Itinerary (PDF)",
       "http": 200,
       "verificado": "2026-08-02"
+    },
+    "valparaiso-vina-3d-es": {
+      "url": "https://patricio358.gumroad.com/l/valparaiso-vina-3d-es",
+      "idioma": "es",
+      "titulo": "Valparaíso + Viña del Mar: 3 días — Itinerario imprimible (PDF)",
+      "http": 200,
+      "verificado": "2026-08-03"
     }
   },
   "no_live_verificado_404": {
-    "_nota": "Probados por HTTP el 2026-08-02 y devuelven 404. NINGUNA página puede enlazarlos: el guard scripts/check-cta-checkout.mjs rompe el build si aparecen.",
+    "_nota": "Probados por HTTP y devuelven 404. NINGUNA página puede enlazarlos: el guard scripts/check-cta-checkout.mjs rompe el build si aparecen. Re-verificado con curl anónimo el 2026-08-03: los que ya estaban live se movieron a `productos`.",
     "slugs": [
       "santiago-cajon-4d-es",
-      "pucon-4d-es",
-      "valparaiso-vina-3d-es",
-      "carretera-austral-norte-7d-es",
-      "valle-elqui-4d-es",
-      "iquique-altiplano-4d-es",
-      "malalcahuello-conguillio-4d-es",
       "malalcahuello-conguillio-4d-en"
     ]
   },

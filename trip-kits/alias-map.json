@@ -66,19 +66,6 @@
       "paginas_que_lo_necesitan": [
         "en/malalcahuello-conguillio.html"
       ]
-    },
-    {
-      "prioridad": 2,
-      "gumroad_slug_esperado": "valparaiso-vina-3d-es",
-      "kit_id": "valparaiso-vina-3d-es",
-      "idioma_del_kit": "es",
-      "pdf_en_dist": "valparaiso-vina-3d-es.pdf",
-      "precio_usd": 9.9,
-      "listing": "trip-kits/listings/valparaiso-vina-3d-es.json",
-      "senal_demanda": null,
-      "paginas_que_lo_necesitan": [
-        "valparaiso.html"
-      ]
     }
   ],
   "tiendas": [
@@ -1170,20 +1157,20 @@
     {
       "pagina": "valparaiso.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/Itnmo?utm_source=guias&utm_medium=cta&utm_campaign=valparaiso-vina-3d-es",
+      "payhip_url_actual": null,
       "kit_id": "valparaiso-vina-3d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "valparaiso-vina-3d-es",
-      "gumroad_live": false,
-      "checkout_actual": "payhip",
-      "gumroad_url_actual": null,
-      "gumroad_slug_actual": null,
-      "idioma_producto_actual": null,
+      "gumroad_live": true,
+      "checkout_actual": "gumroad",
+      "gumroad_url_actual": "https://patricio358.gumroad.com/l/valparaiso-vina-3d-es?utm_source=guias&utm_medium=cta&utm_campaign=valparaiso-vina-3d-es",
+      "gumroad_slug_actual": "valparaiso-vina-3d-es",
+      "idioma_producto_actual": "es",
       "idioma_coincide": true,
       "pdf_en_dist": "valparaiso-vina-3d-es.pdf",
       "payhip_url_config": "https://payhip.com/b/Itnmo",
-      "estado": "payhip_muerto_sin_producto",
-      "accion": "publicar en Gumroad el kit valparaiso-vina-3d-es con permalink valparaiso-vina-3d-es (idioma es)"
+      "estado": "ok",
+      "accion": null
     }
   ]
 }
