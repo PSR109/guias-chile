@@ -193,7 +193,7 @@
     {
       "pagina": "cajon-del-maipo.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/asZlb?utm_source=guias&utm_medium=cta&utm_campaign=santiago-cajon-4d-es",
+      "payhip_url_actual": null,
       "kit_id": "santiago-cajon-4d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "santiago-cajon-es",
@@ -229,7 +229,7 @@
     {
       "pagina": "chiloe.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/f6KZF?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-5d-es",
+      "payhip_url_actual": null,
       "kit_id": "chiloe-5d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "chiloe-5d-es",
@@ -247,7 +247,7 @@
     {
       "pagina": "colchagua-pichilemu.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/ydz2j?utm_source=guias&utm_medium=cta&utm_campaign=valpo-wine-4d",
+      "payhip_url_actual": null,
       "kit_id": "valpo-wine-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "valpo-wine-4d",
@@ -265,7 +265,7 @@
     {
       "pagina": "en/cajon-del-maipo.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/Qrh0p?utm_source=guias&utm_medium=cta&utm_campaign=santiago-cajon-4d",
+      "payhip_url_actual": null,
       "kit_id": "santiago-cajon-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "santiago-cajon-4d",
@@ -283,7 +283,7 @@
     {
       "pagina": "en/carretera-austral.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/MxXD4?utm_source=guias&utm_medium=cta&utm_campaign=carretera-austral-7d",
+      "payhip_url_actual": null,
       "kit_id": "carretera-austral-7d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "carretera-austral-7d",
@@ -301,7 +301,7 @@
     {
       "pagina": "en/chiloe.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/hdBVf?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-lakes-5d",
+      "payhip_url_actual": null,
       "kit_id": "chiloe-lakes-5d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "chiloe-lakes-5d",
@@ -319,7 +319,7 @@
     {
       "pagina": "en/colchagua-pichilemu.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/ydz2j?utm_source=guias&utm_medium=cta&utm_campaign=valpo-wine-4d",
+      "payhip_url_actual": null,
       "kit_id": "valpo-wine-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "valpo-wine-4d",
@@ -337,7 +337,7 @@
     {
       "pagina": "en/frutillar.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/hdBVf?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-lakes-5d",
+      "payhip_url_actual": null,
       "kit_id": "chiloe-lakes-5d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "chiloe-lakes-5d",
@@ -355,7 +355,7 @@
     {
       "pagina": "en/la-serena-coquimbo.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/uy4v9?utm_source=guias&utm_medium=cta&utm_campaign=elqui-stars-4d",
+      "payhip_url_actual": null,
       "kit_id": "elqui-stars-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "elqui-stars-4d",
@@ -391,7 +391,7 @@
     {
       "pagina": "en/pucon-villarrica.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/WjFp0?utm_source=guias&utm_medium=cta&utm_campaign=pucon-volcano-4d",
+      "payhip_url_actual": null,
       "kit_id": "pucon-volcano-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "pucon-volcano-4d",
@@ -409,7 +409,7 @@
     {
       "pagina": "en/puerto-montt.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/hdBVf?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-lakes-5d",
+      "payhip_url_actual": null,
       "kit_id": "chiloe-lakes-5d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "chiloe-lakes-5d",
@@ -427,7 +427,7 @@
     {
       "pagina": "en/puerto-natales.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/9CyLp?utm_source=guias&utm_medium=cta&utm_campaign=tdp-no-car",
+      "payhip_url_actual": null,
       "kit_id": "tdp-no-car",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "tdp-no-car",
@@ -445,7 +445,7 @@
     {
       "pagina": "en/puerto-varas.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/hdBVf?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-lakes-5d",
+      "payhip_url_actual": null,
       "kit_id": "chiloe-lakes-5d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "chiloe-lakes-5d",
@@ -463,7 +463,7 @@
     {
       "pagina": "en/punta-arenas.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/9CyLp?utm_source=guias&utm_medium=cta&utm_campaign=tdp-no-car",
+      "payhip_url_actual": null,
       "kit_id": "tdp-no-car",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "tdp-no-car",
@@ -481,7 +481,7 @@
     {
       "pagina": "en/rapa-nui.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/b97TX?utm_source=guias&utm_medium=cta&utm_campaign=rapa-nui-4d",
+      "payhip_url_actual": null,
       "kit_id": "rapa-nui-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "rapa-nui-4d",
@@ -499,7 +499,7 @@
     {
       "pagina": "en/saltos-del-petrohue.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/hdBVf?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-lakes-5d",
+      "payhip_url_actual": null,
       "kit_id": "chiloe-lakes-5d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "chiloe-lakes-5d",
@@ -517,7 +517,7 @@
     {
       "pagina": "en/san-pedro-de-atacama.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/lBTyt?utm_source=guias&utm_medium=cta&utm_campaign=atacama-5d",
+      "payhip_url_actual": null,
       "kit_id": "atacama-5d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "atacama-5d",
@@ -535,7 +535,7 @@
     {
       "pagina": "en/santiago.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/Qrh0p?utm_source=guias&utm_medium=cta&utm_campaign=santiago-cajon-4d",
+      "payhip_url_actual": null,
       "kit_id": "santiago-cajon-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "santiago-cajon-4d",
@@ -553,7 +553,7 @@
     {
       "pagina": "en/torres-del-paine.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/9CyLp?utm_source=guias&utm_medium=cta&utm_campaign=tdp-no-car",
+      "payhip_url_actual": null,
       "kit_id": "tdp-no-car",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "tdp-no-car",
@@ -571,7 +571,7 @@
     {
       "pagina": "en/valle-del-elqui.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/uy4v9?utm_source=guias&utm_medium=cta&utm_campaign=elqui-stars-4d",
+      "payhip_url_actual": null,
       "kit_id": "elqui-stars-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "elqui-stars-4d",
@@ -589,7 +589,7 @@
     {
       "pagina": "en/valparaiso.html",
       "idioma_pagina": "en",
-      "payhip_url_actual": "https://payhip.com/b/ydz2j?utm_source=guias&utm_medium=cta&utm_campaign=valpo-wine-4d",
+      "payhip_url_actual": null,
       "kit_id": "valpo-wine-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "valpo-wine-4d",
@@ -607,7 +607,7 @@
     {
       "pagina": "frutillar.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/hdBVf?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-lakes-5d",
+      "payhip_url_actual": null,
       "kit_id": "chiloe-lakes-5d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "chiloe-lakes-5d",
@@ -679,7 +679,7 @@
     {
       "pagina": "pt/cajon-del-maipo.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/Qrh0p?utm_source=guias&utm_medium=cta&utm_campaign=santiago-cajon-4d",
+      "payhip_url_actual": null,
       "kit_id": "santiago-cajon-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "santiago-cajon-4d",
@@ -697,7 +697,7 @@
     {
       "pagina": "pt/carretera-austral.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/MxXD4?utm_source=guias&utm_medium=cta&utm_campaign=carretera-austral-7d",
+      "payhip_url_actual": null,
       "kit_id": "carretera-austral-7d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "carretera-austral-7d",
@@ -715,7 +715,7 @@
     {
       "pagina": "pt/chiloe.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/hdBVf?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-lakes-5d",
+      "payhip_url_actual": null,
       "kit_id": "chiloe-lakes-5d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "chiloe-lakes-5d",
@@ -733,7 +733,7 @@
     {
       "pagina": "pt/colchagua-pichilemu.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/ydz2j?utm_source=guias&utm_medium=cta&utm_campaign=valpo-wine-4d",
+      "payhip_url_actual": null,
       "kit_id": "valpo-wine-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "valpo-wine-4d",
@@ -751,7 +751,7 @@
     {
       "pagina": "pt/frutillar.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/hdBVf?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-lakes-5d",
+      "payhip_url_actual": null,
       "kit_id": "chiloe-lakes-5d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "chiloe-lakes-5d",
@@ -769,7 +769,7 @@
     {
       "pagina": "pt/la-serena-coquimbo.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/uy4v9?utm_source=guias&utm_medium=cta&utm_campaign=elqui-stars-4d",
+      "payhip_url_actual": null,
       "kit_id": "elqui-stars-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "elqui-stars-4d",
@@ -787,7 +787,7 @@
     {
       "pagina": "pt/pucon-villarrica.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/WjFp0?utm_source=guias&utm_medium=cta&utm_campaign=pucon-volcano-4d",
+      "payhip_url_actual": null,
       "kit_id": "pucon-volcano-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "pucon-volcano-4d",
@@ -805,7 +805,7 @@
     {
       "pagina": "pt/puerto-montt.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/hdBVf?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-lakes-5d",
+      "payhip_url_actual": null,
       "kit_id": "chiloe-lakes-5d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "chiloe-lakes-5d",
@@ -823,7 +823,7 @@
     {
       "pagina": "pt/puerto-natales.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/9CyLp?utm_source=guias&utm_medium=cta&utm_campaign=tdp-no-car",
+      "payhip_url_actual": null,
       "kit_id": "tdp-no-car",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "tdp-no-car",
@@ -841,7 +841,7 @@
     {
       "pagina": "pt/puerto-varas.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/hdBVf?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-lakes-5d",
+      "payhip_url_actual": null,
       "kit_id": "chiloe-lakes-5d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "chiloe-lakes-5d",
@@ -859,7 +859,7 @@
     {
       "pagina": "pt/punta-arenas.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/9CyLp?utm_source=guias&utm_medium=cta&utm_campaign=tdp-no-car",
+      "payhip_url_actual": null,
       "kit_id": "tdp-no-car",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "tdp-no-car",
@@ -877,7 +877,7 @@
     {
       "pagina": "pt/rapa-nui.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/b97TX?utm_source=guias&utm_medium=cta&utm_campaign=rapa-nui-4d",
+      "payhip_url_actual": null,
       "kit_id": "rapa-nui-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "rapa-nui-4d",
@@ -895,7 +895,7 @@
     {
       "pagina": "pt/saltos-del-petrohue.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/hdBVf?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-lakes-5d",
+      "payhip_url_actual": null,
       "kit_id": "chiloe-lakes-5d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "chiloe-lakes-5d",
@@ -913,7 +913,7 @@
     {
       "pagina": "pt/san-pedro-de-atacama.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/lBTyt?utm_source=guias&utm_medium=cta&utm_campaign=atacama-5d",
+      "payhip_url_actual": null,
       "kit_id": "atacama-5d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "atacama-5d",
@@ -931,7 +931,7 @@
     {
       "pagina": "pt/santiago.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/Qrh0p?utm_source=guias&utm_medium=cta&utm_campaign=santiago-cajon-4d",
+      "payhip_url_actual": null,
       "kit_id": "santiago-cajon-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "santiago-cajon-4d",
@@ -949,7 +949,7 @@
     {
       "pagina": "pt/torres-del-paine.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/9CyLp?utm_source=guias&utm_medium=cta&utm_campaign=tdp-no-car",
+      "payhip_url_actual": null,
       "kit_id": "tdp-no-car",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "tdp-no-car",
@@ -967,7 +967,7 @@
     {
       "pagina": "pt/valle-del-elqui.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/uy4v9?utm_source=guias&utm_medium=cta&utm_campaign=elqui-stars-4d",
+      "payhip_url_actual": null,
       "kit_id": "elqui-stars-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "elqui-stars-4d",
@@ -985,7 +985,7 @@
     {
       "pagina": "pt/valparaiso.html",
       "idioma_pagina": "pt",
-      "payhip_url_actual": "https://payhip.com/b/ydz2j?utm_source=guias&utm_medium=cta&utm_campaign=valpo-wine-4d",
+      "payhip_url_actual": null,
       "kit_id": "valpo-wine-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "valpo-wine-4d",
@@ -1021,7 +1021,7 @@
     {
       "pagina": "puerto-montt.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/f6KZF?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-5d-es",
+      "payhip_url_actual": null,
       "kit_id": "chiloe-5d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "chiloe-5d-es",
@@ -1039,7 +1039,7 @@
     {
       "pagina": "puerto-natales.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/VysH7?utm_source=guias&utm_medium=cta&utm_campaign=torres-del-paine-5d-es",
+      "payhip_url_actual": null,
       "kit_id": "torres-del-paine-5d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "torres-del-paine-5d-es",
@@ -1057,7 +1057,7 @@
     {
       "pagina": "puerto-varas.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/hdBVf?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-lakes-5d",
+      "payhip_url_actual": null,
       "kit_id": "chiloe-lakes-5d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "chiloe-lakes-5d",
@@ -1075,7 +1075,7 @@
     {
       "pagina": "punta-arenas.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/VysH7?utm_source=guias&utm_medium=cta&utm_campaign=torres-del-paine-5d-es",
+      "payhip_url_actual": null,
       "kit_id": "torres-del-paine-5d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "torres-del-paine-5d-es",
@@ -1093,7 +1093,7 @@
     {
       "pagina": "radal-siete-tazas-curico.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/ZD0xY?utm_source=guias&utm_medium=cta&utm_campaign=radal-siete-tazas-3d",
+      "payhip_url_actual": null,
       "kit_id": "radal-siete-tazas-3d",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "radal-siete-tazas-3d",
@@ -1111,7 +1111,7 @@
     {
       "pagina": "rapa-nui.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/b97TX?utm_source=guias&utm_medium=cta&utm_campaign=rapa-nui-4d",
+      "payhip_url_actual": null,
       "kit_id": "rapa-nui-4d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "rapa-nui-4d",
@@ -1129,7 +1129,7 @@
     {
       "pagina": "saltos-del-petrohue.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/hdBVf?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-lakes-5d",
+      "payhip_url_actual": null,
       "kit_id": "chiloe-lakes-5d",
       "idioma_del_kit": "en",
       "gumroad_slug_esperado": "chiloe-lakes-5d",
@@ -1147,7 +1147,7 @@
     {
       "pagina": "san-pedro-de-atacama.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/ONobC?utm_source=guias&utm_medium=cta&utm_campaign=atacama-5d-es",
+      "payhip_url_actual": null,
       "kit_id": "atacama-5d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "atacama-5d-es",
@@ -1165,7 +1165,7 @@
     {
       "pagina": "santiago.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/asZlb?utm_source=guias&utm_medium=cta&utm_campaign=santiago-cajon-4d-es",
+      "payhip_url_actual": null,
       "kit_id": "santiago-cajon-4d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "santiago-cajon-es",
@@ -1183,7 +1183,7 @@
     {
       "pagina": "termas-de-chillan.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/XDjCS?utm_source=guias&utm_medium=cta&utm_campaign=termas-del-sur-4d",
+      "payhip_url_actual": null,
       "kit_id": "termas-del-sur-4d",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "termas-del-sur-4d",
@@ -1201,7 +1201,7 @@
     {
       "pagina": "torres-del-paine.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/VysH7?utm_source=guias&utm_medium=cta&utm_campaign=torres-del-paine-5d-es",
+      "payhip_url_actual": null,
       "kit_id": "torres-del-paine-5d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "torres-del-paine-5d-es",
