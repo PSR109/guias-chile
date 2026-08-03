@@ -8,6 +8,10 @@
 #   3. check-affiliate-ids.mjs  → afiliados.js sigue con los IDs de GYG y Viator.
 #   4. check-hreflang.mjs       → reciprocidad hreflang ES↔EN.
 #   5. check-sitemap.mjs        → sitemap.xml es XML válido, sin DTD/entidades.
+#   6. check-cta-checkout.mjs   → ningún CTA de compra apunta a un producto
+#                                  muerto (404 / pasarela que no cobra) ni a un
+#                                  producto en otro idioma que el de la página.
+#                                  Ver trip-kits/alias-map.json.
 #
 # Este workflow es el gate que habilita el auto-merge del growth agent
 # (.github/workflows/growth-agent.yml): un PR solo se mergea solo si esto
@@ -51,3 +55,7 @@ jobs:
         run: node scripts/check-hreflang.mjs
       - name: sitemap.xml válido (sin DTD/entidades)
         run: node scripts/check-sitemap.mjs
+      - name: alias-map de CTAs al día
+        run: node trip-kits/build-alias-map.mjs --check
+      - name: CTAs de compra vivos y en el idioma de la página
+        run: node scripts/check-cta-checkout.mjs
