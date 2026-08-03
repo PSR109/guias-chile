@@ -1,11 +1,12 @@
 {
   "_meta": {
-    "generado": "2026-08-02",
+    "generado": "2026-08-03",
     "que_es": "Catálogo VENDORIZADO de productos Gumroad de la cuenta patricio358, con idioma real de cada producto. Es la única fuente de verdad que ve el CI de este repo (guias-chile es un repo propio: NO puede leer tools/chrome/gumroad-live.json del monorepo apps-factory).",
     "sincronizar_con": "../../tools/chrome/gumroad-live.json (monorepo apps-factory)",
     "como_se_verificó": "curl -s -o /dev/null -w '%{http_code}' -L https://patricio358.gumroad.com/l/<slug> (200 = LIVE) + lectura del <meta og:title> para clasificar el idioma. Nada aquí es supuesto.",
     "ojo": "tools/chrome/gumroad-live.json tenía 22 slugs el 2026-08-02; la verificación HTTP encontró 2 productos LIVE que NO estaban en esa lista: santiago-cajon-es (ES) y patagonia-14d (EN). Al re-sincronizar, no borrar estos dos.",
-    "regla_dura": "Una página en idioma X solo puede vender un producto con idioma X (excepción declarada: pt puede caer a en mientras no exista catálogo pt). Vender un PDF en inglés a un lector chileno es peor que no vender: ver trip-kits/alias-map.json → politica_idioma."
+    "regla_dura": "Una página en idioma X solo puede vender un producto con idioma X (excepción declarada: pt puede caer a en mientras no exista catálogo pt). Vender un PDF en inglés a un lector chileno es peor que no vender: ver trip-kits/alias-map.json → politica_idioma.",
+    "nota_2026_08_03": "5 slugs agregados tras verificacion HTTP real (200 + og:title ES confirmado): carretera-austral-norte-7d-es, iquique-altiplano-4d-es, malalcahuello-conguillio-4d-es, pucon-4d-es, valle-elqui-4d-es. Ya estaban live en Gumroad (rondas r8-r10); el registro solo estaba desactualizado."
   },
   "productos": {
     "aso-keyword-pack": {
@@ -43,6 +44,13 @@
       "titulo": "Carretera Austral 7-Day Road Trip — Printable Itinerary (PDF)",
       "http": 200,
       "verificado": "2026-08-02"
+    },
+    "carretera-austral-norte-7d-es": {
+      "url": "https://patricio358.gumroad.com/l/carretera-austral-norte-7d-es",
+      "idioma": "es",
+      "titulo": "Carretera Austral Norte en 7 días: de Puerto Montt a Coyhaique (Trip Kit PDF)",
+      "http": 200,
+      "verificado": "2026-08-03"
     },
     "chile-low-cost-30d": {
       "url": "https://patricio358.gumroad.com/l/chile-low-cost-30d",
@@ -100,6 +108,20 @@
       "http": 200,
       "verificado": "2026-08-02"
     },
+    "iquique-altiplano-4d-es": {
+      "url": "https://patricio358.gumroad.com/l/iquique-altiplano-4d-es",
+      "idioma": "es",
+      "titulo": "Iquique + Altiplano: 4 días — Itinerario imprimible (PDF)",
+      "http": 200,
+      "verificado": "2026-08-03"
+    },
+    "malalcahuello-conguillio-4d-es": {
+      "url": "https://patricio358.gumroad.com/l/malalcahuello-conguillio-4d-es",
+      "idioma": "es",
+      "titulo": "Malalcahuello y Conguillío en 4 días — Itinerario imprimible (PDF)",
+      "http": 200,
+      "verificado": "2026-08-03"
+    },
     "patagonia-14d": {
       "url": "https://patricio358.gumroad.com/l/patagonia-14d",
       "idioma": "en",
@@ -114,6 +136,13 @@
       "titulo": "Chile Beaches Dataset — 746 Playas con Acceso, Servicios y Tipo (JSON+CSV)",
       "http": 200,
       "verificado": "2026-08-02"
+    },
+    "pucon-4d-es": {
+      "url": "https://patricio358.gumroad.com/l/pucon-4d-es",
+      "idioma": "es",
+      "titulo": "Pucón y Alrededores: 4 días de aventura — Itinerario imprimible (PDF)",
+      "http": 200,
+      "verificado": "2026-08-03"
     },
     "pucon-volcano-4d": {
       "url": "https://patricio358.gumroad.com/l/pucon-volcano-4d",
@@ -184,6 +213,13 @@
       "url": "https://patricio358.gumroad.com/l/torres-del-paine-5d-es",
       "idioma": "es",
       "titulo": "Torres del Paine sin auto: 5 días — itinerario imprimible (PDF)",
+      "http": 200,
+      "verificado": "2026-08-03"
+    },
+    "valle-elqui-4d-es": {
+      "url": "https://patricio358.gumroad.com/l/valle-elqui-4d-es",
+      "idioma": "es",
+      "titulo": "Valle del Elqui y La Serena: 4 días de estrellas y pisco — Trip Kit PDF (español)",
       "http": 200,
       "verificado": "2026-08-03"
     },

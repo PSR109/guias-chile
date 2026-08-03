@@ -56,47 +56,6 @@
   "publicar_en_gumroad": [
     {
       "prioridad": 1,
-      "gumroad_slug_esperado": "valle-elqui-4d-es",
-      "kit_id": "valle-elqui-4d-es",
-      "idioma_del_kit": "es",
-      "pdf_en_dist": "valle-elqui-4d-es.pdf",
-      "precio_usd": 12.9,
-      "listing": "trip-kits/listings/valle-elqui-4d-es.json",
-      "senal_demanda": "agente/ESTADO.md: \"La Serena... alto volumen\"",
-      "paginas_que_lo_necesitan": [
-        "la-serena-coquimbo.html",
-        "valle-del-elqui.html"
-      ]
-    },
-    {
-      "prioridad": 2,
-      "gumroad_slug_esperado": "iquique-altiplano-4d-es",
-      "kit_id": "iquique-altiplano-4d-es",
-      "idioma_del_kit": "es",
-      "pdf_en_dist": "iquique-altiplano-4d-es.pdf",
-      "precio_usd": 12.9,
-      "listing": "trip-kits/listings/iquique-altiplano-4d-es.json",
-      "senal_demanda": null,
-      "paginas_que_lo_necesitan": [
-        "arica.html",
-        "iquique.html"
-      ]
-    },
-    {
-      "prioridad": 3,
-      "gumroad_slug_esperado": "carretera-austral-norte-7d-es",
-      "kit_id": "carretera-austral-norte-7d-es",
-      "idioma_del_kit": "es",
-      "pdf_en_dist": "carretera-austral-norte-7d-es.pdf",
-      "precio_usd": 14.9,
-      "listing": "trip-kits/listings/carretera-austral-norte-7d-es.json",
-      "senal_demanda": null,
-      "paginas_que_lo_necesitan": [
-        "carretera-austral.html"
-      ]
-    },
-    {
-      "prioridad": 4,
       "gumroad_slug_esperado": "malalcahuello-conguillio-4d-en",
       "kit_id": "malalcahuello-conguillio-4d-en",
       "idioma_del_kit": "en",
@@ -109,33 +68,7 @@
       ]
     },
     {
-      "prioridad": 5,
-      "gumroad_slug_esperado": "malalcahuello-conguillio-4d-es",
-      "kit_id": "malalcahuello-conguillio-4d-es",
-      "idioma_del_kit": "es",
-      "pdf_en_dist": "malalcahuello-conguillio-4d-es.pdf",
-      "precio_usd": 12.9,
-      "listing": "trip-kits/listings/malalcahuello-conguillio-4d-es.json",
-      "senal_demanda": null,
-      "paginas_que_lo_necesitan": [
-        "malalcahuello-conguillio.html"
-      ]
-    },
-    {
-      "prioridad": 6,
-      "gumroad_slug_esperado": "pucon-4d-es",
-      "kit_id": "pucon-4d-es",
-      "idioma_del_kit": "es",
-      "pdf_en_dist": "pucon-4d-es.pdf",
-      "precio_usd": 12.9,
-      "listing": "trip-kits/listings/pucon-4d-es.json",
-      "senal_demanda": null,
-      "paginas_que_lo_necesitan": [
-        "pucon-villarrica.html"
-      ]
-    },
-    {
-      "prioridad": 7,
+      "prioridad": 2,
       "gumroad_slug_esperado": "valparaiso-vina-3d-es",
       "kit_id": "valparaiso-vina-3d-es",
       "idioma_del_kit": "es",
@@ -175,20 +108,20 @@
     {
       "pagina": "arica.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/x90rj?utm_source=guias&utm_medium=cta&utm_campaign=iquique-altiplano-4d-es",
+      "payhip_url_actual": null,
       "kit_id": "iquique-altiplano-4d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "iquique-altiplano-4d-es",
-      "gumroad_live": false,
-      "checkout_actual": "payhip",
-      "gumroad_url_actual": null,
-      "gumroad_slug_actual": null,
-      "idioma_producto_actual": null,
+      "gumroad_live": true,
+      "checkout_actual": "gumroad",
+      "gumroad_url_actual": "https://patricio358.gumroad.com/l/iquique-altiplano-4d-es?utm_source=guias&utm_medium=cta&utm_campaign=iquique-altiplano-4d-es",
+      "gumroad_slug_actual": "iquique-altiplano-4d-es",
+      "idioma_producto_actual": "es",
       "idioma_coincide": true,
       "pdf_en_dist": "iquique-altiplano-4d-es.pdf",
       "payhip_url_config": "https://payhip.com/b/x90rj",
-      "estado": "payhip_muerto_sin_producto",
-      "accion": "publicar en Gumroad el kit iquique-altiplano-4d-es con permalink iquique-altiplano-4d-es (idioma es)"
+      "estado": "ok",
+      "accion": null
     },
     {
       "pagina": "cajon-del-maipo.html",
@@ -211,20 +144,20 @@
     {
       "pagina": "carretera-austral.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/JY2nc?utm_source=guias&utm_medium=cta&utm_campaign=carretera-austral-norte-7d-es",
+      "payhip_url_actual": null,
       "kit_id": "carretera-austral-norte-7d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "carretera-austral-norte-7d-es",
-      "gumroad_live": false,
-      "checkout_actual": "payhip",
-      "gumroad_url_actual": null,
-      "gumroad_slug_actual": null,
-      "idioma_producto_actual": null,
+      "gumroad_live": true,
+      "checkout_actual": "gumroad",
+      "gumroad_url_actual": "https://patricio358.gumroad.com/l/carretera-austral-norte-7d-es?utm_source=guias&utm_medium=cta&utm_campaign=carretera-austral-norte-7d-es",
+      "gumroad_slug_actual": "carretera-austral-norte-7d-es",
+      "idioma_producto_actual": "es",
       "idioma_coincide": true,
       "pdf_en_dist": "carretera-austral-norte-7d-es.pdf",
       "payhip_url_config": "https://payhip.com/b/JY2nc",
-      "estado": "payhip_muerto_sin_producto",
-      "accion": "publicar en Gumroad el kit carretera-austral-norte-7d-es con permalink carretera-austral-norte-7d-es (idioma es)"
+      "estado": "ok",
+      "accion": null
     },
     {
       "pagina": "chiloe.html",
@@ -625,56 +558,56 @@
     {
       "pagina": "iquique.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/x90rj?utm_source=guias&utm_medium=cta&utm_campaign=iquique-altiplano-4d-es",
+      "payhip_url_actual": null,
       "kit_id": "iquique-altiplano-4d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "iquique-altiplano-4d-es",
-      "gumroad_live": false,
-      "checkout_actual": "payhip",
-      "gumroad_url_actual": null,
-      "gumroad_slug_actual": null,
-      "idioma_producto_actual": null,
+      "gumroad_live": true,
+      "checkout_actual": "gumroad",
+      "gumroad_url_actual": "https://patricio358.gumroad.com/l/iquique-altiplano-4d-es?utm_source=guias&utm_medium=cta&utm_campaign=iquique-altiplano-4d-es",
+      "gumroad_slug_actual": "iquique-altiplano-4d-es",
+      "idioma_producto_actual": "es",
       "idioma_coincide": true,
       "pdf_en_dist": "iquique-altiplano-4d-es.pdf",
       "payhip_url_config": "https://payhip.com/b/x90rj",
-      "estado": "payhip_muerto_sin_producto",
-      "accion": "publicar en Gumroad el kit iquique-altiplano-4d-es con permalink iquique-altiplano-4d-es (idioma es)"
+      "estado": "ok",
+      "accion": null
     },
     {
       "pagina": "la-serena-coquimbo.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/3za2d?utm_source=guias&utm_medium=cta&utm_campaign=valle-elqui-4d-es",
+      "payhip_url_actual": null,
       "kit_id": "valle-elqui-4d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "valle-elqui-4d-es",
-      "gumroad_live": false,
-      "checkout_actual": "payhip",
-      "gumroad_url_actual": null,
-      "gumroad_slug_actual": null,
-      "idioma_producto_actual": null,
+      "gumroad_live": true,
+      "checkout_actual": "gumroad",
+      "gumroad_url_actual": "https://patricio358.gumroad.com/l/valle-elqui-4d-es?utm_source=guias&utm_medium=cta&utm_campaign=valle-elqui-4d-es",
+      "gumroad_slug_actual": "valle-elqui-4d-es",
+      "idioma_producto_actual": "es",
       "idioma_coincide": true,
       "pdf_en_dist": "valle-elqui-4d-es.pdf",
       "payhip_url_config": "https://payhip.com/b/3za2d",
-      "estado": "payhip_muerto_sin_producto",
-      "accion": "publicar en Gumroad el kit valle-elqui-4d-es con permalink valle-elqui-4d-es (idioma es)"
+      "estado": "ok",
+      "accion": null
     },
     {
       "pagina": "malalcahuello-conguillio.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/O7gIr?utm_source=guias&utm_medium=cta&utm_campaign=malalcahuello-conguillio-4d-es",
+      "payhip_url_actual": null,
       "kit_id": "malalcahuello-conguillio-4d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "malalcahuello-conguillio-4d-es",
-      "gumroad_live": false,
-      "checkout_actual": "payhip",
-      "gumroad_url_actual": null,
-      "gumroad_slug_actual": null,
-      "idioma_producto_actual": null,
+      "gumroad_live": true,
+      "checkout_actual": "gumroad",
+      "gumroad_url_actual": "https://patricio358.gumroad.com/l/malalcahuello-conguillio-4d-es?utm_source=guias&utm_medium=cta&utm_campaign=malalcahuello-conguillio-4d-es",
+      "gumroad_slug_actual": "malalcahuello-conguillio-4d-es",
+      "idioma_producto_actual": "es",
       "idioma_coincide": true,
       "pdf_en_dist": "malalcahuello-conguillio-4d-es.pdf",
       "payhip_url_config": "https://payhip.com/b/O7gIr",
-      "estado": "payhip_muerto_sin_producto",
-      "accion": "publicar en Gumroad el kit malalcahuello-conguillio-4d-es con permalink malalcahuello-conguillio-4d-es (idioma es)"
+      "estado": "ok",
+      "accion": null
     },
     {
       "pagina": "pt/cajon-del-maipo.html",
@@ -1003,20 +936,20 @@
     {
       "pagina": "pucon-villarrica.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/RlCHK?utm_source=guias&utm_medium=cta&utm_campaign=pucon-4d-es",
+      "payhip_url_actual": null,
       "kit_id": "pucon-4d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "pucon-4d-es",
-      "gumroad_live": false,
-      "checkout_actual": "payhip",
-      "gumroad_url_actual": null,
-      "gumroad_slug_actual": null,
-      "idioma_producto_actual": null,
+      "gumroad_live": true,
+      "checkout_actual": "gumroad",
+      "gumroad_url_actual": "https://patricio358.gumroad.com/l/pucon-4d-es?utm_source=guias&utm_medium=cta&utm_campaign=pucon-4d-es",
+      "gumroad_slug_actual": "pucon-4d-es",
+      "idioma_producto_actual": "es",
       "idioma_coincide": true,
       "pdf_en_dist": "pucon-4d-es.pdf",
       "payhip_url_config": "https://payhip.com/b/RlCHK",
-      "estado": "payhip_muerto_sin_producto",
-      "accion": "publicar en Gumroad el kit pucon-4d-es con permalink pucon-4d-es (idioma es)"
+      "estado": "ok",
+      "accion": null
     },
     {
       "pagina": "puerto-montt.html",
@@ -1219,20 +1152,20 @@
     {
       "pagina": "valle-del-elqui.html",
       "idioma_pagina": "es",
-      "payhip_url_actual": "https://payhip.com/b/3za2d?utm_source=guias&utm_medium=cta&utm_campaign=valle-elqui-4d-es",
+      "payhip_url_actual": null,
       "kit_id": "valle-elqui-4d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "valle-elqui-4d-es",
-      "gumroad_live": false,
-      "checkout_actual": "payhip",
-      "gumroad_url_actual": null,
-      "gumroad_slug_actual": null,
-      "idioma_producto_actual": null,
+      "gumroad_live": true,
+      "checkout_actual": "gumroad",
+      "gumroad_url_actual": "https://patricio358.gumroad.com/l/valle-elqui-4d-es?utm_source=guias&utm_medium=cta&utm_campaign=valle-elqui-4d-es",
+      "gumroad_slug_actual": "valle-elqui-4d-es",
+      "idioma_producto_actual": "es",
       "idioma_coincide": true,
       "pdf_en_dist": "valle-elqui-4d-es.pdf",
       "payhip_url_config": "https://payhip.com/b/3za2d",
-      "estado": "payhip_muerto_sin_producto",
-      "accion": "publicar en Gumroad el kit valle-elqui-4d-es con permalink valle-elqui-4d-es (idioma es)"
+      "estado": "ok",
+      "accion": null
     },
     {
       "pagina": "valparaiso.html",
