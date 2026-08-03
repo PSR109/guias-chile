@@ -56,35 +56,6 @@
   "publicar_en_gumroad": [
     {
       "prioridad": 1,
-      "gumroad_slug_esperado": "torres-del-paine-5d-es",
-      "kit_id": "torres-del-paine-5d-es",
-      "idioma_del_kit": "es",
-      "pdf_en_dist": "torres-del-paine-5d-es-es.pdf",
-      "precio_usd": 12.9,
-      "listing": "trip-kits/listings/torres-del-paine-5d-es.md",
-      "senal_demanda": "3 guías ES (Torres del Paine, Puerto Natales, Punta Arenas) dependen de este único kit",
-      "paginas_que_lo_necesitan": [
-        "puerto-natales.html",
-        "punta-arenas.html",
-        "torres-del-paine.html"
-      ]
-    },
-    {
-      "prioridad": 2,
-      "gumroad_slug_esperado": "chiloe-5d-es",
-      "kit_id": "chiloe-5d-es",
-      "idioma_del_kit": "es",
-      "pdf_en_dist": "chiloe-5d-es-es.pdf",
-      "precio_usd": 12.9,
-      "listing": "trip-kits/listings/chiloe-5d-es.json",
-      "senal_demanda": "cluster Chiloé/Lagos: 2 guías ES lo enlazan hoy + 3 más (frutillar, puerto-varas, saltos-del-petrohue) hoy mal apuntadas al kit EN",
-      "paginas_que_lo_necesitan": [
-        "chiloe.html",
-        "puerto-montt.html"
-      ]
-    },
-    {
-      "prioridad": 3,
       "gumroad_slug_esperado": "valle-elqui-4d-es",
       "kit_id": "valle-elqui-4d-es",
       "idioma_del_kit": "es",
@@ -98,7 +69,7 @@
       ]
     },
     {
-      "prioridad": 4,
+      "prioridad": 2,
       "gumroad_slug_esperado": "iquique-altiplano-4d-es",
       "kit_id": "iquique-altiplano-4d-es",
       "idioma_del_kit": "es",
@@ -112,7 +83,7 @@
       ]
     },
     {
-      "prioridad": 5,
+      "prioridad": 3,
       "gumroad_slug_esperado": "carretera-austral-norte-7d-es",
       "kit_id": "carretera-austral-norte-7d-es",
       "idioma_del_kit": "es",
@@ -125,7 +96,7 @@
       ]
     },
     {
-      "prioridad": 6,
+      "prioridad": 4,
       "gumroad_slug_esperado": "malalcahuello-conguillio-4d-en",
       "kit_id": "malalcahuello-conguillio-4d-en",
       "idioma_del_kit": "en",
@@ -138,7 +109,7 @@
       ]
     },
     {
-      "prioridad": 7,
+      "prioridad": 5,
       "gumroad_slug_esperado": "malalcahuello-conguillio-4d-es",
       "kit_id": "malalcahuello-conguillio-4d-es",
       "idioma_del_kit": "es",
@@ -151,7 +122,7 @@
       ]
     },
     {
-      "prioridad": 8,
+      "prioridad": 6,
       "gumroad_slug_esperado": "pucon-4d-es",
       "kit_id": "pucon-4d-es",
       "idioma_del_kit": "es",
@@ -164,7 +135,7 @@
       ]
     },
     {
-      "prioridad": 9,
+      "prioridad": 7,
       "gumroad_slug_esperado": "valparaiso-vina-3d-es",
       "kit_id": "valparaiso-vina-3d-es",
       "idioma_del_kit": "es",
@@ -262,16 +233,16 @@
       "kit_id": "chiloe-5d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "chiloe-5d-es",
-      "gumroad_live": false,
-      "checkout_actual": "payhip",
-      "gumroad_url_actual": null,
-      "gumroad_slug_actual": null,
-      "idioma_producto_actual": null,
+      "gumroad_live": true,
+      "checkout_actual": "gumroad",
+      "gumroad_url_actual": "https://patricio358.gumroad.com/l/chiloe-5d-es?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-5d-es",
+      "gumroad_slug_actual": "chiloe-5d-es",
+      "idioma_producto_actual": "es",
       "idioma_coincide": true,
       "pdf_en_dist": "chiloe-5d-es-es.pdf",
       "payhip_url_config": "https://payhip.com/b/f6KZF",
-      "estado": "payhip_muerto_sin_producto",
-      "accion": "publicar en Gumroad el kit chiloe-5d-es con permalink chiloe-5d-es (idioma es)"
+      "estado": "ok",
+      "accion": null
     },
     {
       "pagina": "colchagua-pichilemu.html",
@@ -1054,16 +1025,16 @@
       "kit_id": "chiloe-5d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "chiloe-5d-es",
-      "gumroad_live": false,
-      "checkout_actual": "payhip",
-      "gumroad_url_actual": null,
-      "gumroad_slug_actual": null,
-      "idioma_producto_actual": null,
+      "gumroad_live": true,
+      "checkout_actual": "gumroad",
+      "gumroad_url_actual": "https://patricio358.gumroad.com/l/chiloe-5d-es?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-5d-es",
+      "gumroad_slug_actual": "chiloe-5d-es",
+      "idioma_producto_actual": "es",
       "idioma_coincide": true,
       "pdf_en_dist": "chiloe-5d-es-es.pdf",
       "payhip_url_config": "https://payhip.com/b/f6KZF",
-      "estado": "payhip_muerto_sin_producto",
-      "accion": "publicar en Gumroad el kit chiloe-5d-es con permalink chiloe-5d-es (idioma es)"
+      "estado": "ok",
+      "accion": null
     },
     {
       "pagina": "puerto-natales.html",
@@ -1072,16 +1043,16 @@
       "kit_id": "torres-del-paine-5d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "torres-del-paine-5d-es",
-      "gumroad_live": false,
-      "checkout_actual": "payhip",
-      "gumroad_url_actual": null,
-      "gumroad_slug_actual": null,
-      "idioma_producto_actual": null,
+      "gumroad_live": true,
+      "checkout_actual": "gumroad",
+      "gumroad_url_actual": "https://patricio358.gumroad.com/l/torres-del-paine-5d-es?utm_source=guias&utm_medium=cta&utm_campaign=torres-del-paine-5d-es",
+      "gumroad_slug_actual": "torres-del-paine-5d-es",
+      "idioma_producto_actual": "es",
       "idioma_coincide": true,
       "pdf_en_dist": "torres-del-paine-5d-es-es.pdf",
       "payhip_url_config": "https://payhip.com/b/VysH7",
-      "estado": "payhip_muerto_sin_producto",
-      "accion": "publicar en Gumroad el kit torres-del-paine-5d-es con permalink torres-del-paine-5d-es (idioma es)"
+      "estado": "ok",
+      "accion": null
     },
     {
       "pagina": "puerto-varas.html",
@@ -1108,16 +1079,16 @@
       "kit_id": "torres-del-paine-5d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "torres-del-paine-5d-es",
-      "gumroad_live": false,
-      "checkout_actual": "payhip",
-      "gumroad_url_actual": null,
-      "gumroad_slug_actual": null,
-      "idioma_producto_actual": null,
+      "gumroad_live": true,
+      "checkout_actual": "gumroad",
+      "gumroad_url_actual": "https://patricio358.gumroad.com/l/torres-del-paine-5d-es?utm_source=guias&utm_medium=cta&utm_campaign=torres-del-paine-5d-es",
+      "gumroad_slug_actual": "torres-del-paine-5d-es",
+      "idioma_producto_actual": "es",
       "idioma_coincide": true,
       "pdf_en_dist": "torres-del-paine-5d-es-es.pdf",
       "payhip_url_config": "https://payhip.com/b/VysH7",
-      "estado": "payhip_muerto_sin_producto",
-      "accion": "publicar en Gumroad el kit torres-del-paine-5d-es con permalink torres-del-paine-5d-es (idioma es)"
+      "estado": "ok",
+      "accion": null
     },
     {
       "pagina": "radal-siete-tazas-curico.html",
@@ -1234,16 +1205,16 @@
       "kit_id": "torres-del-paine-5d-es",
       "idioma_del_kit": "es",
       "gumroad_slug_esperado": "torres-del-paine-5d-es",
-      "gumroad_live": false,
-      "checkout_actual": "payhip",
-      "gumroad_url_actual": null,
-      "gumroad_slug_actual": null,
-      "idioma_producto_actual": null,
+      "gumroad_live": true,
+      "checkout_actual": "gumroad",
+      "gumroad_url_actual": "https://patricio358.gumroad.com/l/torres-del-paine-5d-es?utm_source=guias&utm_medium=cta&utm_campaign=torres-del-paine-5d-es",
+      "gumroad_slug_actual": "torres-del-paine-5d-es",
+      "idioma_producto_actual": "es",
       "idioma_coincide": true,
       "pdf_en_dist": "torres-del-paine-5d-es-es.pdf",
       "payhip_url_config": "https://payhip.com/b/VysH7",
-      "estado": "payhip_muerto_sin_producto",
-      "accion": "publicar en Gumroad el kit torres-del-paine-5d-es con permalink torres-del-paine-5d-es (idioma es)"
+      "estado": "ok",
+      "accion": null
     },
     {
       "pagina": "valle-del-elqui.html",

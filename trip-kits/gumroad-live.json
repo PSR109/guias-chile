@@ -8,6 +8,13 @@
     "regla_dura": "Una página en idioma X solo puede vender un producto con idioma X (excepción declarada: pt puede caer a en mientras no exista catálogo pt). Vender un PDF en inglés a un lector chileno es peor que no vender: ver trip-kits/alias-map.json → politica_idioma."
   },
   "productos": {
+    "aso-keyword-pack": {
+      "url": "https://patricio358.gumroad.com/l/aso-keyword-pack",
+      "idioma": "en",
+      "titulo": "ASO Keyword Research Pack — 72 audited keywords for 8 app verticals (CSV + guide)",
+      "http": 200,
+      "verificado": "2026-08-02"
+    },
     "atacama-5d": {
       "url": "https://patricio358.gumroad.com/l/atacama-5d",
       "idioma": "en",
@@ -22,6 +29,14 @@
       "http": 200,
       "verificado": "2026-08-02"
     },
+    "bundle-sur-de-chile": {
+      "url": "https://patricio358.gumroad.com/l/bundle-sur-de-chile",
+      "idioma": "es",
+      "titulo": "Bundle Sur de Chile — 4 Trip Kits PDF (Termas del Sur + Pucón + Chiloé + Carretera Austral Norte)",
+      "http": 200,
+      "verificado": "2026-08-02",
+      "nota": "US$29. Contiene los kits ES termas-del-sur-4d, pucon-4d-es, chiloe-5d-es y carretera-austral-norte-7d-es — es decir, 3 kits ES que NO tienen producto individual LIVE ya son comprables en español dentro de este bundle."
+    },
     "carretera-austral-7d": {
       "url": "https://patricio358.gumroad.com/l/carretera-austral-7d",
       "idioma": "en",
@@ -29,10 +44,38 @@
       "http": 200,
       "verificado": "2026-08-02"
     },
+    "chile-low-cost-30d": {
+      "url": "https://patricio358.gumroad.com/l/chile-low-cost-30d",
+      "idioma": "es",
+      "titulo": "Guía Chile Low-Cost: 30 Días",
+      "http": 200,
+      "verificado": "2026-08-02"
+    },
+    "chile-poi-dataset": {
+      "url": "https://patricio358.gumroad.com/l/chile-poi-dataset",
+      "idioma": "en",
+      "titulo": "Chile POI Dataset — 30,386 Points of Interest (JSON + CSV)",
+      "http": 200,
+      "verificado": "2026-08-02"
+    },
+    "chiloe-5d-es": {
+      "url": "https://patricio358.gumroad.com/l/chiloe-5d-es",
+      "idioma": "es",
+      "titulo": "Chiloé en 5 días — Itinerario imprimible (PDF)",
+      "http": 200,
+      "verificado": "2026-08-03"
+    },
     "chiloe-lakes-5d": {
       "url": "https://patricio358.gumroad.com/l/chiloe-lakes-5d",
       "idioma": "en",
       "titulo": "Chiloe & the Chilean Lakes — 5-Day Printable Itinerary (PDF)",
+      "http": 200,
+      "verificado": "2026-08-02"
+    },
+    "costos-ruta-cl-arg": {
+      "url": "https://patricio358.gumroad.com/l/costos-ruta-cl-arg",
+      "idioma": "en",
+      "titulo": "Chile + Argentina Road Cost Dataset — Tolls, TAG Gantries & Park Hours (JSON)",
       "http": 200,
       "verificado": "2026-08-02"
     },
@@ -43,6 +86,20 @@
       "http": 200,
       "verificado": "2026-08-02"
     },
+    "ferias-mercados-chile": {
+      "url": "https://patricio358.gumroad.com/l/ferias-mercados-chile",
+      "idioma": "en",
+      "titulo": "Chile Markets & Traditional Fairs Dataset — Ferias Costumbristas y Mercados (JSON+CSV)",
+      "http": 200,
+      "verificado": "2026-08-02"
+    },
+    "guia-chile-en-auto": {
+      "url": "https://patricio358.gumroad.com/l/guia-chile-en-auto",
+      "idioma": "es",
+      "titulo": "Chile en Auto: 10 Rutas Escénicas — Guía PDF 2026 (distancias, épocas, bencina y peajes)",
+      "http": 200,
+      "verificado": "2026-08-02"
+    },
     "patagonia-14d": {
       "url": "https://patricio358.gumroad.com/l/patagonia-14d",
       "idioma": "en",
@@ -50,6 +107,13 @@
       "http": 200,
       "verificado": "2026-08-02",
       "nota": "LIVE pero ninguna página del sitio lo enlaza. No estaba en tools/chrome/gumroad-live.json."
+    },
+    "playas-chile": {
+      "url": "https://patricio358.gumroad.com/l/playas-chile",
+      "idioma": "en",
+      "titulo": "Chile Beaches Dataset — 746 Playas con Acceso, Servicios y Tipo (JSON+CSV)",
+      "http": 200,
+      "verificado": "2026-08-02"
     },
     "pucon-volcano-4d": {
       "url": "https://patricio358.gumroad.com/l/pucon-volcano-4d",
@@ -88,67 +152,17 @@
       "verificado": "2026-08-02",
       "nota": "NO estaba en tools/chrome/gumroad-live.json y sí está LIVE. El permalink NO es santiago-cajon-4d-es (404): es santiago-cajon-es, tal como lo declara kits.config.mjs → gumroadPermalink."
     },
-    "tdp-no-car": {
-      "url": "https://patricio358.gumroad.com/l/tdp-no-car",
-      "idioma": "en",
-      "titulo": "Torres del Paine Without a Car — 5-Day Printable Itinerary (PDF)",
-      "http": 200,
-      "verificado": "2026-08-02"
-    },
-    "termas-del-sur-4d": {
-      "url": "https://patricio358.gumroad.com/l/termas-del-sur-4d",
-      "idioma": "es",
-      "titulo": "Termas del Sur — 4 días en las Termas de Chillán (PDF)",
-      "http": 200,
-      "verificado": "2026-08-02"
-    },
-    "valpo-wine-4d": {
-      "url": "https://patricio358.gumroad.com/l/valpo-wine-4d",
-      "idioma": "en",
-      "titulo": "Valparaíso & the Colchagua Wine Route — 4-Day Printable Itinerary (PDF)",
-      "http": 200,
-      "verificado": "2026-08-02"
-    },
-    "bundle-sur-de-chile": {
-      "url": "https://patricio358.gumroad.com/l/bundle-sur-de-chile",
-      "idioma": "es",
-      "titulo": "Bundle Sur de Chile — 4 Trip Kits PDF (Termas del Sur + Pucón + Chiloé + Carretera Austral Norte)",
-      "http": 200,
-      "verificado": "2026-08-02",
-      "nota": "US$29. Contiene los kits ES termas-del-sur-4d, pucon-4d-es, chiloe-5d-es y carretera-austral-norte-7d-es — es decir, 3 kits ES que NO tienen producto individual LIVE ya son comprables en español dentro de este bundle."
-    },
-    "chile-low-cost-30d": {
-      "url": "https://patricio358.gumroad.com/l/chile-low-cost-30d",
-      "idioma": "es",
-      "titulo": "Guía Chile Low-Cost: 30 Días",
-      "http": 200,
-      "verificado": "2026-08-02"
-    },
-    "guia-chile-en-auto": {
-      "url": "https://patricio358.gumroad.com/l/guia-chile-en-auto",
-      "idioma": "es",
-      "titulo": "Chile en Auto: 10 Rutas Escénicas — Guía PDF 2026 (distancias, épocas, bencina y peajes)",
-      "http": 200,
-      "verificado": "2026-08-02"
-    },
-    "chile-poi-dataset": {
-      "url": "https://patricio358.gumroad.com/l/chile-poi-dataset",
-      "idioma": "en",
-      "titulo": "Chile POI Dataset — 30,386 Points of Interest (JSON + CSV)",
-      "http": 200,
-      "verificado": "2026-08-02"
-    },
-    "costos-ruta-cl-arg": {
-      "url": "https://patricio358.gumroad.com/l/costos-ruta-cl-arg",
-      "idioma": "en",
-      "titulo": "Chile + Argentina Road Cost Dataset — Tolls, TAG Gantries & Park Hours (JSON)",
-      "http": 200,
-      "verificado": "2026-08-02"
-    },
     "senderos-chile": {
       "url": "https://patricio358.gumroad.com/l/senderos-chile",
       "idioma": "en",
       "titulo": "Chile Hiking & Trekking Trails Dataset — 1,397 Trails (JSON + CSV)",
+      "http": 200,
+      "verificado": "2026-08-02"
+    },
+    "tdp-no-car": {
+      "url": "https://patricio358.gumroad.com/l/tdp-no-car",
+      "idioma": "en",
+      "titulo": "Torres del Paine Without a Car — 5-Day Printable Itinerary (PDF)",
       "http": 200,
       "verificado": "2026-08-02"
     },
@@ -159,24 +173,24 @@
       "http": 200,
       "verificado": "2026-08-02"
     },
-    "ferias-mercados-chile": {
-      "url": "https://patricio358.gumroad.com/l/ferias-mercados-chile",
-      "idioma": "en",
-      "titulo": "Chile Markets & Traditional Fairs Dataset — Ferias Costumbristas y Mercados (JSON+CSV)",
+    "termas-del-sur-4d": {
+      "url": "https://patricio358.gumroad.com/l/termas-del-sur-4d",
+      "idioma": "es",
+      "titulo": "Termas del Sur — 4 días en las Termas de Chillán (PDF)",
       "http": 200,
       "verificado": "2026-08-02"
     },
-    "playas-chile": {
-      "url": "https://patricio358.gumroad.com/l/playas-chile",
-      "idioma": "en",
-      "titulo": "Chile Beaches Dataset — 746 Playas con Acceso, Servicios y Tipo (JSON+CSV)",
+    "torres-del-paine-5d-es": {
+      "url": "https://patricio358.gumroad.com/l/torres-del-paine-5d-es",
+      "idioma": "es",
+      "titulo": "Torres del Paine sin auto: 5 días — itinerario imprimible (PDF)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-03"
     },
-    "aso-keyword-pack": {
-      "url": "https://patricio358.gumroad.com/l/aso-keyword-pack",
+    "valpo-wine-4d": {
+      "url": "https://patricio358.gumroad.com/l/valpo-wine-4d",
       "idioma": "en",
-      "titulo": "ASO Keyword Research Pack — 72 audited keywords for 8 app verticals (CSV + guide)",
+      "titulo": "Valparaíso & the Colchagua Wine Route — 4-Day Printable Itinerary (PDF)",
       "http": 200,
       "verificado": "2026-08-02"
     }
@@ -185,8 +199,6 @@
     "_nota": "Probados por HTTP el 2026-08-02 y devuelven 404. NINGUNA página puede enlazarlos: el guard scripts/check-cta-checkout.mjs rompe el build si aparecen.",
     "slugs": [
       "santiago-cajon-4d-es",
-      "chiloe-5d-es",
-      "torres-del-paine-5d-es",
       "pucon-4d-es",
       "valparaiso-vina-3d-es",
       "carretera-austral-norte-7d-es",
