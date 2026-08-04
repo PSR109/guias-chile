@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { KITS, GUMROAD_BASE, PAYHIP_URLS } from './kits.config.mjs';
+import { KITS, GUMROAD_BASE } from './kits.config.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -100,8 +100,14 @@ const READY_KITS = new Set([
   'iquique-altiplano-4d-es',
 ]);
 
-// URL de compra: Payhip si existe (migracion 2026-07-30), si no el permalink Gumroad.
-const kitUrl = (kit) => PAYHIP_URLS[kit.id] ?? `${GUMROAD_BASE}/${kit.gumroadPermalink}`;
+// URL de compra: SOLO Gumroad (decisión 2026-08-03, PayPal declarado muerto para
+// siempre — Payhip solo cobraba por PayPal y esa cuenta está bloqueada). PAYHIP_URLS
+// sigue viviendo en kits.config.mjs como registro histórico ("no se borra") pero
+// esta función deliberadamente NO lo consulta: antes tenía prioridad sobre Gumroad
+// (`PAYHIP_URLS[kit.id] ?? gumroad`), lo que habría regenerado CTAs de Payhip en el
+// próximo build pese a que el HTML publicado ya estaba limpio — el HTML y la fuente
+// habían quedado desincronizados. Ver memoria payhip-solo-cobra-por-paypal-bloqueado.
+const kitUrl = (kit) => `${GUMROAD_BASE}/${kit.gumroadPermalink}`;
 
 const TEXTS = {
   es: (kit, url) =>
