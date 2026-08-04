@@ -120,7 +120,17 @@ for (const abs of findHtmlFiles(ROOT)) {
     } else if (esEspejo) {
       payhipEspejo++;
     } else {
-      avisos.push(`${rel}: CTA muerto — "${kitId}" sólo existe en Payhip (que no cobra). Falta publicar ${slug} en Gumroad.`);
+      // Antes esto era un AVISO y el build pasaba igual. Eso dejó vivo en prod
+      // durante días el CTA de en/malalcahuello-conguillio.html → payhip.com/b/Qdhbe
+      // (403 tras challenge de Cloudflare): conversión matemáticamente 0% y encima
+      // quema la confianza del lector que hizo clic. Payhip NO COBRA en ninguna
+      // variante (gate #77), así que un CTA primario a Payhip es siempre una venta
+      // imposible, exista o no el gemelo en Gumroad. Es ERROR, no aviso.
+      errores.push(
+        `${rel}: CTA primario en Payhip para "${kitId}" y Payhip no cobra (gate #77) = venta imposible. ` +
+          `${slug} no está LIVE en Gumroad en el idioma de la página. Opciones: publicar ${slug} en Gumroad, ` +
+          `repuntar el CTA a un kit LIVE del mismo idioma, o quitar el CTA. Dejarlo apuntando a Payhip no es una opción.`,
+      );
     }
   }
 }

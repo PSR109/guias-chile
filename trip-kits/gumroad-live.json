@@ -6,7 +6,8 @@
     "como_se_verificó": "curl -s -o /dev/null -w '%{http_code}' -L https://patricio358.gumroad.com/l/<slug> (200 = LIVE) + lectura del <meta og:title> para clasificar el idioma. Nada aquí es supuesto.",
     "ojo": "tools/chrome/gumroad-live.json tenía 22 slugs el 2026-08-02; la verificación HTTP encontró 2 productos LIVE que NO estaban en esa lista: santiago-cajon-es (ES) y patagonia-14d (EN). Al re-sincronizar, no borrar estos dos.",
     "regla_dura": "Una página en idioma X solo puede vender un producto con idioma X (excepción declarada: pt puede caer a en mientras no exista catálogo pt). Vender un PDF en inglés a un lector chileno es peor que no vender: ver trip-kits/alias-map.json → politica_idioma.",
-    "nota_2026_08_03": "5 slugs agregados tras verificacion HTTP real (200 + og:title ES confirmado): carretera-austral-norte-7d-es, iquique-altiplano-4d-es, malalcahuello-conguillio-4d-es, pucon-4d-es, valle-elqui-4d-es. Ya estaban live en Gumroad (rondas r8-r10); el registro solo estaba desactualizado."
+    "nota_2026_08_03": "5 slugs agregados tras verificacion HTTP real (200 + og:title ES confirmado): carretera-austral-norte-7d-es, iquique-altiplano-4d-es, malalcahuello-conguillio-4d-es, pucon-4d-es, valle-elqui-4d-es. Ya estaban live en Gumroad (rondas r8-r10); el registro solo estaba desactualizado.",
+    "precios_2026_08_03": "Los 32 precios se leyeron del <meta property=\"og:price:amount\"> de cada pagina de producto Gumroad el 2026-08-03 (curl -L, los 32 devolvieron 200). NADA aqui es estimado. Se cruzaron ademas contra los 60 <span class=\"kit-price\"> publicados en el sitio: 60 de 60 coinciden. Fuente de verdad de precio para scripts/build-tienda.mjs."
   },
   "productos": {
     "aso-keyword-pack": {
@@ -14,21 +15,30 @@
       "idioma": "en",
       "titulo": "ASO Keyword Research Pack — 72 audited keywords for 8 app verticals (CSV + guide)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 19,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "atacama-5d": {
       "url": "https://patricio358.gumroad.com/l/atacama-5d",
       "idioma": "en",
       "titulo": "Atacama Desert in 5 Days — Printable Itinerary (PDF)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 12.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "atacama-5d-es": {
       "url": "https://patricio358.gumroad.com/l/atacama-5d-es",
       "idioma": "es",
       "titulo": "Desierto de Atacama en 5 días — itinerario imprimible (PDF)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 12.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "bundle-sur-de-chile": {
       "url": "https://patricio358.gumroad.com/l/bundle-sur-de-chile",
@@ -36,91 +46,130 @@
       "titulo": "Bundle Sur de Chile — 4 Trip Kits PDF (Termas del Sur + Pucón + Chiloé + Carretera Austral Norte)",
       "http": 200,
       "verificado": "2026-08-02",
-      "nota": "US$29. Contiene los kits ES termas-del-sur-4d, pucon-4d-es, chiloe-5d-es y carretera-austral-norte-7d-es — es decir, 3 kits ES que NO tienen producto individual LIVE ya son comprables en español dentro de este bundle."
+      "nota": "US$29. Contiene los kits ES termas-del-sur-4d, pucon-4d-es, chiloe-5d-es y carretera-austral-norte-7d-es — es decir, 3 kits ES que NO tienen producto individual LIVE ya son comprables en español dentro de este bundle.",
+      "precio_usd": 29,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "carretera-austral-7d": {
       "url": "https://patricio358.gumroad.com/l/carretera-austral-7d",
       "idioma": "en",
       "titulo": "Carretera Austral 7-Day Road Trip — Printable Itinerary (PDF)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 14.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "carretera-austral-norte-7d-es": {
       "url": "https://patricio358.gumroad.com/l/carretera-austral-norte-7d-es",
       "idioma": "es",
       "titulo": "Carretera Austral Norte en 7 días: de Puerto Montt a Coyhaique (Trip Kit PDF)",
       "http": 200,
-      "verificado": "2026-08-03"
+      "verificado": "2026-08-03",
+      "precio_usd": 14.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "chile-low-cost-30d": {
       "url": "https://patricio358.gumroad.com/l/chile-low-cost-30d",
       "idioma": "es",
       "titulo": "Guía Chile Low-Cost: 30 Días",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 14,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "chile-poi-dataset": {
       "url": "https://patricio358.gumroad.com/l/chile-poi-dataset",
       "idioma": "en",
       "titulo": "Chile POI Dataset — 30,386 Points of Interest (JSON + CSV)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 49,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "chiloe-5d-es": {
       "url": "https://patricio358.gumroad.com/l/chiloe-5d-es",
       "idioma": "es",
       "titulo": "Chiloé en 5 días — Itinerario imprimible (PDF)",
       "http": 200,
-      "verificado": "2026-08-03"
+      "verificado": "2026-08-03",
+      "precio_usd": 12.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "chiloe-lakes-5d": {
       "url": "https://patricio358.gumroad.com/l/chiloe-lakes-5d",
       "idioma": "en",
       "titulo": "Chiloe & the Chilean Lakes — 5-Day Printable Itinerary (PDF)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 9.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "costos-ruta-cl-arg": {
       "url": "https://patricio358.gumroad.com/l/costos-ruta-cl-arg",
       "idioma": "en",
       "titulo": "Chile + Argentina Road Cost Dataset — Tolls, TAG Gantries & Park Hours (JSON)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 29,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "elqui-stars-4d": {
       "url": "https://patricio358.gumroad.com/l/elqui-stars-4d",
       "idioma": "en",
       "titulo": "La Serena, Coquimbo & the Elqui Valley — 4-Day Printable Itinerary (PDF)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 14.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "ferias-mercados-chile": {
       "url": "https://patricio358.gumroad.com/l/ferias-mercados-chile",
       "idioma": "en",
       "titulo": "Chile Markets & Traditional Fairs Dataset — Ferias Costumbristas y Mercados (JSON+CSV)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 19,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "guia-chile-en-auto": {
       "url": "https://patricio358.gumroad.com/l/guia-chile-en-auto",
       "idioma": "es",
       "titulo": "Chile en Auto: 10 Rutas Escénicas — Guía PDF 2026 (distancias, épocas, bencina y peajes)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 14,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "iquique-altiplano-4d-es": {
       "url": "https://patricio358.gumroad.com/l/iquique-altiplano-4d-es",
       "idioma": "es",
       "titulo": "Iquique + Altiplano: 4 días — Itinerario imprimible (PDF)",
       "http": 200,
-      "verificado": "2026-08-03"
+      "verificado": "2026-08-03",
+      "precio_usd": 12.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "malalcahuello-conguillio-4d-es": {
       "url": "https://patricio358.gumroad.com/l/malalcahuello-conguillio-4d-es",
       "idioma": "es",
       "titulo": "Malalcahuello y Conguillío en 4 días — Itinerario imprimible (PDF)",
       "http": 200,
-      "verificado": "2026-08-03"
+      "verificado": "2026-08-03",
+      "precio_usd": 12.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "patagonia-14d": {
       "url": "https://patricio358.gumroad.com/l/patagonia-14d",
@@ -128,42 +177,60 @@
       "titulo": "Ultimate Patagonia — 14 Days in Chile, Printable Itinerary (PDF)",
       "http": 200,
       "verificado": "2026-08-02",
-      "nota": "LIVE pero ninguna página del sitio lo enlaza. No estaba en tools/chrome/gumroad-live.json."
+      "nota": "LIVE pero ninguna página del sitio lo enlaza. No estaba en tools/chrome/gumroad-live.json.",
+      "precio_usd": 29,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "playas-chile": {
       "url": "https://patricio358.gumroad.com/l/playas-chile",
       "idioma": "en",
       "titulo": "Chile Beaches Dataset — 746 Playas con Acceso, Servicios y Tipo (JSON+CSV)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 19,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "pucon-4d-es": {
       "url": "https://patricio358.gumroad.com/l/pucon-4d-es",
       "idioma": "es",
       "titulo": "Pucón y Alrededores: 4 días de aventura — Itinerario imprimible (PDF)",
       "http": 200,
-      "verificado": "2026-08-03"
+      "verificado": "2026-08-03",
+      "precio_usd": 12.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "pucon-volcano-4d": {
       "url": "https://patricio358.gumroad.com/l/pucon-volcano-4d",
       "idioma": "en",
       "titulo": "Pucón & Villarrica Volcano — 4-Day Printable Adventure Itinerary (PDF)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 12.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "radal-siete-tazas-3d": {
       "url": "https://patricio358.gumroad.com/l/radal-siete-tazas-3d",
       "idioma": "es",
       "titulo": "Radal Siete Tazas y Velo de la Novia — 3 días en el Maule (PDF)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 12.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "rapa-nui-4d": {
       "url": "https://patricio358.gumroad.com/l/rapa-nui-4d",
       "idioma": "en",
       "titulo": "Rapa Nui (Easter Island) — 4-Day Printable Itinerary (PDF)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 19.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "santiago-cajon-4d": {
       "url": "https://patricio358.gumroad.com/l/santiago-cajon-4d",
@@ -171,7 +238,10 @@
       "titulo": "Santiago City Break + Cajón del Maipo — 4-Day Printable Itinerary (PDF)",
       "http": 200,
       "verificado": "2026-08-02",
-      "trampa": "ESTE ES EL KIT EN INGLÉS. NO enlazarlo desde páginas ES. El gemelo ES es santiago-cajon-es."
+      "trampa": "ESTE ES EL KIT EN INGLÉS. NO enlazarlo desde páginas ES. El gemelo ES es santiago-cajon-es.",
+      "precio_usd": 9.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "santiago-cajon-es": {
       "url": "https://patricio358.gumroad.com/l/santiago-cajon-es",
@@ -179,63 +249,90 @@
       "titulo": "Santiago + Cajón del Maipo — 4 días, itinerario imprimible (PDF)",
       "http": 200,
       "verificado": "2026-08-02",
-      "nota": "NO estaba en tools/chrome/gumroad-live.json y sí está LIVE. El permalink NO es santiago-cajon-4d-es (404): es santiago-cajon-es, tal como lo declara kits.config.mjs → gumroadPermalink."
+      "nota": "NO estaba en tools/chrome/gumroad-live.json y sí está LIVE. El permalink NO es santiago-cajon-4d-es (404): es santiago-cajon-es, tal como lo declara kits.config.mjs → gumroadPermalink.",
+      "precio_usd": 9.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "senderos-chile": {
       "url": "https://patricio358.gumroad.com/l/senderos-chile",
       "idioma": "en",
       "titulo": "Chile Hiking & Trekking Trails Dataset — 1,397 Trails (JSON + CSV)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 29,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "tdp-no-car": {
       "url": "https://patricio358.gumroad.com/l/tdp-no-car",
       "idioma": "en",
       "titulo": "Torres del Paine Without a Car — 5-Day Printable Itinerary (PDF)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 12.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "termas-chile": {
       "url": "https://patricio358.gumroad.com/l/termas-chile",
       "idioma": "en",
       "titulo": "Termas de Chile Dataset — 150 Hot Springs (JSON + CSV)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 19,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "termas-del-sur-4d": {
       "url": "https://patricio358.gumroad.com/l/termas-del-sur-4d",
       "idioma": "es",
       "titulo": "Termas del Sur — 4 días en las Termas de Chillán (PDF)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 12.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "torres-del-paine-5d-es": {
       "url": "https://patricio358.gumroad.com/l/torres-del-paine-5d-es",
       "idioma": "es",
       "titulo": "Torres del Paine sin auto: 5 días — itinerario imprimible (PDF)",
       "http": 200,
-      "verificado": "2026-08-03"
+      "verificado": "2026-08-03",
+      "precio_usd": 12.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "valle-elqui-4d-es": {
       "url": "https://patricio358.gumroad.com/l/valle-elqui-4d-es",
       "idioma": "es",
       "titulo": "Valle del Elqui y La Serena: 4 días de estrellas y pisco — Trip Kit PDF (español)",
       "http": 200,
-      "verificado": "2026-08-03"
+      "verificado": "2026-08-03",
+      "precio_usd": 12.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "valpo-wine-4d": {
       "url": "https://patricio358.gumroad.com/l/valpo-wine-4d",
       "idioma": "en",
       "titulo": "Valparaíso & the Colchagua Wine Route — 4-Day Printable Itinerary (PDF)",
       "http": 200,
-      "verificado": "2026-08-02"
+      "verificado": "2026-08-02",
+      "precio_usd": 12.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     },
     "valparaiso-vina-3d-es": {
       "url": "https://patricio358.gumroad.com/l/valparaiso-vina-3d-es",
       "idioma": "es",
       "titulo": "Valparaíso + Viña del Mar: 3 días — Itinerario imprimible (PDF)",
       "http": 200,
-      "verificado": "2026-08-03"
+      "verificado": "2026-08-03",
+      "precio_usd": 9.9,
+      "moneda": "USD",
+      "precio_verificado": "2026-08-03"
     }
   },
   "no_live_verificado_404": {

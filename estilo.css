@@ -10,6 +10,11 @@
   :root {
     --fondo: #14181d; --texto: #e8e6e1; --suave: #9aa5b1; --suave-fuerte: #c3cbd3; --borde: #2c333b;
     --tarjeta: #1c2229; --acento: #2fbf94;
+    /* En claro el acento es verde OSCURO (#0d7a5f) y encima va texto blanco; en
+       oscuro el acento es verde CLARO (#2fbf94) y el blanco encima da 2.33:1,
+       bajo el 4.5:1 de WCAG AA (medido en el navegador 2026-08-03). El texto
+       sobre acento tiene que invertirse junto con el acento, no quedarse fijo. */
+    --acento-texto: #08231b;
   }
 }
 * { box-sizing: border-box; }
@@ -52,13 +57,24 @@ th { font-weight: 700; border-bottom: 2px solid var(--acento); }
 .cta.compacta h3 { margin-bottom: 8px; font-size: 16px; }
 .boton {
   display: inline-block; margin: 6px 10px 4px 0; padding: 11px 18px; border-radius: 8px;
-  color: #fff; text-decoration: none; font-weight: 600; font-size: 15px;
+  color: var(--acento-texto); text-decoration: none; font-weight: 600; font-size: 15px;
   transition: filter .15s ease;
+  /* Fondo por DEFECTO. Antes esta regla sólo fijaba `color:#fff` y el fondo lo
+     ponían únicamente los modificadores de afiliado (.viator/.gyg/...): un
+     `class="boton"` a secas quedaba con fondo transparente y texto blanco.
+     Medido en el navegador el 2026-08-03 sobre index.html en modo claro:
+     contraste 1.00:1 (blanco sobre la tarjeta blanca) — o sea INVISIBLE. Eso
+     afectaba justo al único CTA comercial de las tres portadas ("Ver trip kits
+     en la tienda") y a los 154 botones del boletín. En modo oscuro se veía, que
+     es por lo que sobrevivió sin detectarse. */
+  background: var(--acento);
 }
-.boton.viator { background: var(--viator); }
-.boton.civitatis { background: var(--civitatis); }
-.boton.gyg { background: var(--gyg); }
-.boton.airalo { background: var(--airalo); }
+/* Los colores de afiliado son oscuros en AMBOS esquemas, así que ahí el texto
+   se mantiene blanco fijo (no sigue a --acento-texto). */
+.boton.viator { background: var(--viator); color: #fff; }
+.boton.civitatis { background: var(--civitatis); color: #fff; }
+.boton.gyg { background: var(--gyg); color: #fff; }
+.boton.airalo { background: var(--airalo); color: #fff; }
 .boton:hover { filter: brightness(1.08); }
 .boton-fila { display: block; margin: 0 0 10px; }
 .afiliado-nota { display: block; color: var(--suave); font-size: 12.5px; margin: 3px 0 0 1px; }
@@ -157,3 +173,28 @@ footer.sitio { max-width: 760px; margin-left: auto; margin-right: auto; padding:
 }
 
 .comentarios { margin: 34px 0 10px; }
+
+/* ── Tienda (tienda.html, en/tienda.html, pt/tienda.html) ──────────────────
+   Escaparate propio del catálogo Gumroad. Existe porque el perfil público de
+   Gumroad sólo exhibe 9 de los 32 productos LIVE, así que mandar ahí el CTA
+   escondía dos tercios del inventario. Generado por scripts/build-tienda.mjs. */
+.kit-lista { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 14px; }
+@media (min-width: 640px) { .kit-lista { grid-template-columns: repeat(2, 1fr); } }
+.kit-item {
+  position: relative; background: var(--tarjeta); border: 1px solid var(--borde);
+  border-radius: 12px; padding: 16px 18px 14px; display: flex; flex-direction: column;
+}
+.kit-item h3 { margin: 0 0 6px; font-size: 17px; line-height: 1.35; }
+.kit-item h3 a { text-decoration: none; }
+.kit-item h3 a:hover { text-decoration: underline; }
+.kit-item .kit-precio { margin: 0 0 4px; }
+.kit-item .kit-price { font-size: 21px; font-weight: 700; color: var(--texto); }
+.kit-item .kit-nota { color: var(--suave); font-size: 13.5px; margin: 0 0 6px; }
+.kit-item p:last-child { margin: auto 0 0; padding-top: 8px; }
+.kit-item-destacado { border-color: var(--acento); border-top: 3px solid var(--acento); }
+.kit-badge {
+  display: inline-block; align-self: flex-start; margin: 0 0 8px; padding: 3px 9px;
+  border-radius: 999px; background: var(--acento); color: var(--acento-texto);
+  font-size: 12px; font-weight: 700; letter-spacing: .02em;
+}
+.kit-bundle { border-left: 3px solid var(--acento); padding-left: 12px; margin-top: 10px; }

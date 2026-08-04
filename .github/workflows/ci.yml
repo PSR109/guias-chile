@@ -12,6 +12,12 @@
 #                                  muerto (404 / pasarela que no cobra) ni a un
 #                                  producto en otro idioma que el de la página.
 #                                  Ver trip-kits/alias-map.json.
+#   7. build-tienda.mjs --check → tienda.html / en/ / pt/ siguen reflejando el
+#                                  catálogo de trip-kits/gumroad-live.json. Sin
+#                                  esto, publicar un producto nuevo en Gumroad lo
+#                                  dejaba otra vez huérfano (el 2026-08-03 había
+#                                  11 productos LIVE sin un solo enlace, entre
+#                                  ellos los 5 de ticket más alto del catálogo).
 #
 # Este workflow es el gate que habilita el auto-merge del growth agent
 # (.github/workflows/growth-agent.yml): un PR solo se mergea solo si esto
@@ -57,5 +63,9 @@ jobs:
         run: node scripts/check-sitemap.mjs
       - name: alias-map de CTAs al día
         run: node trip-kits/build-alias-map.mjs --check
+      - name: Tiendas ES/EN/PT al día con el catálogo Gumroad
+        run: node scripts/build-tienda.mjs --check
+      - name: Captura de correo activa donde está el popup
+        run: node scripts/activar-boletin-en-pt-2026-08-03.mjs --check
       - name: CTAs de compra vivos y en el idioma de la página
         run: node scripts/check-cta-checkout.mjs
