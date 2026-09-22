@@ -25,26 +25,6 @@
   "deuda_idioma_es": [
     {
       "paginas": [
-        "colchagua-pichilemu.html"
-      ],
-      "producto_actual": "valpo-wine-4d",
-      "idioma_producto": "en",
-      "fix": "publicar valparaiso-vina-3d-es y repuntar",
-      "motivo_de_no_revertir": "revertir a Payhip no arregla el idioma (el producto Payhip de esa campaña es el MISMO kit EN) y encima mata el checkout."
-    },
-    {
-      "paginas": [
-        "frutillar.html",
-        "puerto-varas.html",
-        "saltos-del-petrohue.html"
-      ],
-      "producto_actual": "chiloe-lakes-5d",
-      "idioma_producto": "en",
-      "fix": "publicar chiloe-5d-es y repuntar (chiloe.html y puerto-montt.html ya apuntan a ese kit ES vía Payhip)",
-      "motivo_de_no_revertir": "ídem: el Payhip de chiloe-lakes-5d es el mismo kit EN."
-    },
-    {
-      "paginas": [
         "rapa-nui.html"
       ],
       "producto_actual": "rapa-nui-4d",
@@ -69,7 +49,7 @@
       "gumroad_slug_actual": "iquique-altiplano-4d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "iquique-altiplano-4d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/x90rj",
       "estado": "ok",
       "accion": null
@@ -87,7 +67,7 @@
       "gumroad_slug_actual": "santiago-cajon-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "santiago-cajon-4d-es-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/asZlb",
       "estado": "ok",
       "accion": null
@@ -123,7 +103,7 @@
       "gumroad_slug_actual": "carretera-austral-norte-7d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "carretera-austral-norte-7d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/JY2nc",
       "estado": "ok",
       "accion": null
@@ -159,7 +139,7 @@
       "gumroad_slug_actual": "chiloe-5d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "chiloe-5d-es-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/f6KZF",
       "estado": "ok",
       "accion": null
@@ -168,19 +148,19 @@
       "pagina": "colchagua-pichilemu.html",
       "idioma_pagina": "es",
       "payhip_url_actual": null,
-      "kit_id": "valpo-wine-4d",
-      "idioma_del_kit": "en",
-      "gumroad_slug_esperado": "valpo-wine-4d",
+      "kit_id": "valparaiso-vina-3d-es",
+      "idioma_del_kit": "es",
+      "gumroad_slug_esperado": "valparaiso-vina-3d-es",
       "gumroad_live": true,
       "checkout_actual": "gumroad",
-      "gumroad_url_actual": "https://patricio358.gumroad.com/l/valpo-wine-4d?utm_source=guias&utm_medium=cta&utm_campaign=valpo-wine-4d",
-      "gumroad_slug_actual": "valpo-wine-4d",
-      "idioma_producto_actual": "en",
-      "idioma_coincide": false,
-      "pdf_en_dist": "valpo-wine-4d-en.pdf",
-      "payhip_url_config": "https://payhip.com/b/ydz2j",
-      "estado": "idioma_mismatch",
-      "accion": "página es vendiendo producto en; publicar el kit es y repuntar"
+      "gumroad_url_actual": "https://patricio358.gumroad.com/l/valparaiso-vina-3d-es?utm_source=guias&utm_medium=cta&utm_campaign=valparaiso-vina-3d-es",
+      "gumroad_slug_actual": "valparaiso-vina-3d-es",
+      "idioma_producto_actual": "es",
+      "idioma_coincide": true,
+      "pdf_en_dist": null,
+      "payhip_url_config": "https://payhip.com/b/Itnmo",
+      "estado": "ok",
+      "accion": null
     },
     {
       "pagina": "en/cajon-del-maipo.html",
@@ -195,7 +175,7 @@
       "gumroad_slug_actual": "santiago-cajon-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "santiago-cajon-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/Qrh0p",
       "estado": "ok",
       "accion": null
@@ -213,7 +193,7 @@
       "gumroad_slug_actual": "carretera-austral-7d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "carretera-austral-7d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/MxXD4",
       "estado": "ok",
       "accion": null
@@ -231,7 +211,7 @@
       "gumroad_slug_actual": "chiloe-lakes-5d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "chiloe-lakes-5d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/hdBVf",
       "estado": "ok",
       "accion": null
@@ -249,7 +229,7 @@
       "gumroad_slug_actual": "valpo-wine-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "valpo-wine-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/ydz2j",
       "estado": "ok",
       "accion": null
@@ -267,7 +247,7 @@
       "gumroad_slug_actual": "chiloe-lakes-5d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "chiloe-lakes-5d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/hdBVf",
       "estado": "ok",
       "accion": null
@@ -285,7 +265,7 @@
       "gumroad_slug_actual": "elqui-stars-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "elqui-stars-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/uy4v9",
       "estado": "ok",
       "accion": null
@@ -303,7 +283,7 @@
       "gumroad_slug_actual": "pucon-volcano-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "pucon-volcano-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/WjFp0",
       "estado": "ok",
       "accion": null
@@ -321,7 +301,7 @@
       "gumroad_slug_actual": "pucon-volcano-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "pucon-volcano-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/WjFp0",
       "estado": "ok",
       "accion": null
@@ -339,7 +319,7 @@
       "gumroad_slug_actual": "chiloe-lakes-5d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "chiloe-lakes-5d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/hdBVf",
       "estado": "ok",
       "accion": null
@@ -357,7 +337,7 @@
       "gumroad_slug_actual": "tdp-no-car",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "tdp-no-car-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/9CyLp",
       "estado": "ok",
       "accion": null
@@ -375,7 +355,7 @@
       "gumroad_slug_actual": "chiloe-lakes-5d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "chiloe-lakes-5d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/hdBVf",
       "estado": "ok",
       "accion": null
@@ -393,7 +373,7 @@
       "gumroad_slug_actual": "tdp-no-car",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "tdp-no-car-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/9CyLp",
       "estado": "ok",
       "accion": null
@@ -411,7 +391,7 @@
       "gumroad_slug_actual": "rapa-nui-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "rapa-nui-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/b97TX",
       "estado": "ok",
       "accion": null
@@ -429,7 +409,7 @@
       "gumroad_slug_actual": "chiloe-lakes-5d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "chiloe-lakes-5d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/hdBVf",
       "estado": "ok",
       "accion": null
@@ -447,7 +427,7 @@
       "gumroad_slug_actual": "atacama-5d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "atacama-5d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/lBTyt",
       "estado": "ok",
       "accion": null
@@ -465,7 +445,7 @@
       "gumroad_slug_actual": "santiago-cajon-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "santiago-cajon-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/Qrh0p",
       "estado": "ok",
       "accion": null
@@ -501,7 +481,7 @@
       "gumroad_slug_actual": "atacama-5d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "atacama-5d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/lBTyt",
       "estado": "ok",
       "accion": null
@@ -519,7 +499,7 @@
       "gumroad_slug_actual": "carretera-austral-7d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "carretera-austral-7d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/MxXD4",
       "estado": "ok",
       "accion": null
@@ -555,7 +535,7 @@
       "gumroad_slug_actual": "chiloe-lakes-5d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "chiloe-lakes-5d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/hdBVf",
       "estado": "ok",
       "accion": null
@@ -591,7 +571,7 @@
       "gumroad_slug_actual": "elqui-stars-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "elqui-stars-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/uy4v9",
       "estado": "ok",
       "accion": null
@@ -627,7 +607,7 @@
       "gumroad_slug_actual": "patagonia-14d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "patagonia-14d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/jwes1",
       "estado": "ok",
       "accion": null
@@ -663,7 +643,7 @@
       "gumroad_slug_actual": "pucon-volcano-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "pucon-volcano-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/WjFp0",
       "estado": "ok",
       "accion": null
@@ -681,7 +661,7 @@
       "gumroad_slug_actual": "rapa-nui-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "rapa-nui-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/b97TX",
       "estado": "ok",
       "accion": null
@@ -699,7 +679,7 @@
       "gumroad_slug_actual": "santiago-cajon-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "santiago-cajon-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/Qrh0p",
       "estado": "ok",
       "accion": null
@@ -735,7 +715,7 @@
       "gumroad_slug_actual": "tdp-no-car",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "tdp-no-car-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/9CyLp",
       "estado": "ok",
       "accion": null
@@ -771,7 +751,7 @@
       "gumroad_slug_actual": "valpo-wine-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "valpo-wine-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/ydz2j",
       "estado": "ok",
       "accion": null
@@ -789,7 +769,7 @@
       "gumroad_slug_actual": "tdp-no-car",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "tdp-no-car-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/9CyLp",
       "estado": "ok",
       "accion": null
@@ -807,7 +787,7 @@
       "gumroad_slug_actual": "elqui-stars-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "elqui-stars-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/uy4v9",
       "estado": "ok",
       "accion": null
@@ -825,7 +805,7 @@
       "gumroad_slug_actual": "valpo-wine-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "valpo-wine-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/ydz2j",
       "estado": "ok",
       "accion": null
@@ -834,19 +814,19 @@
       "pagina": "frutillar.html",
       "idioma_pagina": "es",
       "payhip_url_actual": null,
-      "kit_id": "chiloe-lakes-5d",
-      "idioma_del_kit": "en",
-      "gumroad_slug_esperado": "chiloe-lakes-5d",
+      "kit_id": "chiloe-5d-es",
+      "idioma_del_kit": "es",
+      "gumroad_slug_esperado": "chiloe-5d-es",
       "gumroad_live": true,
       "checkout_actual": "gumroad",
-      "gumroad_url_actual": "https://patricio358.gumroad.com/l/chiloe-lakes-5d?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-lakes-5d",
-      "gumroad_slug_actual": "chiloe-lakes-5d",
-      "idioma_producto_actual": "en",
-      "idioma_coincide": false,
-      "pdf_en_dist": "chiloe-lakes-5d-en.pdf",
-      "payhip_url_config": "https://payhip.com/b/hdBVf",
-      "estado": "idioma_mismatch",
-      "accion": "página es vendiendo producto en; publicar el kit es y repuntar"
+      "gumroad_url_actual": "https://patricio358.gumroad.com/l/chiloe-5d-es?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-5d-es",
+      "gumroad_slug_actual": "chiloe-5d-es",
+      "idioma_producto_actual": "es",
+      "idioma_coincide": true,
+      "pdf_en_dist": null,
+      "payhip_url_config": "https://payhip.com/b/f6KZF",
+      "estado": "ok",
+      "accion": null
     },
     {
       "pagina": "iquique.html",
@@ -861,7 +841,7 @@
       "gumroad_slug_actual": "iquique-altiplano-4d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "iquique-altiplano-4d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/x90rj",
       "estado": "ok",
       "accion": null
@@ -879,7 +859,7 @@
       "gumroad_slug_actual": "valle-elqui-4d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "valle-elqui-4d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/3za2d",
       "estado": "ok",
       "accion": null
@@ -897,7 +877,7 @@
       "gumroad_slug_actual": "malalcahuello-conguillio-4d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "malalcahuello-conguillio-4d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/O7gIr",
       "estado": "ok",
       "accion": null
@@ -915,7 +895,7 @@
       "gumroad_slug_actual": "santiago-cajon-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "santiago-cajon-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/Qrh0p",
       "estado": "ok",
       "accion": null
@@ -933,7 +913,7 @@
       "gumroad_slug_actual": "carretera-austral-7d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "carretera-austral-7d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/MxXD4",
       "estado": "ok",
       "accion": null
@@ -951,7 +931,7 @@
       "gumroad_slug_actual": "chiloe-lakes-5d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "chiloe-lakes-5d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/hdBVf",
       "estado": "ok",
       "accion": null
@@ -969,7 +949,7 @@
       "gumroad_slug_actual": "valpo-wine-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "valpo-wine-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/ydz2j",
       "estado": "ok",
       "accion": null
@@ -987,7 +967,7 @@
       "gumroad_slug_actual": "chiloe-lakes-5d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "chiloe-lakes-5d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/hdBVf",
       "estado": "ok",
       "accion": null
@@ -1005,7 +985,7 @@
       "gumroad_slug_actual": "elqui-stars-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "elqui-stars-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/uy4v9",
       "estado": "ok",
       "accion": null
@@ -1023,7 +1003,7 @@
       "gumroad_slug_actual": "pucon-volcano-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "pucon-volcano-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/WjFp0",
       "estado": "ok",
       "accion": null
@@ -1041,7 +1021,7 @@
       "gumroad_slug_actual": "chiloe-lakes-5d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "chiloe-lakes-5d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/hdBVf",
       "estado": "ok",
       "accion": null
@@ -1059,7 +1039,7 @@
       "gumroad_slug_actual": "tdp-no-car",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "tdp-no-car-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/9CyLp",
       "estado": "ok",
       "accion": null
@@ -1077,7 +1057,7 @@
       "gumroad_slug_actual": "chiloe-lakes-5d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "chiloe-lakes-5d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/hdBVf",
       "estado": "ok",
       "accion": null
@@ -1095,7 +1075,7 @@
       "gumroad_slug_actual": "tdp-no-car",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "tdp-no-car-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/9CyLp",
       "estado": "ok",
       "accion": null
@@ -1113,7 +1093,7 @@
       "gumroad_slug_actual": "rapa-nui-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "rapa-nui-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/b97TX",
       "estado": "ok",
       "accion": null
@@ -1131,7 +1111,7 @@
       "gumroad_slug_actual": "chiloe-lakes-5d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "chiloe-lakes-5d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/hdBVf",
       "estado": "ok",
       "accion": null
@@ -1149,7 +1129,7 @@
       "gumroad_slug_actual": "atacama-5d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "atacama-5d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/lBTyt",
       "estado": "ok",
       "accion": null
@@ -1167,7 +1147,7 @@
       "gumroad_slug_actual": "santiago-cajon-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "santiago-cajon-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/Qrh0p",
       "estado": "ok",
       "accion": null
@@ -1203,7 +1183,7 @@
       "gumroad_slug_actual": "atacama-5d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "atacama-5d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/lBTyt",
       "estado": "ok",
       "accion": null
@@ -1221,7 +1201,7 @@
       "gumroad_slug_actual": "carretera-austral-7d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "carretera-austral-7d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/MxXD4",
       "estado": "ok",
       "accion": null
@@ -1257,7 +1237,7 @@
       "gumroad_slug_actual": "chiloe-lakes-5d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "chiloe-lakes-5d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/hdBVf",
       "estado": "ok",
       "accion": null
@@ -1293,7 +1273,7 @@
       "gumroad_slug_actual": "elqui-stars-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "elqui-stars-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/uy4v9",
       "estado": "ok",
       "accion": null
@@ -1329,7 +1309,7 @@
       "gumroad_slug_actual": "patagonia-14d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "patagonia-14d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/jwes1",
       "estado": "ok",
       "accion": null
@@ -1365,7 +1345,7 @@
       "gumroad_slug_actual": "pucon-volcano-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "pucon-volcano-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/WjFp0",
       "estado": "ok",
       "accion": null
@@ -1383,7 +1363,7 @@
       "gumroad_slug_actual": "rapa-nui-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "rapa-nui-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/b97TX",
       "estado": "ok",
       "accion": null
@@ -1401,7 +1381,7 @@
       "gumroad_slug_actual": "santiago-cajon-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "santiago-cajon-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/Qrh0p",
       "estado": "ok",
       "accion": null
@@ -1437,7 +1417,7 @@
       "gumroad_slug_actual": "tdp-no-car",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "tdp-no-car-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/9CyLp",
       "estado": "ok",
       "accion": null
@@ -1473,7 +1453,7 @@
       "gumroad_slug_actual": "valpo-wine-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "valpo-wine-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/ydz2j",
       "estado": "ok",
       "accion": null
@@ -1491,7 +1471,7 @@
       "gumroad_slug_actual": "tdp-no-car",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "tdp-no-car-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/9CyLp",
       "estado": "ok",
       "accion": null
@@ -1509,7 +1489,7 @@
       "gumroad_slug_actual": "elqui-stars-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "elqui-stars-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/uy4v9",
       "estado": "ok",
       "accion": null
@@ -1527,7 +1507,7 @@
       "gumroad_slug_actual": "valpo-wine-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": true,
-      "pdf_en_dist": "valpo-wine-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/ydz2j",
       "estado": "ok",
       "accion": null
@@ -1563,7 +1543,7 @@
       "gumroad_slug_actual": "pucon-4d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "pucon-4d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/RlCHK",
       "estado": "ok",
       "accion": null
@@ -1581,7 +1561,7 @@
       "gumroad_slug_actual": "chiloe-5d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "chiloe-5d-es-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/f6KZF",
       "estado": "ok",
       "accion": null
@@ -1599,7 +1579,7 @@
       "gumroad_slug_actual": "torres-del-paine-5d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "torres-del-paine-5d-es-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/VysH7",
       "estado": "ok",
       "accion": null
@@ -1608,19 +1588,19 @@
       "pagina": "puerto-varas.html",
       "idioma_pagina": "es",
       "payhip_url_actual": null,
-      "kit_id": "chiloe-lakes-5d",
-      "idioma_del_kit": "en",
-      "gumroad_slug_esperado": "chiloe-lakes-5d",
+      "kit_id": "chiloe-5d-es",
+      "idioma_del_kit": "es",
+      "gumroad_slug_esperado": "chiloe-5d-es",
       "gumroad_live": true,
       "checkout_actual": "gumroad",
-      "gumroad_url_actual": "https://patricio358.gumroad.com/l/chiloe-lakes-5d?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-lakes-5d",
-      "gumroad_slug_actual": "chiloe-lakes-5d",
-      "idioma_producto_actual": "en",
-      "idioma_coincide": false,
-      "pdf_en_dist": "chiloe-lakes-5d-en.pdf",
-      "payhip_url_config": "https://payhip.com/b/hdBVf",
-      "estado": "idioma_mismatch",
-      "accion": "página es vendiendo producto en; publicar el kit es y repuntar"
+      "gumroad_url_actual": "https://patricio358.gumroad.com/l/chiloe-5d-es?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-5d-es",
+      "gumroad_slug_actual": "chiloe-5d-es",
+      "idioma_producto_actual": "es",
+      "idioma_coincide": true,
+      "pdf_en_dist": null,
+      "payhip_url_config": "https://payhip.com/b/f6KZF",
+      "estado": "ok",
+      "accion": null
     },
     {
       "pagina": "punta-arenas.html",
@@ -1635,7 +1615,7 @@
       "gumroad_slug_actual": "torres-del-paine-5d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "torres-del-paine-5d-es-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/VysH7",
       "estado": "ok",
       "accion": null
@@ -1653,7 +1633,7 @@
       "gumroad_slug_actual": "radal-siete-tazas-3d",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "radal-siete-tazas-3d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/ZD0xY",
       "estado": "ok",
       "accion": null
@@ -1671,7 +1651,7 @@
       "gumroad_slug_actual": "rapa-nui-4d",
       "idioma_producto_actual": "en",
       "idioma_coincide": false,
-      "pdf_en_dist": "rapa-nui-4d-en.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/b97TX",
       "estado": "idioma_mismatch",
       "accion": "página es vendiendo producto en; publicar el kit es y repuntar"
@@ -1680,19 +1660,19 @@
       "pagina": "saltos-del-petrohue.html",
       "idioma_pagina": "es",
       "payhip_url_actual": null,
-      "kit_id": "chiloe-lakes-5d",
-      "idioma_del_kit": "en",
-      "gumroad_slug_esperado": "chiloe-lakes-5d",
+      "kit_id": "chiloe-5d-es",
+      "idioma_del_kit": "es",
+      "gumroad_slug_esperado": "chiloe-5d-es",
       "gumroad_live": true,
       "checkout_actual": "gumroad",
-      "gumroad_url_actual": "https://patricio358.gumroad.com/l/chiloe-lakes-5d?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-lakes-5d",
-      "gumroad_slug_actual": "chiloe-lakes-5d",
-      "idioma_producto_actual": "en",
-      "idioma_coincide": false,
-      "pdf_en_dist": "chiloe-lakes-5d-en.pdf",
-      "payhip_url_config": "https://payhip.com/b/hdBVf",
-      "estado": "idioma_mismatch",
-      "accion": "página es vendiendo producto en; publicar el kit es y repuntar"
+      "gumroad_url_actual": "https://patricio358.gumroad.com/l/chiloe-5d-es?utm_source=guias&utm_medium=cta&utm_campaign=chiloe-5d-es",
+      "gumroad_slug_actual": "chiloe-5d-es",
+      "idioma_producto_actual": "es",
+      "idioma_coincide": true,
+      "pdf_en_dist": null,
+      "payhip_url_config": "https://payhip.com/b/f6KZF",
+      "estado": "ok",
+      "accion": null
     },
     {
       "pagina": "san-pedro-de-atacama.html",
@@ -1707,7 +1687,7 @@
       "gumroad_slug_actual": "atacama-5d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "atacama-5d-es-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/ONobC",
       "estado": "ok",
       "accion": null
@@ -1725,7 +1705,7 @@
       "gumroad_slug_actual": "santiago-cajon-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "santiago-cajon-4d-es-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/asZlb",
       "estado": "ok",
       "accion": null
@@ -1761,7 +1741,7 @@
       "gumroad_slug_actual": "termas-del-sur-4d",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "termas-del-sur-4d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/XDjCS",
       "estado": "ok",
       "accion": null
@@ -1779,7 +1759,7 @@
       "gumroad_slug_actual": "atacama-5d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "atacama-5d-es-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/ONobC",
       "estado": "ok",
       "accion": null
@@ -1815,7 +1795,7 @@
       "gumroad_slug_actual": "carretera-austral-norte-7d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "carretera-austral-norte-7d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/JY2nc",
       "estado": "ok",
       "accion": null
@@ -1851,7 +1831,7 @@
       "gumroad_slug_actual": "chiloe-5d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "chiloe-5d-es-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/f6KZF",
       "estado": "ok",
       "accion": null
@@ -1887,7 +1867,7 @@
       "gumroad_slug_actual": "iquique-altiplano-4d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "iquique-altiplano-4d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/x90rj",
       "estado": "ok",
       "accion": null
@@ -1905,7 +1885,7 @@
       "gumroad_slug_actual": "malalcahuello-conguillio-4d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "malalcahuello-conguillio-4d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/O7gIr",
       "estado": "ok",
       "accion": null
@@ -1923,7 +1903,7 @@
       "gumroad_slug_actual": "pucon-4d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "pucon-4d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/RlCHK",
       "estado": "ok",
       "accion": null
@@ -1941,7 +1921,7 @@
       "gumroad_slug_actual": "radal-siete-tazas-3d",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "radal-siete-tazas-3d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/ZD0xY",
       "estado": "ok",
       "accion": null
@@ -1977,7 +1957,7 @@
       "gumroad_slug_actual": "termas-del-sur-4d",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "termas-del-sur-4d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/XDjCS",
       "estado": "ok",
       "accion": null
@@ -1995,7 +1975,7 @@
       "gumroad_slug_actual": "torres-del-paine-5d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "torres-del-paine-5d-es-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/VysH7",
       "estado": "ok",
       "accion": null
@@ -2013,7 +1993,7 @@
       "gumroad_slug_actual": "valle-elqui-4d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "valle-elqui-4d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/3za2d",
       "estado": "ok",
       "accion": null
@@ -2031,7 +2011,7 @@
       "gumroad_slug_actual": "valparaiso-vina-3d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "valparaiso-vina-3d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/Itnmo",
       "estado": "ok",
       "accion": null
@@ -2049,7 +2029,7 @@
       "gumroad_slug_actual": "torres-del-paine-5d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "torres-del-paine-5d-es-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/VysH7",
       "estado": "ok",
       "accion": null
@@ -2067,7 +2047,7 @@
       "gumroad_slug_actual": "valle-elqui-4d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "valle-elqui-4d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/3za2d",
       "estado": "ok",
       "accion": null
@@ -2085,7 +2065,7 @@
       "gumroad_slug_actual": "valparaiso-vina-3d-es",
       "idioma_producto_actual": "es",
       "idioma_coincide": true,
-      "pdf_en_dist": "valparaiso-vina-3d-es.pdf",
+      "pdf_en_dist": null,
       "payhip_url_config": "https://payhip.com/b/Itnmo",
       "estado": "ok",
       "accion": null

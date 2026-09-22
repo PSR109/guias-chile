@@ -537,3 +537,33 @@ de verificación). Requiere: Chromium de Playwright (vía `lib/chromium.mjs`),
   xmllint OK, previews sin markup roto (cover + día 1 + mapa raster OK,
   entidades → ≈ — í OK), imágenes 108+56 KB < 127 KB.
 - NO se subió nada a ninguna tienda (la otra mitad del WP es del agente CDP).
+
+---
+
+# NOTES — growth-agent 2026-09-22 (repuntar 4 CTAs a su kit ES ya LIVE)
+
+`trip-kits/alias-map.json` declaraba `deuda_idioma_es` en 4 páginas ES que
+seguían vendiendo el kit EN pese a que su gemelo ES llevaba semanas LIVE en
+Gumroad (`chiloe-5d-es` desde ronda 4, `valparaiso-vina-3d-es` idem) — solo
+`chiloe.html`, `puerto-montt.html` y `valparaiso.html` habían recibido el SWAP
+cuando se publicaron esos productos; `puerto-varas.html`, `frutillar.html`,
+`saltos-del-petrohue.html` y `colchagua-pichilemu.html` quedaron atrás.
+Mandar a un lector chileno a un PDF en inglés convierte peor que no tener CTA
+(razón ya documentada en el propio alias-map).
+
+Cambio: en `trip-kits/inject-kit-cta.mjs` los 4 slugs pasan de string plano al
+mismo patrón array `[kitEN, kitES]` que ya usan `chiloe`/`valparaiso`/
+`puerto-montt` → `node inject-kit-cta.mjs` hizo el SWAP (`changed=4`, las
+guías en/pt no se tocaron, siguen con el kit EN). `build-alias-map.mjs`:
+se retiraron las 2 entradas ya resueltas de `deuda_idioma_es` (solo queda
+Rapa Nui, que requiere producir un PDF ES, no solo publicarlo) y se
+regeneró `alias-map.json` (mismatch de idioma 3 → 1).
+
+Verificación: los 9 gates de `ci.yml` en verde (html, links, affiliate-ids,
+hreflang, sitemap, alias-map --check, build-tienda --check, activar-boletin
+--check, check-cta-checkout). `npm test` de `trip-kits/` no se pudo correr en
+este sandbox (mismo límite de entorno que ronda "puerto-montt sumada a
+chiloe-lakes-5d" del 2026-08-01) — no aplica de todos modos: el cambio no
+toca `kits.config.mjs` ni ninguna invariante de `test/kits-config.test.mjs`,
+solo el `MAP` de `inject-kit-cta.mjs` (datos) y el arreglo estático
+`deuda_idioma_es` de `build-alias-map.mjs`.

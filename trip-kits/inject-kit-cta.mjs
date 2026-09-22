@@ -18,9 +18,13 @@ const MAP = {
   'punta-arenas': ['tdp-no-car', 'torres-del-paine-5d-es'],
   'carretera-austral': ['carretera-austral-7d', 'carretera-austral-norte-7d-es'],
   'chiloe': ['chiloe-lakes-5d', 'chiloe-5d-es'],
-  'puerto-varas': 'chiloe-lakes-5d',
-  'frutillar': 'chiloe-lakes-5d',
-  'saltos-del-petrohue': 'chiloe-lakes-5d',
+  // 2026-09-22: chiloe-5d-es ya estaba LIVE (READY_KITS) desde ronda 4, pero
+  // estas 3 vecinas se quedaron con el string plano del kit EN — deuda
+  // declarada en trip-kits/alias-map.json -> deuda_idioma_es (lector chileno
+  // mandado a un PDF en ingles). SWAP EN->ES igual que chiloe.html/puerto-montt.
+  'puerto-varas': ['chiloe-lakes-5d', 'chiloe-5d-es'],
+  'frutillar': ['chiloe-lakes-5d', 'chiloe-5d-es'],
+  'saltos-del-petrohue': ['chiloe-lakes-5d', 'chiloe-5d-es'],
   // Puerto Montt (guia agregada 2026-07-21, huerfana de kit hasta ahora): es
   // el aeropuerto/puerta de entrada de esta misma ruta ("la mayoria... prefiere
   // dormir en Puerto Varas" dice la propia guia) -- mismo kit que sus vecinas.
@@ -31,7 +35,9 @@ const MAP = {
   'santiago': ['santiago-cajon-4d', 'santiago-cajon-4d-es'],
   'cajon-del-maipo': ['santiago-cajon-4d', 'santiago-cajon-4d-es'],
   'valparaiso': ['valpo-wine-4d', 'valparaiso-vina-3d-es'],
-  'colchagua-pichilemu': 'valpo-wine-4d',
+  // 2026-09-22: mismo caso que arriba — valparaiso-vina-3d-es ya estaba LIVE,
+  // esta pagina se quedo apuntando al kit EN (deuda_idioma_es).
+  'colchagua-pichilemu': ['valpo-wine-4d', 'valparaiso-vina-3d-es'],
   'pucon-villarrica': ['pucon-volcano-4d', 'pucon-4d-es'],
   'la-serena-coquimbo': ['elqui-stars-4d', 'valle-elqui-4d-es'],
   'valle-del-elqui': ['elqui-stars-4d', 'valle-elqui-4d-es'],
