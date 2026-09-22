@@ -230,21 +230,11 @@ const salida = {
     reglas: POLITICA,
     por_que: "es→es es tolerancia cero: mandar a un lector chileno a un PDF en inglés convierte peor que no tener CTA. pt cae a en de forma declarada porque no existe ningún kit en portugués (0 PDFs pt en trip-kits/dist).",
   },
+  // 2026-09-22: colchagua-pichilemu (valparaiso-vina-3d-es) y frutillar/
+  // puerto-varas/saltos-del-petrohue (chiloe-5d-es) se repuntaron a sus
+  // gemelos ES ya LIVE — ver trip-kits/inject-kit-cta.mjs MAP. Solo queda la
+  // deuda de Rapa Nui, que no es de "publicar" sino de "producir" (no existe PDF ES).
   deuda_idioma_es: [
-    {
-      paginas: ["colchagua-pichilemu.html"],
-      producto_actual: "valpo-wine-4d",
-      idioma_producto: "en",
-      fix: "publicar valparaiso-vina-3d-es y repuntar",
-      motivo_de_no_revertir: "revertir a Payhip no arregla el idioma (el producto Payhip de esa campaña es el MISMO kit EN) y encima mata el checkout.",
-    },
-    {
-      paginas: ["frutillar.html", "puerto-varas.html", "saltos-del-petrohue.html"],
-      producto_actual: "chiloe-lakes-5d",
-      idioma_producto: "en",
-      fix: "publicar chiloe-5d-es y repuntar (chiloe.html y puerto-montt.html ya apuntan a ese kit ES vía Payhip)",
-      motivo_de_no_revertir: "ídem: el Payhip de chiloe-lakes-5d es el mismo kit EN.",
-    },
     {
       paginas: ["rapa-nui.html"],
       producto_actual: "rapa-nui-4d",
